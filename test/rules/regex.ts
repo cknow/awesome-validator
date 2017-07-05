@@ -27,6 +27,6 @@ describe('Regex', () => {
         assert.isFalse(new Regex(/^/).validate({}));
         assert.isFalse(new Regex(/^/).validate(Object()));
         assert.isFalse(new Regex(/^/).validate(new Object()));
-
     });
+
 });

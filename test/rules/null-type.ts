@@ -57,4 +57,5 @@ describe('Null Type', () => {
         class Foo {}
         assert.isFalse(nullType.validate(new Foo()));
     });
+
 });

@@ -52,4 +52,5 @@ describe('URL', () => {
         assert.isFalse(url.validate('telnet://192.0.2.16:80/'));
         assert.isFalse(url.validate('telnet://melvyl.ucop.example.edu/'));
     });
+
 });

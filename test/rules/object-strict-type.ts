@@ -57,4 +57,5 @@ describe('Object Type', () => {
         class Foo {}
         assert.isFalse(objectStrictType.validate(new Foo()));
     });
+
 });

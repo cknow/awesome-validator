@@ -57,4 +57,5 @@ describe('Object Type', () => {
         assert.isFalse(objectType.validate(1.0));
         assert.isFalse(objectType.validate(1.1));
     });
+
 });

@@ -60,4 +60,5 @@ describe('Regex Type', () => {
         class Foo {}
         assert.isFalse(regexType.validate(new Foo()));
     });
+
 });
