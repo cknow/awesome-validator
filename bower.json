@@ -1,0 +1,42 @@
+{
+  "name": "awesome-validator",
+  "description": "Awesome validator for node or browser.",
+  "main": [
+    "awesome-validator.min.js"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "**/*.log",
+    "**/*.json",
+    "**/*.yml",
+    ".nyc_output",
+    "coverage",
+    "dist",
+    "node_modules",
+    "src",
+    "test",
+    "wallaby.js",
+    "webpack.config.js",
+    "yarn.lock"
+  ],
+  "keywords": [
+    "awesome-validator",
+    "awesome-validation",
+    "awesome-validate",
+    "validator",
+    "validation",
+    "validate"
+  ],
+  "authors": [
+    "Ricardo Gobbo de Souza <ricardogobbosouza@yahoo.com.br>"
+  ],
+  "homepage": "https://github.com/cknow/awesome-validator",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/cknow/awesome-validator.git"
+  },
+  "dependencies": {},
+  "devDependencies": {},
+  "privado": false
+}
