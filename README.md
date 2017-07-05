@@ -1,0 +1,101 @@
+# Awesome Validator
+> Awesome validator for node or browser.
+
+[![NPM Version](https://img.shields.io/npm/v/awesome-validator.svg)](https://www.npmjs.com/package/awesome-validator)
+[![Downloads](https://img.shields.io/npm/dt/awesome-validator.svg)](https://www.npmjs.com/package/awesome-validator)
+[![MIT License](https://img.shields.io/npm/l/awesome-validator.svg)](LICENSE)
+
+[![Build Status](https://travis-ci.org/cknow/awesome-validator.svg?branch=master)](https://travis-ci.org/cknow/awesome-validator)
+[![Build status](https://ci.appveyor.com/api/projects/status/64mu0a0cfmtvgicd/branch/master?svg=true)](https://ci.appveyor.com/project/cknow/awesome-validator/branch/master)
+[![Coverage Status](https://coveralls.io/repos/github/cknow/awesome-validator/badge.svg?branch=master)](https://coveralls.io/github/cknow/awesome-validator?branch=master)
+
+[![Dependency Status](https://dependencyci.com/github/cknow/awesome-validator/badge)](https://dependencyci.com/github/cknow/awesome-validator)
+[![Dependencies Status](https://david-dm.org/cknow/awesome-validator/status.svg)](https://david-dm.org/cknow/awesome-validator)
+[![devDependencies Status](https://david-dm.org/cknow/awesome-validator/dev-status.svg)](https://david-dm.org/cknow/awesome-validator?type=dev)
+[![peerDependencies Status](https://david-dm.org/cknow/awesome-validator/peer-status.svg)](https://david-dm.org/cknow/awesome-validator?type=peer)
+
+[![Semantic Release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg)](https://github.com/semantic-release/semantic-release)
+[![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
+[![Average time to resolve an issue](http://isitmaintained.com/badge/resolution/cknow/awesome-validator.svg)](http://isitmaintained.com/project/cknow/awesome-validator)
+[![Percentage of issues still open](http://isitmaintained.com/badge/open/cknow/awesome-validator.svg)](http://isitmaintained.com/project/cknow/awesome-validator)
+[![Gitter](https://badges.gitter.im/cknow/awesome-validator.svg)](https://gitter.im/cknow/awesome-validator?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
+
+[![NPM](https://nodei.co/npm/awesome-validator.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/awesome-validator)
+
+## Server-side
+
+Install the library with ```npm install --save awesome-validator```
+
+```js
+var validator = require('awesome-validator');
+
+validator.stringType().validate('foo'); //=> true
+```
+
+### ES6
+
+```js
+import validator from 'awesome-validator';
+
+validator.stringType().validate('foo'); //=> true
+```
+
+Or, import only a subset of the library:
+
+```js
+import StringType from 'awesome-validator/dist/rules/string-type';
+
+new StringType().validate('foo'); //=> true
+```
+
+### Typescript
+
+```ts
+import { validator } from 'awesome-validator';
+
+validator.stringType().validate('foo'); //=> true
+```
+
+Or, import only a subset of the library:
+
+```ts
+import { StringType } from 'awesome-validator/dist/rules/string-type';
+
+new StringType().validate('foo'); //=> true
+```
+
+##  Client-side usage
+
+The library can be loaded either as a standalone script, or through an [AMD](http://requirejs.org/docs/whyamd.html)-compatible loader
+
+```html
+<script type="text/javascript" src="awesome-validator.min.js"></script>
+<script type="text/javascript">
+    validator.stringType().validate('foo'). //=> true
+</script>
+```
+
+## Validators
+
+- [AlwaysInvalid](docs/always-invalid.md)
+- [AlwaysValid](docs/always-valid.md)
+- [ArrayType](docs/array-type.md)
+- [BooleanType](docs/boolean-type.md)
+- [Empty](docs/empty.md)
+- [FloatType](docs/float-type.md)
+- [IntType](docs/int-type.md)
+- [Json](docs/json.md)
+- [NullType](docs/null-type.md)
+- [NumberType](docs/number-type.md)
+- [ObjectStrictType](docs/object-strict-type.md)
+- [ObjectType](docs/object-type.md)
+- [Regex](docs/regex.md)
+- [RegexType](docs/regex-type.md)
+- [Required](docs/required.md)
+- [Scalar](docs/scalar.md)
+- [Sorted](docs/sorted.md)
+- [StringType](docs/string-type.md)
+- [TypeOf](docs/type-of.md)
+- [Url](docs/url.md)
+- [Version](docs/version.md)
+- [Vowel](docs/vowel.md)

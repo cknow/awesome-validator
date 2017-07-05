@@ -1,0 +1,87 @@
+{
+  "name": "awesome-validator",
+  "version": "0.0.0-semantically-released",
+  "description": "Awesome validator for node or browser.",
+  "keywords": [
+    "awesome-validator",
+    "awesome-validation",
+    "awesome-validate",
+    "validator",
+    "validation",
+    "validate"
+  ],
+  "homepage": "https://github.com/cknow/awesome-validator",
+  "bugs": {
+    "url": "https://github.com/cknow/awesome-validator/issues",
+    "email": "ricardo@clicknow.com.br"
+  },
+  "license": "MIT",
+  "author": {
+    "name": "Ricardo Gobbo de Souza",
+    "email": "ricardogobbosouza@yahoo.com.br",
+    "role": "Developer"
+  },
+  "files": [
+    "docs",
+    "dist",
+    "awesome-validator.min.js"
+  ],
+  "main": "./dist/validator.js",
+  "types": "./dist/validator.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cknow/awesome-validator"
+  },
+  "scripts": {
+    "check-coverage": "nyc check-coverage --global 100",
+    "commit": "git-cz",
+    "commitmsg": "validate-commit-msg",
+    "cover": "nyc --reporter lcov --reporter text --extension .ts mocha -t 5000 -r ts-node/register test/**/*.ts",
+    "lint": "npm run lint:src && npm run lint:test",
+    "lint:src": "npm run tslint --  tsconfig.json src/**/*.ts",
+    "lint:test": "npm run tslint --  test/tsconfig.json test/**/*.ts",
+    "posttest": "npm run check-coverage",
+    "precommit": "npm run lint",
+    "precover": "rimraf .nyc_output coverage dist",
+    "prepublishOnly": "rimraf dist && tsc",
+    "prepush": "npm t && webpack",
+    "pretest": "npm run lint",
+    "report-coverage": "cat ./coverage/lcov.info | coveralls",
+    "semantic-release": "semantic-release pre && npm publish && semantic-release post",
+    "test": "npm run cover",
+    "tslint": "tslint --config tslint.json --type-check --project",
+    "watch": "nodemon --ext ts --exec npm t"
+  },
+  "config": {
+    "commitizen": {
+      "path": "node_modules/cz-conventional-changelog"
+    }
+  },
+  "devDependencies": {
+    "@types/chai": "^4.0.1",
+    "@types/mocha": "^2.2.41",
+    "awesome-typescript-loader": "^3.2.1",
+    "chai": "^4.0.2",
+    "commitizen": "^2.9.6",
+    "coveralls": "^2.13.1",
+    "cz-conventional-changelog": "^2.0.0",
+    "husky": "^0.14.3",
+    "mocha": "^3.4.2",
+    "nodemon": "^1.11.0",
+    "nyc": "^11.0.3",
+    "rimraf": "^2.6.1",
+    "semantic-release": "^6.3.6",
+    "ts-node": "^3.1.0",
+    "tslint": "^5.4.3",
+    "tslint-config-clicknow": "^2.4.1",
+    "typescript": "^2.4.1",
+    "validate-commit-msg": "^2.12.2",
+    "webpack": "^3.0.0"
+  },
+  "engines": {
+    "node": ">=4",
+    "npm": ">=3"
+  },
+  "preferGlobal": false,
+  "private": false
+}

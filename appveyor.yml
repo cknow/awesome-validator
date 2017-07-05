@@ -1,0 +1,33 @@
+build: false
+
+clone_depth: 1
+
+cache:
+  - node_modules
+  - '%LOCALAPPDATA%/Yarn'
+
+environment:
+  matrix:
+    - nodejs_version: 4
+    - nodejs_version: 5
+    - nodejs_version: 6
+    - nodejs_version: 7
+    - nodejs_version: 8
+
+matrix:
+  fast_finish: true
+
+install:
+  - ps: Install-Product node $env:nodejs_version
+  - npm i -g npm@4
+  - npm i -g yarn
+  - yarn
+
+before_test:
+  - npm prune
+
+test_script:
+  - node --version
+  - npm --version
+  - yarn --version
+  - npm test

@@ -1,0 +1,9 @@
+{
+  "extends": [
+    "tslint-config-clicknow"
+  ],
+  "rules": {
+    "interface-name": [true, "always-prefix"],
+    "number-literal-format": false
+  }
+}
