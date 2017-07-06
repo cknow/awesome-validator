@@ -71,9 +71,9 @@
     "nyc": "^11.0.3",
     "rimraf": "^2.6.1",
     "semantic-release": "^6.3.6",
-    "ts-node": "^3.1.0",
-    "tslint": "^5.4.3",
-    "tslint-config-clicknow": "^2.4.1",
+    "ts-node": "^3.2.0",
+    "tslint": "^5.5.0",
+    "tslint-config-clicknow": "^2.5.0",
     "typescript": "^2.4.1",
     "validate-commit-msg": "^2.12.2",
     "webpack": "^3.0.0"
