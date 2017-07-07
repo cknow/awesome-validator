@@ -76,7 +76,7 @@
     "tslint-config-clicknow": "^2.5.0",
     "typescript": "^2.4.1",
     "validate-commit-msg": "^2.12.2",
-    "webpack": "^3.0.0"
+    "webpack": "^3.1.0"
   },
   "engines": {
     "node": ">=4",
