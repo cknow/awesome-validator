@@ -14,12 +14,14 @@ validator.objectStrictType().validate(new Object({foo: 'bar'}));
 Invalid values:
 
 ```js
-validator.objectStrictType().validate('foo');
-validator.objectStrictType().validate(null);
 validator.objectStrictType().validate(undefined);
+validator.objectStrictType().validate(null);
 validator.objectStrictType().validate(true);
 validator.objectStrictType().validate(false);
+validator.objectStrictType().validate('foo');
 validator.objectStrictType().validate(0);
 validator.objectStrictType().validate(1);
 validator.objectStrictType().validate([]);
+validator.objectStrictType().validate(new Array());
+validator.objectStrictType().validate(Object.create(null));
 ```

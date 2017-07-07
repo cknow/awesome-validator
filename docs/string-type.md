@@ -16,7 +16,7 @@ validator.stringType().validate(String());
 Invalid values:
 
 ```js
-validator.stringType().validate(undefiend);
+validator.stringType().validate(undefined);
 validator.stringType().validate(null);
 validator.stringType().validate(true);
 validator.stringType().validate(false);

@@ -18,7 +18,7 @@ Invalid values:
 
 ```js
 validator.version().validate('');
-validator.version().validate('1.3.7--');
+validator.version().validate('      1.3.7--');
 validator.version().validate('1.3.7++'))];
 validator.version().validate('foo'))];
 validator.version().validate('1.2.3.4');

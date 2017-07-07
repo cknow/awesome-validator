@@ -18,7 +18,7 @@ validator.required().validate(new Object({foo: 'bar'}));
 Invalid values:
 
 ```js
-validator.required().validate(undefiend);
+validator.required().validate(undefined);
 validator.required().validate(null);
 validator.required().validate(false);
 validator.required().validate(0);

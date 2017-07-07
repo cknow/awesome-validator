@@ -12,8 +12,17 @@ validator.booleanType().validate(false);
 Invalid values:
 
 ```js
-validator.arrayType().validate(0);
-validator.arrayType().validate('foo');
-validator.arrayType().validate([]);
-validator.arrayType().validate({});
+validator.booleanType().validate(undefined);
+validator.booleanType().validate(null);
+validator.booleanType().validate('foo');
+validator.booleanType().validate(0);
+validator.booleanType().validate(1);
+validator.booleanType().validate(-1);
+validator.booleanType().validate(1.1);
+validator.booleanType().validate(-1.1);
+validator.booleanType().validate([]);
+validator.booleanType().validate({});
+validator.booleanType().validate(new Array());
+validator.booleanType().validate(new Object());
+validator.booleanType().validate(Object.create(null));
 ```

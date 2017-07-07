@@ -20,9 +20,7 @@ Invalid values:
 
 ```js
 validator.vowel().validate('');
-validator.vowel().validate(nul);
-validator.vowel().validate(undefined);
-validator.vowel().validate('16');
+validator.vowel().validate('1a');
 validator.vowel().validate('foo');
 validator.vowel().validate('Foo');
 ```

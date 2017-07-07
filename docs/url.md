@@ -15,14 +15,8 @@ validator.url().validate('news:new.example.com');
 Invalid values:
 
 ```js
-validator.url().validate(undefiend);
-validator.url().validate(null);
-validator.url().validate(true);
-validator.url().validate(false);
+validator.url().validate('');
 validator.url().validate('foo');
 validator.url().validate('http:/example.com/');
+validator.url().validate('foo,bar');
 ```
-
-
-
-

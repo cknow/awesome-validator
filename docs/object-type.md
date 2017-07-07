@@ -20,10 +20,10 @@ validator.objectType().validate(new Array('foo'));
 Invalid values:
 
 ```js
-validator.objectType().validate('foo');
 validator.objectType().validate(undefined);
 validator.objectType().validate(true);
 validator.objectType().validate(false);
+validator.objectType().validate('foo');
 validator.objectType().validate(0);
 validator.objectType().validate(1);
 ```

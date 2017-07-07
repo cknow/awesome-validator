@@ -5,7 +5,7 @@ Validates if the given input is empty.
 Valid values:
 
 ```js
-validator.empty().validate(undefiend);
+validator.empty().validate(undefined);
 validator.empty().validate(null);
 validator.empty().validate(false);
 validator.empty().validate(0);

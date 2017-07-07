@@ -20,7 +20,7 @@ validator.scalar().validate('foo');
 Invalid values:
 
 ```js
-validator.scalar().validate(undefiend);
+validator.scalar().validate(undefined);
 validator.scalar().validate(null);
 validator.scalar().validate([]);
 validator.scalar().validate({});
