@@ -19,5 +19,5 @@ validator.regex(/[0-9]/).validate('a');
 Throw error if the regex is invalid:
 
 ```js
-validator.regex({}) // Error('Invalid RegExp.')
+validator.regex({}).validate('foo'); // Error('Invalid RegExp.')
 ```
