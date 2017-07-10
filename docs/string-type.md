@@ -1,6 +1,6 @@
 # String Type
 
-Validates if the given input is string.
+Validates whether the type of an input is string.
 
 Valid values:
 
