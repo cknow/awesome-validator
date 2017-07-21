@@ -1,14 +1,14 @@
 import { assert } from 'chai';
 
 import { AbstractRule } from '../../src/rules/abstract-rule';
-import { URL } from '../../src/rules/url';
+import { Url } from '../../src/rules/url';
 
-describe('URL', () => {
+describe('Url', () => {
 
-    let url: URL;
+    let url: Url;
 
     beforeEach(() => {
-        url = new URL();
+        url = new Url();
     });
 
     it('is rule', () => {

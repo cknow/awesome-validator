@@ -1,6 +1,6 @@
 import { AbstractRule } from './abstract-rule';
 import { ArrayType } from './array-type';
-import { ObjectStrictType } from './object-strict-type';
+import { ObjectTypeStrict } from './object-type-strict';
 import { ObjectType } from './object-type';
 import { StringType } from './string-type';
 
@@ -23,7 +23,7 @@ export class Empty extends AbstractRule {
                 return true;
             }
 
-            if (new ObjectStrictType().validate(input) || new ArrayType().validate(input)) {
+            if (new ObjectTypeStrict().validate(input) || new ArrayType().validate(input)) {
                 return Object.keys(input).length === 0;
             }
         }

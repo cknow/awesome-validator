@@ -61,7 +61,7 @@
     "@types/chai": "^4.0.1",
     "@types/mocha": "^2.2.41",
     "awesome-typescript-loader": "^3.2.1",
-    "chai": "^4.0.2",
+    "chai": "^4.1.0",
     "commitizen": "^2.9.6",
     "coveralls": "^2.13.1",
     "cz-conventional-changelog": "^2.0.0",
@@ -71,12 +71,12 @@
     "nyc": "^11.0.3",
     "rimraf": "^2.6.1",
     "semantic-release": "^6.3.6",
-    "ts-node": "^3.2.0",
+    "ts-node": "^3.2.1",
     "tslint": "^5.5.0",
     "tslint-config-clicknow": "^2.5.0",
-    "typescript": "^2.4.1",
-    "validate-commit-msg": "^2.12.2",
-    "webpack": "^3.1.0"
+    "typescript": "^2.4.2",
+    "validate-commit-msg": "^2.13.0",
+    "webpack": "^3.3.0"
   },
   "engines": {
     "node": ">=4",

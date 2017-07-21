@@ -1,6 +1,6 @@
 import { AbstractConstructotName } from './abstract-constructor-name';
 
-export class ObjectStrictType extends AbstractConstructotName {
+export class ObjectTypeStrict extends AbstractConstructotName {
 
     /**
      * Get constructor name.

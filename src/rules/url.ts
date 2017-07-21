@@ -1,6 +1,6 @@
 import { Regex } from './regex';
 
-export class URL extends Regex {
+export class Url extends Regex {
 
     /**
      * Pattern.

@@ -3,14 +3,14 @@ import { assert } from 'chai';
 import { AbstractRule } from '../../src/rules/abstract-rule';
 import { TypeOf } from '../../src/rules/type-of';
 
-describe('Typeof', () => {
+describe('Type Of', () => {
 
     it('is rule', () => {
         assert.instanceOf(new TypeOf(), AbstractRule);
     });
 
     it('is invalid pattern', () => {
-        assert.throws(() => new TypeOf().validate('a'), TypeError, 'Invalid RegExp.');
+        assert.throws(() => new TypeOf().validate('foo'), TypeError, 'Invalid RegExp.');
     });
 
     it('values is valid', () => {

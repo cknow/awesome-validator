@@ -6,7 +6,9 @@ export abstract class AbstractConstructotName extends AbstractRule {
      * Validate.
      */
     public validate(input: any): boolean {
-        return !(!input || !input.constructor || input.constructor.name !== this.getConstructorName());
+        const name: string = this.getConstructorName().toLocaleUpperCase();
+
+        return !(!input || !input.constructor || String(input.constructor.name).toLocaleUpperCase() !== name);
     }
 
     /**

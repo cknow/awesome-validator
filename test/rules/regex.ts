@@ -15,12 +15,12 @@ describe('Regex', () => {
 
     it('values is valid', () => {
         assert.isTrue(new Regex(/^[0-9]/).validate(0));
-        assert.isTrue(new Regex(/^[a-z]/).validate('a'));
+        assert.isTrue(new Regex(/^[a-z]/).validate('foo'));
         assert.isTrue(new Regex(/^[a-z]/).validate(true));
     });
 
     it('values is not valid', () => {
-        assert.isFalse(new Regex(/^[0-9]/).validate('a'));
+        assert.isFalse(new Regex(/^[0-9]/).validate('foo'));
         assert.isFalse(new Regex(/^[a-z]/).validate(0));
         assert.isFalse(new Regex(/^/).validate([]));
         assert.isFalse(new Regex(/^/).validate(new Array()));
