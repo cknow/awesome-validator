@@ -9,7 +9,7 @@ export * from './float-type';
 export * from './instance-of';
 export * from './int-type';
 export * from './json';
-export * from './Lowercase';
+export * from './lowercase';
 export * from './null-type';
 export * from './number-type';
 export * from './object-instance';
