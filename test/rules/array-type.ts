@@ -1,6 +1,6 @@
 import { assert } from 'chai';
 
-import { AbstractRule } from '../../src/rules/abstract-rule';
+import { AbstractConstructotName } from '../../src/rules/abstract-constructor-name';
 import { ArrayType } from '../../src/rules/array-type';
 
 describe('Array Type', () => {
@@ -12,7 +12,7 @@ describe('Array Type', () => {
     });
 
     it('is rule', () => {
-        assert.instanceOf(arrayType, AbstractRule);
+        assert.instanceOf(arrayType, AbstractConstructotName);
     });
 
     it('values is valid', () => {

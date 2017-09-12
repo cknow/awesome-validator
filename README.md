@@ -29,7 +29,7 @@ Install the library with ```npm install --save awesome-validator```
 ```js
 var validator = require('awesome-validator');
 
-validator.stringType().validate('foo'); //=> true
+validator.required().stringType().validate('foo'); //=> true
 ```
 
 ### ES6
@@ -37,7 +37,7 @@ validator.stringType().validate('foo'); //=> true
 ```js
 import validator from 'awesome-validator';
 
-validator.stringType().validate('foo'); //=> true
+validator.required().stringType().validate('foo'); //=> true
 ```
 
 Or, import only a subset of the library:
@@ -53,7 +53,7 @@ new StringType().validate('foo'); //=> true
 ```ts
 import { validator } from 'awesome-validator';
 
-validator.stringType().validate('foo'); //=> true
+validator.required().stringType().validate('foo'); //=> true
 ```
 
 Or, import only a subset of the library:
@@ -71,18 +71,20 @@ The library can be loaded either as a standalone script, or through an [AMD](htt
 ```html
 <script type="text/javascript" src="awesome-validator.min.js"></script>
 <script type="text/javascript">
-    validator.stringType().validate('foo'). //=> true
+    validator.required().stringType().validate('foo'). //=> true
 </script>
 ```
 
 ## Validators
 
+- [AllOf](docs/all-of.md)
 - [AlwaysInvalid](docs/always-invalid.md)
 - [AlwaysValid](docs/always-valid.md)
 - [ArrayInstance](docs/array-instance.md)
 - [ArrayType](docs/array-type.md)
 - [BooleanType](docs/boolean-type.md)
 - [Empty](docs/empty.md)
+- [Even](docs/even.md)
 - [FloatType](docs/float-type.md)
 - [InstanceOf](docs/instance-of.md)
 - [IntType](docs/int-type.md)

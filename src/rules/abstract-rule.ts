@@ -1,4 +1,6 @@
-export abstract class AbstractRule {
+import { Validatable } from '../validatable';
+
+export abstract class AbstractRule implements Validatable {
 
     /**
      * Validate.

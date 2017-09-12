@@ -1,45 +1,95 @@
 import { assert } from 'chai';
 
-import { AbstractRule } from '../src/rules/abstract-rule';
-import { validator } from '../src/validator';
+import { AllOf } from '../src/rules/all-of';
+import { IntType } from '../src/rules/int-type';
+import { Required } from '../src/rules/required';
+import { Validator } from '../src/validator';
 
 describe('Validator', () => {
 
-    it('is object', () => {
-        assert.instanceOf(validator, Object);
+    let validator: Validator;
+
+    beforeEach(() => {
+        validator = new Validator();
     });
 
-    it('properties is rules', () => {
-        assert.instanceOf(validator.alwaysInvalid(), AbstractRule);
-        assert.instanceOf(validator.alwaysValid(), AbstractRule);
-        assert.instanceOf(validator.arrayInstance(), AbstractRule);
-        assert.instanceOf(validator.arrayType(), AbstractRule);
-        assert.instanceOf(validator.booleanType(), AbstractRule);
-        assert.instanceOf(validator.empty(), AbstractRule);
-        assert.instanceOf(validator.even(), AbstractRule);
-        assert.instanceOf(validator.floatType(), AbstractRule);
-        assert.instanceOf(validator.instanceOf(Object), AbstractRule);
-        assert.instanceOf(validator.intType(), AbstractRule);
-        assert.instanceOf(validator.json(), AbstractRule);
-        assert.instanceOf(validator.lowercase(), AbstractRule);
-        assert.instanceOf(validator.nullType(), AbstractRule);
-        assert.instanceOf(validator.numberType(), AbstractRule);
-        assert.instanceOf(validator.objectInstance(), AbstractRule);
-        assert.instanceOf(validator.objectTypeStrict(), AbstractRule);
-        assert.instanceOf(validator.objectType(), AbstractRule);
-        assert.instanceOf(validator.regexInstance(), AbstractRule);
-        assert.instanceOf(validator.regexType(), AbstractRule);
-        assert.instanceOf(validator.regex(/foo/), AbstractRule);
-        assert.instanceOf(validator.required(), AbstractRule);
-        assert.instanceOf(validator.scalar(), AbstractRule);
-        assert.instanceOf(validator.sorted(), AbstractRule);
-        assert.instanceOf(validator.sorted(null, false), AbstractRule);
-        assert.instanceOf(validator.stringType(), AbstractRule);
-        assert.instanceOf(validator.typeOf(/foo/), AbstractRule);
-        assert.instanceOf(validator.uppercase(), AbstractRule);
-        assert.instanceOf(validator.url(), AbstractRule);
-        assert.instanceOf(validator.version(), AbstractRule);
-        assert.instanceOf(validator.vowel(), AbstractRule);
+    it('rules', () => {
+        assert.instanceOf(validator.allOf(validator.alwaysValid()), AllOf);
+        assert.instanceOf(validator.alwaysInvalid(), Validator);
+        assert.instanceOf(validator.alwaysValid(), Validator);
+        assert.instanceOf(validator.arrayInstance(), Validator);
+        assert.instanceOf(validator.arrayType(), Validator);
+        assert.instanceOf(validator.booleanType(), Validator);
+        assert.instanceOf(validator.empty(), Validator);
+        assert.instanceOf(validator.even(), Validator);
+        assert.instanceOf(validator.floatType(), Validator);
+        assert.instanceOf(validator.instanceOf(Object), Validator);
+        assert.instanceOf(validator.intType(), Validator);
+        assert.instanceOf(validator.json(), Validator);
+        assert.instanceOf(validator.lowercase(), Validator);
+        assert.instanceOf(validator.nullType(), Validator);
+        assert.instanceOf(validator.numberType(), Validator);
+        assert.instanceOf(validator.objectInstance(), Validator);
+        assert.instanceOf(validator.objectTypeStrict(), Validator);
+        assert.instanceOf(validator.objectType(), Validator);
+        assert.instanceOf(validator.regexInstance(), Validator);
+        assert.instanceOf(validator.regexType(), Validator);
+        assert.instanceOf(validator.regex(/foo/), Validator);
+        assert.instanceOf(validator.required(), Validator);
+        assert.instanceOf(validator.scalar(), Validator);
+        assert.instanceOf(validator.sorted(), Validator);
+        assert.instanceOf(validator.sorted(null, false), Validator);
+        assert.instanceOf(validator.stringType(), Validator);
+        assert.instanceOf(validator.typeOf(/foo/), Validator);
+        assert.instanceOf(validator.uppercase(), Validator);
+        assert.instanceOf(validator.url(), Validator);
+        assert.instanceOf(validator.version(), Validator);
+        assert.instanceOf(validator.vowel(), Validator);
+    });
+
+    it('get rules', () => {
+        assert.isEmpty(validator.getRules());
+    });
+
+    it('add rule', () => {
+        assert.instanceOf(validator.addRule(new Required()), Validator);
+        assert.lengthOf(validator.getRules(), 1);
+    });
+
+    it('add rules', () => {
+        assert.instanceOf(validator.addRules(new Required(), new IntType()), Validator);
+        assert.lengthOf(validator.getRules(), 2);
+    });
+
+    it('has rule', () => {
+        const rule: Required = new Required();
+
+        assert.instanceOf(validator.addRule(rule), Validator);
+        assert.isTrue(validator.hasRule(rule));
+    });
+
+    it('no has rule', () => {
+        assert.isFalse(validator.hasRule(new Required()));
+    });
+
+    it('remove rule', () => {
+        const rule: Required = new Required();
+
+        assert.instanceOf(validator.addRule(rule), Validator);
+        assert.isTrue(validator.hasRule(rule));
+        assert.instanceOf(validator.removeRule(rule), Validator);
+        assert.isFalse(validator.hasRule(rule));
+    });
+
+    it('remove rule if exists', () => {
+        assert.instanceOf(validator.removeRule(new Required()), Validator);
+    });
+
+    it('remove rules', () => {
+        assert.instanceOf(validator.addRule(new Required()), Validator);
+        assert.lengthOf(validator.getRules(), 1);
+        assert.instanceOf(validator.removeRules(), Validator);
+        assert.isEmpty(validator.getRules());
     });
 
 });

@@ -1,7 +1,7 @@
 import { AbstractRule } from './abstract-rule';
 import { ArrayType } from './array-type';
-import { ObjectTypeStrict } from './object-type-strict';
 import { ObjectType } from './object-type';
+import { ObjectTypeStrict } from './object-type-strict';
 import { StringType } from './string-type';
 
 export class Empty extends AbstractRule {

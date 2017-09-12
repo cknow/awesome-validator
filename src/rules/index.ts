@@ -1,3 +1,4 @@
+export * from './all-of';
 export * from './always-invalid';
 export * from './always-valid';
 export * from './array-instance';
@@ -13,8 +14,8 @@ export * from './lowercase';
 export * from './null-type';
 export * from './number-type';
 export * from './object-instance';
-export * from './object-type-strict';
 export * from './object-type';
+export * from './object-type-strict';
 export * from './regex-instance';
 export * from './regex-type';
 export * from './regex';
