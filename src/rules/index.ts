@@ -4,6 +4,8 @@ export * from './always-valid';
 export * from './array-instance';
 export * from './array-type';
 export * from './boolean-type';
+export * from './cnpj';
+export * from './cpf';
 export * from './empty';
 export * from './even';
 export * from './float-type';

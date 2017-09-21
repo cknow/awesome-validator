@@ -47,6 +47,20 @@ export class Validator extends rules.AllOf {
     }
 
     /**
+     * Cnpj.
+     */
+    public cnpj(): this {
+        return this.addRule(new rules.Cnpj());
+    }
+
+    /**
+     * Cpf.
+     */
+    public cpf(): this {
+        return this.addRule(new rules.Cpf());
+    }
+
+    /**
      * Empty.
      */
     public empty(): this {

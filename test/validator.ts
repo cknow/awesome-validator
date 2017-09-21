@@ -20,6 +20,8 @@ describe('Validator', () => {
         assert.instanceOf(validator.arrayInstance(), Validator);
         assert.instanceOf(validator.arrayType(), Validator);
         assert.instanceOf(validator.booleanType(), Validator);
+        assert.instanceOf(validator.cnpj(), Validator);
+        assert.instanceOf(validator.cpf(), Validator);
         assert.instanceOf(validator.empty(), Validator);
         assert.instanceOf(validator.even(), Validator);
         assert.instanceOf(validator.floatType(), Validator);

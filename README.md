@@ -83,6 +83,8 @@ The library can be loaded either as a standalone script, or through an [AMD](htt
 - [ArrayInstance](docs/array-instance.md)
 - [ArrayType](docs/array-type.md)
 - [BooleanType](docs/boolean-type.md)
+- [Cnpj](docs/cnpj.md)
+- [Cpf](docs/cpf.md)
 - [Empty](docs/empty.md)
 - [Even](docs/even.md)
 - [FloatType](docs/float-type.md)
