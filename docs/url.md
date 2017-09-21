@@ -1,6 +1,6 @@
 # Url
 
-Validates if the given input is url.
+Validates if the given input is a url.
 
 Valid values:
 

@@ -1,6 +1,6 @@
 # Required
 
-Validates if the given input is not empty.
+Validates if the given input is required (not empty).
 
 Valid values:
 

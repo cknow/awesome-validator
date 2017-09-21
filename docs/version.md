@@ -1,6 +1,6 @@
 # Version
 
-Validates if the given input is version using [Semantic Versioning](http://semver.org/).
+Validates if the given input is a version.
 
 Valid values:
 
