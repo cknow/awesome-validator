@@ -23,11 +23,11 @@
   },
   "files": [
     "docs",
-    "dist",
+    "lib",
     "awesome-validator.min.js"
   ],
-  "main": "./dist/validator.js",
-  "types": "./dist/validator.d.ts",
+  "main": "./lib/validator.js",
+  "types": "./lib/validator.d.ts",
   "repository": {
     "type": "git",
     "url": "https://github.com/cknow/awesome-validator"
@@ -36,14 +36,14 @@
     "check-coverage": "nyc check-coverage --global 100",
     "commit": "git-cz",
     "commitmsg": "validate-commit-msg",
-    "cover": "nyc --reporter lcov --reporter text --extension .ts mocha -t 5000 -r ts-node/register test/**/*.ts",
+    "cover": "nyc --reporter lcov --reporter text --extension .ts mocha -t 5000 -r ts-node/register test/*.ts test/**/*.ts",
     "lint": "npm run lint:src && npm run lint:test",
-    "lint:src": "npm run tslint --  tsconfig.json src/**/*.ts",
-    "lint:test": "npm run tslint --  test/tsconfig.json test/**/*.ts",
+    "lint:src": "npm run tslint -- tsconfig.json src/*.ts src/**/*.ts",
+    "lint:test": "npm run tslint -- test/tsconfig.json test/*.ts test/**/*.ts",
     "posttest": "npm run check-coverage",
     "precommit": "npm run lint",
-    "precover": "rimraf .nyc_output coverage dist",
-    "prepare": "rimraf dist && tsc && webpack",
+    "precover": "rimraf .nyc_output coverage lib",
+    "prepare": "rimraf lib && tsc && webpack",
     "prepush": "npm t",
     "pretest": "npm run lint",
     "report-coverage": "cat ./coverage/lcov.info | coveralls",
@@ -68,7 +68,7 @@
     "cz-conventional-changelog": "^2.0.0",
     "husky": "^0.14.3",
     "mocha": "^3.5.3",
-    "nodemon": "^1.12.0",
+    "nodemon": "^1.12.1",
     "nyc": "^11.2.1",
     "rimraf": "^2.6.2",
     "semantic-release": "^7.0.2",
@@ -76,7 +76,7 @@
     "tslint": "^5.7.0",
     "typescript": "^2.5.2",
     "validate-commit-msg": "^2.14.0",
-    "webpack": "^3.5.6"
+    "webpack": "^3.6.0"
   },
   "engines": {
     "node": ">=4",
