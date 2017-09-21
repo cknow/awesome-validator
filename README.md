@@ -43,7 +43,7 @@ validator.required().stringType().validate('foo'); //=> true
 Or, import only a subset of the library:
 
 ```js
-import StringType from 'awesome-validator/dist/rules/string-type';
+import StringType from 'awesome-validator/lib/rules/string-type';
 
 new StringType().validate('foo'); //=> true
 ```
@@ -59,7 +59,7 @@ validator.required().stringType().validate('foo'); //=> true
 Or, import only a subset of the library:
 
 ```ts
-import { StringType } from 'awesome-validator/dist/rules/string-type';
+import { StringType } from 'awesome-validator/lib/rules/string-type';
 
 new StringType().validate('foo'); //=> true
 ```

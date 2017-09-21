@@ -12,7 +12,7 @@
     "**/*.yml",
     ".nyc_output",
     "coverage",
-    "dist",
+    "lib",
     "node_modules",
     "src",
     "test",

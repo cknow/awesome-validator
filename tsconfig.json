@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "outDir": "dist",
+    "outDir": "lib",
     "target": "es5",
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
@@ -14,10 +14,10 @@
     ]
   },
   "include": [
-    "src/**/*.ts"
+    "src"
   ],
   "exclude": [
-    "dist",
+    "lib",
     "node_modules",
     "test"
   ],
