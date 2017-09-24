@@ -71,7 +71,7 @@ The library can be loaded either as a standalone script, or through an [AMD](htt
 ```html
 <script type="text/javascript" src="awesome-validator.min.js"></script>
 <script type="text/javascript">
-    validator.required().stringType().validate('foo'). //=> true
+    validator.required().stringType().validate('foo'); //=> true
 </script>
 ```
 
@@ -83,6 +83,7 @@ The library can be loaded either as a standalone script, or through an [AMD](htt
 - [ArrayInstance](docs/array-instance.md)
 - [ArrayType](docs/array-type.md)
 - [BooleanType](docs/boolean-type.md)
+- [Cnh](docs/cnh.md)
 - [Cnpj](docs/cnpj.md)
 - [Cpf](docs/cpf.md)
 - [Empty](docs/empty.md)

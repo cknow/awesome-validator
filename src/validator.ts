@@ -47,6 +47,13 @@ export class Validator extends rules.AllOf {
     }
 
     /**
+     * Cnh.
+     */
+    public cnh(): this {
+        return this.addRule(new rules.Cnh());
+    }
+
+    /**
      * Cnpj.
      */
     public cnpj(): this {
