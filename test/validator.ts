@@ -17,6 +17,7 @@ describe('Validator', () => {
         assert.instanceOf(validator.allOf(validator.alwaysValid()), AllOf);
         assert.instanceOf(validator.alwaysInvalid(), Validator);
         assert.instanceOf(validator.alwaysValid(), Validator);
+        assert.instanceOf(validator.anyOf(validator.alwaysValid()), Validator);
         assert.instanceOf(validator.arrayInstance(), Validator);
         assert.instanceOf(validator.arrayType(), Validator);
         assert.instanceOf(validator.booleanType(), Validator);

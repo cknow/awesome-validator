@@ -12,6 +12,13 @@ export class Validator extends rules.AllOf {
     }
 
     /**
+     * Any Of.
+     */
+    public anyOf(...args: Validatable[]): this {
+        return this.addRule(new rules.AnyOf(...args));
+    }
+
+    /**
      * Always Invalid.
      */
     public alwaysInvalid(): this {

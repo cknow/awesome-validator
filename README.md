@@ -80,6 +80,7 @@ The library can be loaded either as a standalone script, or through an [AMD](htt
 - [AllOf](docs/all-of.md)
 - [AlwaysInvalid](docs/always-invalid.md)
 - [AlwaysValid](docs/always-valid.md)
+- [AnyOf](docs/any-of.md)
 - [ArrayInstance](docs/array-instance.md)
 - [ArrayType](docs/array-type.md)
 - [BooleanType](docs/boolean-type.md)

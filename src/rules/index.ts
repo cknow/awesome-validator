@@ -1,4 +1,5 @@
 export * from './all-of';
+export * from './any-of';
 export * from './always-invalid';
 export * from './always-valid';
 export * from './array-instance';
