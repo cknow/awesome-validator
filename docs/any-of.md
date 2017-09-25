@@ -1,6 +1,6 @@
 # Any Of
 
-Will validate if any inner validators validates.
+Will validate if any internal validator is validate.
 
 Valid values:
 
