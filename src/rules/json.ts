@@ -12,7 +12,6 @@ export class Json extends AbstractRule {
 
             return !!obj && new ObjectType().validate(obj);
         } catch (e) {
-            /* ignore */
         }
 
         return false;
