@@ -47,6 +47,13 @@ export class Validator extends rules.AllOf {
     }
 
     /**
+     * Array Val.
+     */
+    public arrayVal(): this {
+        return this.addRule(new rules.ArrayVal());
+    }
+
+    /**
      * Boolean Type.
      */
     public booleanType(): this {

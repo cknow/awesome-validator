@@ -83,6 +83,7 @@ The library can be loaded either as a standalone script, or through an [AMD](htt
 - [AnyOf](docs/any-of.md)
 - [ArrayInstance](docs/array-instance.md)
 - [ArrayType](docs/array-type.md)
+- [ArrayVal](docs/array-val.md)
 - [BooleanType](docs/boolean-type.md)
 - [Cnh](docs/cnh.md)
 - [Cnpj](docs/cnpj.md)

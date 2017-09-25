@@ -4,6 +4,7 @@ export * from './always-invalid';
 export * from './always-valid';
 export * from './array-instance';
 export * from './array-type';
+export * from './array-val';
 export * from './boolean-type';
 export * from './cnh';
 export * from './cnpj';
