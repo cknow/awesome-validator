@@ -82,6 +82,13 @@ export class Validator extends rules.AllOf {
     }
 
     /**
+     * Contains.
+     */
+    public contains(value?: any): this {
+        return this.addRule(new rules.Contains(value));
+    }
+
+    /**
      * Cpf.
      */
     public cpf(): this {
@@ -119,8 +126,8 @@ export class Validator extends rules.AllOf {
     /**
      * In.
      */
-    public in(haystack: string | any[] | Object | Set<any> | Map<any, any>): this {
-        return this.addRule(new rules.In(haystack));
+    public in(searcher?: any): this {
+        return this.addRule(new rules.In(searcher));
     }
 
     /**

@@ -3,9 +3,9 @@ import { In } from './in';
 export class FalseVal extends In {
 
     /**
-     * Get haystack.
+     * Get searcher.
      */
-    protected getHaystack(): any[] {
+    protected getSearcher(): any[] {
         return [0, '0', false, 'false', 'off', 'no', 'n', ''];
     }
 }

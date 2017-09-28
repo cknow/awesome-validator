@@ -21,5 +21,5 @@ validator.instanceOf(RegExp).validate([]]);
 Throw error if the instance is invalid:
 
 ```js
-validator.instanceOf(null).validate('foo'); // Error(''Invalid instance name.')
+validator.instanceOf().validate('foo'); // Error(''Invalid instance name.')
 ```

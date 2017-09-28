@@ -1,6 +1,6 @@
 # In
 
-Validates if the input is contained in a specific haystack.
+Validates if the input is contained in a specific searcher.
 
 Valid values:
 
@@ -30,11 +30,5 @@ validator.in(new Map().set(1, 'bar')).validate(0);
 validator.in(new Map().set('foo', 'bar')).validate('foobar');
 validator.in({foo: 'bar'}).validate('bar');
 validator.in(Object({foo: 'bar'})).validate('bar');
-validator.in(1).validate(null);
-```
-
-Throw error if the haystack is invalid:
-
-```js
-validator.in().validate('foo'); // Error(''Invalid haystack.')
+validator.in().validate(null);
 ```

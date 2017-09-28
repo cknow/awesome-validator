@@ -1,11 +1,11 @@
 import { AbstractSearcher } from './abstract-searcher';
 
-export class In extends AbstractSearcher {
+export class Contains extends AbstractSearcher {
 
     /**
      * Validate.
      */
     public validate(input: any): boolean {
-        return this.validateSearcher(this.getSearcher(), input);
+        return this.validateSearcher(input, this.getSearcher());
     }
 }

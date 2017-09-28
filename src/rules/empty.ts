@@ -1,16 +1,16 @@
-import { AbstractRule } from './abstract-rule';
+import { AbstractSearcher } from './abstract-searcher';
 import { ArrayType } from './array-type';
 import { ObjectType } from './object-type';
 import { ObjectTypeStrict } from './object-type-strict';
 import { StringType } from './string-type';
 
-export class Empty extends AbstractRule {
+export class Empty extends AbstractSearcher {
 
     /**
      * Validate.
      */
     public validate(input: any): boolean {
-        if ([undefined, null, false, 0, '', '0'].indexOf(input) >= 0) {
+        if (this.validateSearcher([undefined, null, false, 0, '', '0'], input)) {
             return true;
         }
 
