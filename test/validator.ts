@@ -22,12 +22,15 @@ describe('Validator', () => {
         assert.instanceOf(validator.arrayType(), Validator);
         assert.instanceOf(validator.arrayVal(), Validator);
         assert.instanceOf(validator.booleanType(), Validator);
+        assert.instanceOf(validator.booleanVal(), Validator);
         assert.instanceOf(validator.cnh(), Validator);
         assert.instanceOf(validator.cnpj(), Validator);
         assert.instanceOf(validator.cpf(), Validator);
         assert.instanceOf(validator.empty(), Validator);
         assert.instanceOf(validator.even(), Validator);
+        assert.instanceOf(validator.falseVal(), Validator);
         assert.instanceOf(validator.floatType(), Validator);
+        assert.instanceOf(validator.in([]), Validator);
         assert.instanceOf(validator.instanceOf(Object), Validator);
         assert.instanceOf(validator.intType(), Validator);
         assert.instanceOf(validator.json(), Validator);
@@ -45,6 +48,7 @@ describe('Validator', () => {
         assert.instanceOf(validator.sorted(), Validator);
         assert.instanceOf(validator.sorted(null, false), Validator);
         assert.instanceOf(validator.stringType(), Validator);
+        assert.instanceOf(validator.trueVal(), Validator);
         assert.instanceOf(validator.typeOf(/foo/), Validator);
         assert.instanceOf(validator.uppercase(), Validator);
         assert.instanceOf(validator.url(), Validator);

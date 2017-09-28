@@ -6,7 +6,7 @@ export abstract class AbstractComposite extends AbstractRule {
     /**
      * Rules.
      */
-    protected rules: Validatable[] = [];
+    protected rules: Set<Validatable> = new Set<Validatable>();
 
     /**
      * Abstract Composite.
@@ -21,14 +21,14 @@ export abstract class AbstractComposite extends AbstractRule {
      * Get rules.
      */
     public getRules(): Validatable[] {
-        return this.rules;
+        return Array.from(this.rules);
     }
 
     /**
      * Add rule.
      */
     public addRule(rule: Validatable): this {
-        this.rules.push(rule);
+        this.rules.add(rule);
 
         return this;
     }
@@ -48,16 +48,14 @@ export abstract class AbstractComposite extends AbstractRule {
      * Has rule.
      */
     public hasRule(rule: Validatable): boolean {
-        return this.rules.indexOf(rule) !== -1;
+        return this.rules.has(rule);
     }
 
     /**
      * Remove rule.
      */
     public removeRule(rule: Validatable): this {
-        if (this.hasRule(rule)) {
-            this.rules.splice(this.rules.indexOf(rule), 1);
-        }
+        this.rules.delete(rule);
 
         return this;
     }
@@ -66,7 +64,7 @@ export abstract class AbstractComposite extends AbstractRule {
      * Remove rules.
      */
     public removeRules(): this {
-        this.rules = [];
+        this.rules.clear();
 
         return this;
     }

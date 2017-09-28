@@ -13,13 +13,13 @@ export class InstanceOf extends AbstractRule {
      * Validate.
      */
     public validate(input: any): boolean {
-        return input instanceof this.instance();
+        return input instanceof this.getInstance();
     }
 
     /**
-     * Instance.
+     * Get instance.
      */
-    protected instance(): any {
+    protected getInstance(): any {
         if (!this.instanceName) {
             throw new TypeError('Invalid instance name.');
         }

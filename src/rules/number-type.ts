@@ -3,9 +3,9 @@ import { TypeOf } from './type-of';
 export class NumberType extends TypeOf {
 
     /**
-     * Pattern.
+     * Get pattern.
      */
-    protected pattern(): string | RegExp {
+    protected getPattern(): string | RegExp {
         return /number/;
     }
 }

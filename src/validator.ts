@@ -12,13 +12,6 @@ export class Validator extends rules.AllOf {
     }
 
     /**
-     * Any Of.
-     */
-    public anyOf(...args: Validatable[]): this {
-        return this.addRule(new rules.AnyOf(...args));
-    }
-
-    /**
      * Always Invalid.
      */
     public alwaysInvalid(): this {
@@ -30,6 +23,13 @@ export class Validator extends rules.AllOf {
      */
     public alwaysValid(): this {
         return this.addRule(new rules.AlwaysValid());
+    }
+
+    /**
+     * Any Of.
+     */
+    public anyOf(...args: Validatable[]): this {
+        return this.addRule(new rules.AnyOf(...args));
     }
 
     /**
@@ -58,6 +58,13 @@ export class Validator extends rules.AllOf {
      */
     public booleanType(): this {
         return this.addRule(new rules.BooleanType());
+    }
+
+    /**
+     * Boolean Val.
+     */
+    public booleanVal(): this {
+        return this.addRule(new rules.BooleanVal());
     }
 
     /**
@@ -96,10 +103,24 @@ export class Validator extends rules.AllOf {
     }
 
     /**
+     * False Val.
+     */
+    public falseVal(): this {
+        return this.addRule(new rules.FalseVal());
+    }
+
+    /**
      * Float Type.
      */
     public floatType(): this {
         return this.addRule(new rules.FloatType());
+    }
+
+    /**
+     * In.
+     */
+    public in(haystack: string | any[] | Object | Set<any> | Map<any, any>): this {
+        return this.addRule(new rules.In(haystack));
     }
 
     /**
@@ -212,6 +233,13 @@ export class Validator extends rules.AllOf {
      */
     public stringType(): this {
         return this.addRule(new rules.StringType());
+    }
+
+    /**
+     * True Val.
+     */
+    public trueVal(): this {
+        return this.addRule(new rules.TrueVal());
     }
 
     /**

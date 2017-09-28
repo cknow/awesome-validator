@@ -1,6 +1,6 @@
 import { assert } from 'chai';
 
-import { AbstractConstructotName } from '../../src/rules/abstract-constructor-name';
+import { AbstractRule } from '../../src/rules/abstract-rule';
 import { ObjectTypeStrict } from '../../src/rules/object-type-strict';
 
 describe('Object Type Strict', () => {
@@ -12,7 +12,7 @@ describe('Object Type Strict', () => {
     });
 
     it('is rule', () => {
-        assert.instanceOf(objectTypeStrict, AbstractConstructotName);
+        assert.instanceOf(objectTypeStrict, AbstractRule);
     });
 
     it('values is valid', () => {

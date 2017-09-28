@@ -3,9 +3,9 @@ import { InstanceOf } from './instance-of';
 export class ArrayInstance extends InstanceOf {
 
     /**
-     * Instance.
+     * Get instance.
      */
-    protected instance(): any {
+    protected getInstance(): any {
         return Array;
     }
 }

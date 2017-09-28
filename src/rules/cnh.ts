@@ -41,5 +41,4 @@ export class Cnh extends AbstractRule {
 
         return `${vl1}${vl2}` === c.substr(-2);
     }
-
 }

@@ -3,9 +3,9 @@ import { TypeOf } from './type-of';
 export class Scalar extends TypeOf {
 
     /**
-     * Pattern.
+     * Get pattern.
      */
-    protected pattern(): string | RegExp {
+    protected getPattern(): string | RegExp {
         return /boolean|number|string/;
     }
 }

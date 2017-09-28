@@ -1,6 +1,6 @@
 import { assert } from 'chai';
 
-import { AbstractComposite } from '../../src/rules/abstract-composite';
+import { AbstractRule } from '../../src/rules/abstract-rule';
 import { AllOf } from '../../src/rules/all-of';
 import { AlwaysValid } from '../../src/rules/always-valid';
 import { ObjectType } from '../../src/rules/object-type';
@@ -8,7 +8,7 @@ import { ObjectType } from '../../src/rules/object-type';
 describe('All Of', () => {
 
     it('is rule', () => {
-        assert.instanceOf(new AllOf(), AbstractComposite);
+        assert.instanceOf(new AllOf(), AbstractRule);
     });
 
     it('values is valid', () => {

@@ -18,13 +18,13 @@ export class Regex extends AbstractRule {
             return false;
         }
 
-        return new RegExp(this.pattern()).test(String(input));
+        return new RegExp(this.getPattern()).test(String(input));
     }
 
     /**
-     * Pattern.
+     * Get pattern.
      */
-    protected pattern(): string | RegExp {
+    protected getPattern(): string | RegExp {
         if (!this.regexp || !new RegexType().validate(this.regexp)) {
             throw new TypeError('Invalid RegExp.');
         }

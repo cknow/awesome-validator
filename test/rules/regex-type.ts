@@ -1,6 +1,6 @@
 import { assert } from 'chai';
 
-import { AbstractConstructotName } from '../../src/rules/abstract-constructor-name';
+import { AbstractRule } from '../../src/rules/abstract-rule';
 import { RegexType } from '../../src/rules/regex-type';
 
 describe('Regex Type', () => {
@@ -12,7 +12,7 @@ describe('Regex Type', () => {
     });
 
     it('is rule', () => {
-        assert.instanceOf(regexType, AbstractConstructotName);
+        assert.instanceOf(regexType, AbstractRule);
     });
 
     it('values is valid', () => {

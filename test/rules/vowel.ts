@@ -1,6 +1,6 @@
 import { assert } from 'chai';
 
-import { AbstractFilter } from '../../src/rules/abstract-filter';
+import { AbstractRule } from '../../src/rules/abstract-rule';
 import { Vowel } from '../../src/rules/vowel';
 
 describe('Vowel', () => {
@@ -12,7 +12,7 @@ describe('Vowel', () => {
     });
 
     it('is rule', () => {
-        assert.instanceOf(vowel, AbstractFilter);
+        assert.instanceOf(vowel, AbstractRule);
     });
 
     it('values is valid with additional characters', () => {

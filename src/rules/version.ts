@@ -3,9 +3,9 @@ import { Regex } from './regex';
 export class Version extends Regex {
 
     /**
-     * Pattern.
+     * Get pattern.
      */
-    protected pattern(): string | RegExp {
+    protected getPattern(): string | RegExp {
         return /^[0-9]+\.[0-9]+\.[0-9]+([+-][^+-][0-9A-Za-z-.]*)?$/;
     }
 }
