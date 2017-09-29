@@ -11,11 +11,11 @@ notifications:
   email: false
 
 node_js:
-  - 4
-  - 5
-  - 6
-  - 7
   - 8
+  - 7
+  - 6
+  - 5
+  - 4
 
 before_install:
   - npm i -g npm
@@ -26,11 +26,15 @@ before_script:
   - npm prune
 
 script:
+  - node --version
+  - npm --version
+  - yarn --version
   - npm test
 
 after_success:
   - npm run report-coverage
-  - 'curl -Lo travis_after_all.py https://git.io/travis_after_all'
-  - python travis_after_all.py
-  - export $(cat .to_export_back) &> /dev/null
   - npm run semantic-release
+
+branches:
+  except:
+    - /^v\d+\.\d+\.\d+$/
