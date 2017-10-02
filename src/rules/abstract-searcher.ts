@@ -36,11 +36,4 @@ export abstract class AbstractSearcher extends AbstractRule {
 
         return false;
     }
-
-    /**
-     * Get searcher.
-     */
-    protected getSearcher(): any {
-        return this.searcher;
-    }
 }

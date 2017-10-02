@@ -1,6 +1,6 @@
 # Int Type
 
-Validates whether the type of an input is int.
+Validates whether the type of an input is integer.
 
 Valid values:
 

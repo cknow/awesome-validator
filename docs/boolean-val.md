@@ -20,9 +20,9 @@ validator.booleanVal().validate(0);
 Invalid values:
 
 ```js
-validator.booleanType().validate(null);
-validator.booleanType().validate(undefined);
-validator.booleanType().validate('foo');
-validator.booleanType().validate([]);
-validator.booleanType().validate({});
+validator.booleanVal().validate(null);
+validator.booleanVal().validate(undefined);
+validator.booleanVal().validate('foo');
+validator.booleanVal().validate([]);
+validator.booleanVal().validate({});
 ```

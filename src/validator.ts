@@ -1,3 +1,4 @@
+/* tslint:disable max-file-line-count */
 import * as rules from './rules';
 
 import { Validatable } from './validatable';
@@ -124,6 +125,13 @@ export class Validator extends rules.AllOf {
     }
 
     /**
+     * Float Val.
+     */
+    public floatVal(): this {
+        return this.addRule(new rules.FloatVal());
+    }
+
+    /**
      * In.
      */
     public in(searcher?: any): this {
@@ -142,6 +150,13 @@ export class Validator extends rules.AllOf {
      */
     public intType(): this {
         return this.addRule(new rules.IntType());
+    }
+
+    /**
+     * Int Val.
+     */
+    public intVal(): this {
+        return this.addRule(new rules.IntVal());
     }
 
     /**

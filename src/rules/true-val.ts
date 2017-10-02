@@ -1,11 +1,11 @@
-import { In } from './in';
+import { AbstractSearcher } from './abstract-searcher';
 
-export class TrueVal extends In {
+export class TrueVal extends AbstractSearcher {
 
     /**
-     * Get searcher.
+     * Validate.
      */
-    protected getSearcher(): any[] {
-        return [1, '1', true, 'true', 'on', 'yes', 'y', 's'];
+    public validate(input: any): boolean {
+        return this.validateSearcher([1, '1', true, 'true', 'on', 'yes', 'y', 's'], input);
     }
 }

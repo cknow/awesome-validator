@@ -1,11 +1,11 @@
-import { NumberType } from './number-type';
+import { AbstractRule } from './abstract-rule';
 
-export class IntType extends NumberType {
+export class IntType extends AbstractRule {
 
     /**
      * Validate.
      */
     public validate(input: any): boolean {
-        return super.validate(input) && input % 1 === 0;
+        return Number.isInteger(input);
     }
 }

@@ -6,6 +6,6 @@ export class Contains extends AbstractSearcher {
      * Validate.
      */
     public validate(input: any): boolean {
-        return this.validateSearcher(input, this.getSearcher());
+        return this.validateSearcher(input, this.searcher);
     }
 }
