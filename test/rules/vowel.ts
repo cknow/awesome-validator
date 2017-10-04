@@ -39,8 +39,13 @@ describe('Vowel', () => {
         assert.isFalse(vowel.validate(null));
         assert.isFalse(vowel.validate(undefined));
         assert.isFalse(vowel.validate('16'));
-        assert.isFalse(vowel.validate('F'));
-        assert.isFalse(vowel.validate('g'));
+        assert.isFalse(vowel.validate('b'));
+        assert.isFalse(vowel.validate('c'));
+        assert.isFalse(vowel.validate('d'));
+        assert.isFalse(vowel.validate('w'));
+        assert.isFalse(vowel.validate('y'));
+        assert.isFalse(vowel.validate('bcdfghklmnp'));
+        assert.isFalse(vowel.validate('bcdfghklm np'));
         assert.isFalse(vowel.validate('Foo'));
         assert.isFalse(vowel.validate(-50));
         assert.isFalse(vowel.validate('basic'));

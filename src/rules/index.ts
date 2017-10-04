@@ -9,6 +9,7 @@ export * from './boolean-type';
 export * from './boolean-val';
 export * from './cnh';
 export * from './cnpj';
+export * from './consonant';
 export * from './contains';
 export * from './cpf';
 export * from './empty';

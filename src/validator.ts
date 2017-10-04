@@ -83,6 +83,13 @@ export class Validator extends rules.AllOf {
     }
 
     /**
+     * Consonant.
+     */
+    public consonant(additionalChars?: string): this {
+        return this.addRule(new rules.Consonant(additionalChars));
+    }
+
+    /**
      * Contains.
      */
     public contains(value?: any): this {
@@ -295,8 +302,8 @@ export class Validator extends rules.AllOf {
     /**
      * Vowel.
      */
-    public vowel(): this {
-        return this.addRule(new rules.Vowel());
+    public vowel(additionalChars?: string): this {
+        return this.addRule(new rules.Vowel(additionalChars));
     }
 }
 
