@@ -39,6 +39,7 @@ describe('Validator', () => {
         assert.instanceOf(validator.intVal(), Validator);
         assert.instanceOf(validator.json(), Validator);
         assert.instanceOf(validator.lowercase(), Validator);
+        assert.instanceOf(validator.multiple(0), Validator);
         assert.instanceOf(validator.nullType(), Validator);
         assert.instanceOf(validator.numberType(), Validator);
         assert.instanceOf(validator.objectInstance(), Validator);

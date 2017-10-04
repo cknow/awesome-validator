@@ -181,6 +181,13 @@ export class Validator extends rules.AllOf {
     }
 
     /**
+     * Multiple.
+     */
+    public multiple(multipleOf: number): this {
+        return this.addRule(new rules.Multiple(multipleOf));
+    }
+
+    /**
      * Null Type.
      */
     public nullType(): this {
