@@ -223,6 +223,13 @@ export class Validator extends rules.AllOf {
     }
 
     /**
+     * Positive.
+     */
+    public positive(): this {
+        return this.addRule(new rules.Positive());
+    }
+
+    /**
      * Regex Instance.
      */
     public regexInstance(): this {
