@@ -188,6 +188,13 @@ export class Validator extends rules.AllOf {
     }
 
     /**
+     * Negative.
+     */
+    public negative(): this {
+        return this.addRule(new rules.Negative());
+    }
+
+    /**
      * Null Type.
      */
     public nullType(): this {

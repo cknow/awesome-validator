@@ -24,6 +24,7 @@ export * from './int-val';
 export * from './json';
 export * from './lowercase';
 export * from './multiple';
+export * from './negative';
 export * from './null-type';
 export * from './number-type';
 export * from './object-instance';

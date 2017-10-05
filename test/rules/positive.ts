@@ -23,6 +23,8 @@ describe('Positive', () => {
     });
 
     it('values is not valid', () => {
+        assert.isFalse(positive.validate(0));
+        assert.isFalse(positive.validate(-0));
         assert.isFalse(positive.validate(''));
         assert.isFalse(positive.validate(null));
         assert.isFalse(positive.validate(undefined));
@@ -31,8 +33,6 @@ describe('Positive', () => {
         assert.isFalse(positive.validate('Foo'));
         assert.isFalse(positive.validate('-1.44'));
         assert.isFalse(positive.validate(-1e-5));
-        assert.isFalse(positive.validate(0));
-        assert.isFalse(positive.validate(-0));
         assert.isFalse(positive.validate(-10));
     });
 
