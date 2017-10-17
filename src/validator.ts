@@ -326,6 +326,13 @@ export class Validator extends rules.AllOf {
     public vowel(additionalChars?: string): this {
         return this.addRule(new rules.Vowel(additionalChars));
     }
+
+    /**
+     * Yes.
+     */
+    public yes(): this {
+        return this.addRule(new rules.Yes());
+    }
 }
 
 const validator: Validator = new Validator();

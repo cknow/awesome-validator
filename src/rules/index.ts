@@ -44,3 +44,4 @@ export * from './uppercase';
 export * from './url';
 export * from './version';
 export * from './vowel';
+export * from './yes';

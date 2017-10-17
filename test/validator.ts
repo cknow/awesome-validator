@@ -61,6 +61,7 @@ describe('Validator', () => {
         assert.instanceOf(validator.url(), Validator);
         assert.instanceOf(validator.version(), Validator);
         assert.instanceOf(validator.vowel(), Validator);
+        assert.instanceOf(validator.yes(), Validator);
     });
 
     it('get rules', () => {
