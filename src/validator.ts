@@ -195,6 +195,13 @@ export class Validator extends rules.AllOf {
     }
 
     /**
+     * No.
+     */
+    public no(): this {
+        return this.addRule(new rules.No());
+    }
+
+    /**
      * Null Type.
      */
     public nullType(): this {

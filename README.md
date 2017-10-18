@@ -104,6 +104,7 @@ The library can be loaded either as a standalone script, or through an [AMD](htt
 - [Lowercase](docs/lowercase.md)
 - [Multiple](docs/multiple.md)
 - [Negative](docs/negative.md)
+- [No](docs/no.md)
 - [NullType](docs/null-type.md)
 - [NumberType](docs/number-type.md)
 - [ObjectInstance](docs/object-instance.md)
