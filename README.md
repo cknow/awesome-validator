@@ -121,6 +121,7 @@ The library can be loaded either as a standalone script, or through an [AMD](htt
 - [Tld](docs/tld.md)
 - [TrueVal](docs/true-val.md)
 - [TypeOf](docs/type-of.md)
+- [Unique](docs/unique.md)
 - [Uppercase](docs/uppercase.md)
 - [Url](docs/url.md)
 - [Uuid](docs/uuid.md)

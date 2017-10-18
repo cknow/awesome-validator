@@ -59,6 +59,7 @@ describe('Validator', () => {
         assert.instanceOf(validator.tld(), Validator);
         assert.instanceOf(validator.trueVal(), Validator);
         assert.instanceOf(validator.typeOf(/foo/), Validator);
+        assert.instanceOf(validator.unique(), Validator);
         assert.instanceOf(validator.uppercase(), Validator);
         assert.instanceOf(validator.url(), Validator);
         assert.instanceOf(validator.uuid(), Validator);

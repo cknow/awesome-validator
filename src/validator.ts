@@ -314,6 +314,13 @@ export class Validator extends rules.AllOf {
     }
 
     /**
+     * Unique.
+     */
+    public unique(): this {
+        return this.addRule(new rules.Unique());
+    }
+
+    /**
      * Uppercase.
      */
     public uppercase(): this {

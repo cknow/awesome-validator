@@ -42,6 +42,7 @@ export * from './string-type';
 export * from './tld';
 export * from './true-val';
 export * from './type-of';
+export * from './unique';
 export * from './uppercase';
 export * from './url';
 export * from './uuid';
