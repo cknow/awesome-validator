@@ -122,6 +122,7 @@ The library can be loaded either as a standalone script, or through an [AMD](htt
 - [TypeOf](docs/type-of.md)
 - [Uppercase](docs/uppercase.md)
 - [Url](docs/url.md)
+- [Uuid](docs/uuid.md)
 - [Version](docs/version.md)
 - [Vowel](docs/vowel.md)
 - [Yes](docs/yes.md)

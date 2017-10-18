@@ -60,6 +60,7 @@ describe('Validator', () => {
         assert.instanceOf(validator.typeOf(/foo/), Validator);
         assert.instanceOf(validator.uppercase(), Validator);
         assert.instanceOf(validator.url(), Validator);
+        assert.instanceOf(validator.uuid(), Validator);
         assert.instanceOf(validator.version(), Validator);
         assert.instanceOf(validator.vowel(), Validator);
         assert.instanceOf(validator.yes(), Validator);

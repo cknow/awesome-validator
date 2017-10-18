@@ -321,6 +321,13 @@ export class Validator extends rules.AllOf {
     }
 
     /**
+     * Uuid.
+     */
+    public uuid(): this {
+        return this.addRule(new rules.Uuid());
+    }
+
+    /**
      * Version.
      */
     public version(): this {

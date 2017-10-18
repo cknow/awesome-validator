@@ -43,6 +43,7 @@ export * from './true-val';
 export * from './type-of';
 export * from './uppercase';
 export * from './url';
+export * from './uuid';
 export * from './version';
 export * from './vowel';
 export * from './yes';
