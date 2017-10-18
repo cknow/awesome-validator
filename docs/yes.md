@@ -1,6 +1,6 @@
 # Yes
 
-Validates if value is considered as "Yes".
+Validates whether the value of input is yes.
 
 Valid values:
 

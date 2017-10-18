@@ -1,6 +1,6 @@
 # False Val
 
-Validates if a value is considered as `false`.
+Validates whether the value of input is false.
 
 Valid values:
 
