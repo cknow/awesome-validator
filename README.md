@@ -118,6 +118,7 @@ The library can be loaded either as a standalone script, or through an [AMD](htt
 - [Scalar](docs/scalar.md)
 - [Sorted](docs/sorted.md)
 - [StringType](docs/string-type.md)
+- [Tld](docs/tld.md)
 - [TrueVal](docs/true-val.md)
 - [TypeOf](docs/type-of.md)
 - [Uppercase](docs/uppercase.md)

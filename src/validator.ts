@@ -293,6 +293,13 @@ export class Validator extends rules.AllOf {
     }
 
     /**
+     * Tld.
+     */
+    public tld(): this {
+        return this.addRule(new rules.Tld());
+    }
+
+    /**
      * True Val.
      */
     public trueVal(): this {
