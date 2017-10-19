@@ -293,6 +293,13 @@ export class Validator extends rules.AllOf {
     }
 
     /**
+     * Symbolic Link.
+     */
+    public symbolicLink(): this {
+        return this.addRule(new rules.SymbolicLink());
+    }
+
+    /**
      * Tld.
      */
     public tld(): this {

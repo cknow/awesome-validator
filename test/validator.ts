@@ -56,6 +56,7 @@ describe('Validator', () => {
         assert.instanceOf(validator.sorted(), Validator);
         assert.instanceOf(validator.sorted(null, false), Validator);
         assert.instanceOf(validator.stringType(), Validator);
+        assert.instanceOf(validator.symbolicLink(), Validator);
         assert.instanceOf(validator.tld(), Validator);
         assert.instanceOf(validator.trueVal(), Validator);
         assert.instanceOf(validator.typeOf(/foo/), Validator);

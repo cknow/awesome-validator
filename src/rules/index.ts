@@ -39,6 +39,7 @@ export * from './required';
 export * from './scalar';
 export * from './sorted';
 export * from './string-type';
+export * from './symbolic-link';
 export * from './tld';
 export * from './true-val';
 export * from './type-of';
