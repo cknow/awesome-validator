@@ -37,6 +37,7 @@ export * from './regex-type';
 export * from './regex';
 export * from './required';
 export * from './scalar';
+export * from './slug';
 export * from './sorted';
 export * from './string-type';
 export * from './symbolic-link';

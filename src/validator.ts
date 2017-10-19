@@ -279,6 +279,13 @@ export class Validator extends rules.AllOf {
     }
 
     /**
+     * Slug.
+     */
+    public slug(): this {
+        return this.addRule(new rules.Slug());
+    }
+
+    /**
      * Sorted.
      */
     public sorted(fn?: Function | null, ascending: boolean = true): this {
