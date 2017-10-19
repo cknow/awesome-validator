@@ -127,4 +127,5 @@ The library can be loaded either as a standalone script, or through an [AMD](htt
 - [Uuid](docs/uuid.md)
 - [Version](docs/version.md)
 - [Vowel](docs/vowel.md)
+- [When](docs/when.md)
 - [Yes](docs/yes.md)

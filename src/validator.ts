@@ -356,6 +356,13 @@ export class Validator extends rules.AllOf {
     }
 
     /**
+     * When.
+     */
+    public when(whenRule: Validatable, thenRule: Validatable, elseRule?: Validatable): this {
+        return this.addRule(new rules.When(whenRule, thenRule, elseRule));
+    }
+
+    /**
      * Yes.
      */
     public yes(): this {

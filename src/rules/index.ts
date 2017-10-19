@@ -48,4 +48,5 @@ export * from './url';
 export * from './uuid';
 export * from './version';
 export * from './vowel';
+export * from './when';
 export * from './yes';

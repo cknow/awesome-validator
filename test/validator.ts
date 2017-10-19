@@ -65,6 +65,7 @@ describe('Validator', () => {
         assert.instanceOf(validator.uuid(), Validator);
         assert.instanceOf(validator.version(), Validator);
         assert.instanceOf(validator.vowel(), Validator);
+        assert.instanceOf(validator.when(validator.alwaysValid(), validator.alwaysValid()), Validator);
         assert.instanceOf(validator.yes(), Validator);
     });
 
