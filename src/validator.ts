@@ -139,6 +139,13 @@ export class Validator extends rules.AllOf {
     }
 
     /**
+     * Function Type.
+     */
+    public functionType(): this {
+        return this.addRule(new rules.FunctionType());
+    }
+
+    /**
      * In.
      */
     public in(searcher?: any): this {
@@ -297,6 +304,13 @@ export class Validator extends rules.AllOf {
      */
     public stringType(): this {
         return this.addRule(new rules.StringType());
+    }
+
+    /**
+     * String Val.
+     */
+    public stringVal(): this {
+        return this.addRule(new rules.StringVal());
     }
 
     /**
