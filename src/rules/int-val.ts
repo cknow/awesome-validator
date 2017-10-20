@@ -1,6 +1,6 @@
-import { IntType } from './int-type';
+import { AbstractRule } from './abstract-rule';
 
-export class IntVal extends IntType {
+export class IntVal extends AbstractRule {
 
     /**
      * Validate.
