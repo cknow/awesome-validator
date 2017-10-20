@@ -29,6 +29,7 @@ export * from './negative';
 export * from './no';
 export * from './null-type';
 export * from './number-type';
+export * from './number-val';
 export * from './object-instance';
 export * from './object-type-strict';
 export * from './object-type';

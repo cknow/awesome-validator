@@ -216,10 +216,17 @@ export class Validator extends rules.AllOf {
     }
 
     /**
-     * Numer type.
+     * Number Type.
      */
     public numberType(): this {
         return this.addRule(new rules.NumberType());
+    }
+
+    /**
+     * Number Val.
+     */
+    public numberVal(): this {
+        return this.addRule(new rules.NumberVal());
     }
 
     /**
