@@ -244,6 +244,13 @@ export class Validator extends rules.AllOf {
     }
 
     /**
+     * Perfect Square.
+     */
+    public perfectSquare(): this {
+        return this.addRule(new rules.PerfectSquare());
+    }
+
+    /**
      * Positive.
      */
     public positive(): this {

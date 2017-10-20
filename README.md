@@ -111,6 +111,7 @@ The library can be loaded either as a standalone script, or through an [AMD](htt
 - [ObjectInstance](docs/object-instance.md)
 - [ObjectTypeStrict](docs/object-type-strict.md)
 - [ObjectType](docs/object-type.md)
+- [PerfectSquare ](docs/perfect-square.md)
 - [Positive](docs/positive.md)
 - [RegexInstance](docs/regex-instance.md)
 - [RegexType](docs/regex-type.md)

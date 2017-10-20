@@ -48,6 +48,7 @@ describe('Validator', () => {
         assert.instanceOf(validator.objectInstance(), Validator);
         assert.instanceOf(validator.objectTypeStrict(), Validator);
         assert.instanceOf(validator.objectType(), Validator);
+        assert.instanceOf(validator.perfectSquare(), Validator);
         assert.instanceOf(validator.positive(), Validator);
         assert.instanceOf(validator.regexInstance(), Validator);
         assert.instanceOf(validator.regexType(), Validator);
