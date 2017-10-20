@@ -279,6 +279,13 @@ export class Validator extends rules.AllOf {
     }
 
     /**
+     * Roman.
+     */
+    public roman(): this {
+        return this.addRule(new rules.Roman());
+    }
+
+    /**
      * Scalar.
      */
     public scalar(): this {

@@ -37,6 +37,7 @@ export * from './regex-instance';
 export * from './regex-type';
 export * from './regex';
 export * from './required';
+export * from './roman';
 export * from './scalar';
 export * from './slug';
 export * from './sorted';

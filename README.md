@@ -116,6 +116,7 @@ The library can be loaded either as a standalone script, or through an [AMD](htt
 - [RegexType](docs/regex-type.md)
 - [Regex](docs/regex.md)
 - [Required](docs/required.md)
+- [Roman](docs/roman.md)
 - [Scalar](docs/scalar.md)
 - [Slug](docs/slug.md)
 - [Sorted](docs/sorted.md)

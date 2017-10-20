@@ -53,6 +53,7 @@ describe('Validator', () => {
         assert.instanceOf(validator.regexType(), Validator);
         assert.instanceOf(validator.regex(/foo/), Validator);
         assert.instanceOf(validator.required(), Validator);
+        assert.instanceOf(validator.roman(), Validator);
         assert.instanceOf(validator.scalar(), Validator);
         assert.instanceOf(validator.slug(), Validator);
         assert.instanceOf(validator.sorted(), Validator);
