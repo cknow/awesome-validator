@@ -114,6 +114,7 @@ The library can be loaded either as a standalone script, or through an [AMD](htt
 - [ObjectType](docs/object-type.md)
 - [PerfectSquare](docs/perfect-square.md)
 - [Pesel](docs/pesel.md)
+- [Phone](docs/phone.md)
 - [Positive](docs/positive.md)
 - [RegexInstance](docs/regex-instance.md)
 - [RegexType](docs/regex-type.md)

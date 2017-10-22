@@ -265,6 +265,13 @@ export class Validator extends rules.AllOf {
     }
 
     /**
+     * Phone.
+     */
+    public phone(): this {
+        return this.addRule(new rules.Phone());
+    }
+
+    /**
      * Positive.
      */
     public positive(): this {
