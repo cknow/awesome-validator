@@ -258,6 +258,13 @@ export class Validator extends rules.AllOf {
     }
 
     /**
+     * Pesel.
+     */
+    public pesel(): this {
+        return this.addRule(new rules.Pesel());
+    }
+
+    /**
      * Positive.
      */
     public positive(): this {

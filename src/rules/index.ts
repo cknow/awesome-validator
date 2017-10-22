@@ -34,6 +34,7 @@ export * from './object-instance';
 export * from './object-type-strict';
 export * from './object-type';
 export * from './perfect-square';
+export * from './pesel';
 export * from './positive';
 export * from './regex-instance';
 export * from './regex-type';
