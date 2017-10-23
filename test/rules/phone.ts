@@ -1,7 +1,7 @@
 import { assert } from 'chai';
 
 import { AbstractRule } from '../../src/rules/abstract-rule';
-import { Phone } from '../../src/rules/Phone';
+import { Phone } from '../../src/rules/phone';
 
 describe('Phone', () => {
 
