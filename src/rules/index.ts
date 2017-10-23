@@ -36,6 +36,7 @@ export * from './object-type';
 export * from './perfect-square';
 export * from './pesel';
 export * from './phone';
+export * from './pis';
 export * from './positive';
 export * from './regex-instance';
 export * from './regex-type';

@@ -272,6 +272,13 @@ export class Validator extends rules.AllOf {
     }
 
     /**
+     * Pis.
+     */
+    public pis(): this {
+        return this.addRule(new rules.Pis());
+    }
+
+    /**
      * Positive.
      */
     public positive(): this {
