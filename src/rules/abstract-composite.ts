@@ -1,4 +1,4 @@
-import { Validatable } from '../validatable';
+import { Validatable } from './../validatable';
 import { AbstractRule } from './abstract-rule';
 
 export abstract class AbstractComposite extends AbstractRule {

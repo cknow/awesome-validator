@@ -16,21 +16,20 @@ export class Cnpj extends AbstractRule {
 
         let i: number;
         let n: number;
-        let d: number;
 
         for (i = 0, n = 0; i < 12; n += Number(c[i]) * b[++i]);
 
-        d = (((n %= 11) < 2) ? 0 : 11 - n);
+        n = n % 11;
 
-        if (Number(c[12]) !== d) {
+        if (Number(c[12]) !== ((n < 2) ? 0 : 11 - n)) {
             return false;
         }
 
         for (i = 0, n = 0; i <= 12; n += Number(c[i]) * b[i++]);
 
-        d = (((n %= 11) < 2) ? 0 : 11 - n);
+        n = n % 11;
 
-        if (Number(c[13]) !== d) {
+        if (Number(c[13]) !== ((n < 2) ? 0 : 11 - n)) {
             return false;
         }
 

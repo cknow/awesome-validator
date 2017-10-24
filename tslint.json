@@ -3,6 +3,7 @@
     "@cknow/tslint-config"
   ],
   "rules": {
-    "number-literal-format": false
+    "number-literal-format": false,
+    "ban-comma-operator": false
   }
 }

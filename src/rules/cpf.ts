@@ -14,22 +14,21 @@ export class Cpf extends AbstractRule {
 
         let i: number;
         let n: number;
-        let d: number;
         let s: number;
 
         for (s = 10, n = 0, i = 0; s >= 2; n += Number(c[i++]) * s--);
 
-        d = (((n %= 11) < 2) ? 0 : 11 - n);
+        n = n % 11;
 
-        if (Number(c[9]) !== d) {
+        if (Number(c[9]) !== ((n < 2) ? 0 : 11 - n)) {
             return false;
         }
 
         for (s = 11, n = 0, i = 0; s >= 2; n += Number(c[i++]) * s--);
 
-        d = (((n %= 11) < 2) ? 0 : 11 - n);
+        n = n % 11;
 
-        if (Number(c[10]) !== d) {
+        if (Number(c[10]) !== ((n < 2) ? 0 : 11 - n)) {
             return false;
         }
 

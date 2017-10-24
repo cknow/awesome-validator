@@ -1,7 +1,7 @@
 import { assert } from 'chai';
 
 import { AbstractRule } from '../../src/rules/abstract-rule';
-import { Even } from './../../src/rules/even';
+import { Even } from '../../src/rules/even';
 
 describe('Even', () => {
 
