@@ -36,6 +36,18 @@ describe('Pesel', () => {
         assert.isFalse(pesel.validate('21120209251'));
         assert.isFalse(pesel.validate('21120209250'));
         assert.isFalse(pesel.validate('01320613890'));
+
+        assert.isFalse(pesel.validate(null));
+        assert.isFalse(pesel.validate(undefined));
+        assert.isFalse(pesel.validate([]));
+        assert.isFalse(pesel.validate({}));
+        assert.isFalse(pesel.validate(new Array('foo')));
+        assert.isFalse(pesel.validate(new Object({foo: 'bar'})));
+        assert.isFalse(pesel.validate(true));
+        assert.isFalse(pesel.validate(false));
+        assert.isFalse(pesel.validate(1));
+        assert.isFalse(pesel.validate(''));
+        assert.isFalse(pesel.validate('foo'));
     });
 
 });

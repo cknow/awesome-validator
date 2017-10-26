@@ -30,7 +30,6 @@ describe('Pis', () => {
     });
 
     it('values is not valid', () => {
-        assert.isFalse(pis.validate(''));
         assert.isFalse(pis.validate('000.0000.000-0'));
         assert.isFalse(pis.validate('111.2222.444-5'));
         assert.isFalse(pis.validate('999999999.99'));
@@ -47,8 +46,18 @@ describe('Pis', () => {
         assert.isFalse(pis.validate('22'));
         assert.isFalse(pis.validate('123'));
         assert.isFalse(pis.validate('992999999999929384'));
-        assert.isFalse(pis.validate(false));
+
+        assert.isFalse(pis.validate(null));
+        assert.isFalse(pis.validate(undefined));
         assert.isFalse(pis.validate([]));
+        assert.isFalse(pis.validate({}));
+        assert.isFalse(pis.validate(new Array('foo')));
+        assert.isFalse(pis.validate(new Object({foo: 'bar'})));
+        assert.isFalse(pis.validate(true));
+        assert.isFalse(pis.validate(false));
+        assert.isFalse(pis.validate(1));
+        assert.isFalse(pis.validate(''));
+        assert.isFalse(pis.validate('foo'));
     });
 
 });
