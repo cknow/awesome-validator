@@ -119,6 +119,7 @@ The library can be loaded either as a standalone script, or through an [AMD](htt
 - [Positive](docs/positive.md)
 - [PrimeNumber](docs/prime-number.md)
 - [Prnt](docs/prnt.md)
+- [Punct](docs/punct.md)
 - [RegexInstance](docs/regex-instance.md)
 - [RegexType](docs/regex-type.md)
 - [Regex](docs/regex.md)

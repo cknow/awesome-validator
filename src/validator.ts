@@ -300,6 +300,13 @@ export class Validator extends rules.AllOf {
     }
 
     /**
+     * Punct.
+     */
+    public punct(): this {
+        return this.addRule(new rules.Punct());
+    }
+
+    /**
      * Regex Instance.
      */
     public regexInstance(): this {
