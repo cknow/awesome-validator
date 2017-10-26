@@ -55,6 +55,7 @@ describe('Validator', () => {
         assert.instanceOf(validator.pis(), Validator);
         assert.instanceOf(validator.positive(), Validator);
         assert.instanceOf(validator.primeNumber(), Validator);
+        assert.instanceOf(validator.prnt(), Validator);
         assert.instanceOf(validator.regexInstance(), Validator);
         assert.instanceOf(validator.regexType(), Validator);
         assert.instanceOf(validator.regex(/foo/), Validator);

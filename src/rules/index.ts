@@ -39,6 +39,7 @@ export * from './phone';
 export * from './pis';
 export * from './positive';
 export * from './prime-number';
+export * from './prnt';
 export * from './regex-instance';
 export * from './regex-type';
 export * from './regex';
