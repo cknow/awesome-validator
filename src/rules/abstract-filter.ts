@@ -21,7 +21,7 @@ export abstract class AbstractFilter extends AbstractRule {
 
         if (this.additionalChars) {
             for (const char of this.additionalChars) {
-                stringInput = stringInput.replace(char, '');
+                stringInput = stringInput.split(char).join('');
             }
         }
 
