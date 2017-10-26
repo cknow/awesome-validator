@@ -33,6 +33,12 @@ describe('Slug', () => {
         assert.isFalse(slug.validate('Nem mesmo Assim'));
         assert.isFalse(slug.validate('Ou-ate-assim'));
         assert.isFalse(slug.validate('-Se juntar-tudo-Então-'));
+        assert.isFalse(slug.validate(null));
+        assert.isFalse(slug.validate(undefined));
+        assert.isFalse(slug.validate([]));
+        assert.isFalse(slug.validate({}));
+        assert.isFalse(slug.validate(new Array('foo')));
+        assert.isFalse(slug.validate(new Object({foo: 'bar'})));
     });
 
 });

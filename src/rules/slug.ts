@@ -1,25 +1,17 @@
 import { AbstractRule } from './abstract-rule';
-
+import { Contains } from './contains';
+import { Regex } from './regex';
 export class Slug extends AbstractRule {
 
     /**
      * Validate.
      */
     public validate(input: any): boolean {
-        const s: string = String(input);
 
-        if (s.indexOf('--') !== -1) {
-            return false;
-        }
-
-        if (!/^[0-9a-z\-]+$/.test(s)) {
-            return false;
-        }
-
-        if (/^-|-$/.test(s)) {
-            return false;
-        }
-
-        return true;
+        return !(
+            new Contains('--').validate(input) ||
+            !new Regex(/^[0-9a-z\-]+$/).validate(input) ||
+            new Regex(/^-|-$/).validate(input)
+        );
     }
 }
