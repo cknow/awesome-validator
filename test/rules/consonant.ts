@@ -35,8 +35,6 @@ describe('Consonant', () => {
 
     it('values is not valid', () => {
         assert.isFalse(consonant.validate(''));
-        assert.isFalse(consonant.validate(null));
-        assert.isFalse(consonant.validate(undefined));
         assert.isFalse(consonant.validate('16'));
         assert.isFalse(consonant.validate('a'));
         assert.isFalse(consonant.validate('e'));

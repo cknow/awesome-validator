@@ -36,8 +36,6 @@ describe('Vowel', () => {
 
     it('values is not valid', () => {
         assert.isFalse(vowel.validate(''));
-        assert.isFalse(vowel.validate(null));
-        assert.isFalse(vowel.validate(undefined));
         assert.isFalse(vowel.validate('16'));
         assert.isFalse(vowel.validate('b'));
         assert.isFalse(vowel.validate('c'));
