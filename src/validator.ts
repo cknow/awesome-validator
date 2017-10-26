@@ -286,6 +286,13 @@ export class Validator extends rules.AllOf {
     }
 
     /**
+     * Prime Number.
+     */
+    public primeNumber(): this {
+        return this.addRule(new rules.PrimeNumber());
+    }
+
+    /**
      * Regex Instance.
      */
     public regexInstance(): this {

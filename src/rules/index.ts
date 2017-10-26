@@ -38,6 +38,7 @@ export * from './pesel';
 export * from './phone';
 export * from './pis';
 export * from './positive';
+export * from './prime-number';
 export * from './regex-instance';
 export * from './regex-type';
 export * from './regex';

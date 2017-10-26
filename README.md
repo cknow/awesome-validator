@@ -117,6 +117,7 @@ The library can be loaded either as a standalone script, or through an [AMD](htt
 - [Phone](docs/phone.md)
 - [Pis](docs/pis.md)
 - [Positive](docs/positive.md)
+- [PrimeNumber](docs/prime-number.md)
 - [RegexInstance](docs/regex-instance.md)
 - [RegexType](docs/regex-type.md)
 - [Regex](docs/regex.md)
