@@ -15,7 +15,7 @@ export abstract class AbstractFilter extends AbstractRule {
     public validate(input: any): boolean {
         let stringInput: string = String(input);
 
-        if (stringInput === '') {
+        if (!input || stringInput === '') {
             return false;
         }
 
