@@ -47,6 +47,7 @@ export * from './prnt';
 export * from './punct';
 export * from './regex-instance';
 export * from './regex-type';
+export * from './regex-val';
 export * from './regex';
 export * from './required';
 export * from './roman';

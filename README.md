@@ -126,6 +126,7 @@ The library can be loaded either as a standalone script, or through an [AMD](htt
 - [Punct](docs/punct.md)
 - [RegexInstance](docs/regex-instance.md)
 - [RegexType](docs/regex-type.md)
+- [RegexVal](docs/regex-val.md)
 - [Regex](docs/regex.md)
 - [Required](docs/required.md)
 - [Roman](docs/roman.md)

@@ -349,6 +349,13 @@ export class Validator extends rules.AllOf {
     }
 
     /**
+     * Regex Val.
+     */
+    public regexVal(): this {
+        return this.addRule(new rules.RegexVal());
+    }
+
+    /**
      * Regex.
      */
     public regex(pattern: string | RegExp): this {
