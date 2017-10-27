@@ -11,6 +11,7 @@ describe('Regex', () => {
 
     it('is invalid pattern', () => {
         assert.throws(() => new Regex().validate('a'), TypeError, 'Invalid RegExp.');
+        assert.throws(() => new Regex('*').validate('a'), TypeError, 'Invalid RegExp.');
     });
 
     it('values is valid', () => {
