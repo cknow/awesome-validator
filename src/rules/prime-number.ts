@@ -1,13 +1,12 @@
-import { AbstractRule } from './abstract-rule';
 import { NumberVal } from './number-val';
 
-export class PrimeNumber extends AbstractRule {
+export class PrimeNumber extends NumberVal {
 
     /**
      * Validate.
      */
     public validate(input: any): boolean {
-        if (!new NumberVal().validate(input) || input <= 1) {
+        if (!super.validate(input) || input <= 1) {
             return false;
         }
 

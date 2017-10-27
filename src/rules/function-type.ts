@@ -6,6 +6,6 @@ export class FunctionType extends TypeOf {
      * Get pattern.
      */
     protected getPattern(): string | RegExp {
-        return /function/;
+        return /function/i;
     }
 }

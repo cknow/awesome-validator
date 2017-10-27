@@ -1,5 +1,4 @@
 import { AbstractRule } from './abstract-rule';
-import { Regex } from './regex';
 
 export class Cnpj extends AbstractRule {
 
@@ -9,7 +8,7 @@ export class Cnpj extends AbstractRule {
     public validate(input: any): boolean {
         const c: string = String(input).replace(/[^\d]/g, '');
 
-        if (c.length !== 14 || new Regex(RegExp(`${Number(c[0])}{14}`)).validate(c)) {
+        if (c.length !== 14 || RegExp(`${Number(c[0])}{14}`).test(c)) {
             return false;
         }
 

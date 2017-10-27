@@ -6,6 +6,6 @@ export class NumberType extends TypeOf {
      * Get pattern.
      */
     protected getPattern(): string | RegExp {
-        return /number/;
+        return /number/i;
     }
 }

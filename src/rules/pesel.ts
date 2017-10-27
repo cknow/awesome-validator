@@ -1,6 +1,5 @@
 
 import { AbstractRule } from './abstract-rule';
-import { Regex } from './regex';
 
 export class Pesel extends AbstractRule {
 
@@ -10,7 +9,7 @@ export class Pesel extends AbstractRule {
     public validate(input: any): boolean {
         const c: string = String(input).replace(/[^\d]/g, '');
 
-        if (c.length !== 11 || new Regex(RegExp(`${Number(c[0])}{11}`)).validate(c)) {
+        if (c.length !== 11 || RegExp(`${Number(c[0])}{11}`).test(c)) {
             return false;
         }
 

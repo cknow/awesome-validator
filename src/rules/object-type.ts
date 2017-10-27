@@ -6,6 +6,6 @@ export class ObjectType extends TypeOf {
      * Get pattern.
      */
     protected getPattern(): string | RegExp {
-        return /object/;
+        return /object/i;
     }
 }

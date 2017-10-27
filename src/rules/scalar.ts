@@ -6,6 +6,6 @@ export class Scalar extends TypeOf {
      * Get pattern.
      */
     protected getPattern(): string | RegExp {
-        return /boolean|number|string/;
+        return /boolean|number|string/i;
     }
 }

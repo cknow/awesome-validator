@@ -1,14 +1,13 @@
-import { AbstractRule } from './abstract-rule';
 import { FunctionType } from './function-type';
 import { Scalar } from './scalar';
 
-export class StringVal extends AbstractRule {
+export class StringVal extends Scalar {
 
     /**
      * Validate.
      */
     public validate(input: any): boolean {
-        if (new Scalar().validate(input)) {
+        if (super.validate(input)) {
             return true;
         }
 

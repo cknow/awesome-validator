@@ -6,6 +6,6 @@ export class BooleanType extends TypeOf {
      * Get pattern.
      */
     protected getPattern(): string | RegExp {
-        return /boolean/;
+        return /boolean/i;
     }
 }

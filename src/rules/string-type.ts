@@ -6,6 +6,6 @@ export class StringType extends TypeOf {
      * Get pattern.
      */
     protected getPattern(): string | RegExp {
-        return /string/;
+        return /string/i;
     }
 }
