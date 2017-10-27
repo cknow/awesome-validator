@@ -1,7 +1,6 @@
-import { AbstractRule } from './abstract-rule';
-import { RegexType } from './regex-type';
+import { RegexVal } from './regex-val';
 
-export class Regex extends AbstractRule {
+export class Regex extends RegexVal {
 
     /**
      * Regex.
@@ -25,7 +24,7 @@ export class Regex extends AbstractRule {
      * Get pattern.
      */
     protected getPattern(): string | RegExp {
-        if (!this.regexp || !new RegexType().validate(this.regexp)) {
+        if (!this.regexp || !super.validate(this.regexp)) {
             throw new TypeError('Invalid RegExp.');
         }
 
