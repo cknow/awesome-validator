@@ -106,6 +106,7 @@ The library can be loaded either as a standalone script, or through an [AMD](htt
 - [Multiple](docs/multiple.md)
 - [Negative](docs/negative.md)
 - [No](docs/no.md)
+- [Not](docs/not.md)
 - [NullType](docs/null-type.md)
 - [NumberType](docs/number-type.md)
 - [NumberVal](docs/number-val.md)

@@ -209,6 +209,13 @@ export class Validator extends rules.AllOf {
     }
 
     /**
+     * Not.
+     */
+    public not(rule: Validatable): this {
+        return this.addRule(new rules.Not(rule));
+    }
+
+    /**
      * Null Type.
      */
     public nullType(): this {
