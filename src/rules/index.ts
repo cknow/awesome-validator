@@ -18,6 +18,7 @@ export * from './even';
 export * from './false-val';
 export * from './float-type';
 export * from './float-val';
+export * from './function-instance';
 export * from './function-type';
 export * from './in';
 export * from './instance-of';

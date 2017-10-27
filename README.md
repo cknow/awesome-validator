@@ -97,6 +97,7 @@ The library can be loaded either as a standalone script, or through an [AMD](htt
 - [FalseVal](docs/false-val.md)
 - [FloatType](docs/float-type.md)
 - [FloatVal](docs/float-val.md)
+- [FunctionInstance](docs/function-instance.md)
 - [FunctionType](docs/function-type.md)
 - [In](docs/in.md)
 - [InstanceOf](docs/instance-of.md)

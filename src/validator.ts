@@ -146,6 +146,13 @@ export class Validator extends rules.AllOf {
     }
 
     /**
+     * Function Instance.
+     */
+    public functionInstance(): this {
+        return this.addRule(new rules.FunctionInstance());
+    }
+
+    /**
      * Function Type.
      */
     public functionType(): this {
