@@ -237,6 +237,13 @@ export class Validator extends rules.AllOf {
     }
 
     /**
+     * Number Instance.
+     */
+    public numberInstance(): this {
+        return this.addRule(new rules.NumberInstance());
+    }
+
+    /**
      * Number Type.
      */
     public numberType(): this {

@@ -31,6 +31,7 @@ export * from './negative';
 export * from './no';
 export * from './not';
 export * from './null-type';
+export * from './number-instance';
 export * from './number-type';
 export * from './number-val';
 export * from './object-instance';

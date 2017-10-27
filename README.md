@@ -110,6 +110,7 @@ The library can be loaded either as a standalone script, or through an [AMD](htt
 - [No](docs/no.md)
 - [Not](docs/not.md)
 - [NullType](docs/null-type.md)
+- [NumberInstance](docs/number-instance.md)
 - [NumberType](docs/number-type.md)
 - [NumberVal](docs/number-val.md)
 - [ObjectInstance](docs/object-instance.md)
