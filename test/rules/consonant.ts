@@ -29,6 +29,7 @@ describe('Consonant', () => {
         assert.isTrue(consonant.validate('y'));
         assert.isTrue(consonant.validate('bcdfghklmnp'));
         assert.isTrue(consonant.validate('bcdfghklm np'));
+        assert.isTrue(consonant.validate('bcdfghjklmnpqrstvwxyz'));
         assert.isTrue(consonant.validate('qrst'));
         assert.isTrue(consonant.validate('\nz\t'));
     });
