@@ -16,6 +16,7 @@ describe('Slug', () => {
     });
 
     it('values is valid', () => {
+        assert.isTrue(slug.validate('a'));
         assert.isTrue(slug.validate('o-rato-roeu-o-rei-de-roma'));
         assert.isTrue(slug.validate('o-alganet-e-um-feio'));
         assert.isTrue(slug.validate('a-e-i-o-u'));
@@ -24,6 +25,7 @@ describe('Slug', () => {
 
     it('values is not valid', () => {
         assert.isFalse(slug.validate(''));
+        assert.isFalse(slug.validate('-'));
         assert.isFalse(slug.validate('o-alganet-é-um-feio'));
         assert.isFalse(slug.validate('á-é-í-ó-ú'));
         assert.isFalse(slug.validate('-assim-nao-pode'));

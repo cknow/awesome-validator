@@ -1,17 +1,17 @@
-import { AbstractRule } from './abstract-rule';
+import { AllOf } from './all-of';
 import { Contains } from './contains';
+import { Not } from './not';
 import { Regex } from './regex';
-export class Slug extends AbstractRule {
+export class Slug extends AllOf {
 
     /**
      * Validate.
      */
     public validate(input: any): boolean {
+        this.addRule(new Not(new Contains('--')));
+        this.addRule(new Regex(/^[0-9a-z\-]+$/));
+        this.addRule(new Not(new Regex(/^-|-$/)));
 
-        return !(
-            new Contains('--').validate(input) ||
-            !new Regex(/^[0-9a-z\-]+$/).validate(input) ||
-            new Regex(/^-|-$/).validate(input)
-        );
+        return super.validate(input);
     }
 }
