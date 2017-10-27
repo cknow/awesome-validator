@@ -84,6 +84,7 @@ The library can be loaded either as a standalone script, or through an [AMD](htt
 - [ArrayInstance](docs/array-instance.md)
 - [ArrayType](docs/array-type.md)
 - [ArrayVal](docs/array-val.md)
+- [BooleanInstance](docs/boolean-instance.md)
 - [BooleanType](docs/boolean-type.md)
 - [BooleanVal](docs/boolean-val.md)
 - [Cnh](docs/cnh.md)

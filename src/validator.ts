@@ -55,6 +55,13 @@ export class Validator extends rules.AllOf {
     }
 
     /**
+     * Boolean Instance.
+     */
+    public booleanInstance(): this {
+        return this.addRule(new rules.BooleanInstance());
+    }
+
+    /**
      * Boolean Type.
      */
     public booleanType(): this {

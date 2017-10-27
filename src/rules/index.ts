@@ -5,6 +5,7 @@ export * from './any-of';
 export * from './array-instance';
 export * from './array-type';
 export * from './array-val';
+export * from './boolean-instance';
 export * from './boolean-type';
 export * from './boolean-val';
 export * from './cnh';
