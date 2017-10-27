@@ -133,6 +133,7 @@ The library can be loaded either as a standalone script, or through an [AMD](htt
 - [Scalar](docs/scalar.md)
 - [Slug](docs/slug.md)
 - [Sorted](docs/sorted.md)
+- [StringInstance](docs/string-instance.md)
 - [StringType](docs/string-type.md)
 - [StringVal](docs/string-val.md)
 - [SymbolicLink](docs/symbolic-link.md)

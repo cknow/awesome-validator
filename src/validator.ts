@@ -398,6 +398,13 @@ export class Validator extends rules.AllOf {
     }
 
     /**
+     * String Instance.
+     */
+    public stringInstance(): this {
+        return this.addRule(new rules.StringInstance());
+    }
+
+    /**
      * String Type.
      */
     public stringType(): this {
