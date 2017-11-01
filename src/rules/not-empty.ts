@@ -1,6 +1,6 @@
 import { Empty } from './empty';
 
-export class Required extends Empty {
+export class NotEmpty extends Empty {
 
     /**
      * Validate.

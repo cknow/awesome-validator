@@ -29,7 +29,7 @@ Install the library with ```npm install --save awesome-validator```
 ```js
 var validator = require('awesome-validator');
 
-validator.required().stringType().validate('foo'); //=> true
+validator.notEmpty().stringType().validate('foo'); //=> true
 ```
 
 ### ES6
@@ -37,7 +37,7 @@ validator.required().stringType().validate('foo'); //=> true
 ```js
 import validator from 'awesome-validator';
 
-validator.required().stringType().validate('foo'); //=> true
+validator.notEmpty().stringType().validate('foo'); //=> true
 ```
 
 Or, import only a subset of the library:
@@ -53,7 +53,7 @@ new StringType().validate('foo'); //=> true
 ```ts
 import { validator } from 'awesome-validator';
 
-validator.required().stringType().validate('foo'); //=> true
+validator.notEmpty().stringType().validate('foo'); //=> true
 ```
 
 Or, import only a subset of the library:
@@ -71,7 +71,7 @@ The library can be loaded either as a standalone script, or through an [AMD](htt
 ```html
 <script type="text/javascript" src="awesome-validator.min.js"></script>
 <script type="text/javascript">
-    validator.required().stringType().validate('foo'); //=> true
+    validator.notEmpty().stringType().validate('foo'); //=> true
 </script>
 ```
 
@@ -109,6 +109,7 @@ The library can be loaded either as a standalone script, or through an [AMD](htt
 - [Negative](docs/negative.md)
 - [No](docs/no.md)
 - [Not](docs/not.md)
+- [NotEmpty](docs/not-empty.md)
 - [NullType](docs/null-type.md)
 - [NumberInstance](docs/number-instance.md)
 - [NumberType](docs/number-type.md)
@@ -128,7 +129,6 @@ The library can be loaded either as a standalone script, or through an [AMD](htt
 - [RegexType](docs/regex-type.md)
 - [RegexVal](docs/regex-val.md)
 - [Regex](docs/regex.md)
-- [Required](docs/required.md)
 - [Roman](docs/roman.md)
 - [Scalar](docs/scalar.md)
 - [Slug](docs/slug.md)

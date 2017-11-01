@@ -15,7 +15,7 @@ export class Empty extends AbstractSearcher {
         }
 
         if (new StringType().validate(input)) {
-            return input.trim().length === 0;
+            return String(input).trim().length === 0;
         }
 
         if (new ObjectType().validate(input)) {

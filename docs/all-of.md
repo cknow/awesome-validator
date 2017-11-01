@@ -6,7 +6,7 @@ Valid values:
 
 ```js
 validator.allOf(
-    validator.required(),
+    validator.notEmpty(),
     validator.booleanType()
 ).validate(true);
 ```
@@ -15,7 +15,7 @@ Invalid values:
 
 ```js
 validator.allOf(
-    validator.required(),
+    validator.notEmpty(),
     validator.booleanType()
 ).validate('foo');
 ```

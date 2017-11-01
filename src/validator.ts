@@ -37,6 +37,7 @@ export class Validator extends AllOf {
     public static negative = (): Validator => new Validator(new rules.Negative());
     public static no = (): Validator => new Validator(new rules.No());
     public static not = (rule: Validatable): Validator => new Validator(new rules.Not(rule));
+    public static notEmpty = (): Validator => new Validator(new rules.NotEmpty());
     public static nullType = (): Validator => new Validator(new rules.NullType());
     public static numberInstance = (): Validator => new Validator(new rules.NumberInstance());
     public static numberType = (): Validator => new Validator(new rules.NumberType());
@@ -56,7 +57,6 @@ export class Validator extends AllOf {
     public static regexType = (): Validator => new Validator(new rules.RegexType());
     public static regexVal = (): Validator => new Validator(new rules.RegexVal());
     public static regex = (pattern: string | RegExp): Validator => new Validator(new rules.Regex(pattern));
-    public static required = (): Validator => new Validator(new rules.Required());
     public static roman = (): Validator => new Validator(new rules.Roman());
     public static scalar = (): Validator => new Validator(new rules.Scalar());
     public static slug = (): Validator => new Validator(new rules.Slug());
@@ -109,6 +109,7 @@ export class Validator extends AllOf {
     public negative = (): this => this.addRule(new rules.Negative());
     public no = (): this => this.addRule(new rules.No());
     public not = (rule: Validatable): this => this.addRule(new rules.Not(rule));
+    public notEmpty = (): this => this.addRule(new rules.NotEmpty());
     public nullType = (): this => this.addRule(new rules.NullType());
     public numberInstance = (): this => this.addRule(new rules.NumberInstance());
     public numberType = (): this => this.addRule(new rules.NumberType());
@@ -128,7 +129,6 @@ export class Validator extends AllOf {
     public regexType = (): this => this.addRule(new rules.RegexType());
     public regexVal = (): this => this.addRule(new rules.RegexVal());
     public regex = (pattern: string | RegExp): this => this.addRule(new rules.Regex(pattern));
-    public required = (): this => this.addRule(new rules.Required());
     public roman = (): this => this.addRule(new rules.Roman());
     public scalar = (): this => this.addRule(new rules.Scalar());
     public slug = (): this => this.addRule(new rules.Slug());

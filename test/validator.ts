@@ -1,8 +1,8 @@
 import { assert } from 'chai';
 
 import { AllOf } from '../src/rules/all-of';
-import { IntType } from '../src/rules/int-type';
-import { Required } from '../src/rules/required';
+import { AlwaysInvalid } from '../src/rules/always-invalid';
+import { AlwaysValid } from '../src/rules/always-valid';
 import { V } from '../src/validator';
 
 describe('Validator', () => {
@@ -47,6 +47,7 @@ describe('Validator', () => {
         assert.instanceOf(V.negative(), V);
         assert.instanceOf(V.no(), V);
         assert.instanceOf(V.not(V.alwaysInvalid()), V);
+        assert.instanceOf(V.notEmpty(), V);
         assert.instanceOf(V.nullType(), V);
         assert.instanceOf(V.numberInstance(), V);
         assert.instanceOf(V.numberType(), V);
@@ -66,7 +67,6 @@ describe('Validator', () => {
         assert.instanceOf(V.regexType(), V);
         assert.instanceOf(V.regexVal(), V);
         assert.instanceOf(V.regex(/foo/), V);
-        assert.instanceOf(V.required(), V);
         assert.instanceOf(V.roman(), V);
         assert.instanceOf(V.scalar(), V);
         assert.instanceOf(V.slug(), V);
@@ -124,6 +124,7 @@ describe('Validator', () => {
         assert.instanceOf(v.negative(), V);
         assert.instanceOf(v.no(), V);
         assert.instanceOf(v.not(v.alwaysInvalid()), V);
+        assert.instanceOf(v.notEmpty(), V);
         assert.instanceOf(v.nullType(), V);
         assert.instanceOf(v.numberInstance(), V);
         assert.instanceOf(v.numberType(), V);
@@ -143,7 +144,6 @@ describe('Validator', () => {
         assert.instanceOf(v.regexType(), V);
         assert.instanceOf(v.regexVal(), V);
         assert.instanceOf(v.regex(/foo/), V);
-        assert.instanceOf(v.required(), V);
         assert.instanceOf(v.roman(), V);
         assert.instanceOf(v.scalar(), V);
         assert.instanceOf(v.slug(), V);
@@ -183,28 +183,28 @@ describe('Validator', () => {
     });
 
     it('add rule', () => {
-        assert.instanceOf(v.addRule(new Required()), V);
+        assert.instanceOf(v.addRule(new AlwaysValid()), V);
         assert.lengthOf(v.getRules(), 1);
     });
 
     it('add rules', () => {
-        assert.instanceOf(v.addRules(new Required(), new IntType()), V);
+        assert.instanceOf(v.addRules(new AlwaysValid(), new AlwaysInvalid()), V);
         assert.lengthOf(v.getRules(), 2);
     });
 
     it('has rule', () => {
-        const rule: Required = new Required();
+        const rule: AlwaysValid = new AlwaysValid();
 
         assert.instanceOf(v.addRule(rule), V);
         assert.isTrue(v.hasRule(rule));
     });
 
     it('no has rule', () => {
-        assert.isFalse(v.hasRule(new Required()));
+        assert.isFalse(v.hasRule(new AlwaysValid()));
     });
 
     it('remove rule', () => {
-        const rule: Required = new Required();
+        const rule: AlwaysValid = new AlwaysValid();
 
         assert.instanceOf(v.addRule(rule), V);
         assert.isTrue(v.hasRule(rule));
@@ -213,11 +213,11 @@ describe('Validator', () => {
     });
 
     it('remove rule if exists', () => {
-        assert.instanceOf(v.removeRule(new Required()), V);
+        assert.instanceOf(v.removeRule(new AlwaysValid()), V);
     });
 
     it('remove rules', () => {
-        assert.instanceOf(v.addRule(new Required()), V);
+        assert.instanceOf(v.addRule(new AlwaysValid()), V);
         assert.lengthOf(v.getRules(), 1);
         assert.instanceOf(v.removeRules(), V);
         assert.isEmpty(v.getRules());
