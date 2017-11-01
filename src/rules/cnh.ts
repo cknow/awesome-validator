@@ -1,17 +1,11 @@
-import { AbstractRule } from './abstract-rule';
+import { AbstractCalculation } from './abstract-calculation';
 
-export class Cnh extends AbstractRule {
+export class Cnh extends AbstractCalculation {
 
     /**
-     * Validate.
+     * Validate Calculation
      */
-    public validate(input: any): boolean {
-        const c: string = String(input).replace(/[^\d]/g, '');
-
-        if (c.length !== 11 || RegExp(`${Number(c[0])}{11}`).test(c)) {
-            return false;
-        }
-
+    protected validateCalculation(input: string): boolean {
         let i: number;
         let j: number;
         let v: number;
@@ -21,7 +15,7 @@ export class Cnh extends AbstractRule {
         let vl2: number;
 
         for (i = 0, j = 9, v = 0; i < 9; ++i, --j) {
-            v += +(Number(c[i]) * j);
+            v += +(Number(input[i]) * j);
         }
 
         dsc = 0;
@@ -33,12 +27,12 @@ export class Cnh extends AbstractRule {
         }
 
         for (i = 0, j = 1, v = 0; i < 9; ++i, ++j) {
-            v += +(Number(c[i]) * j);
+            v += +(Number(input[i]) * j);
         }
 
         x = v % 11;
         vl2 = (x >= 10) ? 0 : x - dsc;
 
-        return `${vl1}${vl2}` === c.substr(-2);
+        return `${vl1}${vl2}` === input.substr(-2);
     }
 }

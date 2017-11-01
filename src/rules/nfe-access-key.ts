@@ -1,17 +1,18 @@
-import { AbstractRule } from './abstract-rule';
+import { AbstractCalculation } from './abstract-calculation';
 
-export class NfeAccessKey extends AbstractRule {
+export class NfeAccessKey extends AbstractCalculation {
 
     /**
-     * Validate.
+     * Get Length
      */
-    public validate(input: any): boolean {
-        const c: string = String(input).replace(/[^\d]/g, '');
+    protected getLength(): number {
+        return 44;
+    }
 
-        if (c.length !== 44 || RegExp(`${Number(c[0])}{44}`).test(c)) {
-            return false;
-        }
-
+    /**
+     * Validate Calculation
+     */
+    protected validateCalculation(input: string): boolean {
         const w: number[] = [];
 
         let i: number;
@@ -24,11 +25,11 @@ export class NfeAccessKey extends AbstractRule {
         }
 
         for (i = 0, z = 0, m = 44; i < m; ++i) {
-            z += Number(c[i]) * w[i];
+            z += Number(input[i]) * w[i];
         }
 
         z -= (Math.floor(z / 11) * 11);
 
-        return ((z === 0 || z === 1) ? 0 : (11 - z)) === Number(c[43]);
+        return ((z === 0 || z === 1) ? 0 : (11 - z)) === Number(input[43]);
     }
 }

@@ -1,35 +1,36 @@
-import { AbstractRule } from './abstract-rule';
+import { AbstractCalculation } from './abstract-calculation';
 
-export class Cnpj extends AbstractRule {
+export class Cnpj extends AbstractCalculation {
 
     /**
-     * Validate.
+     * Get Length
      */
-    public validate(input: any): boolean {
-        const c: string = String(input).replace(/[^\d]/g, '');
+    protected getLength(): number {
+        return 14;
+    }
 
-        if (c.length !== 14 || RegExp(`${Number(c[0])}{14}`).test(c)) {
-            return false;
-        }
-
+    /**
+     * Validate Calculation
+     */
+    protected validateCalculation(input: string): boolean {
         const b: number[] = [6, 5, 4, 3, 2, 9, 8, 7, 6, 5, 4, 3, 2];
 
         let i: number;
         let n: number;
 
-        for (i = 0, n = 0; i < 12; n += Number(c[i]) * b[++i]);
+        for (i = 0, n = 0; i < 12; n += Number(input[i]) * b[++i]);
 
         n = n % 11;
 
-        if (Number(c[12]) !== ((n < 2) ? 0 : 11 - n)) {
+        if (Number(input[12]) !== ((n < 2) ? 0 : 11 - n)) {
             return false;
         }
 
-        for (i = 0, n = 0; i <= 12; n += Number(c[i]) * b[i++]);
+        for (i = 0, n = 0; i <= 12; n += Number(input[i]) * b[i++]);
 
         n = n % 11;
 
-        if (Number(c[13]) !== ((n < 2) ? 0 : 11 - n)) {
+        if (Number(input[13]) !== ((n < 2) ? 0 : 11 - n)) {
             return false;
         }
 
