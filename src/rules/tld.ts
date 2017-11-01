@@ -6,8 +6,6 @@ export class Tld extends AbstractSearcher {
      * Validate.
      */
     public validate(input: any): boolean {
-        /* tslint:disable:max-file-line-count */
-
         /**
          * List extracted from http://data.iana.org/TLD/tlds-alpha-by-domain.txt
          * Version 2017101701, Last Updated Wed Oct 18 07:07:02 2017 UTC

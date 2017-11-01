@@ -4,6 +4,7 @@
   ],
   "rules": {
     "number-literal-format": false,
-    "ban-comma-operator": false
+    "ban-comma-operator": false,
+    "max-file-line-count": false
   }
 }
