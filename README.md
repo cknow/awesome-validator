@@ -107,6 +107,7 @@ The library can be loaded either as a standalone script, or through an [AMD](htt
 - [Lowercase](docs/lowercase.md)
 - [Multiple](docs/multiple.md)
 - [Negative](docs/negative.md)
+- [NfeAccessKey](docs/nfe-access-key.md)
 - [No](docs/no.md)
 - [Not](docs/not.md)
 - [NotEmpty](docs/not-empty.md)

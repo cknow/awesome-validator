@@ -35,6 +35,7 @@ export class Validator extends AllOf {
     public static lowercase = (): Validator => new Validator(new rules.Lowercase());
     public static multiple = (multipleOf: number): Validator => new Validator(new rules.Multiple(multipleOf));
     public static negative = (): Validator => new Validator(new rules.Negative());
+    public static nfeAccessKey  = (): Validator => new Validator(new rules.NfeAccessKey());
     public static no = (): Validator => new Validator(new rules.No());
     public static not = (rule: Validatable): Validator => new Validator(new rules.Not(rule));
     public static notEmpty = (): Validator => new Validator(new rules.NotEmpty());
@@ -107,6 +108,7 @@ export class Validator extends AllOf {
     public lowercase = (): this => this.addRule(new rules.Lowercase());
     public multiple = (multipleOf: number): this => this.addRule(new rules.Multiple(multipleOf));
     public negative = (): this => this.addRule(new rules.Negative());
+    public nfeAccessKey  = (): this => this.addRule(new rules.NfeAccessKey());
     public no = (): this => this.addRule(new rules.No());
     public not = (rule: Validatable): this => this.addRule(new rules.Not(rule));
     public notEmpty = (): this => this.addRule(new rules.NotEmpty());

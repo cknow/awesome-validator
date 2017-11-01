@@ -28,6 +28,7 @@ export * from './json';
 export * from './lowercase';
 export * from './multiple';
 export * from './negative';
+export * from './nfe-access-key';
 export * from './no';
 export * from './not';
 export * from './not-empty';
