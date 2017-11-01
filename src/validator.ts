@@ -1,510 +1,156 @@
-/* tslint:disable max-file-line-count */
 import * as rules from './rules';
-
+import { AllOf } from './rules/all-of';
 import { Validatable } from './validatable';
 
-export class Validator extends rules.AllOf {
-
-    /**
-     * All Of.
-     */
-    public allOf(...args: Validatable[]): rules.AllOf {
-        return new rules.AllOf(...args);
-    }
-
-    /**
-     * Always Invalid.
-     */
-    public alwaysInvalid(): this {
-        return this.addRule(new rules.AlwaysInvalid());
-    }
-
-    /**
-     * Always Valid.
-     */
-    public alwaysValid(): this {
-        return this.addRule(new rules.AlwaysValid());
-    }
-
-    /**
-     * Any Of.
-     */
-    public anyOf(...args: Validatable[]): this {
-        return this.addRule(new rules.AnyOf(...args));
-    }
-
-    /**
-     * Array Instance.
-     */
-    public arrayInstance(): this {
-        return this.addRule(new rules.ArrayInstance());
-    }
-
-    /**
-     * Array Type.
-     */
-    public arrayType(): this {
-        return this.addRule(new rules.ArrayType());
-    }
-
-    /**
-     * Array Val.
-     */
-    public arrayVal(): this {
-        return this.addRule(new rules.ArrayVal());
-    }
-
-    /**
-     * Boolean Instance.
-     */
-    public booleanInstance(): this {
-        return this.addRule(new rules.BooleanInstance());
-    }
-
-    /**
-     * Boolean Type.
-     */
-    public booleanType(): this {
-        return this.addRule(new rules.BooleanType());
-    }
-
-    /**
-     * Boolean Val.
-     */
-    public booleanVal(): this {
-        return this.addRule(new rules.BooleanVal());
-    }
-
-    /**
-     * Cnh.
-     */
-    public cnh(): this {
-        return this.addRule(new rules.Cnh());
-    }
-
-    /**
-     * Cnpj.
-     */
-    public cnpj(): this {
-        return this.addRule(new rules.Cnpj());
-    }
-
-    /**
-     * Consonant.
-     */
-    public consonant(additionalChars?: string): this {
-        return this.addRule(new rules.Consonant(additionalChars));
-    }
-
-    /**
-     * Contains.
-     */
-    public contains(value?: any): this {
-        return this.addRule(new rules.Contains(value));
-    }
-
-    /**
-     * Cpf.
-     */
-    public cpf(): this {
-        return this.addRule(new rules.Cpf());
-    }
-
-    /**
-     * Empty.
-     */
-    public empty(): this {
-        return this.addRule(new rules.Empty());
-    }
-
-    /**
-     * Even.
-     */
-    public even(): this {
-        return this.addRule(new rules.Even());
-    }
-
-    /**
-     * False Val.
-     */
-    public falseVal(): this {
-        return this.addRule(new rules.FalseVal());
-    }
-
-    /**
-     * Float Type.
-     */
-    public floatType(): this {
-        return this.addRule(new rules.FloatType());
-    }
-
-    /**
-     * Float Val.
-     */
-    public floatVal(): this {
-        return this.addRule(new rules.FloatVal());
-    }
-
-    /**
-     * Function Instance.
-     */
-    public functionInstance(): this {
-        return this.addRule(new rules.FunctionInstance());
-    }
-
-    /**
-     * Function Type.
-     */
-    public functionType(): this {
-        return this.addRule(new rules.FunctionType());
-    }
-
-    /**
-     * In.
-     */
-    public in(searcher?: any): this {
-        return this.addRule(new rules.In(searcher));
-    }
-
-    /**
-     * Instance Of.
-     */
-    public instanceOf(instanceName: any): this {
-        return this.addRule(new rules.InstanceOf(instanceName));
-    }
-
-    /**
-     * Int Type.
-     */
-    public intType(): this {
-        return this.addRule(new rules.IntType());
-    }
-
-    /**
-     * Int Val.
-     */
-    public intVal(): this {
-        return this.addRule(new rules.IntVal());
-    }
-
-    /**
-     * Json.
-     */
-    public json(): this {
-        return this.addRule(new rules.Json());
-    }
-
-    /**
-     * Lowercase.
-     */
-    public lowercase(): this {
-        return this.addRule(new rules.Lowercase());
-    }
-
-    /**
-     * Multiple.
-     */
-    public multiple(multipleOf: number): this {
-        return this.addRule(new rules.Multiple(multipleOf));
-    }
-
-    /**
-     * Negative.
-     */
-    public negative(): this {
-        return this.addRule(new rules.Negative());
-    }
-
-    /**
-     * No.
-     */
-    public no(): this {
-        return this.addRule(new rules.No());
-    }
-
-    /**
-     * Not.
-     */
-    public not(rule: Validatable): this {
-        return this.addRule(new rules.Not(rule));
-    }
-
-    /**
-     * Null Type.
-     */
-    public nullType(): this {
-        return this.addRule(new rules.NullType());
-    }
-
-    /**
-     * Number Instance.
-     */
-    public numberInstance(): this {
-        return this.addRule(new rules.NumberInstance());
-    }
-
-    /**
-     * Number Type.
-     */
-    public numberType(): this {
-        return this.addRule(new rules.NumberType());
-    }
-
-    /**
-     * Number Val.
-     */
-    public numberVal(): this {
-        return this.addRule(new rules.NumberVal());
-    }
-
-    /**
-     * Object Instance.
-     */
-    public objectInstance(): this {
-        return this.addRule(new rules.ObjectInstance());
-    }
-
-    /**
-     * Object Type Strict.
-     */
-    public objectTypeStrict(): this {
-        return this.addRule(new rules.ObjectTypeStrict());
-    }
-
-    /**
-     * Object Type.
-     */
-    public objectType(): this {
-        return this.addRule(new rules.ObjectType());
-    }
-
-    /**
-     * Perfect Square.
-     */
-    public perfectSquare(): this {
-        return this.addRule(new rules.PerfectSquare());
-    }
-
-    /**
-     * Pesel.
-     */
-    public pesel(): this {
-        return this.addRule(new rules.Pesel());
-    }
-
-    /**
-     * Phone.
-     */
-    public phone(): this {
-        return this.addRule(new rules.Phone());
-    }
-
-    /**
-     * Pis.
-     */
-    public pis(): this {
-        return this.addRule(new rules.Pis());
-    }
-
-    /**
-     * Positive.
-     */
-    public positive(): this {
-        return this.addRule(new rules.Positive());
-    }
-
-    /**
-     * Prime Number.
-     */
-    public primeNumber(): this {
-        return this.addRule(new rules.PrimeNumber());
-    }
-
-    /**
-     * Prnt.
-     */
-    public prnt(): this {
-        return this.addRule(new rules.Prnt());
-    }
-
-    /**
-     * Punct.
-     */
-    public punct(): this {
-        return this.addRule(new rules.Punct());
-    }
-
-    /**
-     * Regex Instance.
-     */
-    public regexInstance(): this {
-        return this.addRule(new rules.RegexInstance());
-    }
-
-    /**
-     * Regex Type.
-     */
-    public regexType(): this {
-        return this.addRule(new rules.RegexType());
-    }
-
-    /**
-     * Regex Val.
-     */
-    public regexVal(): this {
-        return this.addRule(new rules.RegexVal());
-    }
-
-    /**
-     * Regex.
-     */
-    public regex(pattern: string | RegExp): this {
-        return this.addRule(new rules.Regex(pattern));
-    }
-
-    /**
-     * Required.
-     */
-    public required(): this {
-        return this.addRule(new rules.Required());
-    }
-
-    /**
-     * Roman.
-     */
-    public roman(): this {
-        return this.addRule(new rules.Roman());
-    }
-
-    /**
-     * Scalar.
-     */
-    public scalar(): this {
-        return this.addRule(new rules.Scalar());
-    }
-
-    /**
-     * Slug.
-     */
-    public slug(): this {
-        return this.addRule(new rules.Slug());
-    }
-
-    /**
-     * Sorted.
-     */
-    public sorted(fn?: Function | null, ascending: boolean = true): this {
-        return this.addRule(new rules.Sorted(fn, ascending));
-    }
-
-    /**
-     * String Instance.
-     */
-    public stringInstance(): this {
-        return this.addRule(new rules.StringInstance());
-    }
-
-    /**
-     * String Type.
-     */
-    public stringType(): this {
-        return this.addRule(new rules.StringType());
-    }
-
-    /**
-     * String Val.
-     */
-    public stringVal(): this {
-        return this.addRule(new rules.StringVal());
-    }
-
-    /**
-     * Symbolic Link.
-     */
-    public symbolicLink(): this {
-        return this.addRule(new rules.SymbolicLink());
-    }
-
-    /**
-     * Tld.
-     */
-    public tld(): this {
-        return this.addRule(new rules.Tld());
-    }
-
-    /**
-     * True Val.
-     */
-    public trueVal(): this {
-        return this.addRule(new rules.TrueVal());
-    }
-
-    /**
-     * Type Of.
-     */
-    public typeOf(pattern: string | RegExp): this {
-        return this.addRule(new rules.TypeOf(pattern));
-    }
-
-    /**
-     * Unique.
-     */
-    public unique(): this {
-        return this.addRule(new rules.Unique());
-    }
-
-    /**
-     * Uppercase.
-     */
-    public uppercase(): this {
-        return this.addRule(new rules.Uppercase());
-    }
-
-    /**
-     * Url.
-     */
-    public url(): this {
-        return this.addRule(new rules.Url());
-    }
-
-    /**
-     * Uuid.
-     */
-    public uuid(): this {
-        return this.addRule(new rules.Uuid());
-    }
-
-    /**
-     * Version.
-     */
-    public version(): this {
-        return this.addRule(new rules.Version());
-    }
-
-    /**
-     * Vowel.
-     */
-    public vowel(additionalChars?: string): this {
-        return this.addRule(new rules.Vowel(additionalChars));
-    }
-
-    /**
-     * When.
-     */
-    public when(whenRule: Validatable, thenRule: Validatable, elseRule?: Validatable): this {
-        return this.addRule(new rules.When(whenRule, thenRule, elseRule));
-    }
-
-    /**
-     * Yes.
-     */
-    public yes(): this {
-        return this.addRule(new rules.Yes());
-    }
+export class Validator extends AllOf {
+
+    /* tslint:disable completed-docs max-line-length */
+    public static allOf = (...args: Validatable[]): AllOf => new AllOf(...args);
+    public static alwaysInvalid = (): Validator => new Validator(new rules.AlwaysInvalid());
+    public static alwaysValid = (): Validator => new Validator(new rules.AlwaysValid());
+    public static anyOf = (...args: Validatable[]): Validator => new Validator(new rules.AnyOf(...args));
+    public static arrayInstance = (): Validator => new Validator(new rules.ArrayInstance());
+    public static arrayType = (): Validator => new Validator(new rules.ArrayType());
+    public static arrayVal = (): Validator => new Validator(new rules.ArrayVal());
+    public static booleanInstance = (): Validator => new Validator(new rules.BooleanInstance());
+    public static booleanType = (): Validator => new Validator(new rules.BooleanType());
+    public static booleanVal = (): Validator => new Validator(new rules.BooleanVal());
+    public static cnh = (): Validator => new Validator(new rules.Cnh());
+    public static cnpj = (): Validator => new Validator(new rules.Cnpj());
+    public static consonant = (additionalChars?: string): Validator => new Validator(new rules.Consonant(additionalChars));
+    public static contains = (value?: any): Validator => new Validator(new rules.Contains(value));
+    public static cpf = (): Validator => new Validator(new rules.Cpf());
+    public static empty = (): Validator => new Validator(new rules.Empty());
+    public static even = (): Validator => new Validator(new rules.Even());
+    public static falseVal = (): Validator => new Validator(new rules.FalseVal());
+    public static floatType = (): Validator => new Validator(new rules.FloatType());
+    public static floatVal = (): Validator => new Validator(new rules.FloatVal());
+    public static functionInstance = (): Validator => new Validator(new rules.FunctionInstance());
+    public static functionType = (): Validator => new Validator(new rules.FunctionType());
+    public static in = (searcher?: any): Validator => new Validator(new rules.In(searcher));
+    public static instanceOf = (instanceName: any): Validator => new Validator(new rules.InstanceOf(instanceName));
+    public static intType = (): Validator => new Validator(new rules.IntType());
+    public static intVal = (): Validator => new Validator(new rules.IntVal());
+    public static json = (): Validator => new Validator(new rules.Json());
+    public static lowercase = (): Validator => new Validator(new rules.Lowercase());
+    public static multiple = (multipleOf: number): Validator => new Validator(new rules.Multiple(multipleOf));
+    public static negative = (): Validator => new Validator(new rules.Negative());
+    public static no = (): Validator => new Validator(new rules.No());
+    public static not = (rule: Validatable): Validator => new Validator(new rules.Not(rule));
+    public static nullType = (): Validator => new Validator(new rules.NullType());
+    public static numberInstance = (): Validator => new Validator(new rules.NumberInstance());
+    public static numberType = (): Validator => new Validator(new rules.NumberType());
+    public static numberVal = (): Validator => new Validator(new rules.NumberVal());
+    public static objectInstance = (): Validator => new Validator(new rules.ObjectInstance());
+    public static objectTypeStrict = (): Validator => new Validator(new rules.ObjectTypeStrict());
+    public static objectType = (): Validator => new Validator(new rules.ObjectType());
+    public static perfectSquare = (): Validator => new Validator(new rules.PerfectSquare());
+    public static pesel = (): Validator => new Validator(new rules.Pesel());
+    public static phone = (): Validator => new Validator(new rules.Phone());
+    public static pis = (): Validator => new Validator(new rules.Pis());
+    public static positive = (): Validator => new Validator(new rules.Positive());
+    public static primeNumber = (): Validator => new Validator(new rules.PrimeNumber());
+    public static prnt = (): Validator => new Validator(new rules.Prnt());
+    public static punct = (): Validator => new Validator(new rules.Punct());
+    public static regexInstance = (): Validator => new Validator(new rules.RegexInstance());
+    public static regexType = (): Validator => new Validator(new rules.RegexType());
+    public static regexVal = (): Validator => new Validator(new rules.RegexVal());
+    public static regex = (pattern: string | RegExp): Validator => new Validator(new rules.Regex(pattern));
+    public static required = (): Validator => new Validator(new rules.Required());
+    public static roman = (): Validator => new Validator(new rules.Roman());
+    public static scalar = (): Validator => new Validator(new rules.Scalar());
+    public static slug = (): Validator => new Validator(new rules.Slug());
+    public static sorted = (fn?: Function | null, ascending: boolean = true): Validator => new Validator(new rules.Sorted(fn, ascending));
+    public static stringInstance = (): Validator => new Validator(new rules.StringInstance());
+    public static stringType = (): Validator => new Validator(new rules.StringType());
+    public static stringVal = (): Validator => new Validator(new rules.StringVal());
+    public static symbolicLink = (): Validator => new Validator(new rules.SymbolicLink());
+    public static tld = (): Validator => new Validator(new rules.Tld());
+    public static trueVal = (): Validator => new Validator(new rules.TrueVal());
+    public static typeOf = (pattern: string | RegExp): Validator => new Validator(new rules.TypeOf(pattern));
+    public static unique = (): Validator => new Validator(new rules.Unique());
+    public static uppercase = (): Validator => new Validator(new rules.Uppercase());
+    public static url = (): Validator => new Validator(new rules.Url());
+    public static uuid = (): Validator => new Validator(new rules.Uuid());
+    public static version = (): Validator => new Validator(new rules.Version());
+    public static vowel = (additionalChars?: string): Validator => new Validator(new rules.Vowel(additionalChars));
+    public static when = (whenRule: Validatable, thenRule: Validatable, elseRule?: Validatable): Validator => new Validator(new rules.When(whenRule, thenRule, elseRule));
+    public static yes = (): Validator => new Validator(new rules.Yes());
+
+    public allOf = (...args: Validatable[]): this => this.addRule(new AllOf(...args));
+    public alwaysInvalid = (): this => this.addRule(new rules.AlwaysInvalid());
+    public alwaysValid = (): this => this.addRule(new rules.AlwaysValid());
+    public anyOf = (...args: Validatable[]): this => this.addRule(new rules.AnyOf(...args));
+    public arrayInstance = (): this => this.addRule(new rules.ArrayInstance());
+    public arrayType = (): this => this.addRule(new rules.ArrayType());
+    public arrayVal = (): this => this.addRule(new rules.ArrayVal());
+    public booleanInstance = (): this => this.addRule(new rules.BooleanInstance());
+    public booleanType = (): this => this.addRule(new rules.BooleanType());
+    public booleanVal = (): this => this.addRule(new rules.BooleanVal());
+    public cnh = (): this => this.addRule(new rules.Cnh());
+    public cnpj = (): this => this.addRule(new rules.Cnpj());
+    public consonant = (additionalChars?: string): this => this.addRule(new rules.Consonant(additionalChars));
+    public contains = (value?: any): this => this.addRule(new rules.Contains(value));
+    public cpf = (): this => this.addRule(new rules.Cpf());
+    public empty = (): this => this.addRule(new rules.Empty());
+    public even = (): this => this.addRule(new rules.Even());
+    public falseVal = (): this => this.addRule(new rules.FalseVal());
+    public floatType = (): this => this.addRule(new rules.FloatType());
+    public floatVal = (): this => this.addRule(new rules.FloatVal());
+    public functionInstance = (): this => this.addRule(new rules.FunctionInstance());
+    public functionType = (): this => this.addRule(new rules.FunctionType());
+    public in = (searcher?: any): this => this.addRule(new rules.In(searcher));
+    public instanceOf = (instanceName: any): this => this.addRule(new rules.InstanceOf(instanceName));
+    public intType = (): this => this.addRule(new rules.IntType());
+    public intVal = (): this => this.addRule(new rules.IntVal());
+    public json = (): this => this.addRule(new rules.Json());
+    public lowercase = (): this => this.addRule(new rules.Lowercase());
+    public multiple = (multipleOf: number): this => this.addRule(new rules.Multiple(multipleOf));
+    public negative = (): this => this.addRule(new rules.Negative());
+    public no = (): this => this.addRule(new rules.No());
+    public not = (rule: Validatable): this => this.addRule(new rules.Not(rule));
+    public nullType = (): this => this.addRule(new rules.NullType());
+    public numberInstance = (): this => this.addRule(new rules.NumberInstance());
+    public numberType = (): this => this.addRule(new rules.NumberType());
+    public numberVal = (): this => this.addRule(new rules.NumberVal());
+    public objectInstance = (): this => this.addRule(new rules.ObjectInstance());
+    public objectTypeStrict = (): this => this.addRule(new rules.ObjectTypeStrict());
+    public objectType = (): this => this.addRule(new rules.ObjectType());
+    public perfectSquare = (): this => this.addRule(new rules.PerfectSquare());
+    public pesel = (): this => this.addRule(new rules.Pesel());
+    public phone = (): this => this.addRule(new rules.Phone());
+    public pis = (): this => this.addRule(new rules.Pis());
+    public positive = (): this => this.addRule(new rules.Positive());
+    public primeNumber = (): this => this.addRule(new rules.PrimeNumber());
+    public prnt = (): this => this.addRule(new rules.Prnt());
+    public punct = (): this => this.addRule(new rules.Punct());
+    public regexInstance = (): this => this.addRule(new rules.RegexInstance());
+    public regexType = (): this => this.addRule(new rules.RegexType());
+    public regexVal = (): this => this.addRule(new rules.RegexVal());
+    public regex = (pattern: string | RegExp): this => this.addRule(new rules.Regex(pattern));
+    public required = (): this => this.addRule(new rules.Required());
+    public roman = (): this => this.addRule(new rules.Roman());
+    public scalar = (): this => this.addRule(new rules.Scalar());
+    public slug = (): this => this.addRule(new rules.Slug());
+    public sorted = (fn?: Function | null, ascending: boolean = true): this => this.addRule(new rules.Sorted(fn, ascending));
+    public stringInstance = (): this => this.addRule(new rules.StringInstance());
+    public stringType = (): this => this.addRule(new rules.StringType());
+    public stringVal = (): this => this.addRule(new rules.StringVal());
+    public symbolicLink = (): this => this.addRule(new rules.SymbolicLink());
+    public tld = (): this => this.addRule(new rules.Tld());
+    public trueVal = (): this => this.addRule(new rules.TrueVal());
+    public typeOf = (pattern: string | RegExp): this => this.addRule(new rules.TypeOf(pattern));
+    public unique = (): this => this.addRule(new rules.Unique());
+    public uppercase = (): this => this.addRule(new rules.Uppercase());
+    public url = (): this => this.addRule(new rules.Url());
+    public uuid = (): this => this.addRule(new rules.Uuid());
+    public version = (): this => this.addRule(new rules.Version());
+    public vowel = (additionalChars?: string): this => this.addRule(new rules.Vowel(additionalChars));
+    public when = (whenRule: Validatable, thenRule: Validatable, elseRule?: Validatable): this => this.addRule(new rules.When(whenRule, thenRule, elseRule));
+    public yes = (): this => this.addRule(new rules.Yes());
+    /* tslint:enable completed-docs max-line-length */
 }
 
-const validator: Validator = new Validator();
-
 export * from './rules';
-export { validator };
-export default validator;
+export { Validator as V };
+export default Validator;
