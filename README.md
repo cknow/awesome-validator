@@ -109,6 +109,7 @@ The library can be loaded either as a standalone script, or through an [AMD](htt
 - [Negative](docs/negative.md)
 - [NfeAccessKey](docs/nfe-access-key.md)
 - [No](docs/no.md)
+- [NoneOf](docs/none-of.md)
 - [Not](docs/not.md)
 - [NotEmpty](docs/not-empty.md)
 - [NullType](docs/null-type.md)

@@ -30,6 +30,7 @@ export * from './multiple';
 export * from './negative';
 export * from './nfe-access-key';
 export * from './no';
+export * from './none-of';
 export * from './not';
 export * from './not-empty';
 export * from './null-type';

@@ -47,6 +47,7 @@ describe('Validator', () => {
         assert.instanceOf(V.negative(), V);
         assert.instanceOf(V.nfeAccessKey(), V);
         assert.instanceOf(V.no(), V);
+        assert.instanceOf(V.noneOf(), V);
         assert.instanceOf(V.not(V.alwaysInvalid()), V);
         assert.instanceOf(V.notEmpty(), V);
         assert.instanceOf(V.nullType(), V);
@@ -125,6 +126,7 @@ describe('Validator', () => {
         assert.instanceOf(v.negative(), V);
         assert.instanceOf(v.nfeAccessKey(), V);
         assert.instanceOf(v.no(), V);
+        assert.instanceOf(v.noneOf(), V);
         assert.instanceOf(v.not(v.alwaysInvalid()), V);
         assert.instanceOf(v.notEmpty(), V);
         assert.instanceOf(v.nullType(), V);
