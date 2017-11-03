@@ -29,6 +29,7 @@ export * from './lowercase';
 export * from './multiple';
 export * from './negative';
 export * from './nfe-access-key';
+export * from './no-whitespace';
 export * from './no';
 export * from './none-of';
 export * from './not';

@@ -36,6 +36,7 @@ export class Validator extends AllOf {
     public static multiple = (multipleOf: number): Validator => new Validator(new rules.Multiple(multipleOf));
     public static negative = (): Validator => new Validator(new rules.Negative());
     public static nfeAccessKey  = (): Validator => new Validator(new rules.NfeAccessKey());
+    public static noWhitespace  = (): Validator => new Validator(new rules.NoWhitespace());
     public static no = (): Validator => new Validator(new rules.No());
     public static noneOf = (...args: Validatable[]): Validator => new Validator(new rules.NoneOf(...args));
     public static not = (rule: Validatable): Validator => new Validator(new rules.Not(rule));
@@ -110,6 +111,7 @@ export class Validator extends AllOf {
     public multiple = (multipleOf: number): this => this.addRule(new rules.Multiple(multipleOf));
     public negative = (): this => this.addRule(new rules.Negative());
     public nfeAccessKey  = (): this => this.addRule(new rules.NfeAccessKey());
+    public noWhitespace  = (): this => this.addRule(new rules.NoWhitespace());
     public no = (): this => this.addRule(new rules.No());
     public noneOf = (...args: Validatable[]): this => this.addRule(new rules.NoneOf(...args));
     public not = (rule: Validatable): this => this.addRule(new rules.Not(rule));

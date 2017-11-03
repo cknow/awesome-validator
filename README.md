@@ -108,6 +108,7 @@ The library can be loaded either as a standalone script, or through an [AMD](htt
 - [Multiple](docs/multiple.md)
 - [Negative](docs/negative.md)
 - [NfeAccessKey](docs/nfe-access-key.md)
+- [NoWhitespace](docs/no-whitespace.md)
 - [No](docs/no.md)
 - [NoneOf](docs/none-of.md)
 - [Not](docs/not.md)
