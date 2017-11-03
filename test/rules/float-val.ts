@@ -3,7 +3,7 @@ import { assert } from 'chai';
 import { AbstractRule } from '../../src/rules/abstract-rule';
 import { FloatVal } from '../../src/rules/float-val';
 
-describe('Float Val', () => {
+describe('FloatVal', () => {
 
     let floatVal: FloatVal;
 

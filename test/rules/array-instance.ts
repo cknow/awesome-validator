@@ -3,7 +3,7 @@ import { assert } from 'chai';
 import { AbstractRule } from '../../src/rules/abstract-rule';
 import { ArrayInstance } from '../../src/rules/array-instance';
 
-describe('Array Instance', () => {
+describe('ArrayInstance', () => {
 
     let arrayInstance: ArrayInstance;
 

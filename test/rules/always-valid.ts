@@ -3,7 +3,7 @@ import { assert } from 'chai';
 import { AbstractRule } from '../../src/rules/abstract-rule';
 import { AlwaysValid } from '../../src/rules/always-valid';
 
-describe('Always Valid', () => {
+describe('AlwaysValid', () => {
 
     let alwaysValid: AlwaysValid;
 

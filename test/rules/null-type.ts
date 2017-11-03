@@ -3,7 +3,7 @@ import { assert } from 'chai';
 import { AbstractRule } from '../../src/rules/abstract-rule';
 import { NullType } from '../../src/rules/null-type';
 
-describe('Null Type', () => {
+describe('NullType', () => {
 
     let nullType: NullType;
 

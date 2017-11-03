@@ -3,7 +3,7 @@ import { assert } from 'chai';
 import { AbstractRule } from '../../src/rules/abstract-rule';
 import { Tld } from '../../src/rules/tld';
 
-describe('Yes', () => {
+describe('Tld', () => {
 
     let tld: Tld;
 

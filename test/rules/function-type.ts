@@ -3,7 +3,7 @@ import { assert } from 'chai';
 import { AbstractRule } from '../../src/rules/abstract-rule';
 import { FunctionType } from '../../src/rules/function-type';
 
-describe('Function Type', () => {
+describe('FunctionType', () => {
 
     let functionType: FunctionType;
 

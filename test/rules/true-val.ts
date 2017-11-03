@@ -3,7 +3,7 @@ import { assert } from 'chai';
 import { AbstractRule } from '../../src/rules/abstract-rule';
 import { TrueVal } from '../../src/rules/true-val';
 
-describe('True Val', () => {
+describe('TrueVal', () => {
 
     let trueVal: TrueVal;
 

@@ -3,7 +3,7 @@ import { assert } from 'chai';
 import { AbstractRule } from '../../src/rules/abstract-rule';
 import { ArrayVal } from '../../src/rules/array-val';
 
-describe('Array Val', () => {
+describe('ArrayVal', () => {
 
     let arrayVal: ArrayVal;
 

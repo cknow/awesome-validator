@@ -3,7 +3,7 @@ import { assert } from 'chai';
 import { AbstractRule } from '../../src/rules/abstract-rule';
 import { NotEmpty } from '../../src/rules/not-empty';
 
-describe('Not Empty', () => {
+describe('NotEmpty', () => {
 
     let notEmpty: NotEmpty;
 

@@ -3,7 +3,7 @@ import { assert } from 'chai';
 import { AbstractRule } from '../../src/rules/abstract-rule';
 import { IntType } from '../../src/rules/int-type';
 
-describe('Int Type', () => {
+describe('IntType', () => {
 
     let intType: IntType;
 

@@ -3,7 +3,7 @@ import { assert } from 'chai';
 import { AbstractRule } from '../../src/rules/abstract-rule';
 import { RegexVal } from '../../src/rules/regex-val';
 
-describe('Regex Val', () => {
+describe('RegexVal', () => {
 
     let regexVal: RegexVal;
 

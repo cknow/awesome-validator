@@ -3,7 +3,7 @@ import { assert } from 'chai';
 import { AbstractRule } from '../../src/rules/abstract-rule';
 import { NfeAccessKey } from '../../src/rules/nfe-access-key';
 
-describe('Nfe Access Key', () => {
+describe('NfeAccessKey', () => {
 
     let nfeAccessKey: NfeAccessKey;
 

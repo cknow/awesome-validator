@@ -3,7 +3,7 @@ import { assert } from 'chai';
 import { AbstractRule } from '../../src/rules/abstract-rule';
 import { SymbolicLink } from '../../src/rules/symbolic-link';
 
-describe('Symbolic Link', () => {
+describe('SymbolicLink', () => {
 
     let symbolicLink: SymbolicLink;
 

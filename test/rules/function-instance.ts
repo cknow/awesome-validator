@@ -3,7 +3,7 @@ import { assert } from 'chai';
 import { AbstractRule } from '../../src/rules/abstract-rule';
 import { FunctionInstance } from '../../src/rules/function-instance';
 
-describe('Function Instance', () => {
+describe('FunctionInstance', () => {
 
     let functionInstance: FunctionInstance;
 

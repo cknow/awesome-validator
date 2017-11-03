@@ -3,7 +3,7 @@ import { assert } from 'chai';
 import { AbstractRule } from '../../src/rules/abstract-rule';
 import { StringInstance } from '../../src/rules/string-instance';
 
-describe('String Instance', () => {
+describe('StringInstance', () => {
 
     let stringInstance: StringInstance;
 

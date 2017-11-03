@@ -3,7 +3,7 @@ import { assert } from 'chai';
 import { AbstractRule } from '../../src/rules/abstract-rule';
 import { BooleanType } from '../../src/rules/boolean-type';
 
-describe('Boolean Type', () => {
+describe('BooleanType', () => {
 
     let booleanType: BooleanType;
 

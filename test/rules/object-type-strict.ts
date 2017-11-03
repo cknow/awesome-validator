@@ -3,7 +3,7 @@ import { assert } from 'chai';
 import { AbstractRule } from '../../src/rules/abstract-rule';
 import { ObjectTypeStrict } from '../../src/rules/object-type-strict';
 
-describe('Object Type Strict', () => {
+describe('ObjectTypeStrict', () => {
 
     let objectTypeStrict: ObjectTypeStrict;
 

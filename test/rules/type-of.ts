@@ -3,7 +3,7 @@ import { assert } from 'chai';
 import { AbstractRule } from '../../src/rules/abstract-rule';
 import { TypeOf } from '../../src/rules/type-of';
 
-describe('Type Of', () => {
+describe('TypeOf', () => {
 
     it('is rule', () => {
         assert.instanceOf(new TypeOf(), AbstractRule);
