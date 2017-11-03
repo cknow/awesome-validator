@@ -4,7 +4,7 @@ import { AbstractCalculation } from './abstract-calculation';
 export class Pesel extends AbstractCalculation {
 
     /**
-     * Validate Calculation
+     * Validate Calculation.
      */
     protected validateCalculation(input: string): boolean {
         const weights: number[] = [1, 3, 7, 9, 1, 3, 7, 9, 1, 3];

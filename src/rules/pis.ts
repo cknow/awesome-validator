@@ -3,7 +3,7 @@ import { AbstractCalculation } from './abstract-calculation';
 export class Pis extends AbstractCalculation {
 
     /**
-     * Validate Calculation
+     * Validate Calculation.
      */
     protected validateCalculation(input: string): boolean {
         const multipliers: number[] = [3, 2, 9, 8, 7, 6, 5, 4, 3, 2];

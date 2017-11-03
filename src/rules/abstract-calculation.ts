@@ -18,14 +18,14 @@ export abstract class AbstractCalculation extends AbstractRule {
     }
 
     /**
-     * Get Length
+     * Get Length.
      */
     protected getLength(): number {
         return 11;
     }
 
     /**
-     * Validate Calculation
+     * Validate Calculation.
      */
     protected abstract validateCalculation(input: string): boolean;
 }

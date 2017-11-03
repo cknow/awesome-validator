@@ -3,7 +3,7 @@ import { AbstractCalculation } from './abstract-calculation';
 export class Cnh extends AbstractCalculation {
 
     /**
-     * Validate Calculation
+     * Validate Calculation.
      */
     protected validateCalculation(input: string): boolean {
         let i: number;

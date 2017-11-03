@@ -3,14 +3,14 @@ import { AbstractCalculation } from './abstract-calculation';
 export class NfeAccessKey extends AbstractCalculation {
 
     /**
-     * Get Length
+     * Get Length.
      */
     protected getLength(): number {
         return 44;
     }
 
     /**
-     * Validate Calculation
+     * Validate Calculation.
      */
     protected validateCalculation(input: string): boolean {
         const w: number[] = [];

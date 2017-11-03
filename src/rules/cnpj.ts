@@ -3,14 +3,14 @@ import { AbstractCalculation } from './abstract-calculation';
 export class Cnpj extends AbstractCalculation {
 
     /**
-     * Get Length
+     * Get Length.
      */
     protected getLength(): number {
         return 14;
     }
 
     /**
-     * Validate Calculation
+     * Validate Calculation.
      */
     protected validateCalculation(input: string): boolean {
         const b: number[] = [6, 5, 4, 3, 2, 9, 8, 7, 6, 5, 4, 3, 2];
