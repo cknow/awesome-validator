@@ -33,6 +33,7 @@ describe('IntType', () => {
         assert.isTrue(intType.validate(0.0));
         assert.isTrue(intType.validate(-1.0));
         assert.isTrue(intType.validate(1.0));
+        assert.isTrue(intType.validate(1e12));
     });
 
     it('values is not valid', () => {
@@ -55,6 +56,7 @@ describe('IntType', () => {
         assert.isFalse(intType.validate('0'));
         assert.isFalse(intType.validate(' '));
         assert.isFalse(intType.validate('   '));
+        assert.isFalse(intType.validate('19347e12'));
         assert.isFalse(intType.validate(-0.1));
         assert.isFalse(intType.validate(0.1));
         assert.isFalse(intType.validate(-1.1));
