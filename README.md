@@ -151,4 +151,5 @@ The library can be loaded either as a standalone script, or through an [AMD](htt
 - [Version](docs/version.md)
 - [Vowel](docs/vowel.md)
 - [When](docs/when.md)
+- [Xdigit](docs/xdigit.md)
 - [Yes](docs/yes.md)

@@ -91,6 +91,7 @@ describe('Validator', () => {
         assert.instanceOf(V.vowel(), V);
         assert.instanceOf(V.when(V.alwaysValid(), V.alwaysValid()), V);
         assert.instanceOf(V.when(V.alwaysInvalid(), V.alwaysValid(), V.alwaysValid()), V);
+        assert.instanceOf(V.xdigit(), V);
         assert.instanceOf(V.yes(), V);
     });
 
@@ -172,6 +173,7 @@ describe('Validator', () => {
         assert.instanceOf(v.vowel(), V);
         assert.instanceOf(v.when(v.alwaysValid(), v.alwaysValid()), V);
         assert.instanceOf(v.when(v.alwaysInvalid(), v.alwaysValid(), v.alwaysValid()), V);
+        assert.instanceOf(v.xdigit(), V);
         assert.instanceOf(v.yes(), V);
     });
 

@@ -72,4 +72,5 @@ export * from './uuid';
 export * from './version';
 export * from './vowel';
 export * from './when';
+export * from './xdigit';
 export * from './yes';

@@ -79,6 +79,7 @@ export class Validator extends AllOf {
     public static version = (): Validator => new Validator(new rules.Version());
     public static vowel = (additionalChars?: string): Validator => new Validator(new rules.Vowel(additionalChars));
     public static when = (whenRule: Validatable, thenRule: Validatable, elseRule?: Validatable): Validator => new Validator(new rules.When(whenRule, thenRule, elseRule));
+    public static xdigit = (): Validator => new Validator(new rules.Xdigit());
     public static yes = (): Validator => new Validator(new rules.Yes());
 
     public allOf = (...args: Validatable[]): this => this.addRule(new AllOf(...args));
@@ -155,6 +156,7 @@ export class Validator extends AllOf {
     public version = (): this => this.addRule(new rules.Version());
     public vowel = (additionalChars?: string): this => this.addRule(new rules.Vowel(additionalChars));
     public when = (whenRule: Validatable, thenRule: Validatable, elseRule?: Validatable): this => this.addRule(new rules.When(whenRule, thenRule, elseRule));
+    public xdigit = (): this => this.addRule(new rules.Xdigit());
     public yes = (): this => this.addRule(new rules.Yes());
     /* tslint:enable completed-docs max-line-length */
 }
