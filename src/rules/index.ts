@@ -57,6 +57,7 @@ export * from './roman';
 export * from './scalar';
 export * from './slug';
 export * from './sorted';
+export * from './space';
 export * from './string-instance';
 export * from './string-type';
 export * from './string-val';

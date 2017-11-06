@@ -75,6 +75,7 @@ describe('Validator', () => {
         assert.instanceOf(V.slug(), V);
         assert.instanceOf(V.sorted(), V);
         assert.instanceOf(V.sorted(null, false), V);
+        assert.instanceOf(V.space(), V);
         assert.instanceOf(V.stringInstance(), V);
         assert.instanceOf(V.stringType(), V);
         assert.instanceOf(V.stringVal(), V);
@@ -155,6 +156,7 @@ describe('Validator', () => {
         assert.instanceOf(v.slug(), V);
         assert.instanceOf(v.sorted(), V);
         assert.instanceOf(v.sorted(null, false), V);
+        assert.instanceOf(v.space(), V);
         assert.instanceOf(v.stringInstance(), V);
         assert.instanceOf(v.stringType(), V);
         assert.instanceOf(v.stringVal(), V);

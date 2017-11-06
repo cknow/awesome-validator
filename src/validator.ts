@@ -64,6 +64,7 @@ export class Validator extends AllOf {
     public static scalar = (): Validator => new Validator(new rules.Scalar());
     public static slug = (): Validator => new Validator(new rules.Slug());
     public static sorted = (fn?: Function | null, ascending: boolean = true): Validator => new Validator(new rules.Sorted(fn, ascending));
+    public static space = (): Validator => new Validator(new rules.Space());
     public static stringInstance = (): Validator => new Validator(new rules.StringInstance());
     public static stringType = (): Validator => new Validator(new rules.StringType());
     public static stringVal = (): Validator => new Validator(new rules.StringVal());
@@ -139,6 +140,7 @@ export class Validator extends AllOf {
     public scalar = (): this => this.addRule(new rules.Scalar());
     public slug = (): this => this.addRule(new rules.Slug());
     public sorted = (fn?: Function | null, ascending: boolean = true): this => this.addRule(new rules.Sorted(fn, ascending));
+    public space = (): this => this.addRule(new rules.Space());
     public stringInstance = (): this => this.addRule(new rules.StringInstance());
     public stringType = (): this => this.addRule(new rules.StringType());
     public stringVal = (): this => this.addRule(new rules.StringVal());
@@ -159,4 +161,5 @@ export class Validator extends AllOf {
 
 export * from './rules';
 export { Validator as V };
+export { Validator as validator };
 export default Validator;
