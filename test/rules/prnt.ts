@@ -36,6 +36,17 @@ describe('Prnt', () => {
         assert.isFalse(prnt.validate(undefined));
         assert.isFalse(prnt.validate(`foo${String.fromCharCode(7)}bar`));
         assert.isFalse(prnt.validate(`foo${String.fromCharCode(10)}bar`));
+        assert.isFalse(prnt.validate(Boolean()));
+        assert.isFalse(prnt.validate(Number()));
+        assert.isFalse(prnt.validate(String()));
+        assert.isFalse(prnt.validate(null));
+        assert.isFalse(prnt.validate(undefined));
+        assert.isFalse(prnt.validate([]));
+        assert.isFalse(prnt.validate({}));
+        assert.isFalse(prnt.validate(new Array('foo')));
+        assert.isFalse(prnt.validate(new Object({foo: 'bar'})));
+        class Foo {}
+        assert.isFalse(prnt.validate(new Foo()));
     });
 
 });
