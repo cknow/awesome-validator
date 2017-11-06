@@ -16,6 +16,8 @@ describe('Empty', () => {
     });
 
     it('values is valid', () => {
+        assert.isTrue(empty.validate('false'));
+        assert.isTrue(empty.validate('FALSE'));
         assert.isTrue(empty.validate(Boolean()));
         assert.isTrue(empty.validate(Number()));
         assert.isTrue(empty.validate(String()));

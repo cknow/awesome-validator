@@ -24,8 +24,14 @@ describe('FalseVal', () => {
         assert.isTrue(falseVal.validate('no'));
         assert.isTrue(falseVal.validate('n'));
         assert.isTrue(falseVal.validate(''));
+        assert.isTrue(falseVal.validate('FALSE'));
+        assert.isTrue(falseVal.validate('OFF'));
+        assert.isTrue(falseVal.validate('NO'));
+        assert.isTrue(falseVal.validate('N'));
+        assert.isTrue(falseVal.validate(''));
         assert.isTrue(falseVal.validate(String()));
         assert.isTrue(falseVal.validate(Number()));
+        assert.isTrue(falseVal.validate(Boolean()));
     });
 
     it('values is not valid', () => {

@@ -24,6 +24,11 @@ describe('TrueVal', () => {
         assert.isTrue(trueVal.validate('yes'));
         assert.isTrue(trueVal.validate('y'));
         assert.isTrue(trueVal.validate('s'));
+        assert.isTrue(trueVal.validate('TRUE'));
+        assert.isTrue(trueVal.validate('ON'));
+        assert.isTrue(trueVal.validate('YES'));
+        assert.isTrue(trueVal.validate('Y'));
+        assert.isTrue(trueVal.validate('S'));
     });
 
     it('values is not valid', () => {
@@ -34,6 +39,7 @@ describe('TrueVal', () => {
         assert.isFalse(trueVal.validate('off'));
         assert.isFalse(trueVal.validate('no'));
         assert.isFalse(trueVal.validate('n'));
+        assert.isFalse(trueVal.validate(Boolean()));
         assert.isFalse(trueVal.validate(String()));
         assert.isFalse(trueVal.validate(Number()));
         assert.isFalse(trueVal.validate(null));

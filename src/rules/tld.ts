@@ -1,11 +1,13 @@
-import { AbstractSearcher } from './abstract-searcher';
+import { AbstractRule } from './abstract-rule';
+import { In } from './in';
 
-export class Tld extends AbstractSearcher {
+export class Tld extends AbstractRule {
 
     /**
      * Validate.
      */
     public validate(input: any): boolean {
+
         /**
          * List extracted from http://data.iana.org/TLD/tlds-alpha-by-domain.txt
          * Version 2017101701, Last Updated Wed Oct 18 07:07:02 2017 UTC
@@ -1555,6 +1557,6 @@ export class Tld extends AbstractSearcher {
             'ZW'
         ];
 
-        return this.validateSearcher(searcher, String(input).toLocaleUpperCase());
+        return new In(searcher, false).validate(input);
     }
 }

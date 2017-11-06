@@ -30,6 +30,13 @@ describe('Tld', () => {
         assert.isFalse(tld.validate(1.0));
         assert.isFalse(tld.validate('wrongtld'));
         assert.isFalse(tld.validate(true));
+        assert.isFalse(tld.validate([]));
+        assert.isFalse(tld.validate({}));
+        assert.isFalse(tld.validate(new Array('foo')));
+        assert.isFalse(tld.validate(new Object({foo: 'bar'})));
+
+        class Foo {}
+        assert.isFalse(tld.validate(new Foo()));
     });
 
 });
