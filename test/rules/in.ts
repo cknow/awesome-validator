@@ -4,6 +4,12 @@ import { AbstractRule } from '../../src/rules/abstract-rule';
 import { In } from '../../src/rules/in';
 
 describe('In', () => {
+    class Foo {
+        /**
+         * bar
+         */
+        public bar: string = 'foobar';
+    }
 
     it('is rule', () => {
         assert.instanceOf(new In(), AbstractRule);
@@ -11,6 +17,8 @@ describe('In', () => {
 
     it('values is valid', () => {
         assert.isTrue(new In('foobar').validate('foo'));
+        assert.isTrue(new In('foobar').validate('FOO'));
+        assert.isTrue(new In('fooBAR').validate('bar'));
         assert.isTrue(new In(String('foobar')).validate('foo'));
         assert.isTrue(new In([1, 2, 3]).validate(1));
         assert.isTrue(new In(new Array('foo', 'bar', 'foobar')).validate('foo'));
@@ -20,6 +28,13 @@ describe('In', () => {
         assert.isTrue(new In(new Map().set('foo', 'bar')).validate('foo'));
         assert.isTrue(new In({foo: 'bar'}).validate('foo'));
         assert.isTrue(new In(Object({foo: 'bar'})).validate('foo'));
+        assert.isTrue(new In('Foo', false).validate('foo'));
+        assert.isTrue(new In('FOO', false, true).validate('FOO'));
+        assert.isTrue(new In(null).validate(null));
+
+        const foo: Foo = new Foo();
+        assert.isTrue(new In(foo).validate(foo));
+        assert.isTrue(new In(foo).validate('bar'));
     });
 
     it('values is not valid', () => {
@@ -34,6 +49,11 @@ describe('In', () => {
         assert.isFalse(new In({foo: 'bar'}).validate('bar'));
         assert.isFalse(new In(Object({foo: 'bar'})).validate('bar'));
         assert.isFalse(new In().validate(null));
+        assert.isFalse(new In('foobar', false).validate('foo'));
+        assert.isFalse(new In('FOO', false, true).validate('foo'));
+        assert.isFalse(new In().validate(null));
+        assert.isFalse(new In(new Foo()).validate(new Foo()));
+        assert.isFalse(new In(new Foo()).validate('foobar'));
     });
 
 });

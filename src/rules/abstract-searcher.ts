@@ -1,12 +1,16 @@
 import { AbstractRule } from './abstract-rule';
-import { StringType } from './string-type';
+import { Scalar } from './scalar';
 
 export abstract class AbstractSearcher extends AbstractRule {
 
     /**
      * Abstract searcher.
      */
-    public constructor(public readonly searcher?: any) {
+    public constructor(
+        public readonly searcher?: any,
+        public readonly contains: boolean = true,
+        public readonly identical: boolean = false
+    ) {
         super();
     }
 
@@ -14,11 +18,19 @@ export abstract class AbstractSearcher extends AbstractRule {
      * Validate searcher.
      */
     protected validateSearcher(searcher: any, input: any): boolean {
-        if (new StringType().validate(searcher)) {
-            return String(searcher).indexOf(input) !== - 1;
+        if (new Scalar().validate(searcher)) {
+            return String(searcher).search(
+                RegExp(this.contains ? `${input}` : `^${input}$`, this.identical ? undefined : 'i')
+            ) !== -1;
         }
 
         if (Array.isArray(searcher)) {
+            if (!this.identical && new Scalar().validate(input)) {
+                return searcher.findIndex(
+                    (item: any) => this.validateSearcher(item, input)
+                ) !== -1;
+            }
+
             return searcher.indexOf(input) !== -1;
         }
 
@@ -30,10 +42,10 @@ export abstract class AbstractSearcher extends AbstractRule {
             return searcher.has(input);
         }
 
-        if (searcher instanceof Object) {
+        if (searcher instanceof Object && /number|string|symbol/.test(typeof input)) {
             return searcher.hasOwnProperty(input);
         }
 
-        return false;
+        return searcher === input;
     }
 }

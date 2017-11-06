@@ -15,6 +15,8 @@ validator.in(new Map().set(1, 'bar')).validate(1);
 validator.in(new Map().set('foo', 'bar')).validate('foo');
 validator.in({foo: 'bar'}).validate('foo');
 validator.in(Object({foo: 'bar'})).validate('foo');
+validator.in('Foo', false).validate('foo');
+validator.in('FOO', false, true).validate('FOO');
 ```
 
 Invalid values:
@@ -31,4 +33,6 @@ validator.in(new Map().set('foo', 'bar')).validate('foobar');
 validator.in({foo: 'bar'}).validate('bar');
 validator.in(Object({foo: 'bar'})).validate('bar');
 validator.in().validate(null);
+validator.in('foobar', false).validate('foo');
+validator.in('FOO', false, true).validate('foo');
 ```

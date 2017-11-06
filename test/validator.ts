@@ -29,6 +29,8 @@ describe('Validator', () => {
         assert.instanceOf(V.cnpj(), V);
         assert.instanceOf(V.consonant(), V);
         assert.instanceOf(V.contains('foo'), V);
+        assert.instanceOf(V.contains('foo', false), V);
+        assert.instanceOf(V.contains('foo', false, true), V);
         assert.instanceOf(V.cpf(), V);
         assert.instanceOf(V.empty(), V);
         assert.instanceOf(V.even(), V);
@@ -38,6 +40,8 @@ describe('Validator', () => {
         assert.instanceOf(V.functionInstance(), V);
         assert.instanceOf(V.functionType(), V);
         assert.instanceOf(V.in([]), V);
+        assert.instanceOf(V.in([], false), V);
+        assert.instanceOf(V.in([], false, true), V);
         assert.instanceOf(V.instanceOf(Object), V);
         assert.instanceOf(V.intType(), V);
         assert.instanceOf(V.intVal(), V);
@@ -111,6 +115,8 @@ describe('Validator', () => {
         assert.instanceOf(v.cnpj(), V);
         assert.instanceOf(v.consonant(), V);
         assert.instanceOf(v.contains('foo'), V);
+        assert.instanceOf(v.contains('foo', false), V);
+        assert.instanceOf(v.contains('foo', false, true), V);
         assert.instanceOf(v.cpf(), V);
         assert.instanceOf(v.empty(), V);
         assert.instanceOf(v.even(), V);
@@ -120,6 +126,8 @@ describe('Validator', () => {
         assert.instanceOf(v.functionInstance(), V);
         assert.instanceOf(v.functionType(), V);
         assert.instanceOf(v.in([]), V);
+        assert.instanceOf(v.in([], false), V);
+        assert.instanceOf(v.in([], false, true), V);
         assert.instanceOf(v.instanceOf(Object), V);
         assert.instanceOf(v.intType(), V);
         assert.instanceOf(v.intVal(), V);

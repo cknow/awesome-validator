@@ -18,7 +18,7 @@ export class Validator extends AllOf {
     public static cnh = (): Validator => new Validator(new rules.Cnh());
     public static cnpj = (): Validator => new Validator(new rules.Cnpj());
     public static consonant = (additionalChars?: string): Validator => new Validator(new rules.Consonant(additionalChars));
-    public static contains = (value?: any): Validator => new Validator(new rules.Contains(value));
+    public static contains = (value?: any, contains: boolean = true, identical: boolean = false): Validator => new Validator(new rules.Contains(value, contains, identical));
     public static cpf = (): Validator => new Validator(new rules.Cpf());
     public static empty = (): Validator => new Validator(new rules.Empty());
     public static even = (): Validator => new Validator(new rules.Even());
@@ -27,7 +27,7 @@ export class Validator extends AllOf {
     public static floatVal = (): Validator => new Validator(new rules.FloatVal());
     public static functionInstance = (): Validator => new Validator(new rules.FunctionInstance());
     public static functionType = (): Validator => new Validator(new rules.FunctionType());
-    public static in = (searcher?: any): Validator => new Validator(new rules.In(searcher));
+    public static in = (searcher?: any, contains: boolean = true, identical: boolean = false): Validator => new Validator(new rules.In(searcher, contains, identical));
     public static instanceOf = (instanceName: any): Validator => new Validator(new rules.InstanceOf(instanceName));
     public static intType = (): Validator => new Validator(new rules.IntType());
     public static intVal = (): Validator => new Validator(new rules.IntVal());
@@ -95,7 +95,7 @@ export class Validator extends AllOf {
     public cnh = (): this => this.addRule(new rules.Cnh());
     public cnpj = (): this => this.addRule(new rules.Cnpj());
     public consonant = (additionalChars?: string): this => this.addRule(new rules.Consonant(additionalChars));
-    public contains = (value?: any): this => this.addRule(new rules.Contains(value));
+    public contains = (value?: any, contains: boolean = true, identical: boolean = false): this => this.addRule(new rules.Contains(value, contains, identical));
     public cpf = (): this => this.addRule(new rules.Cpf());
     public empty = (): this => this.addRule(new rules.Empty());
     public even = (): this => this.addRule(new rules.Even());
@@ -104,7 +104,7 @@ export class Validator extends AllOf {
     public floatVal = (): this => this.addRule(new rules.FloatVal());
     public functionInstance = (): this => this.addRule(new rules.FunctionInstance());
     public functionType = (): this => this.addRule(new rules.FunctionType());
-    public in = (searcher?: any): this => this.addRule(new rules.In(searcher));
+    public in = (searcher?: any, contains: boolean = true, identical: boolean = false): this => this.addRule(new rules.In(searcher, contains, identical));
     public instanceOf = (instanceName: any): this => this.addRule(new rules.InstanceOf(instanceName));
     public intType = (): this => this.addRule(new rules.IntType());
     public intVal = (): this => this.addRule(new rules.IntVal());

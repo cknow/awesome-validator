@@ -15,6 +15,8 @@ validator.contains(1).validate(new Map().set(1, 'bar'));
 validator.contains('foo').validate(new Map().set('foo', 'bar'));
 validator.contains('foo').validate({foo: 'bar'});
 validator.contains('foo').validate(Object({foo: 'bar'}));
+validator.contains('foo', false).validate('Foo');
+validator.contains('FOO', false, true).validate('FOO');
 ```
 
 Invalid values:
@@ -31,4 +33,6 @@ validator.contains('foobar').validate(new Map().set('foo', 'bar'));
 validator.contains('bar').validate({foo: 'bar'});
 validator.contains('bar').validate(Object({foo: 'bar'}));
 validator.contains().validate(null);
+validator.contains('foo', false).validate('foobar');
+validator.contains('foo', false, true).validate('FOO');
 ```
