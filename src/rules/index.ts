@@ -34,6 +34,7 @@ export * from './no';
 export * from './none-of';
 export * from './not';
 export * from './not-empty';
+export * from './not-optional';
 export * from './null-type';
 export * from './number-instance';
 export * from './number-type';

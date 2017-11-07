@@ -59,6 +59,7 @@ describe('Validator', () => {
         assert.instanceOf(V.noneOf(V.alwaysValid()), V);
         assert.instanceOf(V.not(V.alwaysValid()), V);
         assert.instanceOf(V.notEmpty(), V);
+        assert.instanceOf(V.notOptional(), V);
         assert.instanceOf(V.nullType(), V);
         assert.instanceOf(V.numberInstance(), V);
         assert.instanceOf(V.numberType(), V);
@@ -163,6 +164,7 @@ describe('Validator', () => {
         assert.instanceOf(v.noneOf(V.alwaysValid()), V);
         assert.instanceOf(v.not(V.alwaysValid()), V);
         assert.instanceOf(v.notEmpty(), V);
+        assert.instanceOf(v.notOptional(), V);
         assert.instanceOf(v.nullType(), V);
         assert.instanceOf(v.numberInstance(), V);
         assert.instanceOf(v.numberType(), V);

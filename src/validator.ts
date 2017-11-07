@@ -43,6 +43,7 @@ export class Validator extends AllOf {
     public static noneOf = (...args: Validatable[]): Validator => new Validator(new rules.NoneOf(...args));
     public static not = (rule: Validatable): Validator => new Validator(new rules.Not(rule));
     public static notEmpty = (): Validator => new Validator(new rules.NotEmpty());
+    public static notOptional = (): Validator => new Validator(new rules.NotOptional());
     public static nullType = (): Validator => new Validator(new rules.NullType());
     public static numberInstance = (): Validator => new Validator(new rules.NumberInstance());
     public static numberType = (): Validator => new Validator(new rules.NumberType());
@@ -124,6 +125,7 @@ export class Validator extends AllOf {
     public noneOf = (...args: Validatable[]): this => this.addRule(new rules.NoneOf(...args));
     public not = (rule: Validatable): this => this.addRule(new rules.Not(rule));
     public notEmpty = (): this => this.addRule(new rules.NotEmpty());
+    public notOptional = (): this => this.addRule(new rules.NotOptional());
     public nullType = (): this => this.addRule(new rules.NullType());
     public numberInstance = (): this => this.addRule(new rules.NumberInstance());
     public numberType = (): this => this.addRule(new rules.NumberType());

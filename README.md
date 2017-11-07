@@ -113,6 +113,7 @@ The library can be loaded either as a standalone script, or through an [AMD](htt
 - [NoneOf](docs/none-of.md)
 - [Not](docs/not.md)
 - [NotEmpty](docs/not-empty.md)
+- [NotOptional](docs/not-optional.md)
 - [NullType](docs/null-type.md)
 - [NumberInstance](docs/number-instance.md)
 - [NumberType](docs/number-type.md)

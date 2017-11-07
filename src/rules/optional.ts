@@ -1,5 +1,6 @@
+
 import { AbstractWrapper } from './abstract-wrapper';
-import { In } from './in';
+import { NotOptional } from './not-optional';
 
 export class Optional extends AbstractWrapper {
 
@@ -7,6 +8,6 @@ export class Optional extends AbstractWrapper {
      * Validate.
      */
     public validate(input: any): boolean {
-        return new In([null, ''], false).validate(input) || super.validate(input);
+        return !new NotOptional().validate(input) || super.validate(input);
     }
 }
