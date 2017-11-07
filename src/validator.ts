@@ -52,6 +52,7 @@ export class Validator extends AllOf {
     public static objectType = (): Validator => new Validator(new rules.ObjectType());
     public static odd = (): Validator => new Validator(new rules.Odd());
     public static oneOf = (...args: Validatable[]): Validator => new Validator(new rules.OneOf(...args));
+    public static optional = (validatable: Validatable): Validator => new Validator(new rules.Optional(validatable));
     public static perfectSquare = (): Validator => new Validator(new rules.PerfectSquare());
     public static pesel = (): Validator => new Validator(new rules.Pesel());
     public static phone = (): Validator => new Validator(new rules.Phone());
@@ -132,6 +133,7 @@ export class Validator extends AllOf {
     public objectType = (): this => this.addRule(new rules.ObjectType());
     public odd = (): this => this.addRule(new rules.Odd());
     public oneOf = (...args: Validatable[]): this => this.addRule(new rules.OneOf(...args));
+    public optional = (validatable: Validatable): this => this.addRule(new rules.Optional(validatable));
     public perfectSquare = (): this => this.addRule(new rules.PerfectSquare());
     public pesel = (): this => this.addRule(new rules.Pesel());
     public phone = (): this => this.addRule(new rules.Phone());
