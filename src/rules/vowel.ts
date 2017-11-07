@@ -1,11 +1,11 @@
-import { AbstractFilter } from './abstract-filter';
+import { AbstractRegexFilter } from './abstract-regex-filter';
 
-export class Vowel extends AbstractFilter {
+export class Vowel extends AbstractRegexFilter {
 
     /**
-     * Validate Clean.
+     * Get pattern.
      */
-    public validateClean(input: string): boolean {
-        return /^(\s|[aeiou])*$/i.test(input);
+    protected getPattern(): string | RegExp {
+        return /^(\s|[aeiou])*$/i;
     }
 }

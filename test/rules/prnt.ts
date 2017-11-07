@@ -28,6 +28,8 @@ describe('Prnt', () => {
         assert.isTrue(prnt.validate('123'));
         assert.isTrue(prnt.validate('foo bar'));
         assert.isTrue(prnt.validate('#$%&*_'));
+        assert.isTrue(prnt.validate(Boolean()));
+        assert.isTrue(prnt.validate(Number()));
     });
 
     it('values is not valid', () => {
@@ -36,8 +38,6 @@ describe('Prnt', () => {
         assert.isFalse(prnt.validate(undefined));
         assert.isFalse(prnt.validate(`foo${String.fromCharCode(7)}bar`));
         assert.isFalse(prnt.validate(`foo${String.fromCharCode(10)}bar`));
-        assert.isFalse(prnt.validate(Boolean()));
-        assert.isFalse(prnt.validate(Number()));
         assert.isFalse(prnt.validate(String()));
         assert.isFalse(prnt.validate(null));
         assert.isFalse(prnt.validate(undefined));

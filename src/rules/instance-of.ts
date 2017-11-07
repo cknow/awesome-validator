@@ -5,7 +5,7 @@ export class InstanceOf extends AbstractRule {
     /**
      * Instance Of.
      */
-    public constructor(public readonly instanceName?: any) {
+    public constructor(public readonly instanceName: any) {
         super();
     }
 
@@ -13,17 +13,6 @@ export class InstanceOf extends AbstractRule {
      * Validate.
      */
     public validate(input: any): boolean {
-        return input instanceof this.getInstance();
-    }
-
-    /**
-     * Get instance.
-     */
-    protected getInstance(): any {
-        if (!this.instanceName) {
-            throw new TypeError('Invalid instance name.');
-        }
-
-        return this.instanceName;
+        return input instanceof this.instanceName;
     }
 }

@@ -1,11 +1,12 @@
+import { AbstractRule } from './abstract-rule';
 import { InstanceOf } from './instance-of';
 
-export class ArrayInstance extends InstanceOf {
+export class ArrayInstance extends AbstractRule {
 
     /**
-     * Get instance.
+     * Validate.
      */
-    protected getInstance(): any {
-        return Array;
+    public validate(input: any): boolean {
+        return new InstanceOf(Array).validate(input);
     }
 }

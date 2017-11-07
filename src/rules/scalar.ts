@@ -1,11 +1,12 @@
+import { AbstractRule } from './abstract-rule';
 import { TypeOf } from './type-of';
 
-export class Scalar extends TypeOf {
+export class Scalar extends AbstractRule {
 
     /**
-     * Get pattern.
+     * Validate.
      */
-    protected getPattern(): string | RegExp {
-        return /boolean|number|string/i;
+    public validate(input: any): boolean {
+        return new TypeOf(/boolean|number|string/i).validate(input);
     }
 }

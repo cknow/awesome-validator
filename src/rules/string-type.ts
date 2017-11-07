@@ -1,11 +1,12 @@
+import { AbstractRule } from './abstract-rule';
 import { TypeOf } from './type-of';
 
-export class StringType extends TypeOf {
+export class StringType extends AbstractRule {
 
     /**
-     * Get pattern.
+     * Validate.
      */
-    protected getPattern(): string | RegExp {
-        return /string/i;
+    public validate(input: any): boolean {
+        return new TypeOf(/string/i).validate(input);
     }
 }

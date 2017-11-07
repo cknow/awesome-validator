@@ -1,11 +1,11 @@
-import { AbstractFilter } from './abstract-filter';
+import { AbstractRegexFilter } from './abstract-regex-filter';
 
-export class Consonant extends AbstractFilter {
+export class Consonant extends AbstractRegexFilter {
 
     /**
-     * Validate Clean.
+     * Get pattern.
      */
-    public validateClean(input: string): boolean {
-        return /^(\s|[bcdfghjklmnpqrstvwxyz])*$/i.test(input);
+    protected getPattern(): string | RegExp {
+        return /^(\s|[bcdfghjklmnpqrstvwxyz])*$/i;
     }
 }

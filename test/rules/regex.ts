@@ -9,11 +9,6 @@ describe('Regex', () => {
         assert.instanceOf(new Regex(/^[0-9]/), AbstractRule);
     });
 
-    it('is invalid pattern', () => {
-        assert.throws(() => new Regex().validate('a'), TypeError, 'Invalid RegExp.');
-        assert.throws(() => new Regex('*').validate('a'), TypeError, 'Invalid RegExp.');
-    });
-
     it('values is valid', () => {
         assert.isTrue(new Regex(/^[0-9]/).validate(0));
         assert.isTrue(new Regex(/^[a-z]/).validate('foo'));
@@ -28,6 +23,7 @@ describe('Regex', () => {
         assert.isFalse(new Regex(/^/).validate({}));
         assert.isFalse(new Regex(/^/).validate(Object()));
         assert.isFalse(new Regex(/^/).validate(new Object()));
+        assert.isFalse(new Regex('*').validate('foo'));
     });
 
 });

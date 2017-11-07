@@ -1,11 +1,12 @@
+import { AbstractRule } from './abstract-rule';
 import { InstanceOf } from './instance-of';
 
-export class RegexInstance extends InstanceOf {
+export class RegexInstance extends AbstractRule {
 
     /**
-     * Get instance.
+     * Validate.
      */
-    protected getInstance(): any {
-        return RegExp;
+    public validate(input: any): boolean {
+        return new InstanceOf(RegExp).validate(input);
     }
 }

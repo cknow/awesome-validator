@@ -18,6 +18,7 @@ describe('Validator', () => {
         assert.instanceOf(V.allOf(V.alwaysValid()), AllOf);
         assert.instanceOf(V.alwaysInvalid(), V);
         assert.instanceOf(V.alwaysValid(), V);
+        assert.instanceOf(V.anyOf(), V);
         assert.instanceOf(V.anyOf(V.alwaysValid()), V);
         assert.instanceOf(V.arrayInstance(), V);
         assert.instanceOf(V.arrayType(), V);
@@ -28,6 +29,7 @@ describe('Validator', () => {
         assert.instanceOf(V.cnh(), V);
         assert.instanceOf(V.cnpj(), V);
         assert.instanceOf(V.consonant(), V);
+        assert.instanceOf(V.consonant('foo'), V);
         assert.instanceOf(V.contains('foo'), V);
         assert.instanceOf(V.contains('foo', false), V);
         assert.instanceOf(V.contains('foo', false, true), V);
@@ -52,8 +54,10 @@ describe('Validator', () => {
         assert.instanceOf(V.nfeAccessKey(), V);
         assert.instanceOf(V.noWhitespace(), V);
         assert.instanceOf(V.no(), V);
+        assert.instanceOf(V.no('foo'), V);
         assert.instanceOf(V.noneOf(), V);
-        assert.instanceOf(V.not(V.alwaysInvalid()), V);
+        assert.instanceOf(V.noneOf(V.alwaysValid()), V);
+        assert.instanceOf(V.not(V.alwaysValid()), V);
         assert.instanceOf(V.notEmpty(), V);
         assert.instanceOf(V.nullType(), V);
         assert.instanceOf(V.numberInstance(), V);
@@ -69,7 +73,9 @@ describe('Validator', () => {
         assert.instanceOf(V.positive(), V);
         assert.instanceOf(V.primeNumber(), V);
         assert.instanceOf(V.prnt(), V);
+        assert.instanceOf(V.prnt('foo'), V);
         assert.instanceOf(V.punct(), V);
+        assert.instanceOf(V.punct('foo'), V);
         assert.instanceOf(V.regexInstance(), V);
         assert.instanceOf(V.regexType(), V);
         assert.instanceOf(V.regexVal(), V);
@@ -78,8 +84,10 @@ describe('Validator', () => {
         assert.instanceOf(V.scalar(), V);
         assert.instanceOf(V.slug(), V);
         assert.instanceOf(V.sorted(), V);
-        assert.instanceOf(V.sorted(null, false), V);
+        assert.instanceOf(V.sorted(null), V);
+        assert.instanceOf(V.sorted(null, true), V);
         assert.instanceOf(V.space(), V);
+        assert.instanceOf(V.space('foo'), V);
         assert.instanceOf(V.stringInstance(), V);
         assert.instanceOf(V.stringType(), V);
         assert.instanceOf(V.stringVal(), V);
@@ -93,18 +101,22 @@ describe('Validator', () => {
         assert.instanceOf(V.uuid(), V);
         assert.instanceOf(V.version(), V);
         assert.instanceOf(V.vowel(), V);
+        assert.instanceOf(V.vowel('foo'), V);
         assert.instanceOf(V.when(V.alwaysValid(), V.alwaysValid()), V);
         assert.instanceOf(V.when(V.alwaysInvalid(), V.alwaysValid(), V.alwaysValid()), V);
         assert.instanceOf(V.xdigit(), V);
+        assert.instanceOf(V.xdigit('foo'), V);
         assert.instanceOf(V.yes(), V);
+        assert.instanceOf(V.yes('foo'), V);
     });
 
     it('rules', () => {
-        assert.instanceOf(v.allOf(), V);
-        assert.instanceOf(v.allOf(V.alwaysValid()), V);
+        assert.instanceOf(v.allOf(), AllOf);
+        assert.instanceOf(v.allOf(V.alwaysValid()), AllOf);
         assert.instanceOf(v.alwaysInvalid(), V);
         assert.instanceOf(v.alwaysValid(), V);
-        assert.instanceOf(v.anyOf(v.alwaysValid()), V);
+        assert.instanceOf(v.anyOf(), V);
+        assert.instanceOf(v.anyOf(V.alwaysValid()), V);
         assert.instanceOf(v.arrayInstance(), V);
         assert.instanceOf(v.arrayType(), V);
         assert.instanceOf(v.arrayVal(), V);
@@ -114,6 +126,7 @@ describe('Validator', () => {
         assert.instanceOf(v.cnh(), V);
         assert.instanceOf(v.cnpj(), V);
         assert.instanceOf(v.consonant(), V);
+        assert.instanceOf(v.consonant('foo'), V);
         assert.instanceOf(v.contains('foo'), V);
         assert.instanceOf(v.contains('foo', false), V);
         assert.instanceOf(v.contains('foo', false, true), V);
@@ -138,8 +151,10 @@ describe('Validator', () => {
         assert.instanceOf(v.nfeAccessKey(), V);
         assert.instanceOf(v.noWhitespace(), V);
         assert.instanceOf(v.no(), V);
+        assert.instanceOf(v.no('foo'), V);
         assert.instanceOf(v.noneOf(), V);
-        assert.instanceOf(v.not(v.alwaysInvalid()), V);
+        assert.instanceOf(v.noneOf(V.alwaysValid()), V);
+        assert.instanceOf(v.not(V.alwaysValid()), V);
         assert.instanceOf(v.notEmpty(), V);
         assert.instanceOf(v.nullType(), V);
         assert.instanceOf(v.numberInstance(), V);
@@ -155,7 +170,9 @@ describe('Validator', () => {
         assert.instanceOf(v.positive(), V);
         assert.instanceOf(v.primeNumber(), V);
         assert.instanceOf(v.prnt(), V);
+        assert.instanceOf(v.prnt('foo'), V);
         assert.instanceOf(v.punct(), V);
+        assert.instanceOf(v.punct('foo'), V);
         assert.instanceOf(v.regexInstance(), V);
         assert.instanceOf(v.regexType(), V);
         assert.instanceOf(v.regexVal(), V);
@@ -164,8 +181,10 @@ describe('Validator', () => {
         assert.instanceOf(v.scalar(), V);
         assert.instanceOf(v.slug(), V);
         assert.instanceOf(v.sorted(), V);
-        assert.instanceOf(v.sorted(null, false), V);
+        assert.instanceOf(v.sorted(null), V);
+        assert.instanceOf(v.sorted(null, true), V);
         assert.instanceOf(v.space(), V);
+        assert.instanceOf(v.space('foo'), V);
         assert.instanceOf(v.stringInstance(), V);
         assert.instanceOf(v.stringType(), V);
         assert.instanceOf(v.stringVal(), V);
@@ -179,10 +198,13 @@ describe('Validator', () => {
         assert.instanceOf(v.uuid(), V);
         assert.instanceOf(v.version(), V);
         assert.instanceOf(v.vowel(), V);
-        assert.instanceOf(v.when(v.alwaysValid(), v.alwaysValid()), V);
-        assert.instanceOf(v.when(v.alwaysInvalid(), v.alwaysValid(), v.alwaysValid()), V);
+        assert.instanceOf(v.vowel('foo'), V);
+        assert.instanceOf(v.when(V.alwaysValid(), V.alwaysValid()), V);
+        assert.instanceOf(v.when(V.alwaysInvalid(), V.alwaysValid(), V.alwaysValid()), V);
         assert.instanceOf(v.xdigit(), V);
+        assert.instanceOf(v.xdigit('foo'), V);
         assert.instanceOf(v.yes(), V);
+        assert.instanceOf(v.yes('foo'), V);
     });
 
     it('initialize with rules', () => {

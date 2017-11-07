@@ -26,6 +26,11 @@ describe('Xdigit', () => {
         assert.isTrue(xdigit.validate('DE12FA'));
         assert.isTrue(xdigit.validate('1234567890abcdef'));
         assert.isTrue(xdigit.validate(0x123));
+        assert.isTrue(xdigit.validate(Number()));
+        assert.isTrue(xdigit.validate(0));
+        assert.isTrue(xdigit.validate(-0));
+        assert.isTrue(xdigit.validate(0.0));
+        assert.isTrue(xdigit.validate(-0.0));
     });
 
     it('values is not valid', () => {
@@ -39,7 +44,6 @@ describe('Xdigit', () => {
         assert.isFalse(xdigit.validate(-12));
         assert.isFalse(xdigit.validate('( )_{}'));
         assert.isFalse(xdigit.validate(Boolean()));
-        assert.isFalse(xdigit.validate(Number()));
         assert.isFalse(xdigit.validate(String()));
         assert.isFalse(xdigit.validate(null));
         assert.isFalse(xdigit.validate(undefined));
@@ -50,11 +54,7 @@ describe('Xdigit', () => {
         assert.isFalse(xdigit.validate('-1.1'));
         assert.isFalse(xdigit.validate('1.1'));
         assert.isFalse(xdigit.validate('-1'));
-        assert.isFalse(xdigit.validate(0));
-        assert.isFalse(xdigit.validate(-0));
         assert.isFalse(xdigit.validate(-1));
-        assert.isFalse(xdigit.validate(0.0));
-        assert.isFalse(xdigit.validate(-0.0));
         assert.isFalse(xdigit.validate(-1.0));
         assert.isFalse(xdigit.validate(0.1));
         assert.isFalse(xdigit.validate(-0.1));

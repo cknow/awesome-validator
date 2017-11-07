@@ -1,6 +1,7 @@
+import { AbstractRule } from './abstract-rule';
 import { ObjectType } from './object-type';
 
-export class Json extends ObjectType {
+export class Json extends AbstractRule {
 
     /**
      * Validate.
@@ -9,7 +10,7 @@ export class Json extends ObjectType {
         try {
             const obj: any = JSON.parse(input);
 
-            return !!obj && super.validate(obj);
+            return !!obj && new ObjectType().validate(obj);
         } catch (e) {}
 
         return false;

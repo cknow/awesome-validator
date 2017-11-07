@@ -6,11 +6,7 @@ import { TypeOf } from '../../src/rules/type-of';
 describe('TypeOf', () => {
 
     it('is rule', () => {
-        assert.instanceOf(new TypeOf(), AbstractRule);
-    });
-
-    it('is invalid pattern', () => {
-        assert.throws(() => new TypeOf().validate('foo'), TypeError, 'Invalid RegExp.');
+        assert.instanceOf(new TypeOf(/string/), AbstractRule);
     });
 
     it('values is valid', () => {

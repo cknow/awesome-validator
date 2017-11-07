@@ -1,6 +1,6 @@
-import { Regex } from './regex';
+import { AbstractRegexFilter } from './abstract-regex-filter';
 
-export class No extends Regex {
+export class No extends AbstractRegexFilter {
 
     /**
      * Get pattern.

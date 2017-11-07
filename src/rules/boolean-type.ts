@@ -1,11 +1,12 @@
+import { AbstractRule } from './abstract-rule';
 import { TypeOf } from './type-of';
 
-export class BooleanType extends TypeOf {
+export class BooleanType extends AbstractRule {
 
     /**
-     * Get pattern.
+     * Validate.
      */
-    protected getPattern(): string | RegExp {
-        return /boolean/i;
+    public validate(input: any): boolean {
+        return new TypeOf(/boolean/i).validate(input);
     }
 }

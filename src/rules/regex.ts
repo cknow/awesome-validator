@@ -6,7 +6,7 @@ export class Regex extends AbstractRule {
     /**
      * Regex.
      */
-    public constructor(public readonly regexp?: string | RegExp) {
+    public constructor(public readonly regexp: string | RegExp) {
         super();
     }
 
@@ -14,21 +14,10 @@ export class Regex extends AbstractRule {
      * Validate.
      */
     public validate(input: any): boolean {
-        if (!/boolean|number|string/.test(typeof input)) {
+        if (!/boolean|number|string/.test(typeof input) || !new RegexVal().validate(this.regexp)) {
             return false;
         }
 
-        return new RegExp(this.getPattern()).test(String(input));
-    }
-
-    /**
-     * Get pattern.
-     */
-    protected getPattern(): string | RegExp {
-        if (!this.regexp || !new RegexVal().validate(this.regexp)) {
-            throw new TypeError('Invalid RegExp.');
-        }
-
-        return this.regexp;
+        return new RegExp(this.regexp).test(String(input));
     }
 }

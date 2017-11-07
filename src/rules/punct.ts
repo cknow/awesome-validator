@@ -1,11 +1,11 @@
-import { AbstractFilter } from './abstract-filter';
+import { AbstractRegexFilter } from './abstract-regex-filter';
 
-export class Punct extends AbstractFilter {
+export class Punct extends AbstractRegexFilter {
 
     /**
-     * Validate Clean.
+     * Get pattern.
      */
-    public validateClean(input: string): boolean {
-        return /^[\u0021-\u002F\u003A-\u0040\u005B-\u0060\u007B-\u007E]+$/g.test(input);
+    protected getPattern(): string | RegExp {
+        return /^[\u0021-\u002F\u003A-\u0040\u005B-\u0060\u007B-\u007E]+$/g;
     }
 }

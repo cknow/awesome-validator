@@ -1,11 +1,11 @@
-import { AbstractFilter } from './abstract-filter';
+import { AbstractRegexFilter } from './abstract-regex-filter';
 
-export class Xdigit extends AbstractFilter {
+export class Xdigit extends AbstractRegexFilter {
 
     /**
-     * Validate Clean.
+     * Get pattern.
      */
-    public validateClean(input: string): boolean {
-        return /^[A-Fa-f\d]+$/g.test(input);
+    protected getPattern(): string | RegExp {
+        return /^[A-Fa-f\d]+$/g;
     }
 }

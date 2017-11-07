@@ -6,12 +6,7 @@ import { InstanceOf } from '../../src/rules/instance-of';
 describe('InstanceOf', () => {
 
     it('is rule', () => {
-        assert.instanceOf(new InstanceOf(), AbstractRule);
-    });
-
-    it('is invalid pattern', () => {
-        assert.throws(() => new InstanceOf().validate('foo'), TypeError, 'Invalid instance name.');
-        assert.throws(() => new InstanceOf(null).validate('foo'), TypeError, 'Invalid instance name.');
+        assert.instanceOf(new InstanceOf(null), AbstractRule);
     });
 
     it('values is valid', () => {

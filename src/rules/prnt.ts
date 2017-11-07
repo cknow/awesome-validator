@@ -1,11 +1,11 @@
-import { AbstractFilter } from './abstract-filter';
+import { AbstractRegexFilter } from './abstract-regex-filter';
 
-export class Prnt extends AbstractFilter {
+export class Prnt extends AbstractRegexFilter {
 
     /**
-     * Validate Clean.
+     * Get pattern.
      */
-    public validateClean(input: string): boolean {
-        return /^[\u0020-\u007E]+$/g.test(input);
+    protected getPattern(): string | RegExp {
+        return /^[\u0020-\u007E]+$/g;
     }
 }

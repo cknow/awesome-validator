@@ -15,6 +15,10 @@ describe('No', () => {
         assert.instanceOf(no, AbstractRule);
     });
 
+    it('values is valid with additional characters', () => {
+        assert.isTrue(new No('não').validate('não'));
+    });
+
     it('values is valid', () => {
         assert.isTrue(no.validate('N'));
         assert.isTrue(no.validate('Nay'));

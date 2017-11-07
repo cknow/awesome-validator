@@ -37,7 +37,7 @@ export class Validator extends AllOf {
     public static negative = (): Validator => new Validator(new rules.Negative());
     public static nfeAccessKey  = (): Validator => new Validator(new rules.NfeAccessKey());
     public static noWhitespace  = (): Validator => new Validator(new rules.NoWhitespace());
-    public static no = (): Validator => new Validator(new rules.No());
+    public static no = (additionalChars?: string): Validator => new Validator(new rules.No(additionalChars));
     public static noneOf = (...args: Validatable[]): Validator => new Validator(new rules.NoneOf(...args));
     public static not = (rule: Validatable): Validator => new Validator(new rules.Not(rule));
     public static notEmpty = (): Validator => new Validator(new rules.NotEmpty());
@@ -54,8 +54,8 @@ export class Validator extends AllOf {
     public static pis = (): Validator => new Validator(new rules.Pis());
     public static positive = (): Validator => new Validator(new rules.Positive());
     public static primeNumber = (): Validator => new Validator(new rules.PrimeNumber());
-    public static prnt = (): Validator => new Validator(new rules.Prnt());
-    public static punct = (): Validator => new Validator(new rules.Punct());
+    public static prnt = (additionalChars?: string): Validator => new Validator(new rules.Prnt(additionalChars));
+    public static punct = (additionalChars?: string): Validator => new Validator(new rules.Punct(additionalChars));
     public static regexInstance = (): Validator => new Validator(new rules.RegexInstance());
     public static regexType = (): Validator => new Validator(new rules.RegexType());
     public static regexVal = (): Validator => new Validator(new rules.RegexVal());
@@ -64,7 +64,7 @@ export class Validator extends AllOf {
     public static scalar = (): Validator => new Validator(new rules.Scalar());
     public static slug = (): Validator => new Validator(new rules.Slug());
     public static sorted = (fn?: Function | null, ascending: boolean = true): Validator => new Validator(new rules.Sorted(fn, ascending));
-    public static space = (): Validator => new Validator(new rules.Space());
+    public static space = (additionalChars?: string): Validator => new Validator(new rules.Space(additionalChars));
     public static stringInstance = (): Validator => new Validator(new rules.StringInstance());
     public static stringType = (): Validator => new Validator(new rules.StringType());
     public static stringVal = (): Validator => new Validator(new rules.StringVal());
@@ -79,8 +79,8 @@ export class Validator extends AllOf {
     public static version = (): Validator => new Validator(new rules.Version());
     public static vowel = (additionalChars?: string): Validator => new Validator(new rules.Vowel(additionalChars));
     public static when = (whenRule: Validatable, thenRule: Validatable, elseRule?: Validatable): Validator => new Validator(new rules.When(whenRule, thenRule, elseRule));
-    public static xdigit = (): Validator => new Validator(new rules.Xdigit());
-    public static yes = (): Validator => new Validator(new rules.Yes());
+    public static xdigit = (additionalChars?: string): Validator => new Validator(new rules.Xdigit(additionalChars));
+    public static yes = (additionalChars?: string): Validator => new Validator(new rules.Yes(additionalChars));
 
     public allOf = (...args: Validatable[]): this => this.addRule(new AllOf(...args));
     public alwaysInvalid = (): this => this.addRule(new rules.AlwaysInvalid());
@@ -114,7 +114,7 @@ export class Validator extends AllOf {
     public negative = (): this => this.addRule(new rules.Negative());
     public nfeAccessKey  = (): this => this.addRule(new rules.NfeAccessKey());
     public noWhitespace  = (): this => this.addRule(new rules.NoWhitespace());
-    public no = (): this => this.addRule(new rules.No());
+    public no = (additionalChars?: string): this => this.addRule(new rules.No(additionalChars));
     public noneOf = (...args: Validatable[]): this => this.addRule(new rules.NoneOf(...args));
     public not = (rule: Validatable): this => this.addRule(new rules.Not(rule));
     public notEmpty = (): this => this.addRule(new rules.NotEmpty());
@@ -131,8 +131,8 @@ export class Validator extends AllOf {
     public pis = (): this => this.addRule(new rules.Pis());
     public positive = (): this => this.addRule(new rules.Positive());
     public primeNumber = (): this => this.addRule(new rules.PrimeNumber());
-    public prnt = (): this => this.addRule(new rules.Prnt());
-    public punct = (): this => this.addRule(new rules.Punct());
+    public prnt = (additionalChars?: string): this => this.addRule(new rules.Prnt(additionalChars));
+    public punct = (additionalChars?: string): this => this.addRule(new rules.Punct(additionalChars));
     public regexInstance = (): this => this.addRule(new rules.RegexInstance());
     public regexType = (): this => this.addRule(new rules.RegexType());
     public regexVal = (): this => this.addRule(new rules.RegexVal());
@@ -141,7 +141,7 @@ export class Validator extends AllOf {
     public scalar = (): this => this.addRule(new rules.Scalar());
     public slug = (): this => this.addRule(new rules.Slug());
     public sorted = (fn?: Function | null, ascending: boolean = true): this => this.addRule(new rules.Sorted(fn, ascending));
-    public space = (): this => this.addRule(new rules.Space());
+    public space = (additionalChars?: string): this => this.addRule(new rules.Space(additionalChars));
     public stringInstance = (): this => this.addRule(new rules.StringInstance());
     public stringType = (): this => this.addRule(new rules.StringType());
     public stringVal = (): this => this.addRule(new rules.StringVal());
@@ -156,8 +156,8 @@ export class Validator extends AllOf {
     public version = (): this => this.addRule(new rules.Version());
     public vowel = (additionalChars?: string): this => this.addRule(new rules.Vowel(additionalChars));
     public when = (whenRule: Validatable, thenRule: Validatable, elseRule?: Validatable): this => this.addRule(new rules.When(whenRule, thenRule, elseRule));
-    public xdigit = (): this => this.addRule(new rules.Xdigit());
-    public yes = (): this => this.addRule(new rules.Yes());
+    public xdigit = (additionalChars?: string): this => this.addRule(new rules.Xdigit(additionalChars));
+    public yes = (additionalChars?: string): this => this.addRule(new rules.Yes(additionalChars));
     /* tslint:enable completed-docs max-line-length */
 }
 

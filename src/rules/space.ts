@@ -1,11 +1,11 @@
-import { AbstractFilter } from './abstract-filter';
+import { AbstractRegexFilter } from './abstract-regex-filter';
 
-export class Space extends AbstractFilter {
+export class Space extends AbstractRegexFilter {
 
     /**
-     * Validate Clean.
+     * Get pattern.
      */
-    public validateClean(input: string): boolean {
-        return /^[\f\n\r\t\v ]+$/g.test(input);
+    protected getPattern(): string | RegExp {
+        return /^[\f\n\r\t\v ]+$/g;
     }
 }

@@ -1,6 +1,6 @@
-import { Regex } from './regex';
+import { AbstractRegex } from './abstract-regex';
 
-export class Phone extends Regex {
+export class Phone extends AbstractRegex {
 
     /**
      * Get pattern.

@@ -1,4 +1,5 @@
 import { AbstractRule } from './abstract-rule';
+import { Scalar } from './scalar';
 
 export abstract class AbstractFilter extends AbstractRule {
 
@@ -13,9 +14,13 @@ export abstract class AbstractFilter extends AbstractRule {
      * Validate.
      */
     public validate(input: any): boolean {
+        if (!new Scalar().validate(input)) {
+            return false;
+        }
+
         let stringInput: string = String(input);
 
-        if (!input || stringInput === '') {
+        if (stringInput === '') {
             return false;
         }
 
@@ -33,7 +38,7 @@ export abstract class AbstractFilter extends AbstractRule {
     }
 
     /**
-     * Validate Clean
+     * Validate Clean.
      */
-    protected abstract validateClean(input: string): boolean;
+    protected abstract validateClean(stringInput: string): boolean;
 }
