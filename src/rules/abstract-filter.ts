@@ -4,7 +4,7 @@ import { Scalar } from './scalar';
 export abstract class AbstractFilter extends AbstractRule {
 
     /**
-     * Abstract Filter.
+     * AbstractFilter.
      */
     public constructor(public readonly additionalChars: string = '') {
         super();

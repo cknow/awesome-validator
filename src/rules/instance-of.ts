@@ -3,7 +3,7 @@ import { AbstractRule } from './abstract-rule';
 export class InstanceOf extends AbstractRule {
 
     /**
-     * Instance Of.
+     * InstanceOf.
      */
     public constructor(public readonly instanceName: any) {
         super();

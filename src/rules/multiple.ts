@@ -3,7 +3,7 @@ import { AbstractRule } from './abstract-rule';
 export class Multiple extends AbstractRule {
 
     /**
-     * Multiple
+     * Multiple.
      */
     public constructor(public readonly multipleOf: number) {
         super();

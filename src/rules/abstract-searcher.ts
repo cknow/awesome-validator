@@ -4,7 +4,7 @@ import { Scalar } from './scalar';
 export abstract class AbstractSearcher extends AbstractRule {
 
     /**
-     * Abstract searcher.
+     * AbstractSearcher.
      */
     public constructor(
         public readonly searcher?: any,

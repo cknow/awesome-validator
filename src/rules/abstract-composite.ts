@@ -9,7 +9,7 @@ export abstract class AbstractComposite extends AbstractRule {
     protected rules: Set<Validatable> = new Set<Validatable>();
 
     /**
-     * Abstract Composite.
+     * AbstractComposite.
      */
     public constructor(...rules: Validatable[]) {
         super();
