@@ -41,6 +41,7 @@ export * from './number-val';
 export * from './object-instance';
 export * from './object-type-strict';
 export * from './object-type';
+export * from './odd';
 export * from './perfect-square';
 export * from './pesel';
 export * from './phone';
