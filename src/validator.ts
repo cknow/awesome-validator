@@ -1,4 +1,6 @@
 import * as rules from './rules';
+import { VideoService } from './rules/video-url';
+
 import { AllOf } from './rules/all-of';
 import { Validatable } from './validatable';
 
@@ -77,6 +79,7 @@ export class Validator extends AllOf {
     public static url = (): Validator => new Validator(new rules.Url());
     public static uuid = (): Validator => new Validator(new rules.Uuid());
     public static version = (): Validator => new Validator(new rules.Version());
+    public static videoUrl = (service?: VideoService): Validator => new Validator(new rules.VideoUrl(service));
     public static vowel = (additionalChars?: string): Validator => new Validator(new rules.Vowel(additionalChars));
     public static when = (whenRule: Validatable, thenRule: Validatable, elseRule?: Validatable): Validator => new Validator(new rules.When(whenRule, thenRule, elseRule));
     public static xdigit = (additionalChars?: string): Validator => new Validator(new rules.Xdigit(additionalChars));
@@ -154,6 +157,7 @@ export class Validator extends AllOf {
     public url = (): this => this.addRule(new rules.Url());
     public uuid = (): this => this.addRule(new rules.Uuid());
     public version = (): this => this.addRule(new rules.Version());
+    public videoUrl = (service?: VideoService): this => this.addRule(new rules.VideoUrl(service));
     public vowel = (additionalChars?: string): this => this.addRule(new rules.Vowel(additionalChars));
     public when = (whenRule: Validatable, thenRule: Validatable, elseRule?: Validatable): this => this.addRule(new rules.When(whenRule, thenRule, elseRule));
     public xdigit = (additionalChars?: string): this => this.addRule(new rules.Xdigit(additionalChars));

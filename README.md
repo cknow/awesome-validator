@@ -149,6 +149,7 @@ The library can be loaded either as a standalone script, or through an [AMD](htt
 - [Url](docs/url.md)
 - [Uuid](docs/uuid.md)
 - [Version](docs/version.md)
+- [VideoUrl](docs/video-url.md)
 - [Vowel](docs/vowel.md)
 - [When](docs/when.md)
 - [Xdigit](docs/xdigit.md)

@@ -3,7 +3,7 @@ import { assert } from 'chai';
 import { AllOf } from '../src/rules/all-of';
 import { AlwaysInvalid } from '../src/rules/always-invalid';
 import { AlwaysValid } from '../src/rules/always-valid';
-import { V } from '../src/validator';
+import { V, VideoService } from '../src/validator';
 
 describe('Validator', () => {
 
@@ -100,6 +100,9 @@ describe('Validator', () => {
         assert.instanceOf(V.url(), V);
         assert.instanceOf(V.uuid(), V);
         assert.instanceOf(V.version(), V);
+        assert.instanceOf(V.videoUrl(), V);
+        assert.instanceOf(V.videoUrl(VideoService.YouTube), V);
+        assert.instanceOf(V.videoUrl(VideoService.Vimeo), V);
         assert.instanceOf(V.vowel(), V);
         assert.instanceOf(V.vowel('foo'), V);
         assert.instanceOf(V.when(V.alwaysValid(), V.alwaysValid()), V);
@@ -197,6 +200,9 @@ describe('Validator', () => {
         assert.instanceOf(v.url(), V);
         assert.instanceOf(v.uuid(), V);
         assert.instanceOf(v.version(), V);
+        assert.instanceOf(v.videoUrl(), V);
+        assert.instanceOf(v.videoUrl(VideoService.YouTube), V);
+        assert.instanceOf(v.videoUrl(VideoService.Vimeo), V);
         assert.instanceOf(v.vowel(), V);
         assert.instanceOf(v.vowel('foo'), V);
         assert.instanceOf(v.when(V.alwaysValid(), V.alwaysValid()), V);
