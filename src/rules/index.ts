@@ -26,6 +26,7 @@ export * from './int-type';
 export * from './int-val';
 export * from './json';
 export * from './lowercase';
+export * from './mac-address';
 export * from './multiple';
 export * from './negative';
 export * from './nfe-access-key';

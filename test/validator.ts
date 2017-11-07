@@ -49,6 +49,7 @@ describe('Validator', () => {
         assert.instanceOf(V.intVal(), V);
         assert.instanceOf(V.json(), V);
         assert.instanceOf(V.lowercase(), V);
+        assert.instanceOf(V.macAddress(), V);
         assert.instanceOf(V.multiple(0), V);
         assert.instanceOf(V.negative(), V);
         assert.instanceOf(V.nfeAccessKey(), V);
@@ -154,6 +155,7 @@ describe('Validator', () => {
         assert.instanceOf(v.intVal(), V);
         assert.instanceOf(v.json(), V);
         assert.instanceOf(v.lowercase(), V);
+        assert.instanceOf(v.macAddress(), V);
         assert.instanceOf(v.multiple(0), V);
         assert.instanceOf(v.negative(), V);
         assert.instanceOf(v.nfeAccessKey(), V);

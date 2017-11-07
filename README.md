@@ -105,6 +105,7 @@ The library can be loaded either as a standalone script, or through an [AMD](htt
 - [IntVal](docs/int-val.md)
 - [Json](docs/json.md)
 - [Lowercase](docs/lowercase.md)
+- [MacAddress](docs/mac-address.md)
 - [Multiple](docs/multiple.md)
 - [Negative](docs/negative.md)
 - [NfeAccessKey](docs/nfe-access-key.md)
