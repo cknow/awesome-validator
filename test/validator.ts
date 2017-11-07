@@ -67,6 +67,8 @@ describe('Validator', () => {
         assert.instanceOf(V.objectTypeStrict(), V);
         assert.instanceOf(V.objectType(), V);
         assert.instanceOf(V.odd(), V);
+        assert.instanceOf(V.oneOf(), V);
+        assert.instanceOf(V.oneOf(V.alwaysValid()), V);
         assert.instanceOf(V.perfectSquare(), V);
         assert.instanceOf(V.pesel(), V);
         assert.instanceOf(V.phone(), V);
@@ -168,6 +170,8 @@ describe('Validator', () => {
         assert.instanceOf(v.objectTypeStrict(), V);
         assert.instanceOf(v.objectType(), V);
         assert.instanceOf(v.odd(), V);
+        assert.instanceOf(v.oneOf(), V);
+        assert.instanceOf(v.oneOf(V.alwaysValid()), V);
         assert.instanceOf(v.perfectSquare(), V);
         assert.instanceOf(v.pesel(), V);
         assert.instanceOf(v.phone(), V);

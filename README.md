@@ -121,6 +121,7 @@ The library can be loaded either as a standalone script, or through an [AMD](htt
 - [ObjectTypeStrict](docs/object-type-strict.md)
 - [ObjectType](docs/object-type.md)
 - [Odd](docs/odd.md)
+- [OneOf](docs/one-of.md)
 - [PerfectSquare](docs/perfect-square.md)
 - [Pesel](docs/pesel.md)
 - [Phone](docs/phone.md)
