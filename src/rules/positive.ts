@@ -7,10 +7,6 @@ export class Positive extends AbstractRule {
      * Validate.
      */
     public validate(input: any): boolean {
-        if (!new NumberVal().validate(input)) {
-            return false;
-        }
-
-        return input > 0;
+        return new NumberVal().validate(input) && input > 0;
     }
 }
