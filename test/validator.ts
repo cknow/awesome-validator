@@ -97,6 +97,9 @@ describe('Validator', () => {
         assert.instanceOf(V.stringInstance(), V);
         assert.instanceOf(V.stringType(), V);
         assert.instanceOf(V.stringVal(), V);
+        assert.instanceOf(V.symbolInstance(), V);
+        assert.instanceOf(V.symbolType(), V);
+        assert.instanceOf(V.symbolVal(), V);
         assert.instanceOf(V.symbolicLink(), V);
         assert.instanceOf(V.tld(), V);
         assert.instanceOf(V.trueVal(), V);
@@ -203,6 +206,9 @@ describe('Validator', () => {
         assert.instanceOf(v.stringInstance(), V);
         assert.instanceOf(v.stringType(), V);
         assert.instanceOf(v.stringVal(), V);
+        assert.instanceOf(v.symbolInstance(), V);
+        assert.instanceOf(v.symbolType(), V);
+        assert.instanceOf(v.symbolVal(), V);
         assert.instanceOf(v.symbolicLink(), V);
         assert.instanceOf(v.tld(), V);
         assert.instanceOf(v.trueVal(), V);

@@ -75,6 +75,9 @@ export class Validator extends AllOf {
     public static stringInstance = (): Validator => new Validator(new rules.StringInstance());
     public static stringType = (): Validator => new Validator(new rules.StringType());
     public static stringVal = (): Validator => new Validator(new rules.StringVal());
+    public static symbolInstance = (): Validator => new Validator(new rules.SymbolInstance());
+    public static symbolType = (): Validator => new Validator(new rules.SymbolType());
+    public static symbolVal = (): Validator => new Validator(new rules.SymbolVal());
     public static symbolicLink = (): Validator => new Validator(new rules.SymbolicLink());
     public static tld = (): Validator => new Validator(new rules.Tld());
     public static trueVal = (): Validator => new Validator(new rules.TrueVal());
@@ -158,6 +161,9 @@ export class Validator extends AllOf {
     public stringInstance = (): this => this.addRule(new rules.StringInstance());
     public stringType = (): this => this.addRule(new rules.StringType());
     public stringVal = (): this => this.addRule(new rules.StringVal());
+    public symbolInstance = (): this => this.addRule(new rules.SymbolInstance());
+    public symbolType = (): this => this.addRule(new rules.SymbolType());
+    public symbolVal = (): this => this.addRule(new rules.SymbolVal());
     public symbolicLink = (): this => this.addRule(new rules.SymbolicLink());
     public tld = (): this => this.addRule(new rules.Tld());
     public trueVal = (): this => this.addRule(new rules.TrueVal());
