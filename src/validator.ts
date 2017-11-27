@@ -1,7 +1,8 @@
-import * as rules from './rules';
-import { VideoService } from './rules/video-url';
+import * as momment from 'moment';
 
+import * as rules from './rules';
 import { AllOf } from './rules/all-of';
+import { VideoService } from './rules/video-url';
 import { Validatable } from './validatable';
 
 export class Validator extends AllOf {
@@ -34,6 +35,7 @@ export class Validator extends AllOf {
     public static intType = (): Validator => new Validator(new rules.IntType());
     public static intVal = (): Validator => new Validator(new rules.IntVal());
     public static json = (): Validator => new Validator(new rules.Json());
+    public static leapYear = (format?: momment.MomentFormatSpecification): Validator => new Validator(new rules.LeapYear(format));
     public static lowercase = (): Validator => new Validator(new rules.Lowercase());
     public static macAddress = (): Validator => new Validator(new rules.MacAddress());
     public static multiple = (multipleOf: number): Validator => new Validator(new rules.Multiple(multipleOf));
@@ -120,6 +122,7 @@ export class Validator extends AllOf {
     public intType = (): this => this.addRule(new rules.IntType());
     public intVal = (): this => this.addRule(new rules.IntVal());
     public json = (): this => this.addRule(new rules.Json());
+    public leapYear = (format?: momment.MomentFormatSpecification): this => this.addRule(new rules.LeapYear(format));
     public lowercase = (): this => this.addRule(new rules.Lowercase());
     public macAddress = (): this => this.addRule(new rules.MacAddress());
     public multiple = (multipleOf: number): this => this.addRule(new rules.Multiple(multipleOf));

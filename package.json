@@ -57,11 +57,14 @@
       "path": "node_modules/cz-conventional-changelog"
     }
   },
+  "dependencies": {
+    "moment": "^2.19.2"
+  },
   "devDependencies": {
     "@cknow/tslint-config": "^3.2.0",
-    "@types/chai": "^4.0.4",
+    "@types/chai": "^4.0.5",
     "@types/mocha": "^2.2.44",
-    "awesome-typescript-loader": "^3.3.0",
+    "awesome-typescript-loader": "^3.4.0",
     "chai": "^4.1.2",
     "commitizen": "^2.9.6",
     "coveralls": "^3.0.0",

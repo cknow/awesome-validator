@@ -48,9 +48,9 @@
     lodash "^4.17.4"
     pify "^3.0.0"
 
-"@types/chai@^4.0.4":
-  version "4.0.4"
-  resolved "https://registry.yarnpkg.com/@types/chai/-/chai-4.0.4.tgz#fe86315d9a66827feeb16f73bc954688ec950e18"
+"@types/chai@^4.0.5":
+  version "4.0.5"
+  resolved "https://registry.yarnpkg.com/@types/chai/-/chai-4.0.5.tgz#b6e250e281b47e0192e236619e9b1afe62fd345c"
 
 "@types/mocha@^2.2.44":
   version "2.2.44"
@@ -265,9 +265,9 @@ atob@^2.0.0:
   version "2.0.3"
   resolved "https://registry.yarnpkg.com/atob/-/atob-2.0.3.tgz#19c7a760473774468f20b2d2d03372ad7d4cbf5d"
 
-awesome-typescript-loader@^3.3.0:
-  version "3.3.0"
-  resolved "https://registry.yarnpkg.com/awesome-typescript-loader/-/awesome-typescript-loader-3.3.0.tgz#24bed5650ca0d6e95457904d9969127ba4ff3575"
+awesome-typescript-loader@^3.4.0:
+  version "3.4.0"
+  resolved "https://registry.yarnpkg.com/awesome-typescript-loader/-/awesome-typescript-loader-3.4.0.tgz#aed2c83af614d617d11e3ec368ac3befb55d002f"
   dependencies:
     colors "^1.1.2"
     enhanced-resolve "3.3.0"
