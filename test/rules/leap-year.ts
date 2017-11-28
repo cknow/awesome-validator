@@ -25,7 +25,7 @@ describe('LeapYear', () => {
         assert.isTrue(leapYear.validate(moment([2008])));
     });
 
-    it('valu is valid with format', () => {
+    it('values is valid with format', () => {
         assert.isTrue(new LeapYear('DD-MM-YYYY').validate('29-02-2008'));
     });
 
@@ -40,7 +40,7 @@ describe('LeapYear', () => {
         assert.isFalse(leapYear.validate(moment([2009])));
     });
 
-    it('valu is not valid with format', () => {
+    it('values is not valid with format', () => {
         assert.isFalse(new LeapYear('DD-MM-YYYY').validate('2009-02-29'));
     });
 

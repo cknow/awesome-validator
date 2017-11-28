@@ -1,7 +1,8 @@
 import * as moment from 'moment';
 
 import { AbstractRule } from './abstract-rule';
-import { StringVal } from './string-val';
+import { IntVal } from './int-val';
+import { StringType } from './string-type';
 
 export abstract class AbstractDate extends AbstractRule {
 
@@ -18,7 +19,7 @@ export abstract class AbstractDate extends AbstractRule {
     public validate(input: any): boolean {
         const date: moment.Moment = this.parseDate(input);
 
-        return date.isValid() && this.validateDate(date);
+        return this.validateDate(date);
     }
 
     /**
@@ -30,8 +31,12 @@ export abstract class AbstractDate extends AbstractRule {
      * Parse Date.
      */
     private parseDate(input: any): moment.Moment {
-        if (new StringVal().validate(input)) {
-            return moment([input], this.format);
+        if (new IntVal().validate(input)) {
+            return moment([input]);
+        }
+
+        if (new StringType().validate(input)) {
+            return moment(input, this.format);
         }
 
         if (moment.isMoment(input)) {
