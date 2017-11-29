@@ -78,6 +78,7 @@ export class Validator extends AllOf {
     public static stringInstance = (): Validator => new Validator(new rules.StringInstance());
     public static stringType = (): Validator => new Validator(new rules.StringType());
     public static stringVal = (): Validator => new Validator(new rules.StringVal());
+    public static subdivisionCode = (countryCode: string, identical: boolean = true): Validator => new Validator(new rules.SubdivisionCode(countryCode, identical));
     public static symbolInstance = (): Validator => new Validator(new rules.SymbolInstance());
     public static symbolType = (): Validator => new Validator(new rules.SymbolType());
     public static symbolVal = (): Validator => new Validator(new rules.SymbolVal());
@@ -166,6 +167,7 @@ export class Validator extends AllOf {
     public stringInstance = (): this => this.addRule(new rules.StringInstance());
     public stringType = (): this => this.addRule(new rules.StringType());
     public stringVal = (): this => this.addRule(new rules.StringVal());
+    public subdivisionCode = (countryCode: string, identical: boolean = true): this => this.addRule(new rules.SubdivisionCode(countryCode, identical));
     public symbolInstance = (): this => this.addRule(new rules.SymbolInstance());
     public symbolType = (): this => this.addRule(new rules.SymbolType());
     public symbolVal = (): this => this.addRule(new rules.SymbolVal());

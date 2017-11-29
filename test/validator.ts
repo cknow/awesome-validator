@@ -101,6 +101,8 @@ describe('Validator', () => {
         assert.instanceOf(V.stringInstance(), V);
         assert.instanceOf(V.stringType(), V);
         assert.instanceOf(V.stringVal(), V);
+        assert.instanceOf(V.subdivisionCode('countryCode'), V);
+        assert.instanceOf(V.subdivisionCode('countryCode', false), V);
         assert.instanceOf(V.symbolInstance(), V);
         assert.instanceOf(V.symbolType(), V);
         assert.instanceOf(V.symbolVal(), V);
@@ -214,6 +216,8 @@ describe('Validator', () => {
         assert.instanceOf(v.stringInstance(), V);
         assert.instanceOf(v.stringType(), V);
         assert.instanceOf(v.stringVal(), V);
+        assert.instanceOf(v.subdivisionCode('countryCode'), V);
+        assert.instanceOf(v.subdivisionCode('countryCode', false), V);
         assert.instanceOf(v.symbolInstance(), V);
         assert.instanceOf(v.symbolType(), V);
         assert.instanceOf(v.symbolVal(), V);
