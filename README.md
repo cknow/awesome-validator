@@ -108,6 +108,7 @@ The library can be loaded either as a standalone script, or through an [AMD](htt
 - [LeapDate](docs/leap-date.md)
 - [LeapYear](docs/leap-year.md)
 - [Lowercase](docs/lowercase.md)
+- [Luhn](docs/luhn.md)
 - [MacAddress](docs/mac-address.md)
 - [Multiple](docs/multiple.md)
 - [Negative](docs/negative.md)

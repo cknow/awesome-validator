@@ -29,6 +29,7 @@ export * from './json';
 export * from './leap-date';
 export * from './leap-year';
 export * from './lowercase';
+export * from './luhn';
 export * from './mac-address';
 export * from './multiple';
 export * from './negative';

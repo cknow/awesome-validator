@@ -39,6 +39,7 @@ export class Validator extends AllOf {
     public static leapDate= (format?: momment.MomentFormatSpecification): Validator => new Validator(new rules.LeapDate(format));
     public static leapYear = (format?: momment.MomentFormatSpecification): Validator => new Validator(new rules.LeapYear(format));
     public static lowercase = (): Validator => new Validator(new rules.Lowercase());
+    public static luhn = (): Validator => new Validator(new rules.Luhn());
     public static macAddress = (): Validator => new Validator(new rules.MacAddress());
     public static multiple = (multipleOf: number): Validator => new Validator(new rules.Multiple(multipleOf));
     public static negative = (): Validator => new Validator(new rules.Negative());
@@ -129,6 +130,7 @@ export class Validator extends AllOf {
     public leapDate = (format?: momment.MomentFormatSpecification): this => this.addRule(new rules.LeapDate(format));
     public leapYear = (format?: momment.MomentFormatSpecification): this => this.addRule(new rules.LeapYear(format));
     public lowercase = (): this => this.addRule(new rules.Lowercase());
+    public luhn = (): this => this.addRule(new rules.Luhn());
     public macAddress = (): this => this.addRule(new rules.MacAddress());
     public multiple = (multipleOf: number): this => this.addRule(new rules.Multiple(multipleOf));
     public negative = (): this => this.addRule(new rules.Negative());
