@@ -3,6 +3,13 @@ import { AbstractCalculation } from './abstract-calculation';
 export class Cnh extends AbstractCalculation {
 
     /**
+     * Get Length.
+     */
+    protected getLength(): number {
+        return 11;
+    }
+
+    /**
      * Validate Calculation.
      */
     protected validateCalculation(input: string): boolean {
