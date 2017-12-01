@@ -23,6 +23,7 @@ export class Validator extends AllOf {
     public static consonant = (additionalChars?: string): Validator => new Validator(new rules.Consonant(additionalChars));
     public static contains = (value?: any, contains: boolean = true, identical: boolean = false): Validator => new Validator(new rules.Contains(value, contains, identical));
     public static cpf = (): Validator => new Validator(new rules.Cpf());
+    public static digit = (additionalChars?: string): Validator => new Validator(new rules.Digit(additionalChars));
     public static empty = (): Validator => new Validator(new rules.Empty());
     public static even = (): Validator => new Validator(new rules.Even());
     public static falseVal = (): Validator => new Validator(new rules.FalseVal());
@@ -112,6 +113,7 @@ export class Validator extends AllOf {
     public consonant = (additionalChars?: string): this => this.addRule(new rules.Consonant(additionalChars));
     public contains = (value?: any, contains: boolean = true, identical: boolean = false): this => this.addRule(new rules.Contains(value, contains, identical));
     public cpf = (): this => this.addRule(new rules.Cpf());
+    public digit = (additionalChars?: string): this => this.addRule(new rules.Digit(additionalChars));
     public empty = (): this => this.addRule(new rules.Empty());
     public even = (): this => this.addRule(new rules.Even());
     public falseVal = (): this => this.addRule(new rules.FalseVal());

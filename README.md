@@ -92,6 +92,7 @@ The library can be loaded either as a standalone script, or through an [AMD](htt
 - [Consonant](docs/consonant.md)
 - [Contains](docs/contains.md)
 - [Cpf](docs/cpf.md)
+- [Digit](docs/digit.md)
 - [Empty](docs/empty.md)
 - [Even](docs/even.md)
 - [FalseVal](docs/false-val.md)
