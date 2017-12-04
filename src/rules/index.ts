@@ -26,6 +26,7 @@ export * from './instance-of';
 export * from './int-type';
 export * from './int-val';
 export * from './json';
+export * from './label';
 export * from './leap-date';
 export * from './leap-year';
 export * from './lowercase';

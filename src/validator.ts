@@ -36,6 +36,7 @@ export class Validator extends AllOf {
     public static intType = (): Validator => new Validator(new rules.IntType());
     public static intVal = (): Validator => new Validator(new rules.IntVal());
     public static json = (): Validator => new Validator(new rules.Json());
+    public static label = (): Validator => new Validator(new rules.Label());
     public static leapDate= (format?: momment.MomentFormatSpecification): Validator => new Validator(new rules.LeapDate(format));
     public static leapYear = (format?: momment.MomentFormatSpecification): Validator => new Validator(new rules.LeapYear(format));
     public static lowercase = (): Validator => new Validator(new rules.Lowercase());
@@ -127,6 +128,7 @@ export class Validator extends AllOf {
     public intType = (): this => this.addRule(new rules.IntType());
     public intVal = (): this => this.addRule(new rules.IntVal());
     public json = (): this => this.addRule(new rules.Json());
+    public label = (): this => this.addRule(new rules.Label());
     public leapDate = (format?: momment.MomentFormatSpecification): this => this.addRule(new rules.LeapDate(format));
     public leapYear = (format?: momment.MomentFormatSpecification): this => this.addRule(new rules.LeapYear(format));
     public lowercase = (): this => this.addRule(new rules.Lowercase());

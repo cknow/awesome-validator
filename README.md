@@ -105,6 +105,7 @@ The library can be loaded either as a standalone script, or through an [AMD](htt
 - [IntType](docs/int-type.md)
 - [IntVal](docs/int-val.md)
 - [Json](docs/json.md)
+- [Label](docs/label.md)
 - [LeapDate](docs/leap-date.md)
 - [LeapYear](docs/leap-year.md)
 - [Lowercase](docs/lowercase.md)

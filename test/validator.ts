@@ -50,6 +50,7 @@ describe('Validator', () => {
         assert.instanceOf(V.intType(), V);
         assert.instanceOf(V.intVal(), V);
         assert.instanceOf(V.json(), V);
+        assert.instanceOf(V.label(), V);
         assert.instanceOf(V.leapDate(), V);
         assert.instanceOf(V.leapDate('DD-MM-YYYY'), V);
         assert.instanceOf(V.leapYear(), V);
@@ -168,6 +169,7 @@ describe('Validator', () => {
         assert.instanceOf(v.intType(), V);
         assert.instanceOf(v.intVal(), V);
         assert.instanceOf(v.json(), V);
+        assert.instanceOf(v.label(), V);
         assert.instanceOf(v.leapDate(), V);
         assert.instanceOf(v.leapDate('DD-MM-YYYY'), V);
         assert.instanceOf(v.leapYear(), V);
