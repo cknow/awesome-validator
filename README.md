@@ -111,6 +111,8 @@ The library can be loaded either as a standalone script, or through an [AMD](htt
 - [Lowercase](docs/lowercase.md)
 - [Luhn](docs/luhn.md)
 - [MacAddress](docs/mac-address.md)
+- [Max](docs/max.md)
+- [Min](docs/min.md)
 - [Multiple](docs/multiple.md)
 - [Negative](docs/negative.md)
 - [NfeAccessKey](docs/nfe-access-key.md)

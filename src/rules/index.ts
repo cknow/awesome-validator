@@ -32,6 +32,8 @@ export * from './leap-year';
 export * from './lowercase';
 export * from './luhn';
 export * from './mac-address';
+export * from './max';
+export * from './min';
 export * from './multiple';
 export * from './negative';
 export * from './nfe-access-key';
