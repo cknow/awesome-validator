@@ -5,7 +5,9 @@ export class Digit extends AbstractRegexFilter {
     /**
      * Filter white sapce.
      */
-    protected filterWhiteSpace: boolean = true;
+    protected filterWhiteSpace(): boolean {
+        return true;
+    }
 
     /**
      * Get pattern.

@@ -4,11 +4,6 @@ import { Scalar } from './scalar';
 export abstract class AbstractFilter extends AbstractRule {
 
     /**
-     * Filter white sapce.
-     */
-    protected filterWhiteSpace: boolean = false;
-
-    /**
      * AbstractFilter.
      */
     public constructor(public readonly additionalChars: string = '') {
@@ -35,7 +30,7 @@ export abstract class AbstractFilter extends AbstractRule {
             }
         }
 
-        if (this.filterWhiteSpace) {
+        if (this.filterWhiteSpace()) {
             stringInput = stringInput.replace(/\s/g, '');
         }
 
@@ -44,6 +39,13 @@ export abstract class AbstractFilter extends AbstractRule {
         }
 
         return this.validateClean(stringInput);
+    }
+
+    /**
+     * Filter white sapce.
+     */
+    protected filterWhiteSpace(): boolean {
+        return false;
     }
 
     /**
