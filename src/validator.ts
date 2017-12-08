@@ -80,6 +80,7 @@ export class Validator extends AllOf {
     public static slug = (): Validator => new Validator(new rules.Slug());
     public static sorted = (fn?: Function | null, ascending: boolean = true): Validator => new Validator(new rules.Sorted(fn, ascending));
     public static space = (additionalChars?: string): Validator => new Validator(new rules.Space(additionalChars));
+    public static startsWith = (startValue: string, identical: boolean = false): Validator => new Validator(new rules.StartsWith(startValue, identical));
     public static stringInstance = (): Validator => new Validator(new rules.StringInstance());
     public static stringType = (): Validator => new Validator(new rules.StringType());
     public static stringVal = (): Validator => new Validator(new rules.StringVal());
@@ -174,6 +175,7 @@ export class Validator extends AllOf {
     public slug = (): this => this.addRule(new rules.Slug());
     public sorted = (fn?: Function | null, ascending: boolean = true): this => this.addRule(new rules.Sorted(fn, ascending));
     public space = (additionalChars?: string): this => this.addRule(new rules.Space(additionalChars));
+    public startsWith = (startValue: string, identical: boolean = false): this => this.addRule(new rules.StartsWith(startValue, identical));
     public stringInstance = (): this => this.addRule(new rules.StringInstance());
     public stringType = (): this => this.addRule(new rules.StringType());
     public stringVal = (): this => this.addRule(new rules.StringVal());

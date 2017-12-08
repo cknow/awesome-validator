@@ -149,6 +149,7 @@ The library can be loaded either as a standalone script, or through an [AMD](htt
 - [Slug](docs/slug.md)
 - [Sorted](docs/sorted.md)
 - [Space](docs/space.md)
+- [StartsWith](docs/starts-with.md)
 - [StringInstance](docs/string-instance.md)
 - [StringType](docs/string-type.md)
 - [StringVal](docs/string-val.md)

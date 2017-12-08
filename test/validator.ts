@@ -106,6 +106,8 @@ describe('Validator', () => {
         assert.instanceOf(V.sorted(null, true), V);
         assert.instanceOf(V.space(), V);
         assert.instanceOf(V.space('foo'), V);
+        assert.instanceOf(V.startsWith('foo'), V);
+        assert.instanceOf(V.startsWith('foo', true), V);
         assert.instanceOf(V.stringInstance(), V);
         assert.instanceOf(V.stringType(), V);
         assert.instanceOf(V.stringVal(), V);
@@ -229,6 +231,8 @@ describe('Validator', () => {
         assert.instanceOf(v.sorted(null, true), V);
         assert.instanceOf(v.space(), V);
         assert.instanceOf(v.space('foo'), V);
+        assert.instanceOf(v.startsWith('foo'), V);
+        assert.instanceOf(v.startsWith('foo', true), V);
         assert.instanceOf(v.stringInstance(), V);
         assert.instanceOf(v.stringType(), V);
         assert.instanceOf(v.stringVal(), V);
