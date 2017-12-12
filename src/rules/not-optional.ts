@@ -7,6 +7,6 @@ export class NotOptional extends AbstractRule {
      * Validate.
      */
     public validate(input: any): boolean {
-        return !new In([null, ''], false).validate(input);
+        return !new In(['', null, undefined], false).validate(input);
     }
 }

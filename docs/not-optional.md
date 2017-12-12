@@ -20,4 +20,5 @@ Invalid values:
 ```js
 validator.notOptional().validate('');
 validator.notOptional().validate(null);
+validator.notOptional().validate(undefined);
 ```

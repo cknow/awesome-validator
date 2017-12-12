@@ -58,6 +58,7 @@ describe('NotOptional', () => {
     it('values is not valid', () => {
         assert.isFalse(notOptional.validate(''));
         assert.isFalse(notOptional.validate(null));
+        assert.isFalse(notOptional.validate(undefined));
         assert.isFalse(notOptional.validate(String()));
     });
 
