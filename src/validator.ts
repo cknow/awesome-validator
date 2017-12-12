@@ -42,8 +42,8 @@ export class Validator extends AllOf {
     public static lowercase = (): Validator => new Validator(new rules.Lowercase());
     public static luhn = (): Validator => new Validator(new rules.Luhn());
     public static macAddress = (): Validator => new Validator(new rules.MacAddress());
-    public static max = (interval: any, inclusive: boolean = true): Validator => new Validator(new rules.Max(interval, inclusive));
-    public static min = (interval: any, inclusive: boolean = true): Validator => new Validator(new rules.Min(interval, inclusive));
+    public static max = (interval?: any, inclusive: boolean = true): Validator => new Validator(new rules.Max(interval, inclusive));
+    public static min = (interval?: any, inclusive: boolean = true): Validator => new Validator(new rules.Min(interval, inclusive));
     public static multiple = (multipleOf: number): Validator => new Validator(new rules.Multiple(multipleOf));
     public static negative = (): Validator => new Validator(new rules.Negative());
     public static nfeAccessKey  = (): Validator => new Validator(new rules.NfeAccessKey());
@@ -137,8 +137,8 @@ export class Validator extends AllOf {
     public lowercase = (): this => this.addRule(new rules.Lowercase());
     public luhn = (): this => this.addRule(new rules.Luhn());
     public macAddress = (): this => this.addRule(new rules.MacAddress());
-    public max = (interval: any, inclusive: boolean = true): this => this.addRule(new rules.Max(interval, inclusive));
-    public min = (interval: any, inclusive: boolean = true): this => this.addRule(new rules.Min(interval, inclusive));
+    public max = (interval?: any, inclusive: boolean = true): this => this.addRule(new rules.Max(interval, inclusive));
+    public min = (interval?: any, inclusive: boolean = true): this => this.addRule(new rules.Min(interval, inclusive));
     public multiple = (multipleOf: number): this => this.addRule(new rules.Multiple(multipleOf));
     public negative = (): this => this.addRule(new rules.Negative());
     public nfeAccessKey  = (): this => this.addRule(new rules.NfeAccessKey());

@@ -58,8 +58,10 @@ describe('Validator', () => {
         assert.instanceOf(V.lowercase(), V);
         assert.instanceOf(V.luhn(), V);
         assert.instanceOf(V.macAddress(), V);
+        assert.instanceOf(V.max(), V);
         assert.instanceOf(V.max(100), V);
         assert.instanceOf(V.max(100, false), V);
+        assert.instanceOf(V.min(), V);
         assert.instanceOf(V.min(100), V);
         assert.instanceOf(V.min(100, false), V);
         assert.instanceOf(V.multiple(0), V);
@@ -183,8 +185,10 @@ describe('Validator', () => {
         assert.instanceOf(v.lowercase(), V);
         assert.instanceOf(v.luhn(), V);
         assert.instanceOf(v.macAddress(), V);
+        assert.instanceOf(v.max(), V);
         assert.instanceOf(v.max(100), V);
         assert.instanceOf(v.max(100, false), V);
+        assert.instanceOf(v.min(), V);
         assert.instanceOf(v.min(100), V);
         assert.instanceOf(v.min(100, false), V);
         assert.instanceOf(v.multiple(0), V);

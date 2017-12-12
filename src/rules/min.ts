@@ -3,13 +3,13 @@ import { AbstractInterval } from './abstract-interval';
 export class Min extends AbstractInterval {
 
     /**
-     * Validate.
+     * Validate interval.
      */
-    public validate(input: any): boolean {
+    protected validateInterval(input: any, interval: any): boolean {
         if (this.inclusive) {
-            return this.filterInterval(input) >= this.filterInterval(this.interval);
+            return input >= interval;
         }
 
-        return this.filterInterval(input) > this.filterInterval(this.interval);
+        return input > interval;
     }
 }
