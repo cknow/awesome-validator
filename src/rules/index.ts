@@ -13,6 +13,7 @@ export * from './cnpj';
 export * from './consonant';
 export * from './contains';
 export * from './cpf';
+export * from './date-time';
 export * from './digit';
 export * from './empty';
 export * from './even';

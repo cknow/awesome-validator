@@ -8,6 +8,29 @@ import { StringType } from './string-type';
 export abstract class AbstractDate extends AbstractRule {
 
     /**
+     * Parse.
+     */
+    public static parse(input: any, format?: moment.MomentFormatSpecification): moment.Moment {
+        if (new NumberVal().validate(input)) {
+            if (moment([input]).isValid()) {
+                return moment([input]);
+            }
+
+            return moment.unix(Number(input));
+        }
+
+        if (new StringType().validate(input)) {
+            return moment(input, format, !!format);
+        }
+
+        if (new BooleanType().validate(input)) {
+            return moment();
+        }
+
+        return moment(input);
+    }
+
+    /**
      * AbstractDate.
      */
     public constructor(public readonly format?: moment.MomentFormatSpecification) {
@@ -18,7 +41,7 @@ export abstract class AbstractDate extends AbstractRule {
      * Validate.
      */
     public validate(input: any): boolean {
-        const date: moment.Moment = this.parseDate(input);
+        const date: moment.Moment = AbstractDate.parse(input, this.format);
 
         return date.isValid() && this.validateDate(date);
     }
@@ -27,27 +50,4 @@ export abstract class AbstractDate extends AbstractRule {
      * Validate Date.
      */
     protected abstract validateDate(date: moment.Moment): boolean;
-
-    /**
-     * Parse Date.
-     */
-    private parseDate(input: any): moment.Moment {
-        if (new NumberVal().validate(input)) {
-            if (moment([input]).isValid()) {
-                return moment([input]);
-            }
-
-            return moment.unix(Number(input));
-        }
-
-        if (new StringType().validate(input)) {
-            return moment(input, this.format);
-        }
-
-        if (new BooleanType().validate(input)) {
-            return moment();
-        }
-
-        return moment(input);
-    }
 }

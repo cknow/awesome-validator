@@ -34,6 +34,8 @@ describe('Validator', () => {
         assert.instanceOf(V.contains('foo', false), V);
         assert.instanceOf(V.contains('foo', false, true), V);
         assert.instanceOf(V.cpf(), V);
+        assert.instanceOf(V.dateTime(), V);
+        assert.instanceOf(V.dateTime('DD-MM-YYYY'), V);
         assert.instanceOf(V.digit(), V);
         assert.instanceOf(V.digit('foo'), V);
         assert.instanceOf(V.empty(), V);
@@ -161,6 +163,8 @@ describe('Validator', () => {
         assert.instanceOf(v.contains('foo', false), V);
         assert.instanceOf(v.contains('foo', false, true), V);
         assert.instanceOf(v.cpf(), V);
+        assert.instanceOf(v.dateTime(), V);
+        assert.instanceOf(v.dateTime('DD-MM-YYYY'), V);
         assert.instanceOf(v.digit(), V);
         assert.instanceOf(v.digit('foo'), V);
         assert.instanceOf(v.empty(), V);

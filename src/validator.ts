@@ -23,6 +23,7 @@ export class Validator extends AllOf {
     public static consonant = (additionalChars?: string): Validator => new Validator(new rules.Consonant(additionalChars));
     public static contains = (value?: any, contains: boolean = true, identical: boolean = false): Validator => new Validator(new rules.Contains(value, contains, identical));
     public static cpf = (): Validator => new Validator(new rules.Cpf());
+    public static dateTime = (format?: momment.MomentFormatSpecification): Validator => new Validator(new rules.DateTime(format));
     public static digit = (additionalChars?: string): Validator => new Validator(new rules.Digit(additionalChars));
     public static empty = (): Validator => new Validator(new rules.Empty());
     public static even = (): Validator => new Validator(new rules.Even());
@@ -118,6 +119,7 @@ export class Validator extends AllOf {
     public consonant = (additionalChars?: string): this => this.addRule(new rules.Consonant(additionalChars));
     public contains = (value?: any, contains: boolean = true, identical: boolean = false): this => this.addRule(new rules.Contains(value, contains, identical));
     public cpf = (): this => this.addRule(new rules.Cpf());
+    public dateTime = (format?: momment.MomentFormatSpecification): this => this.addRule(new rules.DateTime(format));
     public digit = (additionalChars?: string): this => this.addRule(new rules.Digit(additionalChars));
     public empty = (): this => this.addRule(new rules.Empty());
     public even = (): this => this.addRule(new rules.Even());
