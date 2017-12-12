@@ -24,7 +24,6 @@ describe('NotOptional', () => {
         assert.isTrue(notOptional.validate(true));
         assert.isTrue(notOptional.validate(false));
         assert.isTrue(notOptional.validate(Number()));
-        assert.isTrue(notOptional.validate(undefined));
         assert.isTrue(notOptional.validate('true'));
         assert.isTrue(notOptional.validate('false'));
         assert.isTrue(notOptional.validate('-1.1'));
