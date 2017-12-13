@@ -38,7 +38,7 @@ export class Validator extends AllOf {
     public static intVal = (): Validator => new Validator(new rules.IntVal());
     public static json = (): Validator => new Validator(new rules.Json());
     public static label = (): Validator => new Validator(new rules.Label());
-    public static leapDate= (format?: momment.MomentFormatSpecification): Validator => new Validator(new rules.LeapDate(format));
+    public static leapDate = (format?: momment.MomentFormatSpecification): Validator => new Validator(new rules.LeapDate(format));
     public static leapYear = (format?: momment.MomentFormatSpecification): Validator => new Validator(new rules.LeapYear(format));
     public static lowercase = (): Validator => new Validator(new rules.Lowercase());
     public static luhn = (): Validator => new Validator(new rules.Luhn());
@@ -72,6 +72,7 @@ export class Validator extends AllOf {
     public static primeNumber = (): Validator => new Validator(new rules.PrimeNumber());
     public static prnt = (additionalChars?: string): Validator => new Validator(new rules.Prnt(additionalChars));
     public static punct = (additionalChars?: string): Validator => new Validator(new rules.Punct(additionalChars));
+    public static range = (min?: number | null, max?: number | null, inclusive: boolean = true): Validator => new Validator(new rules.Range(min, max, inclusive));
     public static regexInstance = (): Validator => new Validator(new rules.RegexInstance());
     public static regexType = (): Validator => new Validator(new rules.RegexType());
     public static regexVal = (): Validator => new Validator(new rules.RegexVal());
@@ -168,6 +169,7 @@ export class Validator extends AllOf {
     public primeNumber = (): this => this.addRule(new rules.PrimeNumber());
     public prnt = (additionalChars?: string): this => this.addRule(new rules.Prnt(additionalChars));
     public punct = (additionalChars?: string): this => this.addRule(new rules.Punct(additionalChars));
+    public range = (min?: number | null, max?: number | null, inclusive: boolean = true): this => this.addRule(new rules.Range(min, max, inclusive));
     public regexInstance = (): this => this.addRule(new rules.RegexInstance());
     public regexType = (): this => this.addRule(new rules.RegexType());
     public regexVal = (): this => this.addRule(new rules.RegexVal());
