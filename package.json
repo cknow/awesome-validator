@@ -82,7 +82,7 @@
     "webpack": "^3.10.0"
   },
   "engines": {
-    "node": ">=7",
+    "node": ">=6",
     "npm": ">=3"
   },
   "preferGlobal": false,
