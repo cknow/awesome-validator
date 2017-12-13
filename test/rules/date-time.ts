@@ -18,6 +18,9 @@ describe('DateTime', () => {
     });
 
     it('values is valid', () => {
+        assert.isTrue(dateTime.validate(1318781876.721));
+        assert.isTrue(dateTime.validate(true));
+        assert.isTrue(dateTime.validate(false));
         assert.isTrue(dateTime.validate('2008'));
         assert.isTrue(dateTime.validate(new Date(2008, 1, 29)));
         assert.isTrue(dateTime.validate('2008-02-29'));
