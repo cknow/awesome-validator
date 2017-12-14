@@ -77,6 +77,7 @@ The library can be loaded either as a standalone script, or through an [AMD](htt
 
 ## Validators
 
+- [Age](docs/age.md)
 - [AllOf](docs/all-of.md)
 - [AlwaysInvalid](docs/always-invalid.md)
 - [AlwaysValid](docs/always-valid.md)

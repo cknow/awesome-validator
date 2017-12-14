@@ -14,6 +14,13 @@ describe('Validator', () => {
     });
 
     it('static rules', () => {
+        assert.instanceOf(V.age(), V);
+        assert.instanceOf(V.age(10), V);
+        assert.instanceOf(V.age(10, 50), V);
+        assert.instanceOf(V.age(10, 50, 'DD/MM/YYYY'), V);
+        assert.instanceOf(V.age(undefined, 50, 'DD/MM/YYYY'), V);
+        assert.instanceOf(V.age(10, undefined, 'DD/MM/YYYY'), V);
+        assert.instanceOf(V.age(undefined, undefined, 'DD/MM/YYYY'), V);
         assert.instanceOf(V.allOf(), AllOf);
         assert.instanceOf(V.allOf(V.alwaysValid()), AllOf);
         assert.instanceOf(V.alwaysInvalid(), V);
@@ -153,6 +160,13 @@ describe('Validator', () => {
     });
 
     it('rules', () => {
+        assert.instanceOf(v.age(), V);
+        assert.instanceOf(v.age(10), V);
+        assert.instanceOf(v.age(10, 50), V);
+        assert.instanceOf(v.age(10, 50, 'DD/MM/YYYY'), V);
+        assert.instanceOf(v.age(undefined, 50, 'DD/MM/YYYY'), V);
+        assert.instanceOf(v.age(10, undefined, 'DD/MM/YYYY'), V);
+        assert.instanceOf(v.age(undefined, undefined, 'DD/MM/YYYY'), V);
         assert.instanceOf(v.allOf(), AllOf);
         assert.instanceOf(v.allOf(V.alwaysValid()), AllOf);
         assert.instanceOf(v.alwaysInvalid(), V);

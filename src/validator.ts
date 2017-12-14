@@ -1,4 +1,4 @@
-import * as momment from 'moment';
+import * as moment from 'moment';
 
 import * as rules from './rules';
 import { AllOf } from './rules/all-of';
@@ -8,6 +8,7 @@ import { Validatable } from './validatable';
 export class Validator extends AllOf {
 
     /* tslint:disable completed-docs max-line-length */
+    public static age = (minAge: moment.DurationInputArg1 = 18, maxAge?: moment.DurationInputArg1, format?: moment.MomentFormatSpecification): Validator => new Validator(new rules.Age(minAge, maxAge, format));
     public static allOf = (...args: Validatable[]): AllOf => new AllOf(...args);
     public static alwaysInvalid = (): Validator => new Validator(new rules.AlwaysInvalid());
     public static alwaysValid = (): Validator => new Validator(new rules.AlwaysValid());
@@ -23,7 +24,7 @@ export class Validator extends AllOf {
     public static consonant = (additionalChars?: string): Validator => new Validator(new rules.Consonant(additionalChars));
     public static contains = (value?: any, contains: boolean = true, identical: boolean = false): Validator => new Validator(new rules.Contains(value, contains, identical));
     public static cpf = (): Validator => new Validator(new rules.Cpf());
-    public static dateTime = (format?: momment.MomentFormatSpecification): Validator => new Validator(new rules.DateTime(format));
+    public static dateTime = (format?: moment.MomentFormatSpecification): Validator => new Validator(new rules.DateTime(format));
     public static digit = (additionalChars?: string): Validator => new Validator(new rules.Digit(additionalChars));
     public static empty = (): Validator => new Validator(new rules.Empty());
     public static even = (): Validator => new Validator(new rules.Even());
@@ -38,8 +39,8 @@ export class Validator extends AllOf {
     public static intVal = (): Validator => new Validator(new rules.IntVal());
     public static json = (): Validator => new Validator(new rules.Json());
     public static label = (): Validator => new Validator(new rules.Label());
-    public static leapDate = (format?: momment.MomentFormatSpecification): Validator => new Validator(new rules.LeapDate(format));
-    public static leapYear = (format?: momment.MomentFormatSpecification): Validator => new Validator(new rules.LeapYear(format));
+    public static leapDate = (format?: moment.MomentFormatSpecification): Validator => new Validator(new rules.LeapDate(format));
+    public static leapYear = (format?: moment.MomentFormatSpecification): Validator => new Validator(new rules.LeapYear(format));
     public static lowercase = (): Validator => new Validator(new rules.Lowercase());
     public static luhn = (): Validator => new Validator(new rules.Luhn());
     public static macAddress = (): Validator => new Validator(new rules.MacAddress());
@@ -105,6 +106,7 @@ export class Validator extends AllOf {
     public static xdigit = (additionalChars?: string): Validator => new Validator(new rules.Xdigit(additionalChars));
     public static yes = (additionalChars?: string): Validator => new Validator(new rules.Yes(additionalChars));
 
+    public age = (minAge: moment.DurationInputArg1 = 18, maxAge?: moment.DurationInputArg1, format?: moment.MomentFormatSpecification): this => this.addRule(new rules.Age(minAge, maxAge, format));
     public allOf = (...args: Validatable[]): this => this.addRule(new AllOf(...args));
     public alwaysInvalid = (): this => this.addRule(new rules.AlwaysInvalid());
     public alwaysValid = (): this => this.addRule(new rules.AlwaysValid());
@@ -120,7 +122,7 @@ export class Validator extends AllOf {
     public consonant = (additionalChars?: string): this => this.addRule(new rules.Consonant(additionalChars));
     public contains = (value?: any, contains: boolean = true, identical: boolean = false): this => this.addRule(new rules.Contains(value, contains, identical));
     public cpf = (): this => this.addRule(new rules.Cpf());
-    public dateTime = (format?: momment.MomentFormatSpecification): this => this.addRule(new rules.DateTime(format));
+    public dateTime = (format?: moment.MomentFormatSpecification): this => this.addRule(new rules.DateTime(format));
     public digit = (additionalChars?: string): this => this.addRule(new rules.Digit(additionalChars));
     public empty = (): this => this.addRule(new rules.Empty());
     public even = (): this => this.addRule(new rules.Even());
@@ -135,8 +137,8 @@ export class Validator extends AllOf {
     public intVal = (): this => this.addRule(new rules.IntVal());
     public json = (): this => this.addRule(new rules.Json());
     public label = (): this => this.addRule(new rules.Label());
-    public leapDate = (format?: momment.MomentFormatSpecification): this => this.addRule(new rules.LeapDate(format));
-    public leapYear = (format?: momment.MomentFormatSpecification): this => this.addRule(new rules.LeapYear(format));
+    public leapDate = (format?: moment.MomentFormatSpecification): this => this.addRule(new rules.LeapDate(format));
+    public leapYear = (format?: moment.MomentFormatSpecification): this => this.addRule(new rules.LeapYear(format));
     public lowercase = (): this => this.addRule(new rules.Lowercase());
     public luhn = (): this => this.addRule(new rules.Luhn());
     public macAddress = (): this => this.addRule(new rules.MacAddress());
