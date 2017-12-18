@@ -35,6 +35,10 @@ describe('Range', () => {
         assert.isTrue(new Range(null, 5).validate(new Map<number, number>([[1, 1], [2, 2], [3, 3]])));
         assert.isTrue(new Range(1, 5).validate(new Map<number, number>([[1, 1], [2, 2], [3, 3]])));
         assert.isTrue(new Range(1, 5, false).validate(new Map<number, number>([[1, 1], [2, 2], [3, 3]])));
+        assert.isTrue(new Range('5mb', '20mb').validate('10mb'));
+        assert.isTrue(new Range('5mb').validate('10mb'));
+        assert.isTrue(new Range(null, '20mb').validate('10mb'));
+        assert.isTrue(new Range('a', 'c').validate('b'));
     });
 
     it('values is not valid', () => {
@@ -62,6 +66,10 @@ describe('Range', () => {
         assert.isFalse(new Range(null, 2).validate(new Map<number, number>([[1, 1], [2, 2], [3, 3]])));
         assert.isFalse(new Range(5, 10).validate(new Map<number, number>([[1, 1], [2, 2], [3, 3]])));
         assert.isFalse(new Range(3, 5, false).validate(new Map<number, number>([[1, 1], [2, 2], [3, 3]])));
+        assert.isFalse(new Range('5mb', '20mb').validate('30mb'));
+        assert.isFalse(new Range('5mb').validate('3mb'));
+        assert.isFalse(new Range(null, '20mb').validate('30mb'));
+        assert.isFalse(new Range('a', 'c').validate('d'));
     });
 
 });

@@ -18,8 +18,7 @@ export class SymbolicLink extends AbstractRule {
             }
 
             return String(url).length > 0;
-        } catch (e) {
-        }
+        } catch (e) {}
 
         return false;
     }
