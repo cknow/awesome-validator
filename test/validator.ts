@@ -121,6 +121,12 @@ describe('Validator', () => {
         assert.instanceOf(V.regex(/foo/), V);
         assert.instanceOf(V.roman(), V);
         assert.instanceOf(V.scalar(), V);
+        assert.instanceOf(V.size(), V);
+        assert.instanceOf(V.size(100), V);
+        assert.instanceOf(V.size(100, 100), V);
+        assert.instanceOf(V.size(100, 200, false), V);
+        assert.instanceOf(V.size(null, 100), V);
+        assert.instanceOf(V.size(undefined, 100), V);
         assert.instanceOf(V.slug(), V);
         assert.instanceOf(V.sorted(), V);
         assert.instanceOf(V.sorted(null), V);
@@ -263,6 +269,12 @@ describe('Validator', () => {
         assert.instanceOf(v.regex(/foo/), V);
         assert.instanceOf(v.roman(), V);
         assert.instanceOf(v.scalar(), V);
+        assert.instanceOf(v.size(), V);
+        assert.instanceOf(v.size(100), V);
+        assert.instanceOf(v.size(100, 100), V);
+        assert.instanceOf(v.size(100, 200, false), V);
+        assert.instanceOf(v.size(null, 100), V);
+        assert.instanceOf(v.size(undefined, 100), V);
         assert.instanceOf(v.slug(), V);
         assert.instanceOf(v.sorted(), V);
         assert.instanceOf(v.sorted(null), V);

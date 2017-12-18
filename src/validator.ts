@@ -8,7 +8,7 @@ import { Validatable } from './validatable';
 export class Validator extends AllOf {
 
     /* tslint:disable completed-docs max-line-length */
-    public static age = (minAge: moment.DurationInputArg1 = 18, maxAge?: moment.DurationInputArg1, format?: moment.MomentFormatSpecification): Validator => new Validator(new rules.Age(minAge, maxAge, format));
+    public static age = (min: moment.DurationInputArg1 = 18, max?: moment.DurationInputArg1, format?: moment.MomentFormatSpecification): Validator => new Validator(new rules.Age(min, max, format));
     public static allOf = (...args: Validatable[]): AllOf => new AllOf(...args);
     public static alwaysInvalid = (): Validator => new Validator(new rules.AlwaysInvalid());
     public static alwaysValid = (): Validator => new Validator(new rules.AlwaysValid());
@@ -73,13 +73,14 @@ export class Validator extends AllOf {
     public static primeNumber = (): Validator => new Validator(new rules.PrimeNumber());
     public static prnt = (additionalChars?: string): Validator => new Validator(new rules.Prnt(additionalChars));
     public static punct = (additionalChars?: string): Validator => new Validator(new rules.Punct(additionalChars));
-    public static range = (min?: number | null, max?: number | null, inclusive: boolean = true): Validator => new Validator(new rules.Range(min, max, inclusive));
+    public static range = (min?: any, max?: any, inclusive: boolean = true): Validator => new Validator(new rules.Range(min, max, inclusive));
     public static regexInstance = (): Validator => new Validator(new rules.RegexInstance());
     public static regexType = (): Validator => new Validator(new rules.RegexType());
     public static regexVal = (): Validator => new Validator(new rules.RegexVal());
     public static regex = (pattern: string | RegExp): Validator => new Validator(new rules.Regex(pattern));
     public static roman = (): Validator => new Validator(new rules.Roman());
     public static scalar = (): Validator => new Validator(new rules.Scalar());
+    public static size = (min?: any, max?: any, inclusive: boolean = true): Validator => new Validator(new rules.Size(min, max, inclusive));
     public static slug = (): Validator => new Validator(new rules.Slug());
     public static sorted = (fn?: Function | null, ascending: boolean = true): Validator => new Validator(new rules.Sorted(fn, ascending));
     public static space = (additionalChars?: string): Validator => new Validator(new rules.Space(additionalChars));
@@ -106,7 +107,7 @@ export class Validator extends AllOf {
     public static xdigit = (additionalChars?: string): Validator => new Validator(new rules.Xdigit(additionalChars));
     public static yes = (additionalChars?: string): Validator => new Validator(new rules.Yes(additionalChars));
 
-    public age = (minAge: moment.DurationInputArg1 = 18, maxAge?: moment.DurationInputArg1, format?: moment.MomentFormatSpecification): this => this.addRule(new rules.Age(minAge, maxAge, format));
+    public age = (min: moment.DurationInputArg1 = 18, max?: moment.DurationInputArg1, format?: moment.MomentFormatSpecification): this => this.addRule(new rules.Age(min, max, format));
     public allOf = (...args: Validatable[]): this => this.addRule(new AllOf(...args));
     public alwaysInvalid = (): this => this.addRule(new rules.AlwaysInvalid());
     public alwaysValid = (): this => this.addRule(new rules.AlwaysValid());
@@ -171,13 +172,14 @@ export class Validator extends AllOf {
     public primeNumber = (): this => this.addRule(new rules.PrimeNumber());
     public prnt = (additionalChars?: string): this => this.addRule(new rules.Prnt(additionalChars));
     public punct = (additionalChars?: string): this => this.addRule(new rules.Punct(additionalChars));
-    public range = (min?: number | null, max?: number | null, inclusive: boolean = true): this => this.addRule(new rules.Range(min, max, inclusive));
+    public range = (min?: any, max?: any, inclusive: boolean = true): this => this.addRule(new rules.Range(min, max, inclusive));
     public regexInstance = (): this => this.addRule(new rules.RegexInstance());
     public regexType = (): this => this.addRule(new rules.RegexType());
     public regexVal = (): this => this.addRule(new rules.RegexVal());
     public regex = (pattern: string | RegExp): this => this.addRule(new rules.Regex(pattern));
     public roman = (): this => this.addRule(new rules.Roman());
     public scalar = (): this => this.addRule(new rules.Scalar());
+    public size = (min?: any, max?: any, inclusive: boolean = true): this => this.addRule(new rules.Size(min, max, inclusive));
     public slug = (): this => this.addRule(new rules.Slug());
     public sorted = (fn?: Function | null, ascending: boolean = true): this => this.addRule(new rules.Sorted(fn, ascending));
     public space = (additionalChars?: string): this => this.addRule(new rules.Space(additionalChars));

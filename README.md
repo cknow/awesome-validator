@@ -149,6 +149,7 @@ The library can be loaded either as a standalone script, or through an [AMD](htt
 - [Regex](docs/regex.md)
 - [Roman](docs/roman.md)
 - [Scalar](docs/scalar.md)
+- [Size](docs/size.md)
 - [Slug](docs/slug.md)
 - [Sorted](docs/sorted.md)
 - [Space](docs/space.md)

@@ -70,6 +70,7 @@ export * from './regex-val';
 export * from './regex';
 export * from './roman';
 export * from './scalar';
+export * from './size';
 export * from './slug';
 export * from './sorted';
 export * from './space';
