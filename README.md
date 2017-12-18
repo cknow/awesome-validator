@@ -102,6 +102,7 @@ The library can be loaded either as a standalone script, or through an [AMD](htt
 - [FloatVal](docs/float-val.md)
 - [FunctionInstance](docs/function-instance.md)
 - [FunctionType](docs/function-type.md)
+- [Graph](docs/graph.md)
 - [In](docs/in.md)
 - [InstanceOf](docs/instance-of.md)
 - [IntType](docs/int-type.md)

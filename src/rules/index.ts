@@ -23,6 +23,7 @@ export * from './float-type';
 export * from './float-val';
 export * from './function-instance';
 export * from './function-type';
+export * from './graph';
 export * from './in';
 export * from './instance-of';
 export * from './int-type';
