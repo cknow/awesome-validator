@@ -19,6 +19,7 @@ export * from './digit';
 export * from './empty';
 export * from './even';
 export * from './false-val';
+export * from './fibonacci';
 export * from './float-type';
 export * from './float-val';
 export * from './function-instance';

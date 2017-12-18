@@ -48,6 +48,7 @@ describe('Validator', () => {
         assert.instanceOf(V.empty(), V);
         assert.instanceOf(V.even(), V);
         assert.instanceOf(V.falseVal(), V);
+        assert.instanceOf(V.fibonacci(), V);
         assert.instanceOf(V.floatType(), V);
         assert.instanceOf(V.floatVal(), V);
         assert.instanceOf(V.functionInstance(), V);
@@ -203,6 +204,7 @@ describe('Validator', () => {
         assert.instanceOf(v.empty(), V);
         assert.instanceOf(v.even(), V);
         assert.instanceOf(v.falseVal(), V);
+        assert.instanceOf(v.fibonacci(), V);
         assert.instanceOf(v.floatType(), V);
         assert.instanceOf(v.floatVal(), V);
         assert.instanceOf(v.functionInstance(), V);

@@ -3,7 +3,7 @@ import { assert } from 'chai';
 import { AbstractRule } from '../../src/rules/abstract-rule';
 import { Imei } from '../../src/rules/imei';
 
-describe('Luhn', () => {
+describe('Imei', () => {
 
     let imei: Imei;
 
