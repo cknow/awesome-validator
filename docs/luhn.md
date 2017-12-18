@@ -22,3 +22,4 @@ validator.luhn().validate(null);
 validator.luhn().validate(undefined);
 validator.luhn().validate('foo');
 validator.luhn().validate(' ');
+```

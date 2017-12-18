@@ -34,6 +34,7 @@ export class Validator extends AllOf {
     public static functionInstance = (): Validator => new Validator(new rules.FunctionInstance());
     public static functionType = (): Validator => new Validator(new rules.FunctionType());
     public static graph = (additionalChars?: string): Validator => new Validator(new rules.Graph(additionalChars));
+    public static imei = (): Validator => new Validator(new rules.Imei());
     public static in = (searcher?: any, contains: boolean = true, identical: boolean = false): Validator => new Validator(new rules.In(searcher, contains, identical));
     public static instanceOf = (instanceName: any): Validator => new Validator(new rules.InstanceOf(instanceName));
     public static intType = (): Validator => new Validator(new rules.IntType());
@@ -134,6 +135,7 @@ export class Validator extends AllOf {
     public functionInstance = (): this => this.addRule(new rules.FunctionInstance());
     public functionType = (): this => this.addRule(new rules.FunctionType());
     public graph = (additionalChars?: string): this => this.addRule(new rules.Graph(additionalChars));
+    public imei = (): this => this.addRule(new rules.Imei());
     public in = (searcher?: any, contains: boolean = true, identical: boolean = false): this => this.addRule(new rules.In(searcher, contains, identical));
     public instanceOf = (instanceName: any): this => this.addRule(new rules.InstanceOf(instanceName));
     public intType = (): this => this.addRule(new rules.IntType());

@@ -103,6 +103,7 @@ The library can be loaded either as a standalone script, or through an [AMD](htt
 - [FunctionInstance](docs/function-instance.md)
 - [FunctionType](docs/function-type.md)
 - [Graph](docs/graph.md)
+- [Imei](docs/imei.md)
 - [In](docs/in.md)
 - [InstanceOf](docs/instance-of.md)
 - [IntType](docs/int-type.md)
