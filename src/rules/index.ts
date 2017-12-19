@@ -68,6 +68,7 @@ export * from './prime-number';
 export * from './prnt';
 export * from './punct';
 export * from './range';
+export * from './readable';
 export * from './regex-instance';
 export * from './regex-type';
 export * from './regex-val';

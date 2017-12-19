@@ -147,6 +147,7 @@ The library can be loaded either as a standalone script, or through an [AMD](htt
 - [Prnt](docs/prnt.md)
 - [Punct](docs/punct.md)
 - [Range](docs/range.md)
+- [Readable](docs/readable.md)
 - [RegexInstance](docs/regex-instance.md)
 - [RegexType](docs/regex-type.md)
 - [RegexVal](docs/regex-val.md)

@@ -78,6 +78,7 @@ export class Validator extends AllOf {
     public static prnt = (additionalChars?: string): Validator => new Validator(new rules.Prnt(additionalChars));
     public static punct = (additionalChars?: string): Validator => new Validator(new rules.Punct(additionalChars));
     public static range = (min?: any, max?: any, inclusive: boolean = true): Validator => new Validator(new rules.Range(min, max, inclusive));
+    public static readable = (): Validator => new Validator(new rules.Readable());
     public static regexInstance = (): Validator => new Validator(new rules.RegexInstance());
     public static regexType = (): Validator => new Validator(new rules.RegexType());
     public static regexVal = (): Validator => new Validator(new rules.RegexVal());
@@ -182,6 +183,7 @@ export class Validator extends AllOf {
     public prnt = (additionalChars?: string): this => this.addRule(new rules.Prnt(additionalChars));
     public punct = (additionalChars?: string): this => this.addRule(new rules.Punct(additionalChars));
     public range = (min?: any, max?: any, inclusive: boolean = true): this => this.addRule(new rules.Range(min, max, inclusive));
+    public readable = (): this => this.addRule(new rules.Readable());
     public regexInstance = (): this => this.addRule(new rules.RegexInstance());
     public regexType = (): this => this.addRule(new rules.RegexType());
     public regexVal = (): this => this.addRule(new rules.RegexVal());

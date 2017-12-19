@@ -120,6 +120,7 @@ describe('Validator', () => {
         assert.instanceOf(V.range(100, 200, false), V);
         assert.instanceOf(V.range(null, 100), V);
         assert.instanceOf(V.range(undefined, 100), V);
+        assert.instanceOf(V.readable(), V);
         assert.instanceOf(V.regexInstance(), V);
         assert.instanceOf(V.regexType(), V);
         assert.instanceOf(V.regexVal(), V);
@@ -274,6 +275,7 @@ describe('Validator', () => {
         assert.instanceOf(v.range(100, 200, false), V);
         assert.instanceOf(v.range(null, 100), V);
         assert.instanceOf(v.range(undefined, 100), V);
+        assert.instanceOf(v.readable(), V);
         assert.instanceOf(v.regexInstance(), V);
         assert.instanceOf(v.regexType(), V);
         assert.instanceOf(v.regexVal(), V);
