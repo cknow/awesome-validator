@@ -1,17 +1,13 @@
-import { AbstractRule } from './abstract-rule';
+import { AbstractTryCatch } from './abstract-try-catch';
 
-export class RegexVal extends AbstractRule {
+export class RegexVal extends AbstractTryCatch {
 
     /**
-     * Validate.
+     * Validate Function.
      */
-    public validate(input: any): boolean {
-        try {
-            RegExp(input);
+    protected validateFunction(input: any): boolean {
+        RegExp(input);
 
-            return true;
-        } catch (e) {}
-
-        return false;
+        return true;
     }
 }

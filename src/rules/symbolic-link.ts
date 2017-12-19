@@ -1,25 +1,21 @@
 import * as nodeURL from 'url';
 
-import { AbstractRule } from './abstract-rule';
+import { AbstractTryCatch } from './abstract-try-catch';
 
-export class SymbolicLink extends AbstractRule {
+export class SymbolicLink extends AbstractTryCatch {
 
     /**
-     * Validate.
+     * Validate Function.
      */
-    public validate(input: any): boolean {
+    protected validateFunction(input: any): boolean {
+        let url: any;
+
         try {
-            let url: any;
+            url = new nodeURL.URL(input);
+        } catch (e) {
+            url = new URL(input);
+        }
 
-            try {
-                url = new nodeURL.URL(input);
-            } catch (e) {
-                url = new URL(input);
-            }
-
-            return String(url).length > 0;
-        } catch (e) {}
-
-        return false;
+        return String(url).length > 0;
     }
 }

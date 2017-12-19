@@ -1,18 +1,14 @@
-import { AbstractRule } from './abstract-rule';
+import { AbstractTryCatch } from './abstract-try-catch';
 import { ObjectType } from './object-type';
 
-export class Json extends AbstractRule {
+export class Json extends AbstractTryCatch {
 
     /**
-     * Validate.
+     * Validate Function.
      */
-    public validate(input: any): boolean {
-        try {
-            const obj: any = JSON.parse(input);
+    protected validateFunction(input: any): boolean {
+        const obj: any = JSON.parse(input);
 
-            return !!obj && new ObjectType().validate(obj);
-        } catch (e) {}
-
-        return false;
+        return !!obj && new ObjectType().validate(obj);
     }
 }

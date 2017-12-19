@@ -1,19 +1,15 @@
 import * as fs from 'fs';
 
-import { AbstractRule } from './abstract-rule';
+import { AbstractTryCatch } from './abstract-try-catch';
 
-export class Readable extends AbstractRule {
+export class Readable extends AbstractTryCatch {
 
     /**
-     * Validate.
+     * Validate Function.
      */
-    public validate(input: any): boolean {
-        try {
-            fs.accessSync(input, fs.constants.R_OK);
+    protected validateFunction(input: any): boolean {
+        fs.accessSync(input, fs.constants.R_OK);
 
-            return true;
-        } catch (e) {}
-
-        return false;
+        return true;
     }
 }

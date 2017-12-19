@@ -1,18 +1,14 @@
-import { AbstractRule } from './abstract-rule';
+import { AbstractTryCatch } from './abstract-try-catch';
 
-export abstract class AbstractConstructotName extends AbstractRule {
+export abstract class AbstractConstructotName extends AbstractTryCatch {
 
     /**
-     * Validate.
+     * Validate Function.
      */
-    public validate(input: any): boolean {
-        try {
-            const name: string = this.getConstructorName().toLocaleLowerCase();
+    protected validateFunction(input: any): boolean {
+        const name: string = this.getConstructorName().toLocaleLowerCase();
 
-            return String(input.constructor.name).toLocaleLowerCase() === name;
-        } catch (e) {}
-
-        return false;
+        return String(input.constructor.name).toLocaleLowerCase() === name;
     }
 
     /**
