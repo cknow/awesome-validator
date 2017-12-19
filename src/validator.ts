@@ -30,6 +30,7 @@ export class Validator extends AllOf {
     public static even = (): Validator => new Validator(new rules.Even());
     public static falseVal = (): Validator => new Validator(new rules.FalseVal());
     public static fibonacci = (): Validator => new Validator(new rules.Fibonacci());
+    public static file = (): Validator => new Validator(new rules.File());
     public static floatType = (): Validator => new Validator(new rules.FloatType());
     public static floatVal = (): Validator => new Validator(new rules.FloatVal());
     public static functionInstance = (): Validator => new Validator(new rules.FunctionInstance());
@@ -132,6 +133,7 @@ export class Validator extends AllOf {
     public even = (): this => this.addRule(new rules.Even());
     public falseVal = (): this => this.addRule(new rules.FalseVal());
     public fibonacci = (): this => this.addRule(new rules.Fibonacci());
+    public file = (): this => this.addRule(new rules.File());
     public floatType = (): this => this.addRule(new rules.FloatType());
     public floatVal = (): this => this.addRule(new rules.FloatVal());
     public functionInstance = (): this => this.addRule(new rules.FunctionInstance());
