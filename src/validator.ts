@@ -108,6 +108,7 @@ export class Validator extends AllOf {
     public static videoUrl = (service?: VideoService): Validator => new Validator(new rules.VideoUrl(service));
     public static vowel = (additionalChars?: string): Validator => new Validator(new rules.Vowel(additionalChars));
     public static when = (whenRule: Validatable, thenRule: Validatable, elseRule?: Validatable): Validator => new Validator(new rules.When(whenRule, thenRule, elseRule));
+    public static writable = (): Validator => new Validator(new rules.Writable());
     public static xdigit = (additionalChars?: string): Validator => new Validator(new rules.Xdigit(additionalChars));
     public static yes = (additionalChars?: string): Validator => new Validator(new rules.Yes(additionalChars));
 
@@ -211,6 +212,7 @@ export class Validator extends AllOf {
     public videoUrl = (service?: VideoService): this => this.addRule(new rules.VideoUrl(service));
     public vowel = (additionalChars?: string): this => this.addRule(new rules.Vowel(additionalChars));
     public when = (whenRule: Validatable, thenRule: Validatable, elseRule?: Validatable): this => this.addRule(new rules.When(whenRule, thenRule, elseRule));
+    public writable = (): this => this.addRule(new rules.Writable());
     public xdigit = (additionalChars?: string): this => this.addRule(new rules.Xdigit(additionalChars));
     public yes = (additionalChars?: string): this => this.addRule(new rules.Yes(additionalChars));
     /* tslint:enable completed-docs max-line-length */

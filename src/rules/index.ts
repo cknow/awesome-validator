@@ -98,5 +98,6 @@ export * from './version';
 export * from './video-url';
 export * from './vowel';
 export * from './when';
+export * from './writable';
 export * from './xdigit';
 export * from './yes';

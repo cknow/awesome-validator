@@ -44,5 +44,5 @@ export abstract class AbstractFileSystem extends AbstractRule {
     /**
      * Validate File System.
      */
-    protected abstract validateFileSystem(stas: Stats): boolean;
+    protected abstract validateFileSystem(stats: Stats): boolean;
 }

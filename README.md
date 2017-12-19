@@ -177,5 +177,6 @@ The library can be loaded either as a standalone script, or through an [AMD](htt
 - [VideoUrl](docs/video-url.md)
 - [Vowel](docs/vowel.md)
 - [When](docs/when.md)
+- [Writable](docs/writable.md)
 - [Xdigit](docs/xdigit.md)
 - [Yes](docs/yes.md)
