@@ -1,5 +1,4 @@
-import * as fs from 'fs';
-
+import { File } from './file';
 import { Range } from './range';
 
 export class Size extends Range {
@@ -8,15 +7,9 @@ export class Size extends Range {
      * Validate.
      */
     public validate(input: any): boolean {
-        try {
-            if (input instanceof fs.Stats) {
-                return super.validate(input.size);
-            }
-
-            if (fs.existsSync(input)) {
-                return super.validate(fs.statSync(input).size);
-            }
-        } catch (e) {}
+        if (new File().validate(input)) {
+            return super.validate(File.stats.size);
+        }
 
         return super.validate(input);
     }

@@ -11,7 +11,7 @@ describe('Size', () => {
 
     beforeEach(() => {
         mock({
-            sizeFake: 'foo'
+            'file.txt': 'foo'
         });
     });
 
@@ -25,19 +25,19 @@ describe('Size', () => {
 
     it('values is valid', () => {
         assert.isTrue(new Size('5mb', '20mb').validate('10mb'));
-        assert.isTrue(new Size().validate('sizeFake'));
-        assert.isTrue(new Size(null, '20mb').validate('sizeFake'));
+        assert.isTrue(new Size().validate('file.txt'));
+        assert.isTrue(new Size(null, '20mb').validate('file.txt'));
         assert.isTrue(new Size().validate(fs.statSync(tempWrite.sync('foo'))));
         assert.isTrue(new Size(null, '20mb').validate(fs.statSync(tempWrite.sync('foo'))));
-        assert.isTrue(new Size().validate('sizeFake'));
-        assert.isTrue(new Size(null, '20mb').validate('sizeFake'));
+        assert.isTrue(new Size().validate('file.txt'));
+        assert.isTrue(new Size(null, '20mb').validate('file.txt'));
     });
 
     it('values is not valid', () => {
         assert.isFalse(new Size('5mb', '20mb').validate('30mb'));
-        assert.isFalse(new Size('5mb').validate('sizeFake'));
-        assert.isFalse(new Size('5mb', '20mb').validate('sizeFake'));
-        assert.isFalse(new Size(0, 1).validate('sizeFake'));
+        assert.isFalse(new Size('5mb').validate('file.txt'));
+        assert.isFalse(new Size('5mb', '20mb').validate('file.txt'));
+        assert.isFalse(new Size(0, 1).validate('file.txt'));
         assert.isFalse(new Size(0, 1).validate(fs.statSync(tempWrite.sync())));
     });
 
