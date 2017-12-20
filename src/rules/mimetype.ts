@@ -1,13 +1,14 @@
 import { lookup } from 'mime-types';
 
 import { AbstractRule } from './abstract-rule';
+import { In } from './in';
 
 export class Mimetype extends AbstractRule {
 
     /**
      * Mimetype.
      */
-    public constructor(public readonly mimetype: string) {
+    public constructor(public readonly mimetype: string | string[]) {
         super();
     }
 
@@ -15,6 +16,8 @@ export class Mimetype extends AbstractRule {
      * Validate.
      */
     public validate(input: any): boolean {
-        return lookup(input) === this.mimetype;
+        const mime: string | false = lookup(input);
+
+        return mime !== false && new In(this.mimetype, false).validate(mime);
     }
 }
