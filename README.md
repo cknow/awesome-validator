@@ -110,6 +110,7 @@ The library can be loaded either as a standalone script, or through an [AMD](htt
 - [InstanceOf](docs/instance-of.md)
 - [IntType](docs/int-type.md)
 - [IntVal](docs/int-val.md)
+- [Iterable](docs/iterable.md)
 - [Json](docs/json.md)
 - [Label](docs/label.md)
 - [LeapDate](docs/leap-date.md)

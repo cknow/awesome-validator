@@ -31,6 +31,7 @@ export * from './in';
 export * from './instance-of';
 export * from './int-type';
 export * from './int-val';
+export * from './iterable';
 export * from './json';
 export * from './label';
 export * from './leap-date';
