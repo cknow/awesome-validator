@@ -16,6 +16,7 @@ describe('In', () => {
     });
 
     it('values is valid', () => {
+        assert.isTrue(new In(/foo/).validate('foo'));
         assert.isTrue(new In('foobar').validate('foo'));
         assert.isTrue(new In('foobar').validate('FOO'));
         assert.isTrue(new In('fooBAR').validate('bar'));
@@ -38,6 +39,7 @@ describe('In', () => {
     });
 
     it('values is not valid', () => {
+        assert.isFalse(new In(/bar/).validate('foo'));
         assert.isFalse(new In('foo').validate('bar'));
         assert.isFalse(new In(String('foo')).validate('bar'));
         assert.isFalse(new In([1, 2, 3]).validate(0));

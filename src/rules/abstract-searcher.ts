@@ -1,4 +1,6 @@
 import { AbstractRule } from './abstract-rule';
+import { Regex } from './regex';
+import { RegexType } from './regex-type';
 import { Scalar } from './scalar';
 
 export abstract class AbstractSearcher extends AbstractRule {
@@ -39,6 +41,10 @@ export abstract class AbstractSearcher extends AbstractRule {
             }
 
             return searcher.indexOf(input) !== -1;
+        }
+
+        if (new RegexType().validate(searcher)) {
+            return new Regex(searcher).validate(input);
         }
 
         if (searcher instanceof Set) {
