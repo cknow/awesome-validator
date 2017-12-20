@@ -58,6 +58,8 @@
     }
   },
   "dependencies": {
+    "@types/mime-types": "^2.1.0",
+    "mime-types": "^2.1.17",
     "moment": "^2.19.3"
   },
   "devDependencies": {

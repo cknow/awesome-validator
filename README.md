@@ -121,6 +121,7 @@ The library can be loaded either as a standalone script, or through an [AMD](htt
 - [Luhn](docs/luhn.md)
 - [MacAddress](docs/mac-address.md)
 - [Max](docs/max.md)
+- [Mimetype](docs/mimetype.md)
 - [Min](docs/min.md)
 - [Multiple](docs/multiple.md)
 - [Negative](docs/negative.md)

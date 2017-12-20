@@ -80,6 +80,7 @@ describe('Validator', () => {
         assert.instanceOf(V.max(undefined), V);
         assert.instanceOf(V.max(100), V);
         assert.instanceOf(V.max(100, false), V);
+        assert.instanceOf(V.mimetype('foo'), V);
         assert.instanceOf(V.min(), V);
         assert.instanceOf(V.min(null), V);
         assert.instanceOf(V.min(undefined), V);
@@ -240,6 +241,7 @@ describe('Validator', () => {
         assert.instanceOf(v.max(), V);
         assert.instanceOf(v.max(100), V);
         assert.instanceOf(v.max(100, false), V);
+        assert.instanceOf(v.mimetype('foo'), V);
         assert.instanceOf(v.min(), V);
         assert.instanceOf(v.min(100), V);
         assert.instanceOf(v.min(100, false), V);

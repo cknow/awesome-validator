@@ -52,6 +52,7 @@ export class Validator extends AllOf {
     public static luhn = (): Validator => new Validator(new rules.Luhn());
     public static macAddress = (): Validator => new Validator(new rules.MacAddress());
     public static max = (interval?: any, inclusive: boolean = true): Validator => new Validator(new rules.Max(interval, inclusive));
+    public static mimetype = (mimetype: string): Validator => new Validator(new rules.Mimetype(mimetype));
     public static min = (interval?: any, inclusive: boolean = true): Validator => new Validator(new rules.Min(interval, inclusive));
     public static multiple = (multipleOf: number): Validator => new Validator(new rules.Multiple(multipleOf));
     public static negative = (): Validator => new Validator(new rules.Negative());
@@ -160,6 +161,7 @@ export class Validator extends AllOf {
     public luhn = (): this => this.addRule(new rules.Luhn());
     public macAddress = (): this => this.addRule(new rules.MacAddress());
     public max = (interval?: any, inclusive: boolean = true): this => this.addRule(new rules.Max(interval, inclusive));
+    public mimetype = (mimetype: string): this => this.addRule(new rules.Mimetype(mimetype));
     public min = (interval?: any, inclusive: boolean = true): this => this.addRule(new rules.Min(interval, inclusive));
     public multiple = (multipleOf: number): this => this.addRule(new rules.Multiple(multipleOf));
     public negative = (): this => this.addRule(new rules.Negative());

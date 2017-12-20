@@ -42,6 +42,7 @@ export * from './lowercase';
 export * from './luhn';
 export * from './mac-address';
 export * from './max';
+export * from './mimetype';
 export * from './min';
 export * from './multiple';
 export * from './negative';
