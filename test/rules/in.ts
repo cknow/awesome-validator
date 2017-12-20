@@ -54,6 +54,8 @@ describe('In', () => {
         assert.isFalse(new In().validate(null));
         assert.isFalse(new In(new Foo()).validate(new Foo()));
         assert.isFalse(new In(new Foo()).validate('foobar'));
+        assert.isFalse(new In('1', false, true).validate(1));
+        assert.isFalse(new In(['1', 2, 3], false, true).validate(1));
     });
 
 });

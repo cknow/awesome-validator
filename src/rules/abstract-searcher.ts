@@ -19,6 +19,13 @@ export abstract class AbstractSearcher extends AbstractRule {
      */
     protected validateSearcher(searcher: any, input: any): boolean {
         if (new Scalar().validate(searcher)) {
+
+            /* tslint:disable:strict-type-predicates */
+            if (this.identical && typeof searcher !== typeof input) {
+                return false;
+            }
+            /* tslint:enable:strict-type-predicates */
+
             return String(searcher).search(
                 RegExp(this.contains ? `${input}` : `^${input}$`, this.identical ? undefined : 'i')
             ) !== -1;

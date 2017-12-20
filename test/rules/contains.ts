@@ -56,6 +56,8 @@ describe('Contains', () => {
         assert.isFalse(new Contains().validate(null));
         assert.isFalse(new Contains(new Foo()).validate(new Foo()));
         assert.isFalse(new Contains('foobar').validate(new Foo()));
+        assert.isFalse(new Contains(1, false, true).validate('1'));
+        assert.isFalse(new Contains(1, false, true).validate(['1', 2, 3]));
     });
 
 });
