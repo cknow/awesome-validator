@@ -8,7 +8,7 @@ export class Mimetype extends AbstractRule {
     /**
      * Mimetype.
      */
-    public constructor(public readonly mimetype: string | string[]) {
+    public constructor(public readonly mimetype: any) {
         super();
     }
 
