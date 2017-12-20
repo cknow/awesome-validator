@@ -27,6 +27,6 @@ export class StartsWith extends AbstractRule {
         }
         /* tslint:enable:strict-type-predicates */
 
-        return new Regex(RegExp(`^${this.startValue}`, ((this.identical) ? undefined : 'i'))).validate(value);
+        return new Regex(RegExp(`^${this.startValue}`, this.identical ? undefined : 'i')).validate(value);
     }
 }
