@@ -106,6 +106,7 @@ The library can be loaded either as a standalone script, or through an [AMD](htt
 - [FunctionInstance](docs/function-instance.md)
 - [FunctionType](docs/function-type.md)
 - [Graph](docs/graph.md)
+- [HexRgbColor](docs/hex-rgb-color.md)
 - [Identical](docs/identical.md)
 - [Image](docs/image.md)
 - [Imei](docs/imei.md)

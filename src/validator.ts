@@ -37,6 +37,7 @@ export class Validator extends AllOf {
     public static functionInstance = (): Validator => new Validator(new rules.FunctionInstance());
     public static functionType = (): Validator => new Validator(new rules.FunctionType());
     public static graph = (additionalChars?: string): Validator => new Validator(new rules.Graph(additionalChars));
+    public static hexRgbColor = (): Validator => new Validator(new rules.HexRgbColor());
     public static identical = (compareTo: any): Validator => new Validator(new rules.Identical(compareTo));
     public static image = (): Validator => new Validator(new rules.Image());
     public static imei = (): Validator => new Validator(new rules.Imei());
@@ -148,6 +149,7 @@ export class Validator extends AllOf {
     public functionInstance = (): this => this.addRule(new rules.FunctionInstance());
     public functionType = (): this => this.addRule(new rules.FunctionType());
     public graph = (additionalChars?: string): this => this.addRule(new rules.Graph(additionalChars));
+    public hexRgbColor = (): this => this.addRule(new rules.HexRgbColor());
     public identical = (compareTo: any): this => this.addRule(new rules.Identical(compareTo));
     public image = (): this => this.addRule(new rules.Image());
     public imei = (): this => this.addRule(new rules.Imei());
