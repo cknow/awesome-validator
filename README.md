@@ -100,6 +100,7 @@ The library can be loaded either as a standalone script, or through an [AMD](htt
 - [FalseVal](docs/false-val.md)
 - [Fibonacci](docs/fibonacci.md)
 - [File](docs/file.md)
+- [Finite](docs/finite.md)
 - [FloatType](docs/float-type.md)
 - [FloatVal](docs/float-val.md)
 - [FunctionInstance](docs/function-instance.md)
