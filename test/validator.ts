@@ -57,6 +57,7 @@ describe('Validator', () => {
         assert.instanceOf(V.functionType(), V);
         assert.instanceOf(V.graph(), V);
         assert.instanceOf(V.graph('foo'), V);
+        assert.instanceOf(V.identical('foo'), V);
         assert.instanceOf(V.image(), V);
         assert.instanceOf(V.imei(), V);
         assert.instanceOf(V.in([]), V);
@@ -222,6 +223,7 @@ describe('Validator', () => {
         assert.instanceOf(v.functionType(), V);
         assert.instanceOf(v.graph(), V);
         assert.instanceOf(v.graph('foo'), V);
+        assert.instanceOf(v.identical('foo'), V);
         assert.instanceOf(v.image(), V);
         assert.instanceOf(v.imei(), V);
         assert.instanceOf(v.in([]), V);
