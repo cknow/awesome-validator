@@ -37,6 +37,7 @@ export class Validator extends AllOf {
     public static functionInstance = (): Validator => new Validator(new rules.FunctionInstance());
     public static functionType = (): Validator => new Validator(new rules.FunctionType());
     public static graph = (additionalChars?: string): Validator => new Validator(new rules.Graph(additionalChars));
+    public static image = (): Validator => new Validator(new rules.Image());
     public static imei = (): Validator => new Validator(new rules.Imei());
     public static in = (searcher?: any, contains: boolean = true, identical: boolean = false): Validator => new Validator(new rules.In(searcher, contains, identical));
     public static infinite = (): Validator => new Validator(new rules.Infinite());
@@ -52,7 +53,7 @@ export class Validator extends AllOf {
     public static luhn = (): Validator => new Validator(new rules.Luhn());
     public static macAddress = (): Validator => new Validator(new rules.MacAddress());
     public static max = (interval?: any, inclusive: boolean = true): Validator => new Validator(new rules.Max(interval, inclusive));
-    public static mimetype = (mimetype: string | string[]): Validator => new Validator(new rules.Mimetype(mimetype));
+    public static mimetype = (mimetype: any): Validator => new Validator(new rules.Mimetype(mimetype));
     public static min = (interval?: any, inclusive: boolean = true): Validator => new Validator(new rules.Min(interval, inclusive));
     public static multiple = (multipleOf: number): Validator => new Validator(new rules.Multiple(multipleOf));
     public static negative = (): Validator => new Validator(new rules.Negative());
@@ -146,6 +147,7 @@ export class Validator extends AllOf {
     public functionInstance = (): this => this.addRule(new rules.FunctionInstance());
     public functionType = (): this => this.addRule(new rules.FunctionType());
     public graph = (additionalChars?: string): this => this.addRule(new rules.Graph(additionalChars));
+    public image = (): this => this.addRule(new rules.Image());
     public imei = (): this => this.addRule(new rules.Imei());
     public in = (searcher?: any, contains: boolean = true, identical: boolean = false): this => this.addRule(new rules.In(searcher, contains, identical));
     public infinite = (): this => this.addRule(new rules.Infinite());
@@ -161,7 +163,7 @@ export class Validator extends AllOf {
     public luhn = (): this => this.addRule(new rules.Luhn());
     public macAddress = (): this => this.addRule(new rules.MacAddress());
     public max = (interval?: any, inclusive: boolean = true): this => this.addRule(new rules.Max(interval, inclusive));
-    public mimetype = (mimetype: string | string[]): this => this.addRule(new rules.Mimetype(mimetype));
+    public mimetype = (mimetype: any): this => this.addRule(new rules.Mimetype(mimetype));
     public min = (interval?: any, inclusive: boolean = true): this => this.addRule(new rules.Min(interval, inclusive));
     public multiple = (multipleOf: number): this => this.addRule(new rules.Multiple(multipleOf));
     public negative = (): this => this.addRule(new rules.Negative());

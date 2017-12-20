@@ -27,6 +27,7 @@ export * from './float-val';
 export * from './function-instance';
 export * from './function-type';
 export * from './graph';
+export * from './image';
 export * from './imei';
 export * from './in';
 export * from './infinite';
