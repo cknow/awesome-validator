@@ -60,6 +60,7 @@ describe('Validator', () => {
         assert.instanceOf(V.in([]), V);
         assert.instanceOf(V.in([], false), V);
         assert.instanceOf(V.in([], false, true), V);
+        assert.instanceOf(V.infinite(), V);
         assert.instanceOf(V.instanceOf(Object), V);
         assert.instanceOf(V.intType(), V);
         assert.instanceOf(V.intVal(), V);
@@ -220,6 +221,7 @@ describe('Validator', () => {
         assert.instanceOf(v.in([]), V);
         assert.instanceOf(v.in([], false), V);
         assert.instanceOf(v.in([], false, true), V);
+        assert.instanceOf(v.infinite(), V);
         assert.instanceOf(v.instanceOf(Object), V);
         assert.instanceOf(v.intType(), V);
         assert.instanceOf(v.intVal(), V);

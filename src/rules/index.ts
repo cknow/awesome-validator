@@ -28,6 +28,7 @@ export * from './function-type';
 export * from './graph';
 export * from './imei';
 export * from './in';
+export * from './infinite';
 export * from './instance-of';
 export * from './int-type';
 export * from './int-val';

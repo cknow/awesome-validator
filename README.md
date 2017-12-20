@@ -107,6 +107,7 @@ The library can be loaded either as a standalone script, or through an [AMD](htt
 - [Graph](docs/graph.md)
 - [Imei](docs/imei.md)
 - [In](docs/in.md)
+- [Infinite](docs/infinite.md)
 - [InstanceOf](docs/instance-of.md)
 - [IntType](docs/int-type.md)
 - [IntVal](docs/int-val.md)
