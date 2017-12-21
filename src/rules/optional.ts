@@ -1,13 +1,21 @@
 
-import { AbstractWrapper } from './abstract-wrapper';
+import { Validatable } from './../validatable';
+import { AbstractRule } from './abstract-rule';
 import { NotOptional } from './not-optional';
 
-export class Optional extends AbstractWrapper {
+export class Optional extends AbstractRule {
+
+    /**
+     * Optional.
+     */
+    public constructor(public readonly validatable: Validatable) {
+        super();
+    }
 
     /**
      * Validate.
      */
     public validate(input: any): boolean {
-        return !new NotOptional().validate(input) || super.validate(input);
+        return !new NotOptional().validate(input) || this.validatable.validate(input);
     }
 }

@@ -6,7 +6,7 @@ export class Not extends AbstractRule {
     /**
      * Not.
      */
-    public constructor(public readonly rule: Validatable) {
+    public constructor(public readonly validatable: Validatable) {
         super();
     }
 
@@ -14,6 +14,6 @@ export class Not extends AbstractRule {
      * Validate.
      */
     public validate(input: any): boolean {
-        return !this.rule.validate(input);
+        return !this.validatable.validate(input);
     }
 }

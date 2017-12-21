@@ -1,13 +1,12 @@
-import { AbstractRule } from './abstract-rule';
 import { NumberVal } from './number-val';
 
-export class Fibonacci extends AbstractRule {
+export class Fibonacci extends NumberVal {
 
     /**
      * Validate.
      */
     public validate(input: any): boolean {
-        if (!new NumberVal().validate(input)) {
+        if (!super.validate(input)) {
             return false;
         }
 

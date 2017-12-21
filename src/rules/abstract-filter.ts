@@ -51,5 +51,5 @@ export abstract class AbstractFilter extends AbstractRule {
     /**
      * Validate Clean.
      */
-    protected abstract validateClean(stringInput: string): boolean;
+    protected abstract validateClean(input: string): boolean;
 }

@@ -5,6 +5,8 @@ import { Identical } from '../../src/rules/identical';
 
 describe('Identical', () => {
 
+    class Foo {}
+
     it('is rule', () => {
         assert.instanceOf(new Identical('foo'), AbstractRule);
     });
@@ -15,6 +17,9 @@ describe('Identical', () => {
         assert.isTrue(new Identical([]).validate([]));
         assert.isTrue(new Identical([1, 2, 3]).validate([1, 2, 3]));
         assert.isTrue(new Identical(null).validate(null));
+
+        const s: Foo = new Foo();
+        assert.isTrue(new Identical(s).validate(s));
     });
 
     it('values is not valid', () => {
@@ -23,6 +28,7 @@ describe('Identical', () => {
         assert.isFalse(new Identical([1, 2, 3]).validate(['1', 2, 3]));
         assert.isFalse(new Identical(null).validate('foo'));
         assert.isFalse(new Identical('foo').validate(null));
+        assert.isFalse(new Identical(new Foo()).validate(new Foo()));
     });
 
 });

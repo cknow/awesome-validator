@@ -1,12 +1,14 @@
-import { AbstractRule } from './abstract-rule';
+import { Validatable } from './../validatable';
+import { AbstractWrapper } from './abstract-wrapper';
 import { In } from './in';
+import { Not } from './not';
 
-export class NotOptional extends AbstractRule {
+export class NotOptional extends AbstractWrapper {
 
     /**
-     * Validate.
+     * Get Validatable.
      */
-    public validate(input: any): boolean {
-        return !new In(['', null, undefined], false).validate(input);
+    protected getValidatable(): Validatable {
+        return new Not(new In(['', null, undefined], false));
     }
 }

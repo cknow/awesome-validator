@@ -18,6 +18,7 @@ describe('NoWhitespace', () => {
     it('values is valid', () => {
         assert.isTrue(noWhitespace.validate(''));
         assert.isTrue(noWhitespace.validate(null));
+        assert.isTrue(noWhitespace.validate(undefined));
         assert.isTrue(noWhitespace.validate(0));
         assert.isTrue(noWhitespace.validate('wpoiur'));
         assert.isTrue(noWhitespace.validate('Foo'));

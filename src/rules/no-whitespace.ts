@@ -1,13 +1,12 @@
-import { AbstractRule } from './abstract-rule';
-import { NullType } from './null-type';
+import { NotOptional } from './not-optional';
 import { Scalar } from './scalar';
 
-export class NoWhitespace extends AbstractRule {
+export class NoWhitespace extends NotOptional {
 
     /**
      * Validate.
      */
     public validate(input: any): boolean {
-        return new NullType().validate(input) || (new Scalar().validate(input) && !/\s/.test(input));
+        return !super.validate(input) || (new Scalar().validate(input) && !/\s/.test(input));
     }
 }

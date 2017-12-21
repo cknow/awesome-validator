@@ -1,12 +1,13 @@
-import { AbstractRule } from './abstract-rule';
+import { Validatable } from './../validatable';
+import { AbstractWrapper } from './abstract-wrapper';
 import { TypeOf } from './type-of';
 
-export class FunctionType extends AbstractRule {
+export class FunctionType extends AbstractWrapper {
 
     /**
-     * Validate.
+     * Get Validatable.
      */
-    public validate(input: any): boolean {
-        return new TypeOf(/function/i).validate(input);
+    protected getValidatable(): Validatable {
+        return new TypeOf(/function/i);
     }
 }

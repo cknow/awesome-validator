@@ -1,13 +1,14 @@
-import { AbstractRule } from './abstract-rule';
+import { Validatable } from './../validatable';
+import { AbstractWrapper } from './abstract-wrapper';
 import { Regex } from './regex';
 
-export abstract class AbstractRegex extends AbstractRule {
+export abstract class AbstractRegex extends AbstractWrapper {
 
     /**
-     * Validate.
+     * Get Validatable.
      */
-    public validate(input: any): boolean {
-        return new Regex(this.getPattern()).validate(input);
+    protected getValidatable(): Validatable {
+        return new Regex(this.getPattern());
     }
 
     /**

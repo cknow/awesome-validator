@@ -1,12 +1,13 @@
-import { AbstractRule } from './abstract-rule';
+import { Validatable } from './../validatable';
+import { AbstractWrapper } from './abstract-wrapper';
 import { In } from './in';
 
-export class Tld extends AbstractRule {
+export class Tld extends AbstractWrapper {
 
     /**
-     * Validate.
+     * Get Validatable.
      */
-    public validate(input: any): boolean {
+    protected getValidatable(): Validatable {
 
         /**
          * List extracted from http://data.iana.org/TLD/tlds-alpha-by-domain.txt
@@ -1557,6 +1558,6 @@ export class Tld extends AbstractRule {
             'ZW'
         ];
 
-        return new In(searcher, false).validate(input);
+        return new In(searcher, false);
     }
 }

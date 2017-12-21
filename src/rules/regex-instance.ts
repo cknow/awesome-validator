@@ -1,12 +1,13 @@
-import { AbstractRule } from './abstract-rule';
+import { Validatable } from './../validatable';
+import { AbstractWrapper } from './abstract-wrapper';
 import { InstanceOf } from './instance-of';
 
-export class RegexInstance extends AbstractRule {
+export class RegexInstance extends AbstractWrapper {
 
     /**
-     * Validate.
+     * Get Validatable.
      */
-    public validate(input: any): boolean {
-        return new InstanceOf(RegExp).validate(input);
+    protected getValidatable(): Validatable {
+        return new InstanceOf(RegExp);
     }
 }

@@ -1,12 +1,11 @@
-import { AbstractRule } from './abstract-rule';
 import { NumberVal } from './number-val';
 
-export class Positive extends AbstractRule {
+export class Positive extends NumberVal {
 
     /**
      * Validate.
      */
     public validate(input: any): boolean {
-        return new NumberVal().validate(input) && input > 0;
+        return super.validate(input) && input > 0;
     }
 }

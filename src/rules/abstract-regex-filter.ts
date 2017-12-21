@@ -6,8 +6,8 @@ export abstract class AbstractRegexFilter extends AbstractFilter {
     /**
      * Validate Clean.
      */
-    protected validateClean(stringInput: string): boolean {
-        return new Regex(this.getPattern()).validate(stringInput);
+    protected validateClean(input: string): boolean {
+        return new Regex(this.getPattern()).validate(input);
     }
 
     /**

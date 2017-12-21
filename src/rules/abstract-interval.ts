@@ -61,11 +61,7 @@ export abstract class AbstractInterval extends AbstractRule {
      * Validate.
      */
     public validate(input: any): boolean {
-        if (!new NotOptional().validate(this.interval)) {
-            return true;
-        }
-
-        return this.validateInterval(
+        return !new NotOptional().validate(this.interval) || this.validateInterval(
             AbstractInterval.parse(input),
             AbstractInterval.parse(this.interval)
         );

@@ -1,12 +1,13 @@
-import { AbstractRule } from './abstract-rule';
+import { Validatable } from './../validatable';
+import { AbstractWrapper } from './abstract-wrapper';
 import { Mimetype } from './mimetype';
 
-export class Image extends AbstractRule {
+export class Image extends AbstractWrapper {
 
     /**
-     * Validate.
+     * Get Validatable.
      */
-    public validate(input: any): boolean {
-        return new Mimetype(/^image\//i).validate(input);
+    protected getValidatable(): Validatable {
+        return new Mimetype(/^image\//i);
     }
 }

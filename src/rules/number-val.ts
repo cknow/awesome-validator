@@ -1,13 +1,15 @@
-import { AbstractRule } from './abstract-rule';
+import { Validatable } from './../validatable';
+import { AbstractWrapper } from './abstract-wrapper';
+import { AnyOf } from './any-of';
 import { FloatVal } from './float-val';
 import { IntVal } from './int-val';
 
-export class NumberVal extends AbstractRule {
+export class NumberVal extends AbstractWrapper {
 
     /**
-     * Validate.
+     * Get Validatable.
      */
-    public validate(input: any): boolean {
-        return new FloatVal().validate(input) || new IntVal().validate(input);
+    protected getValidatable(): Validatable {
+        return new AnyOf(new FloatVal(), new IntVal());
     }
 }

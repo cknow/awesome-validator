@@ -1,13 +1,12 @@
-import { AbstractRule } from './abstract-rule';
 import { ArrayVal } from './array-val';
 
-export class Unique extends AbstractRule {
+export class Unique extends ArrayVal {
 
     /**
      * Validate.
      */
     public validate(input: any): boolean {
-        if (!new ArrayVal().validate(input)) {
+        if (!super.validate(input)) {
             return false;
         }
 
