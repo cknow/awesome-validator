@@ -1,4 +1,5 @@
 import { AbstractRule } from './abstract-rule';
+import { PropertyKey } from './property-key';
 import { Regex } from './regex';
 import { RegexType } from './regex-type';
 import { Scalar } from './scalar';
@@ -55,7 +56,7 @@ export abstract class AbstractSearcher extends AbstractRule {
             return searcher.has(input);
         }
 
-        if (searcher instanceof Object && /number|string|symbol/.test(typeof input)) {
+        if (searcher instanceof Object && new PropertyKey().validate(input)) {
             return searcher.hasOwnProperty(input);
         }
 

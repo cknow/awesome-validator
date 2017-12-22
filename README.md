@@ -152,6 +152,7 @@ The library can be loaded either as a standalone script, or through an [AMD](htt
 - [Positive](docs/positive.md)
 - [PrimeNumber](docs/prime-number.md)
 - [Prnt](docs/prnt.md)
+- [PropertyKey](docs/property-key.md)
 - [Punct](docs/punct.md)
 - [Range](docs/range.md)
 - [Readable](docs/readable.md)

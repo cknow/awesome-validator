@@ -73,6 +73,7 @@ export * from './pis';
 export * from './positive';
 export * from './prime-number';
 export * from './prnt';
+export * from './property-key';
 export * from './punct';
 export * from './range';
 export * from './readable';
