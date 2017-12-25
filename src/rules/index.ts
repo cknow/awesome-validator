@@ -40,6 +40,7 @@ export * from './int-val';
 export * from './iterable';
 export * from './json';
 export * from './label';
+export * from './language-code';
 export * from './leap-date';
 export * from './leap-year';
 export * from './lowercase';
