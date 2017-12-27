@@ -97,6 +97,7 @@ The library can be loaded either as a standalone script, or through an [AMD](htt
 - [Digit](docs/digit.md)
 - [Empty](docs/empty.md)
 - [Even](docs/even.md)
+- [Extension](docs/extension.md)
 - [Factor](docs/factor.md)
 - [FalseVal](docs/false-val.md)
 - [Fibonacci](docs/fibonacci.md)

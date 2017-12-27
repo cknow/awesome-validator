@@ -18,6 +18,7 @@ export * from './date-time';
 export * from './digit';
 export * from './empty';
 export * from './even';
+export * from './extension';
 export * from './factor';
 export * from './false-val';
 export * from './fibonacci';
