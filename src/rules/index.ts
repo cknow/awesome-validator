@@ -17,6 +17,7 @@ export * from './cpf';
 export * from './date-time';
 export * from './digit';
 export * from './empty';
+export * from './equals';
 export * from './even';
 export * from './executable';
 export * from './exists';
