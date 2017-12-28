@@ -1,8 +1,8 @@
 import { existsSync, Stats, statSync } from 'fs';
 
-import { AbstractRule } from './abstract-rule';
+import { AbstractTryCatch } from './abstract-try-catch';
 
-export abstract class AbstractFileSystem extends AbstractRule {
+export abstract class AbstractFileSystem extends AbstractTryCatch {
 
     /**
      * Stats.
@@ -10,35 +10,22 @@ export abstract class AbstractFileSystem extends AbstractRule {
     public static stats: Stats;
 
     /**
-     * Parse.
+     * Validate Function.
      */
-    public static parse(input: any): Stats | null {
-        try {
-            if (input instanceof Stats) {
-                return input;
-            }
+    protected validateFunction(input: any): boolean {
+        if (input instanceof Stats) {
+            AbstractFileSystem.stats = input;
 
-            if (existsSync(input)) {
-                return statSync(input);
-            }
-        } catch (e) {}
-
-        return null;
-    }
-
-    /**
-     * Validate.
-     */
-    public validate(input: any): boolean {
-        const stats: Stats | null = AbstractFileSystem.parse(input);
-
-        if (stats === null) {
-            return false;
+            return this.validateFileSystem(AbstractFileSystem.stats);
         }
 
-        AbstractFileSystem.stats = stats;
+        if (existsSync(input)) {
+            AbstractFileSystem.stats = statSync(input);
 
-        return this.validateFileSystem(stats);
+            return this.validateFileSystem(AbstractFileSystem.stats);
+        }
+
+        return false;
     }
 
     /**
