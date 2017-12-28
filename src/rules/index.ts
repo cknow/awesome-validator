@@ -18,6 +18,7 @@ export * from './date-time';
 export * from './digit';
 export * from './empty';
 export * from './even';
+export * from './executable';
 export * from './exists';
 export * from './extension';
 export * from './factor';
