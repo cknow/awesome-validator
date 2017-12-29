@@ -30,6 +30,7 @@ describe('File', () => {
 
     it('values is valid', () => {
         assert.isTrue(file.validate('file.txt'));
+        assert.isTrue(file.validate(fs.statSync('file.txt')));
         assert.isTrue(file.validate(fs.statSync(tempWrite.sync('foo'))));
     });
 
