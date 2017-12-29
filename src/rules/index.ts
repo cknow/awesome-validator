@@ -17,6 +17,7 @@ export * from './cpf';
 export * from './date-time';
 export * from './digit';
 export * from './directory';
+export * from './email';
 export * from './empty';
 export * from './ends-with';
 export * from './equals';
