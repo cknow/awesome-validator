@@ -1,6 +1,6 @@
 # Starts With
 
-validates only if the value is at the beginning of the input.
+Validates only if the value is at the beginning of the input.
 
 Valid values:
 

@@ -96,6 +96,7 @@ The library can be loaded either as a standalone script, or through an [AMD](htt
 - [DateTime](docs/date-time.md)
 - [Digit](docs/digit.md)
 - [Empty](docs/empty.md)
+- [EndsWith](docs/ends-width.md)
 - [Equals](docs/equals.md)
 - [Even](docs/even.md)
 - [Executable](docs/executable.md)
