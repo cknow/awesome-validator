@@ -1,6 +1,5 @@
 import * as fs from 'fs';
 import * as mock from 'mock-fs';
-import * as tempy from 'tempy';
 
 import { assert } from 'chai';
 
@@ -30,7 +29,7 @@ describe('Directory', () => {
 
     it('values is valid', () => {
         assert.isTrue(directory.validate('dir'));
-        assert.isTrue(directory.validate(fs.statSync(tempy.directory())));
+        assert.isTrue(directory.validate(fs.statSync('dir')));
     });
 
     it('values is not valid', () => {
