@@ -95,6 +95,7 @@ The library can be loaded either as a standalone script, or through an [AMD](htt
 - [Cpf](docs/cpf.md)
 - [DateTime](docs/date-time.md)
 - [Digit](docs/digit.md)
+- [Directory](docs/directory.md)
 - [Empty](docs/empty.md)
 - [EndsWith](docs/ends-width.md)
 - [Equals](docs/equals.md)

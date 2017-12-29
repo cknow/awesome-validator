@@ -15,6 +15,7 @@ describe('File', () => {
         file = new File();
 
         mock({
+            'dir': {},
             'file.txt': 'foo'
         });
     });
@@ -33,8 +34,8 @@ describe('File', () => {
     });
 
     it('values is not valid', () => {
-        assert.isFalse(file.validate(''));
         assert.isFalse(file.validate('foo'));
+        assert.isFalse(file.validate('dir'));
         assert.isFalse(file.validate(__dirname));
     });
 
