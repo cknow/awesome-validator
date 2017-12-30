@@ -35,7 +35,6 @@ describe('Digit', () => {
 
     it('values is not valid', () => {
         assert.isFalse(digit.validate(''));
-        assert.isFalse(digit.validate(null));
         assert.isFalse(digit.validate('16-50'));
         assert.isFalse(digit.validate('a'));
         assert.isFalse(digit.validate('Foo'));

@@ -30,7 +30,6 @@ describe('Graph', () => {
 
     it('values is not valid', () => {
         assert.isFalse(graph.validate(''));
-        assert.isFalse(graph.validate(null));
         assert.isFalse(graph.validate(' '));
         assert.isFalse(graph.validate('foo\nbar'));
         assert.isFalse(graph.validate('foo\tbar'));
