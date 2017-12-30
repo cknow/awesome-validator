@@ -90,6 +90,7 @@ The library can be loaded either as a standalone script, or through an [AMD](htt
 - [BooleanVal](docs/boolean-val.md)
 - [Cnh](docs/cnh.md)
 - [Cnpj](docs/cnpj.md)
+- [Cntrl](docs/cntrl.md)
 - [Consonant](docs/consonant.md)
 - [Contains](docs/contains.md)
 - [Cpf](docs/cpf.md)
