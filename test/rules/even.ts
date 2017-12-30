@@ -27,6 +27,7 @@ describe('Even', () => {
         assert.isFalse(even.validate(''));
         assert.isFalse(even.validate(null));
         assert.isFalse(even.validate(undefined));
+        assert.isFalse(even.validate(false));
         assert.isFalse(even.validate(-3));
         assert.isFalse(even.validate(-1));
         assert.isFalse(even.validate(1));

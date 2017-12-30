@@ -30,12 +30,13 @@ describe('ObjectInstance', () => {
     });
 
     it('values is not valid', () => {
-        assert.isFalse(objectInstance.validate(null));
         assert.isFalse(objectInstance.validate(Object.create(null)));
         assert.isFalse(objectInstance.validate(Boolean()));
         assert.isFalse(objectInstance.validate(Number()));
         assert.isFalse(objectInstance.validate(String()));
+        assert.isFalse(objectInstance.validate(null));
         assert.isFalse(objectInstance.validate(undefined));
+        assert.isFalse(objectInstance.validate(true));
         assert.isFalse(objectInstance.validate(false));
         assert.isFalse(objectInstance.validate(0));
         assert.isFalse(objectInstance.validate(0.0));
@@ -48,7 +49,6 @@ describe('ObjectInstance', () => {
         assert.isFalse(objectInstance.validate(Number(1)));
         assert.isFalse(objectInstance.validate(String('fooBar')));
         assert.isFalse(objectInstance.validate('foo'));
-        assert.isFalse(objectInstance.validate(true));
         assert.isFalse(objectInstance.validate(1));
         assert.isFalse(objectInstance.validate(-1));
         assert.isFalse(objectInstance.validate(1.0));

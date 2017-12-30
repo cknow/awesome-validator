@@ -27,6 +27,7 @@ describe('RegexInstance', () => {
         assert.isFalse(regexInstance.validate(String()));
         assert.isFalse(regexInstance.validate(null));
         assert.isFalse(regexInstance.validate(undefined));
+        assert.isFalse(regexInstance.validate(true));
         assert.isFalse(regexInstance.validate(false));
         assert.isFalse(regexInstance.validate(0));
         assert.isFalse(regexInstance.validate(0.0));
@@ -46,7 +47,6 @@ describe('RegexInstance', () => {
         assert.isFalse(regexInstance.validate('foo'));
         assert.isFalse(regexInstance.validate({foo: 'bar'}));
         assert.isFalse(regexInstance.validate(['foo']));
-        assert.isFalse(regexInstance.validate(true));
         assert.isFalse(regexInstance.validate(1));
         assert.isFalse(regexInstance.validate(-1));
         assert.isFalse(regexInstance.validate(1.0));

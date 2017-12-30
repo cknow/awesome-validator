@@ -23,6 +23,10 @@ describe('Uppercase', () => {
     it('values is not valid', () => {
         assert.isFalse(uppercase.validate('Foo'));
         assert.isFalse(uppercase.validate('fooBar'));
+        assert.isFalse(uppercase.validate(null));
+        assert.isFalse(uppercase.validate(undefined));
+        assert.isFalse(uppercase.validate(true));
+        assert.isFalse(uppercase.validate(false));
     });
 
 });

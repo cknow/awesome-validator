@@ -27,6 +27,9 @@ describe('PrimeNumber', () => {
     it('values is not valid', () => {
         assert.isFalse(primeNumber.validate(''));
         assert.isFalse(primeNumber.validate(null));
+        assert.isFalse(primeNumber.validate(undefined));
+        assert.isFalse(primeNumber.validate(true));
+        assert.isFalse(primeNumber.validate(false));
         assert.isFalse(primeNumber.validate(0));
         assert.isFalse(primeNumber.validate(10));
         assert.isFalse(primeNumber.validate(25));

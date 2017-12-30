@@ -28,6 +28,7 @@ describe('ObjectTypeStrict', () => {
         assert.isFalse(objectTypeStrict.validate(String()));
         assert.isFalse(objectTypeStrict.validate(null));
         assert.isFalse(objectTypeStrict.validate(undefined));
+        assert.isFalse(objectTypeStrict.validate(true));
         assert.isFalse(objectTypeStrict.validate(false));
         assert.isFalse(objectTypeStrict.validate(0));
         assert.isFalse(objectTypeStrict.validate(0.0));
@@ -44,7 +45,6 @@ describe('ObjectTypeStrict', () => {
         assert.isFalse(objectTypeStrict.validate(String('fooBar')));
         assert.isFalse(objectTypeStrict.validate('foo'));
         assert.isFalse(objectTypeStrict.validate(['foo']));
-        assert.isFalse(objectTypeStrict.validate(true));
         assert.isFalse(objectTypeStrict.validate(1));
         assert.isFalse(objectTypeStrict.validate(-1));
         assert.isFalse(objectTypeStrict.validate(1.0));

@@ -21,6 +21,8 @@ describe('Slug', () => {
         assert.isTrue(slug.validate('o-alganet-e-um-feio'));
         assert.isTrue(slug.validate('a-e-i-o-u'));
         assert.isTrue(slug.validate('anticonstitucionalissimamente'));
+        assert.isTrue(slug.validate(true));
+        assert.isTrue(slug.validate(false));
     });
 
     it('values is not valid', () => {

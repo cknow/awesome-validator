@@ -36,6 +36,8 @@ describe('FloatVal', () => {
         assert.isFalse(floatVal.validate('0.0'));
         assert.isFalse(floatVal.validate(''));
         assert.isFalse(floatVal.validate(null));
+        assert.isFalse(floatVal.validate(undefined));
+        assert.isFalse(floatVal.validate(false));
         assert.isFalse(floatVal.validate('a'));
         assert.isFalse(floatVal.validate(' '));
         assert.isFalse(floatVal.validate('Foo'));

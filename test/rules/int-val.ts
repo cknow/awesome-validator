@@ -35,6 +35,8 @@ describe('IntVal', () => {
         assert.isFalse(intVal.validate('165.7'));
         assert.isFalse(intVal.validate(''));
         assert.isFalse(intVal.validate(null));
+        assert.isFalse(intVal.validate(undefined));
+        assert.isFalse(intVal.validate(false));
         assert.isFalse(intVal.validate('a'));
         assert.isFalse(intVal.validate(' '));
         assert.isFalse(intVal.validate('Foo'));

@@ -32,6 +32,10 @@ describe('Uuid', () => {
         assert.isFalse(uuid.validate('a71a18f4-3a13-11g7-a919-92ebcb67fe33'));
         assert.isFalse(uuid.validate('a71a18f4-3a13-11e7-g919-92ebcb67fe33'));
         assert.isFalse(uuid.validate('a71a18f4-3a13-11e7-a919-92gbcb67fe33'));
+        assert.isFalse(uuid.validate(null));
+        assert.isFalse(uuid.validate(undefined));
+        assert.isFalse(uuid.validate(true));
+        assert.isFalse(uuid.validate(false));
     });
 
 });

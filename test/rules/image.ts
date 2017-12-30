@@ -26,6 +26,9 @@ describe('Image', () => {
         assert.isFalse(image.validate('foo/png'));
         assert.isFalse(image.validate('foo/jpg'));
         assert.isFalse(image.validate('foobar'));
+        assert.isFalse(image.validate(null));
+        assert.isFalse(image.validate(undefined));
+        assert.isFalse(image.validate(false));
     });
 
 });

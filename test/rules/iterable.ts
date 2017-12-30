@@ -43,6 +43,7 @@ describe('Iterable', () => {
         assert.isFalse(iterable.validate(Number()));
         assert.isFalse(iterable.validate(null));
         assert.isFalse(iterable.validate(undefined));
+        assert.isFalse(iterable.validate(true));
         assert.isFalse(iterable.validate(false));
         assert.isFalse(iterable.validate(0));
         assert.isFalse(iterable.validate(0.0));
@@ -53,7 +54,6 @@ describe('Iterable', () => {
         assert.isFalse(iterable.validate(Boolean(true)));
         assert.isFalse(iterable.validate(Number(1)));
         assert.isFalse(iterable.validate({foo: 'bar'}));
-        assert.isFalse(iterable.validate(true));
         assert.isFalse(iterable.validate(1));
         assert.isFalse(iterable.validate(-1));
         assert.isFalse(iterable.validate(1.0));

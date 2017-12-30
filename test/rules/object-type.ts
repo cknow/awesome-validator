@@ -36,6 +36,7 @@ describe('ObjectType', () => {
         assert.isFalse(objectType.validate(Number()));
         assert.isFalse(objectType.validate(String()));
         assert.isFalse(objectType.validate(undefined));
+        assert.isFalse(objectType.validate(true));
         assert.isFalse(objectType.validate(false));
         assert.isFalse(objectType.validate(0));
         assert.isFalse(objectType.validate(0.0));
@@ -48,7 +49,6 @@ describe('ObjectType', () => {
         assert.isFalse(objectType.validate(Number(1)));
         assert.isFalse(objectType.validate(String('fooBar')));
         assert.isFalse(objectType.validate('foo'));
-        assert.isFalse(objectType.validate(true));
         assert.isFalse(objectType.validate(1));
         assert.isFalse(objectType.validate(-1));
         assert.isFalse(objectType.validate(1.0));

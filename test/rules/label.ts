@@ -26,8 +26,8 @@ describe('Label', () => {
     });
 
     it('values is not valid', () => {
-        assert.isFalse(label.validate(undefined));
         assert.isFalse(label.validate(null));
+        assert.isFalse(label.validate(undefined));
         assert.isFalse(label.validate('%'));
         assert.isFalse(label.validate('*'));
         assert.isFalse(label.validate('-'));

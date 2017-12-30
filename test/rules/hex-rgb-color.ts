@@ -29,6 +29,7 @@ describe('HexRgbColor', () => {
         assert.isFalse(hexRgbColor.validate(''));
         assert.isFalse(hexRgbColor.validate(null));
         assert.isFalse(hexRgbColor.validate(undefined));
+        assert.isFalse(hexRgbColor.validate(false));
         assert.isFalse(hexRgbColor.validate('#0'));
         assert.isFalse(hexRgbColor.validate('#0000G0'));
         assert.isFalse(hexRgbColor.validate('#0FG'));

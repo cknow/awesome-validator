@@ -51,6 +51,10 @@ describe('Url', () => {
         assert.isFalse(url.validate('news:comp.infosystems.www.servers.unix'));
         assert.isFalse(url.validate('telnet://192.0.2.16:80/'));
         assert.isFalse(url.validate('telnet://melvyl.ucop.example.edu/'));
+        assert.isFalse(url.validate(null));
+        assert.isFalse(url.validate(undefined));
+        assert.isFalse(url.validate(true));
+        assert.isFalse(url.validate(false));
     });
 
 });

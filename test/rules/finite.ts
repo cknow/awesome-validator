@@ -32,6 +32,7 @@ describe('Finite', () => {
         assert.isFalse(finite.validate(Infinity));
         assert.isFalse(finite.validate(null));
         assert.isFalse(finite.validate(undefined));
+        assert.isFalse(finite.validate(false));
     });
 
 });

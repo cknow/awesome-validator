@@ -18,6 +18,8 @@ describe('InstanceOf', () => {
     it('values is not valid', () => {
         assert.isFalse(new InstanceOf(Array).validate(/foo/));
         assert.isFalse(new InstanceOf(Object).validate(null));
+        assert.isFalse(new InstanceOf(Object).validate(undefined));
+        assert.isFalse(new InstanceOf(Object).validate(false));
         assert.isFalse(new InstanceOf(RegExp).validate({}));
     });
 

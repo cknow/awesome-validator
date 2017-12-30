@@ -27,6 +27,8 @@ describe('Negative', () => {
         assert.isFalse(negative.validate(''));
         assert.isFalse(negative.validate(null));
         assert.isFalse(negative.validate(undefined));
+        assert.isFalse(negative.validate(true));
+        assert.isFalse(negative.validate(false));
         assert.isFalse(negative.validate('a'));
         assert.isFalse(negative.validate('   '));
         assert.isFalse(negative.validate('Foo'));

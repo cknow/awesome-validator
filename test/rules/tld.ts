@@ -29,7 +29,10 @@ describe('Tld', () => {
         assert.isFalse(tld.validate('1'));
         assert.isFalse(tld.validate(1.0));
         assert.isFalse(tld.validate('wrongtld'));
+        assert.isFalse(tld.validate(null));
+        assert.isFalse(tld.validate(undefined));
         assert.isFalse(tld.validate(true));
+        assert.isFalse(tld.validate(false));
         assert.isFalse(tld.validate([]));
         assert.isFalse(tld.validate({}));
         assert.isFalse(tld.validate(new Array('foo')));

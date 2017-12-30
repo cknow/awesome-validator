@@ -27,6 +27,7 @@ describe('RegexType', () => {
         assert.isFalse(regexType.validate(String()));
         assert.isFalse(regexType.validate(null));
         assert.isFalse(regexType.validate(undefined));
+        assert.isFalse(regexType.validate(true));
         assert.isFalse(regexType.validate(false));
         assert.isFalse(regexType.validate(0));
         assert.isFalse(regexType.validate(0.0));
@@ -46,7 +47,6 @@ describe('RegexType', () => {
         assert.isFalse(regexType.validate('foo'));
         assert.isFalse(regexType.validate({foo: 'bar'}));
         assert.isFalse(regexType.validate(['foo']));
-        assert.isFalse(regexType.validate(true));
         assert.isFalse(regexType.validate(1));
         assert.isFalse(regexType.validate(-1));
         assert.isFalse(regexType.validate(1.0));

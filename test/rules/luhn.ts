@@ -29,6 +29,8 @@ describe('Luhn', () => {
         assert.isFalse(luhn.validate('2223000048400010'));
         assert.isFalse(luhn.validate(null));
         assert.isFalse(luhn.validate(undefined));
+        assert.isFalse(luhn.validate(true));
+        assert.isFalse(luhn.validate(false));
         assert.isFalse(luhn.validate('foo'));
         assert.isFalse(luhn.validate(' '));
     });

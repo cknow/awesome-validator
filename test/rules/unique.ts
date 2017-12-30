@@ -34,6 +34,10 @@ describe('Unique', () => {
         assert.isFalse(unique.validate([0, 3.14, 2.71, 3.14]));
         assert.isFalse(unique.validate([[], [1], [1]]));
         assert.isFalse(unique.validate([{key: 'value'}, {key: 'value'}]));
+        assert.isFalse(unique.validate(null));
+        assert.isFalse(unique.validate(undefined));
+        assert.isFalse(unique.validate(true));
+        assert.isFalse(unique.validate(false));
     });
 
 });

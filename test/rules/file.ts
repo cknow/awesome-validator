@@ -35,6 +35,9 @@ describe('File', () => {
     });
 
     it('values is not valid', () => {
+        assert.isFalse(file.validate(null));
+        assert.isFalse(file.validate(undefined));
+        assert.isFalse(file.validate(false));
         assert.isFalse(file.validate('foo'));
         assert.isFalse(file.validate('dir'));
         assert.isFalse(file.validate(__dirname));

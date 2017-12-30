@@ -26,7 +26,10 @@ describe('LanguageCode', () => {
         assert.isFalse(languageCode.validate('   '));
         assert.isFalse(languageCode.validate(1.0));
         assert.isFalse(languageCode.validate('wrong code'));
+        assert.isFalse(languageCode.validate(null));
+        assert.isFalse(languageCode.validate(undefined));
         assert.isFalse(languageCode.validate(true));
+        assert.isFalse(languageCode.validate(false));
         assert.isFalse(languageCode.validate([]));
         assert.isFalse(languageCode.validate({}));
         assert.isFalse(languageCode.validate(new Array('foo')));

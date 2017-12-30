@@ -26,6 +26,7 @@ describe('Infinite', () => {
         assert.isFalse(infinite.validate(Number.MAX_SAFE_INTEGER));
         assert.isFalse(infinite.validate(null));
         assert.isFalse(infinite.validate(undefined));
+        assert.isFalse(infinite.validate(false));
         assert.isFalse(infinite.validate('123456'));
         assert.isFalse(infinite.validate(-9));
         assert.isFalse(infinite.validate(0));

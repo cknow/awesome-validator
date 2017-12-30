@@ -33,6 +33,7 @@ describe('ArrayVal', () => {
         assert.isFalse(arrayVal.validate(String()));
         assert.isFalse(arrayVal.validate(null));
         assert.isFalse(arrayVal.validate(undefined));
+        assert.isFalse(arrayVal.validate(true));
         assert.isFalse(arrayVal.validate(false));
         assert.isFalse(arrayVal.validate(0));
         assert.isFalse(arrayVal.validate(0.0));
@@ -49,7 +50,6 @@ describe('ArrayVal', () => {
         assert.isFalse(arrayVal.validate(String('fooBar')));
         assert.isFalse(arrayVal.validate('foo'));
         assert.isFalse(arrayVal.validate({foo: 'bar'}));
-        assert.isFalse(arrayVal.validate(true));
         assert.isFalse(arrayVal.validate(1));
         assert.isFalse(arrayVal.validate(-1));
         assert.isFalse(arrayVal.validate(1.0));

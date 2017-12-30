@@ -21,6 +21,10 @@ describe('Lowercase', () => {
     });
 
     it('values is not valid', () => {
+        assert.isFalse(lowercase.validate(null));
+        assert.isFalse(lowercase.validate(undefined));
+        assert.isFalse(lowercase.validate(true));
+        assert.isFalse(lowercase.validate(false));
         assert.isFalse(lowercase.validate('Foo'));
         assert.isFalse(lowercase.validate('fooBar'));
     });

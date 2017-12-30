@@ -17,8 +17,9 @@ describe('Extension', () => {
     });
 
     it('values is not valid', () => {
-        assert.isFalse(new Extension(null).validate(undefined));
         assert.isFalse(new Extension(null).validate(null));
+        assert.isFalse(new Extension(null).validate(undefined));
+        assert.isFalse(new Extension(null).validate(false));
         assert.isFalse(new Extension(null).validate('foo'));
         assert.isFalse(new Extension('xls').validate('file.xlsx'));
         assert.isFalse(new Extension(['png', 'jpg', 'gif']).validate('image.jpeg'));

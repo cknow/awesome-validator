@@ -34,8 +34,9 @@ describe('Executable', () => {
     });
 
     it('values is not valid', () => {
-        assert.isFalse(executable.validate(undefined));
         assert.isFalse(executable.validate(null));
+        assert.isFalse(executable.validate(undefined));
+        assert.isFalse(executable.validate(false));
         assert.isFalse(executable.validate('dir'));
         assert.isFalse(executable.validate('image.png'));
     });

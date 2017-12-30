@@ -33,6 +33,10 @@ describe('Version', () => {
         assert.isFalse(version.validate('1.2.3.4'));
         assert.isFalse(version.validate('1.2.3.4-beta'));
         assert.isFalse(version.validate('beta'));
+        assert.isFalse(version.validate(null));
+        assert.isFalse(version.validate(undefined));
+        assert.isFalse(version.validate(true));
+        assert.isFalse(version.validate(false));
     });
 
 });

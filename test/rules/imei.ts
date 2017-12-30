@@ -32,6 +32,7 @@ describe('Imei', () => {
         assert.isFalse(imei.validate('Whateveeeeeerrr'));
         assert.isFalse(imei.validate(null));
         assert.isFalse(imei.validate(undefined));
+        assert.isFalse(imei.validate(false));
         assert.isFalse(imei.validate('foo'));
         assert.isFalse(imei.validate(' '));
     });

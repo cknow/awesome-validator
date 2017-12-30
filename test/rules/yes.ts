@@ -38,6 +38,10 @@ describe('Yes', () => {
         assert.isFalse(yes.validate('Yoo'));
         assert.isFalse(yes.validate('Young'));
         assert.isFalse(yes.validate('Yy'));
+        assert.isFalse(yes.validate(null));
+        assert.isFalse(yes.validate(undefined));
+        assert.isFalse(yes.validate(true));
+        assert.isFalse(yes.validate(false));
     });
 
 });

@@ -33,6 +33,7 @@ describe('ArrayType', () => {
         assert.isFalse(arrayType.validate(String()));
         assert.isFalse(arrayType.validate(null));
         assert.isFalse(arrayType.validate(undefined));
+        assert.isFalse(arrayType.validate(true));
         assert.isFalse(arrayType.validate(false));
         assert.isFalse(arrayType.validate(0));
         assert.isFalse(arrayType.validate(0.0));
@@ -49,7 +50,6 @@ describe('ArrayType', () => {
         assert.isFalse(arrayType.validate(String('fooBar')));
         assert.isFalse(arrayType.validate('foo'));
         assert.isFalse(arrayType.validate({foo: 'bar'}));
-        assert.isFalse(arrayType.validate(true));
         assert.isFalse(arrayType.validate(1));
         assert.isFalse(arrayType.validate(-1));
         assert.isFalse(arrayType.validate(1.0));

@@ -40,6 +40,9 @@ describe('Odd', () => {
         assert.isFalse(odd.validate('165.7'));
         assert.isFalse(odd.validate(''));
         assert.isFalse(odd.validate(null));
+        assert.isFalse(odd.validate(undefined));
+        assert.isFalse(odd.validate(true));
+        assert.isFalse(odd.validate(false));
         assert.isFalse(odd.validate('a'));
         assert.isFalse(odd.validate(' '));
         assert.isFalse(odd.validate('Foo'));

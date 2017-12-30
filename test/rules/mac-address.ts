@@ -28,6 +28,10 @@ describe('MacAddress', () => {
         assert.isFalse(macAddress.validate('66-77--99-jj-bb'));
         assert.isFalse(macAddress.validate('HH:0F-bd:12:44:ba'));
         assert.isFalse(macAddress.validate('90-bc-nk:1a-dd-cc'));
+        assert.isFalse(macAddress.validate(null));
+        assert.isFalse(macAddress.validate(undefined));
+        assert.isFalse(macAddress.validate(true));
+        assert.isFalse(macAddress.validate(false));
     });
 
 });

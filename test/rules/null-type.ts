@@ -24,6 +24,7 @@ describe('NullType', () => {
         assert.isFalse(nullType.validate(Number()));
         assert.isFalse(nullType.validate(String()));
         assert.isFalse(nullType.validate(undefined));
+        assert.isFalse(nullType.validate(true));
         assert.isFalse(nullType.validate(false));
         assert.isFalse(nullType.validate(0));
         assert.isFalse(nullType.validate(0.0));
@@ -43,7 +44,6 @@ describe('NullType', () => {
         assert.isFalse(nullType.validate('foo'));
         assert.isFalse(nullType.validate({foo: 'bar'}));
         assert.isFalse(nullType.validate(['foo']));
-        assert.isFalse(nullType.validate(true));
         assert.isFalse(nullType.validate(1));
         assert.isFalse(nullType.validate(-1));
         assert.isFalse(nullType.validate(1.0));

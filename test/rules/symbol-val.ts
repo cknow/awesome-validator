@@ -46,13 +46,13 @@ describe('SymbolVal', () => {
     it('values is not valid', () => {
         assert.isFalse(symbolVal.validate(Boolean()));
         assert.isFalse(symbolVal.validate(null));
+        assert.isFalse(symbolVal.validate(true));
         assert.isFalse(symbolVal.validate(false));
         assert.isFalse(symbolVal.validate({}));
         assert.isFalse(symbolVal.validate(new Object()));
         assert.isFalse(symbolVal.validate(Object.create(null)));
         assert.isFalse(symbolVal.validate(Boolean(true)));
         assert.isFalse(symbolVal.validate({foo: 'bar'}));
-        assert.isFalse(symbolVal.validate(true));
         assert.isFalse(symbolVal.validate([]));
         assert.isFalse(symbolVal.validate({}));
         assert.isFalse(symbolVal.validate(new Array('foo')));

@@ -21,6 +21,7 @@ describe('AlwaysInvalid', () => {
         assert.isFalse(alwaysInvalid.validate(String()));
         assert.isFalse(alwaysInvalid.validate(null));
         assert.isFalse(alwaysInvalid.validate(undefined));
+        assert.isFalse(alwaysInvalid.validate(true));
         assert.isFalse(alwaysInvalid.validate(false));
         assert.isFalse(alwaysInvalid.validate(0));
         assert.isFalse(alwaysInvalid.validate(0.0));
@@ -40,7 +41,6 @@ describe('AlwaysInvalid', () => {
         assert.isFalse(alwaysInvalid.validate('foo'));
         assert.isFalse(alwaysInvalid.validate({foo: 'bar'}));
         assert.isFalse(alwaysInvalid.validate(['foo']));
-        assert.isFalse(alwaysInvalid.validate(true));
         assert.isFalse(alwaysInvalid.validate(1));
         assert.isFalse(alwaysInvalid.validate(-1));
         assert.isFalse(alwaysInvalid.validate(1.0));

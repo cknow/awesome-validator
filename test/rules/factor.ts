@@ -53,6 +53,8 @@ describe('Factor', () => {
         assert.isFalse(new Factor(1.5).validate(null));
         assert.isFalse(new Factor(-0.5).validate(null));
         assert.isFalse(new Factor(-1.5).validate(null));
+        assert.isFalse(new Factor(-1.5).validate(undefined));
+        assert.isFalse(new Factor(-1.5).validate(false));
         assert.isFalse(new Factor(Number.MAX_SAFE_INTEGER + 1).validate(null));
     });
 

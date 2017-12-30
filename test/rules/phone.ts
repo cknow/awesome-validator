@@ -93,6 +93,10 @@ describe('Phone', () => {
         assert.isFalse(phone.validate('03610666-5'));
         assert.isFalse(phone.validate('text'));
         assert.isFalse(phone.validate('555\n5555'));
+        assert.isFalse(phone.validate(null));
+        assert.isFalse(phone.validate(undefined));
+        assert.isFalse(phone.validate(true));
+        assert.isFalse(phone.validate(false));
     });
 
 });

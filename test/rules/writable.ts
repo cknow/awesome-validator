@@ -33,6 +33,10 @@ describe('Writable', () => {
     it('values is not valid', () => {
         assert.isFalse(writable.validate('foo'));
         assert.isFalse(writable.validate('file-not-found.txt'));
+        assert.isFalse(writable.validate(null));
+        assert.isFalse(writable.validate(undefined));
+        assert.isFalse(writable.validate(true));
+        assert.isFalse(writable.validate(false));
     });
 
 });

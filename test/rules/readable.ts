@@ -33,6 +33,10 @@ describe('Readable', () => {
     it('values is not valid', () => {
         assert.isFalse(readable.validate('foo'));
         assert.isFalse(readable.validate('file-not-found.txt'));
+        assert.isFalse(readable.validate(null));
+        assert.isFalse(readable.validate(undefined));
+        assert.isFalse(readable.validate(true));
+        assert.isFalse(readable.validate(false));
     });
 
 });

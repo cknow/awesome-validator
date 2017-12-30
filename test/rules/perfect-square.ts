@@ -32,6 +32,9 @@ describe('PerfectSquare', () => {
         assert.isFalse(perfectSquare.validate(250));
         assert.isFalse(perfectSquare.validate(''));
         assert.isFalse(perfectSquare.validate(null));
+        assert.isFalse(perfectSquare.validate(undefined));
+        assert.isFalse(perfectSquare.validate(true));
+        assert.isFalse(perfectSquare.validate(false));
         assert.isFalse(perfectSquare.validate(7));
         assert.isFalse(perfectSquare.validate(-1));
         assert.isFalse(perfectSquare.validate(6));

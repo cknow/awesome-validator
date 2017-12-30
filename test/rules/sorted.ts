@@ -20,7 +20,6 @@ describe('Sorted', () => {
         assert.isTrue(new Sorted((value: any): any => value.key).validate({
             a: {key: 'a'}, b: {key: 'b'}, c: {key: 'c'}
         }));
-
         assert.isTrue(new Sorted(null, false).validate(''));
         assert.isTrue(new Sorted(null, false).validate([]));
         assert.isTrue(new Sorted(null, false).validate({}));
@@ -40,7 +39,6 @@ describe('Sorted', () => {
         assert.isFalse(new Sorted((value: any): any => value.key).validate({
             c: {key: 'c'}, b: {key: 'b'}, a: {key: 'a'}
         }));
-
         assert.isFalse(new Sorted(null, false).validate('abcde'));
         assert.isFalse(new Sorted(null, false).validate([1, 2, 3]));
         assert.isFalse(new Sorted(null, false).validate({a: 'a', b: 'b', c: 'c'}));

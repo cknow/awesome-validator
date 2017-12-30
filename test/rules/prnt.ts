@@ -30,6 +30,8 @@ describe('Prnt', () => {
         assert.isTrue(prnt.validate('#$%&*_'));
         assert.isTrue(prnt.validate(Boolean()));
         assert.isTrue(prnt.validate(Number()));
+        assert.isTrue(prnt.validate(true));
+        assert.isTrue(prnt.validate(false));
     });
 
     it('values is not valid', () => {

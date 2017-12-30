@@ -33,6 +33,10 @@ describe('LeapDate', () => {
         assert.isFalse(leapDate.validate('2009'));
         assert.isFalse(leapDate.validate('2009-02-29'));
         assert.isFalse(leapDate.validate(2009));
+        assert.isFalse(leapDate.validate(null));
+        assert.isFalse(leapDate.validate(undefined));
+        assert.isFalse(leapDate.validate(true));
+        assert.isFalse(leapDate.validate(false));
         assert.isFalse(leapDate.validate([]));
         assert.isFalse(leapDate.validate({}));
         assert.isFalse(leapDate.validate(moment([2009])));

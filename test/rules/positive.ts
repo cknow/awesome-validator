@@ -28,6 +28,8 @@ describe('Positive', () => {
         assert.isFalse(positive.validate(''));
         assert.isFalse(positive.validate(null));
         assert.isFalse(positive.validate(undefined));
+        assert.isFalse(positive.validate(true));
+        assert.isFalse(positive.validate(false));
         assert.isFalse(positive.validate('a'));
         assert.isFalse(positive.validate('   '));
         assert.isFalse(positive.validate('Foo'));

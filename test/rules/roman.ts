@@ -39,6 +39,10 @@ describe('Roman', () => {
         assert.isFalse(roman.validate('MXM'));
         assert.isFalse(roman.validate('XIIIIIIII'));
         assert.isFalse(roman.validate('MIMIMI'));
+        assert.isFalse(roman.validate(null));
+        assert.isFalse(roman.validate(undefined));
+        assert.isFalse(roman.validate(true));
+        assert.isFalse(roman.validate(false));
     });
 
 });

@@ -36,7 +36,6 @@ describe('Pesel', () => {
         assert.isFalse(pesel.validate('21120209251'));
         assert.isFalse(pesel.validate('21120209250'));
         assert.isFalse(pesel.validate('01320613890'));
-
         assert.isFalse(pesel.validate(null));
         assert.isFalse(pesel.validate(undefined));
         assert.isFalse(pesel.validate([]));

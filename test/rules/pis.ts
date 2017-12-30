@@ -46,7 +46,6 @@ describe('Pis', () => {
         assert.isFalse(pis.validate('22'));
         assert.isFalse(pis.validate('123'));
         assert.isFalse(pis.validate('992999999999929384'));
-
         assert.isFalse(pis.validate(null));
         assert.isFalse(pis.validate(undefined));
         assert.isFalse(pis.validate([]));

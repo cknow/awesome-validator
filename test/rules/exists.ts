@@ -32,6 +32,9 @@ describe('Exists', () => {
     });
 
     it('values is not valid', () => {
+        assert.isFalse(exists.validate(null));
+        assert.isFalse(exists.validate(undefined));
+        assert.isFalse(exists.validate(false));
         assert.isFalse(exists.validate('file-not-exists'));
         assert.isFalse(exists.validate('dir-not-exists'));
         assert.isFalse(exists.validate([]));

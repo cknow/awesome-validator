@@ -40,6 +40,10 @@ describe('No', () => {
         assert.isFalse(no.validate('Niet'));
         assert.isFalse(no.validate('Noooooooo'));
         assert.isFalse(no.validate('Não'));
+        assert.isFalse(no.validate(null));
+        assert.isFalse(no.validate(undefined));
+        assert.isFalse(no.validate(true));
+        assert.isFalse(no.validate(false));
     });
 
 });

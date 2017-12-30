@@ -21,6 +21,10 @@ describe('SymbolicLink', () => {
 
     it('values is not valid', () => {
         assert.isFalse(symbolicLink.validate('foo'));
+        assert.isFalse(symbolicLink.validate(null));
+        assert.isFalse(symbolicLink.validate(undefined));
+        assert.isFalse(symbolicLink.validate(true));
+        assert.isFalse(symbolicLink.validate(false));
     });
 
 });
