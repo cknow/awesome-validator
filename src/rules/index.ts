@@ -15,6 +15,7 @@ export * from './cntrl';
 export * from './consonant';
 export * from './contains';
 export * from './cpf';
+export * from './currency-code';
 export * from './date-time';
 export * from './digit';
 export * from './directory';

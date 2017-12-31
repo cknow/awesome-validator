@@ -94,6 +94,7 @@ The library can be loaded either as a standalone script, or through an [AMD](htt
 - [Consonant](docs/consonant.md)
 - [Contains](docs/contains.md)
 - [Cpf](docs/cpf.md)
+- [CurrencyCode](docs/currency-code.md)
 - [DateTime](docs/date-time.md)
 - [Digit](docs/digit.md)
 - [Directory](docs/directory.md)
