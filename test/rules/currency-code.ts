@@ -3,7 +3,7 @@ import { assert } from 'chai';
 import { AbstractRule } from '../../src/rules/abstract-rule';
 import { CurrencyCode } from '../../src/rules/currency-code';
 
-describe('Tld', () => {
+describe('CurrencyCode', () => {
 
     let currencyCode: CurrencyCode;
 
