@@ -3,10 +3,10 @@ import { AllOf } from './all-of';
 import { Max } from './max';
 import { Min } from './min';
 
-export class Range extends AbstractRule {
+export class Between extends AbstractRule {
 
     /**
-     * RanRangee.
+     * Between.
      */
     public constructor(
         public readonly min?: any,

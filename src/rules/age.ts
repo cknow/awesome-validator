@@ -1,8 +1,8 @@
 import * as moment from 'moment';
 
 import { AbstractRule } from './abstract-rule';
+import { Between } from './between';
 import { DateTime } from './date-time';
-import { Range } from './range';
 
 export class Age extends AbstractRule {
 
@@ -23,7 +23,7 @@ export class Age extends AbstractRule {
     public validate(input: any): boolean {
         const date: moment.Moment = DateTime.parse(input, this.format);
 
-        return date.isValid() && new Range(
+        return date.isValid() && new Between(
             this.max ? moment().subtract(this.max, 'years').hour(0).minute(0).second(0) : null,
             this.min ? moment().subtract(this.min, 'years').hour(23).minute(59).second(59) : null
         ).validate(date);

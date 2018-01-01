@@ -1,7 +1,7 @@
+import { Between } from './between';
 import { File } from './file';
-import { Range } from './range';
 
-export class Size extends Range {
+export class Size extends Between {
 
     /**
      * Validate.
