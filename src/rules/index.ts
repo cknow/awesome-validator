@@ -11,6 +11,7 @@ export * from './between';
 export * from './boolean-instance';
 export * from './boolean-type';
 export * from './boolean-val';
+export * from './bsn';
 export * from './cnh';
 export * from './cnpj';
 export * from './cntrl';

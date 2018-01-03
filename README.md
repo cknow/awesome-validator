@@ -90,6 +90,7 @@ The library can be loaded either as a standalone script, or through an [AMD](htt
 - [BooleanInstance](docs/boolean-instance.md)
 - [BooleanType](docs/boolean-type.md)
 - [BooleanVal](docs/boolean-val.md)
+- [Bsn](docs/bsn.md)
 - [Cnh](docs/cnh.md)
 - [Cnpj](docs/cnpj.md)
 - [Cntrl](docs/cntrl.md)
