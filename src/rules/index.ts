@@ -8,6 +8,7 @@ export * from './any-of';
 export * from './array-instance';
 export * from './array-type';
 export * from './array-val';
+export * from './base';
 export * from './base64';
 export * from './between';
 export * from './boolean-instance';
