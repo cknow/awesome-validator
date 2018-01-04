@@ -22,6 +22,7 @@ describe('Alpha', () => {
     });
 
     it('values is valid', () => {
+        assert.isTrue(alpha.validate(' '));
         assert.isTrue(alpha.validate('alganet'));
         assert.isTrue(alpha.validate('a'));
         assert.isTrue(alpha.validate('\t'));

@@ -22,6 +22,7 @@ describe('Alnum', () => {
     });
 
     it('values is valid', () => {
+        assert.isTrue(alnum.validate(' '));
         assert.isTrue(alnum.validate('alganet'));
         assert.isTrue(alnum.validate('a'));
         assert.isTrue(alnum.validate('1'));
