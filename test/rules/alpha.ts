@@ -27,6 +27,7 @@ describe('Alpha', () => {
         assert.isTrue(alpha.validate('\t'));
         assert.isTrue(alpha.validate('\n'));
         assert.isTrue(alpha.validate('foobar'));
+        assert.isTrue(alpha.validate('Foo'));
         assert.isTrue(alpha.validate('alganet alganet'));
         assert.isTrue(alpha.validate('\nabc'));
         assert.isTrue(alpha.validate('\tdef'));
