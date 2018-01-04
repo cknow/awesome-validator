@@ -1,5 +1,6 @@
 export * from './age';
 export * from './all-of';
+export * from './alpha';
 export * from './always-invalid';
 export * from './always-valid';
 export * from './any-of';

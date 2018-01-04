@@ -79,6 +79,7 @@ The library can be loaded either as a standalone script, or through an [AMD](htt
 
 - [Age](docs/age.md)
 - [AllOf](docs/all-of.md)
+- [Alpha](docs/alpha.md)
 - [AlwaysInvalid](docs/always-invalid.md)
 - [AlwaysValid](docs/always-valid.md)
 - [AnyOf](docs/any-of.md)
