@@ -18,7 +18,7 @@ describe('Directory', () => {
     it('values is valid', () => {
         assert.isTrue(email.validate('abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ@letters-in-local.org'));
         assert.isTrue(email.validate('01234567890@numbers-in-local.net'));
-        assert.isTrue(email.validate("&'*+-./=?^_{}~@other-valid-characters-in-local.net"));
+        assert.isTrue(email.validate('&\'*+-./=?^_{}~@other-valid-characters-in-local.net'));
         assert.isTrue(email.validate('mixed-1234-in-{+^}-local@sld.net'));
         assert.isTrue(email.validate('a@single-character-in-local.org'));
         assert.isTrue(email.validate('one-character-third-level@a.example.com'));

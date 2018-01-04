@@ -17,7 +17,7 @@ describe('Alpha', () => {
 
     it('values is valid with additional characters', () => {
         assert.isTrue(new Alpha('!@#$%^&*(){}').validate('!@#$%^&*(){} abc'));
-        assert.isTrue(new Alpha('[]?+=/\\-_|"\',<>.').validate("[]?+=/\\-_|\"',<>. \t \n abc"));
+        assert.isTrue(new Alpha('[]?+=/\\-_|"\',<>.').validate('[]?+=/\\-_|"\',<>. \t \n abc'));
         assert.isTrue(new Alpha(undefined).validate('abc'));
     });
 

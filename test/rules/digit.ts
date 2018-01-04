@@ -17,7 +17,7 @@ describe('Digit', () => {
 
     it('values is valid with additional characters', () => {
         assert.isTrue(new Digit('!@#$%^&*(){}').validate('!@#$%^&*(){} 123'));
-        assert.isTrue(new Digit('[]?+=/\\-_|"\',<>.').validate("[]?+=/\\-_|\"',<>. \t \n 123"));
+        assert.isTrue(new Digit('[]?+=/\\-_|"\',<>.').validate('[]?+=/\\-_|"\',<>. \t \n 123'));
         assert.isTrue(new Digit(undefined).validate('12 345'));
     });
 

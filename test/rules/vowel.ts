@@ -17,8 +17,8 @@ describe('Vowel', () => {
 
     it('values is valid with additional characters', () => {
         assert.isTrue(new Vowel('!@#$%^&*(){}').validate('!@#$%^&*(){} aeo iu'));
-        assert.isTrue(new Vowel('[]?+=/\\-_|"\',<>.').validate("[]?+=/\\-_|\"',<>. \t \n aeo iu"));
-        assert.isTrue(new Vowel('[]?+=/\\-_|"\',<>.').validate("[]?+=/\\-_|\"',<>."));
+        assert.isTrue(new Vowel('[]?+=/\\-_|"\',<>.').validate('[]?+=/\\-_|"\',<>. \t \n aeo iu'));
+        assert.isTrue(new Vowel('[]?+=/\\-_|"\',<>.').validate('[]?+=/\\-_|"\',<>.'));
         assert.isTrue(new Vowel(undefined).validate('aeiou'));
     });
 

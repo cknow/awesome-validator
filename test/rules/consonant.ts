@@ -17,7 +17,7 @@ describe('Consonant', () => {
 
     it('values is valid with additional characters', () => {
         assert.isTrue(new Consonant('!@#$%^&*(){}').validate('!@#$%^&*(){} bc dfg'));
-        assert.isTrue(new Consonant('[]?+=/\\-_|"\',<>.').validate("[]?+=/\\-_|\"',<>. \t \n bc dfg"));
+        assert.isTrue(new Consonant('[]?+=/\\-_|"\',<>.').validate('[]?+=/\\-_|"\',<>. \t \n bc dfg'));
         assert.isTrue(new Consonant(undefined).validate('bc dfg'));
     });
 
