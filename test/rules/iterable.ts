@@ -29,6 +29,10 @@ describe('Iterable', () => {
         assert.isTrue(iterable.validate(new Set(['foo', 'bar', 'foobar'])));
         assert.isTrue(iterable.validate(new Map().set(1, 'bar')));
         assert.isTrue(iterable.validate(new Map().set('foo', 'bar')));
+        assert.isTrue(iterable.validate({}));
+        assert.isTrue(iterable.validate({foo: 'bar'}));
+        assert.isTrue(iterable.validate(new Object()));
+        assert.isTrue(iterable.validate(new Object({foo: 'bar'})));
         assert.isTrue(iterable.validate(String()));
         assert.isTrue(iterable.validate(''));
         assert.isTrue(iterable.validate('0'));
@@ -39,6 +43,7 @@ describe('Iterable', () => {
     });
 
     it('values is not valid', () => {
+        assert.isFalse(iterable.validate(Object.create(null)));
         assert.isFalse(iterable.validate(Boolean()));
         assert.isFalse(iterable.validate(Number()));
         assert.isFalse(iterable.validate(null));
@@ -48,12 +53,8 @@ describe('Iterable', () => {
         assert.isFalse(iterable.validate(0));
         assert.isFalse(iterable.validate(0.0));
         assert.isFalse(iterable.validate(-0.0));
-        assert.isFalse(iterable.validate({}));
-        assert.isFalse(iterable.validate(new Object()));
-        assert.isFalse(iterable.validate(Object.create(null)));
         assert.isFalse(iterable.validate(Boolean(true)));
         assert.isFalse(iterable.validate(Number(1)));
-        assert.isFalse(iterable.validate({foo: 'bar'}));
         assert.isFalse(iterable.validate(1));
         assert.isFalse(iterable.validate(-1));
         assert.isFalse(iterable.validate(1.0));
@@ -61,7 +62,6 @@ describe('Iterable', () => {
         assert.isFalse(iterable.validate(1));
         assert.isFalse(iterable.validate(1.0));
         assert.isFalse(iterable.validate(1.1));
-        assert.isFalse(iterable.validate(new Object({foo: 'bar'})));
 
         class Foo {}
         assert.isFalse(iterable.validate(new Foo()));
