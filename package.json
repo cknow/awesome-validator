@@ -60,6 +60,7 @@
   "dependencies": {
     "@types/deep-equal": "^1.0.1",
     "@types/mime-types": "^2.1.0",
+    "chardet": "^0.4.2",
     "deep-equal": "^1.0.1",
     "mime-types": "^2.1.17",
     "moment": "^2.20.1"
