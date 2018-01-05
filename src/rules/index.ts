@@ -20,6 +20,7 @@ export * from './cnpj';
 export * from './cntrl';
 export * from './consonant';
 export * from './contains';
+export * from './countable';
 export * from './country-code';
 export * from './cpf';
 export * from './credit-card';
