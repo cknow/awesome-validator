@@ -29,6 +29,7 @@ export * from './currency-code';
 export * from './date-time';
 export * from './digit';
 export * from './directory';
+export * from './each';
 export * from './email';
 export * from './empty';
 export * from './ends-with';
