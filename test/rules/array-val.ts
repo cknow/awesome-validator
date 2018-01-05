@@ -25,6 +25,10 @@ describe('ArrayVal', () => {
         assert.isTrue(arrayVal.validate(['foo', 'bar', 'foobaz']));
         assert.isTrue(arrayVal.validate(new Array('foo', 'bar', 'foobaz')));
         assert.isTrue(arrayVal.validate(Array('foo', 'bar', 'foobaz')));
+        assert.isTrue(arrayVal.validate(new Set([1, 2, 3])));
+        assert.isTrue(arrayVal.validate(new Set(['foo', 'bar', 'foobar'])));
+        assert.isTrue(arrayVal.validate(new Map().set(1, 'bar')));
+        assert.isTrue(arrayVal.validate(new Map().set('foo', 'bar')));
     });
 
     it('values is not valid', () => {

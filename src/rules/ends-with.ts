@@ -18,7 +18,7 @@ export class EndsWith extends AbstractRule {
         let value: any = input;
 
         if (new ArrayVal().validate(value)) {
-            value = value.reverse().shift();
+            value = Array.from(value).reverse().shift();
         }
 
         /* tslint:disable:strict-type-predicates */

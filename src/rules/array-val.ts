@@ -6,6 +6,6 @@ export class ArrayVal extends AbstractRule {
      * Validate.
      */
     public validate(input: any): boolean {
-        return Array.isArray(input);
+        return Array.isArray(input) || input instanceof Set || input instanceof Map;
     }
 }

@@ -18,7 +18,7 @@ export class StartsWith extends AbstractRule {
         let value: any = input;
 
         if (new ArrayVal().validate(value)) {
-            value = value.shift();
+            value = Array.from(value).shift();
         }
 
         /* tslint:disable:strict-type-predicates */
