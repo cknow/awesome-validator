@@ -23,6 +23,10 @@ describe('StringVal', () => {
         assert.isTrue(stringVal.validate(false));
         assert.isTrue(stringVal.validate(true));
         assert.isTrue(stringVal.validate({toString: (): string => 'foo'}));
+        assert.isTrue(stringVal.validate(Boolean()));
+        assert.isTrue(stringVal.validate(Number()));
+        assert.isTrue(stringVal.validate(Boolean(true)));
+        assert.isTrue(stringVal.validate(Number(1)));
     });
 
     it('values is not valid', () => {
@@ -31,6 +35,14 @@ describe('StringVal', () => {
         assert.isFalse(stringVal.validate(null));
         assert.isFalse(stringVal.validate(undefined));
         assert.isFalse(stringVal.validate({toString: 'foo'}));
+        assert.isFalse(stringVal.validate({}));
+        assert.isFalse(stringVal.validate(new Object()));
+        assert.isFalse(stringVal.validate(Object.create(null)));
+        assert.isFalse(stringVal.validate({foo: 'bar'}));
+        assert.isFalse(stringVal.validate(new Object({foo: 'bar'})));
+
+        class Foo {}
+        assert.isFalse(stringVal.validate(new Foo()));
     });
 
 });
