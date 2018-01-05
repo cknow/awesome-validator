@@ -160,6 +160,7 @@ The library can be loaded either as a standalone script, or through an [AMD](htt
 - [NumberVal](docs/number-val.md)
 - [ObjectInstance](docs/object-instance.md)
 - [ObjectProperty](docs/object-property.md)
+- [ObjectPropertyFunction](docs/object-property-function.md)
 - [ObjectTypeStrict](docs/object-type-strict.md)
 - [ObjectType](docs/object-type.md)
 - [Odd](docs/odd.md)

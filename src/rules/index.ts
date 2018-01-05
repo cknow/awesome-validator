@@ -81,6 +81,7 @@ export * from './number-type';
 export * from './number-val';
 export * from './object-instance';
 export * from './object-property';
+export * from './object-property-function';
 export * from './object-type-strict';
 export * from './object-type';
 export * from './odd';
