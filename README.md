@@ -125,6 +125,7 @@ The library can be loaded either as a standalone script, or through an [AMD](htt
 - [FloatType](docs/float-type.md)
 - [FloatVal](docs/float-val.md)
 - [FunctionInstance](docs/function-instance.md)
+- [FunctionName](docs/function-name.md)
 - [FunctionType](docs/function-type.md)
 - [Graph](docs/graph.md)
 - [HexRgbColor](docs/hex-rgb-color.md)
