@@ -15,6 +15,7 @@ export * from './boolean-instance';
 export * from './boolean-type';
 export * from './boolean-val';
 export * from './bsn';
+export * from './callable';
 export * from './charset';
 export * from './cnh';
 export * from './cnpj';
