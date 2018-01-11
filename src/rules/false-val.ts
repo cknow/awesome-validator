@@ -7,7 +7,7 @@ export class FalseVal extends AbstractWrapper {
     /**
      * Get Validatable.
      */
-    protected getValidatable(): Validatable {
+    protected getValidatable(input: any): Validatable {
         return new In([0, false, 'off', 'no', 'n', ''], false);
     }
 }

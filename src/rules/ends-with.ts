@@ -1,13 +1,17 @@
 import { AbstractRule } from './abstract-rule';
 import { ArrayVal } from './array-val';
 import { Regex } from './regex';
+import { TypeOf } from './type-of';
 
 export class EndsWith extends AbstractRule {
 
     /**
      * EndsWith.
      */
-    public constructor(public readonly endValue: any, public readonly identical: boolean = false) {
+    public constructor(
+        protected readonly endValue: any,
+        protected readonly identical: boolean = false
+    ) {
         super();
     }
 
@@ -21,11 +25,9 @@ export class EndsWith extends AbstractRule {
             value = Array.from(value).reverse().shift();
         }
 
-        /* tslint:disable:strict-type-predicates */
-        if (this.identical && typeof this.endValue !== typeof value) {
+        if (this.identical && !new TypeOf(typeof this.endValue).validate(value)) {
             return false;
         }
-        /* tslint:enable:strict-type-predicates */
 
         return new Regex(RegExp(`${this.endValue}$`, this.identical ? undefined : 'i')).validate(value);
     }

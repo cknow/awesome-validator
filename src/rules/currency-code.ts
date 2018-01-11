@@ -7,7 +7,7 @@ export class CurrencyCode extends AbstractWrapper {
     /**
      * Get Validatable.
      */
-    protected getValidatable(): Validatable {
+    protected getValidatable(input: any): Validatable {
 
         /**
          * List extracted from http://www.currency-iso.org/en/home/tables/table-a1.html

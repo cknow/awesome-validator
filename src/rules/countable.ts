@@ -1,12 +1,15 @@
+import { Validatable } from './../validatable';
+import { AbstractWrapper } from './abstract-wrapper';
+import { AnyOf } from './any-of';
 import { ArrayVal } from './array-val';
 import { ObjectPropertyFunction } from './object-property-function';
 
-export class Countable extends ArrayVal {
+export class Countable extends AbstractWrapper {
 
     /**
-     * Validate.
+     * Get Validatable.
      */
-    public validate(input: any): boolean {
-        return super.validate(input) || new ObjectPropertyFunction('count').validate(input);
+    protected getValidatable(input: any): Validatable {
+        return new AnyOf(new ArrayVal(), new ObjectPropertyFunction('count'));
     }
 }

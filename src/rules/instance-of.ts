@@ -5,7 +5,7 @@ export class InstanceOf extends AbstractRule {
     /**
      * InstanceOf.
      */
-    public constructor(public readonly instanceName: any) {
+    public constructor(protected readonly instanceName: any) {
         super();
     }
 

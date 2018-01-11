@@ -7,11 +7,11 @@ export abstract class AbstractWrapper extends AbstractRule {
      * Validate.
      */
     public validate(input: any): boolean {
-        return this.getValidatable().validate(input);
+        return this.getValidatable(input).validate(input);
     }
 
     /**
      * Get Validatable.
      */
-    protected abstract getValidatable(): Validatable;
+    protected abstract getValidatable(input: any): Validatable;
 }

@@ -27,9 +27,9 @@ describe('Charset', () => {
 
     it('values is valid', () => {
         assert.isTrue(new Charset('utf-8').validate('foo'));
-        assert.isTrue(new Charset(['iso-8859-1', 'utf-8']).validate('foo'));
+        assert.isTrue(new Charset('iso-8859-1', 'utf-8').validate('foo'));
         assert.isTrue(new Charset('utf-8').validate('file.txt'));
-        assert.isTrue(new Charset(['iso-8859-1', 'utf-8']).validate('file.txt'));
+        assert.isTrue(new Charset('iso-8859-1', 'utf-8').validate('file.txt'));
     });
 
     it('values is not valid', () => {

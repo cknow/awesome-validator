@@ -7,9 +7,9 @@ export class When extends AbstractRule {
      * When.
      */
     public constructor(
-        public readonly whenValidatable: Validatable,
-        public readonly thenValidatable: Validatable,
-        public readonly elseValidatable?: Validatable
+        protected readonly whenValidatable: Validatable,
+        protected readonly thenValidatable: Validatable,
+        protected readonly elseValidatable?: Validatable
     ) {
         super();
     }

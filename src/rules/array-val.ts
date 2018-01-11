@@ -1,11 +1,14 @@
-import { AbstractRule } from './abstract-rule';
+import { Validatable } from './../validatable';
+import { AbstractWrapper } from './abstract-wrapper';
+import { AnyOf } from './any-of';
+import { InstanceOf } from './instance-of';
 
-export class ArrayVal extends AbstractRule {
+export class ArrayVal extends AbstractWrapper {
 
     /**
-     * Validate.
+     * Get Validatable.
      */
-    public validate(input: any): boolean {
-        return Array.isArray(input) || input instanceof Set || input instanceof Map;
+    protected getValidatable(input: any): Validatable {
+        return new AnyOf(new InstanceOf(Array), new InstanceOf(Set), new InstanceOf(Map));
     }
 }

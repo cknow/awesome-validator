@@ -3,6 +3,7 @@ import { PropertyKey } from './property-key';
 import { Regex } from './regex';
 import { RegexType } from './regex-type';
 import { Scalar } from './scalar';
+import { TypeOf } from './type-of';
 
 export abstract class AbstractSearcher extends AbstractRule {
 
@@ -10,9 +11,9 @@ export abstract class AbstractSearcher extends AbstractRule {
      * AbstractSearcher.
      */
     public constructor(
-        public readonly searcher?: any,
-        public readonly contains: boolean = true,
-        public readonly identical: boolean = false
+        protected readonly searcher?: any,
+        protected readonly contains: boolean = true,
+        protected readonly identical: boolean = false
     ) {
         super();
     }
@@ -23,11 +24,9 @@ export abstract class AbstractSearcher extends AbstractRule {
     protected validateSearcher(searcher: any, input: any): boolean {
         if (new Scalar().validate(searcher)) {
 
-            /* tslint:disable:strict-type-predicates */
-            if (this.identical && typeof searcher !== typeof input) {
+            if (this.identical && !new TypeOf(typeof searcher).validate(input)) {
                 return false;
             }
-            /* tslint:enable:strict-type-predicates */
 
             return String(searcher).search(
                 RegExp(this.contains ? `${input}` : `^${input}$`, this.identical ? undefined : 'i')

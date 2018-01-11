@@ -53,7 +53,10 @@ export abstract class AbstractInterval extends AbstractRule {
     /**
      * AbstractInterval.
      */
-    public constructor(public readonly interval?: any, public readonly inclusive: boolean = true) {
+    public constructor(
+        protected readonly interval?: any,
+        protected readonly inclusive: boolean = true
+    ) {
         super();
     }
 

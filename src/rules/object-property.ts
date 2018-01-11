@@ -1,12 +1,12 @@
 import { AbstractRule } from './abstract-rule';
-import { ObjectTypeStrict } from './object-type-strict';
+import { NotOptional } from './not-optional';
 
 export class ObjectProperty extends AbstractRule {
 
     /**
      * ObjectProperty.
      */
-    public constructor(public readonly property: string) {
+    public constructor(protected readonly property: any) {
         super();
     }
 
@@ -14,6 +14,6 @@ export class ObjectProperty extends AbstractRule {
      * Validate.
      */
     public validate(input: any): boolean {
-        return new ObjectTypeStrict().validate(input) && Object.prototype.hasOwnProperty.call(input, this.property);
+        return new NotOptional().validate(input) && Object.prototype.hasOwnProperty.call(input, this.property);
     }
 }

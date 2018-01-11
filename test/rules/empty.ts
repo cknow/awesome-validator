@@ -36,6 +36,8 @@ describe('Empty', () => {
         assert.isTrue(empty.validate(new Array()));
         assert.isTrue(empty.validate(new Object()));
         assert.isTrue(empty.validate(Object.create(null)));
+        assert.isTrue(empty.validate(new Set()));
+        assert.isTrue(empty.validate(new Map()));
     });
 
     it('values is not valid', () => {
@@ -55,6 +57,8 @@ describe('Empty', () => {
         assert.isFalse(empty.validate(1.1));
         assert.isFalse(empty.validate(new Array('foo')));
         assert.isFalse(empty.validate(new Object({foo: 'bar'})));
+        assert.isFalse(empty.validate(new Set('foo')));
+        assert.isFalse(empty.validate(new Map<any, any>([[{}, {}]])));
 
         class Foo {}
         assert.isFalse(empty.validate(new Foo()));

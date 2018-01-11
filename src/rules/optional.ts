@@ -8,7 +8,7 @@ export class Optional extends AbstractRule {
     /**
      * Optional.
      */
-    public constructor(public readonly validatable: Validatable) {
+    public constructor(protected readonly validatable: Validatable) {
         super();
     }
 

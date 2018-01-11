@@ -7,7 +7,7 @@ export class PropertyKey extends AbstractWrapper {
     /**
      * Get Validatable.
      */
-    protected getValidatable(): Validatable {
+    protected getValidatable(input: any): Validatable {
         return new TypeOf(/number|string|symbol/i);
     }
 }

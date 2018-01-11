@@ -21,6 +21,7 @@ describe('VideoUrl', () => {
         assert.isTrue(new VideoUrl('YouTube').validate('https://www.youtube.com/embed/netHLn9TScY'));
         assert.isTrue(new VideoUrl('YouTube').validate('https://www.youtube.com/watch?v=netHLn9TScY'));
         assert.isTrue(new VideoUrl('YouTube').validate('https://youtu.be/netHLn9TScY'));
+        assert.isTrue(new VideoUrl('Vimeo', 'YouTube').validate('https://youtu.be/netHLn9TScY'));
 
         assert.isTrue(videoUrl.validate('https://player.vimeo.com/video/71787467')); // Vimeo
         assert.isTrue(videoUrl.validate('https://vimeo.com/71787467')); // Vimeo
@@ -32,6 +33,7 @@ describe('VideoUrl', () => {
     it('values is not valid', () => {
         assert.isFalse(new VideoUrl('Vimeo').validate('https://www.youtube.com/watch?v=netHLn9TScY')); // YouTube
         assert.isFalse(new VideoUrl('YouTube').validate('https://vimeo.com/71787467')); // Vimeo
+        assert.isFalse(new VideoUrl('Vimeo', 'YouTube').validate('https:/example.com'));
 
         assert.isFalse(videoUrl.validate('example.com'));
         assert.isFalse(videoUrl.validate('ftp://youtu.be/netHLn9TScY'));

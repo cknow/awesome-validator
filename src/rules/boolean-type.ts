@@ -7,7 +7,7 @@ export class BooleanType extends AbstractWrapper {
     /**
      * Get Validatable.
      */
-    protected getValidatable(): Validatable {
+    protected getValidatable(input: any): Validatable {
         return new TypeOf(/boolean/i);
     }
 }

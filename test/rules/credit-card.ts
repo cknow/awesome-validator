@@ -25,6 +25,9 @@ describe('CreditCard', () => {
         assert.isTrue(new CreditCard('Discover').validate('6011000990139424'));
         assert.isTrue(new CreditCard('JCB').validate('3566002020360505'));
 
+        assert.isTrue(new CreditCard('MasterCard', 'Visa').validate('2223000048400011')); // MasterCard 2 BIN Range
+        assert.isTrue(new CreditCard('MasterCard', 'Visa').validate('4024 007 193 879')); // Visa 13
+
         assert.isTrue(creditCard.validate('5376 7473 9720 8720')); // MasterCard 5 BIN Range
         assert.isTrue(creditCard.validate('2223000048400011')); // MasterCard 2 BIN Range
         assert.isTrue(creditCard.validate('4024.0071.5336.1885')); // Visa 16
@@ -42,6 +45,7 @@ describe('CreditCard', () => {
         assert.isFalse(new CreditCard('Diners Club').validate('4012888888881881')); // Visa
         assert.isFalse(new CreditCard('Discover').validate('371449635398431')); // American Express
         assert.isFalse(new CreditCard('JCB').validate('38520000023237')); // Diners Club
+        assert.isFalse(new CreditCard('MasterCard', 'Visa').validate('38520000023237')); // Diners Club
 
         assert.isFalse(creditCard.validate(''));
         assert.isFalse(creditCard.validate('foo'));

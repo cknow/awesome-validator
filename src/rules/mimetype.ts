@@ -1,23 +1,13 @@
 import { lookup } from 'mime-types';
 
-import { AbstractRule } from './abstract-rule';
-import { In } from './in';
+import { AbstractServiceList } from './abstract-service-list';
 
-export class Mimetype extends AbstractRule {
-
-    /**
-     * Mimetype.
-     */
-    public constructor(public readonly mimetype: any) {
-        super();
-    }
+export class Mimetype extends AbstractServiceList {
 
     /**
-     * Validate.
+     * Get item.
      */
-    public validate(input: any): boolean {
-        const mime: string | false = lookup(input);
-
-        return mime !== false && new In(this.mimetype, false).validate(mime);
+    protected getItem(input: any): any {
+        return lookup(input);
     }
 }

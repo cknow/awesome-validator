@@ -1,12 +1,15 @@
+import { Validatable } from './../validatable';
+import { AbstractWrapper } from './abstract-wrapper';
+import { AnyOf } from './any-of';
 import { ObjectPropertyFunction } from './object-property-function';
 import { Scalar } from './scalar';
 
-export class StringVal extends Scalar {
+export class StringVal extends AbstractWrapper {
 
     /**
-     * Validate.
+     * Get Validatable.
      */
-    public validate(input: any): boolean {
-        return super.validate(input) || new ObjectPropertyFunction('toString').validate(input);
+    protected getValidatable(input: any): Validatable {
+        return new AnyOf(new Scalar(), new ObjectPropertyFunction('toString'));
     }
 }

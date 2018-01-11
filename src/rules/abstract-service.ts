@@ -3,24 +3,33 @@ import { AbstractRule } from './abstract-rule';
 export abstract class AbstractService<Key, Value> extends AbstractRule {
 
     /**
+     * Services key.
+     */
+    protected readonly servicesKey: Key[];
+
+    /**
      * Service.
      */
-    public constructor(public readonly serviceKey?: Key) {
+    public constructor(...servicesKey: Key[]) {
         super();
+
+        this.servicesKey = servicesKey;
     }
 
     /**
      * Validate.
      */
     public validate(input: any): boolean {
-        const serviceValue: Value | undefined = this.serviceKey ? this.services.get(this.serviceKey) : undefined;
+        let services: [Key, Value][] = Array.from(this.services).filter(
+            (value: [Key, Value]) => this.servicesFilter(value)
+        );
 
-        if (serviceValue !== undefined) {
-            return this.validateService(serviceValue, input);
+        if (services.length === 0) {
+            services = Array.from(this.services);
         }
 
-        for (const service of Array.from(this.services.values())) {
-            if (this.validateService(service, input)) {
+        for (const service of services) {
+            if (this.validateService(service[1], input)) {
                 return true;
             }
         }
@@ -32,6 +41,11 @@ export abstract class AbstractService<Key, Value> extends AbstractRule {
      * Services.
      */
     protected abstract get services(): Map<Key, Value>;
+
+    /**
+     * Services filter.
+     */
+    protected abstract servicesFilter(value: [Key, Value]): boolean;
 
     /**
      * Validate Service.

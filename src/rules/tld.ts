@@ -7,7 +7,7 @@ export class Tld extends AbstractWrapper {
     /**
      * Get Validatable.
      */
-    protected getValidatable(): Validatable {
+    protected getValidatable(input: any): Validatable {
 
         /**
          * List extracted from http://data.iana.org/TLD/tlds-alpha-by-domain.txt

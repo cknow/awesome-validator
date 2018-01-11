@@ -1,7 +1,7 @@
-import { AbstractService } from './abstract-service';
+import { AbstractServiceFilter } from './abstract-service-filter';
 import { Regex } from './regex';
 
-export abstract class AbstractServiceRegex extends AbstractService<string, RegExp> {
+export abstract class AbstractServiceRegex extends AbstractServiceFilter<RegExp> {
 
     /**
      * Validate Service.

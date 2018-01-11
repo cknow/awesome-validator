@@ -1,7 +1,6 @@
-import { AbstractService } from './abstract-service';
-import { In } from './in';
+import { AbstractServiceArray } from './abstract-service-array';
 
-export class CountryCode extends AbstractService<string, string[]> {
+export class CountryCode extends AbstractServiceArray {
 
     /**
      * Services.
@@ -271,12 +270,5 @@ export class CountryCode extends AbstractService<string, string[]> {
             ['alpha-3', list.map((value: string[]) => value[1])],
             ['numeric', list.map((value: string[]) => value[2])]
         ]);
-    }
-
-    /**
-     * Validate Service.
-     */
-    protected validateService(service: string[], input: any): boolean {
-        return new In(service, false).validate(input);
     }
 }

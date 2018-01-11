@@ -8,7 +8,7 @@ export class NotEmpty extends AbstractWrapper {
     /**
      * Get Validatable.
      */
-    protected getValidatable(): Validatable {
+    protected getValidatable(input: any): Validatable {
         return new Not(new Empty());
     }
 }

@@ -7,7 +7,7 @@ export class TrueVal extends AbstractWrapper {
     /**
      * Get Validatable.
      */
-    protected getValidatable(): Validatable {
+    protected getValidatable(input: any): Validatable {
         return new In([1, true, 'on', 'yes', 'y', 's'], false);
     }
 }

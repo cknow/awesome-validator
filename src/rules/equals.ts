@@ -7,7 +7,7 @@ export class Equals extends AbstractRule {
     /**
      * Equals.
      */
-    public constructor(public readonly compareTo: any) {
+    public constructor(protected readonly compareTo: any) {
         super();
     }
 

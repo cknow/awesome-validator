@@ -1,33 +1,18 @@
 import * as chardet from 'chardet';
 
-import { AbstractRule } from './abstract-rule';
-import { In } from './in';
+import { AbstractServiceList } from './abstract-service-list';
 import { Readable } from './readable';
-import { StringType } from './string-type';
 
-export class Charset extends AbstractRule {
-
-    /**
-     * Charset.
-     */
-    public constructor(public readonly charset: string | string[]) {
-        super();
-    }
+export class Charset extends AbstractServiceList {
 
     /**
-     * Validate.
+     * Get item.
      */
-    public validate(input: any): boolean {
-        if (!new StringType().validate(input)) {
-            return false;
-        }
-
-        const rule: In = new In(this.charset, false);
-
+    protected getItem(input: any): any {
         if (new Readable().validate(input)) {
-            return rule.validate(chardet.detectFileSync(input));
+            return chardet.detectFileSync(input);
         }
 
-        return rule.validate(chardet.detect(new Buffer(input)));
+        return chardet.detect(new Buffer(input));
     }
 }

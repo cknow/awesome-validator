@@ -1,24 +1,26 @@
 import { AbstractRule } from './abstract-rule';
+import { Iterable } from './iterable';
 
 export class Sorted extends AbstractRule {
 
     /**
      * Sorted.
      */
-    public constructor(public readonly fn?: Function | null, public readonly ascending: boolean = true) {
+    public constructor(
+        protected readonly fn?: Function | null,
+        protected readonly ascending: boolean = true
+    ) {
         super();
 
-        if (!this.fn) {
-            this.fn = (input: any): any => input;
-        }
+        this.fn = (this.fn) ? this.fn : (input: any): any => input;
     }
 
     /**
      * Validate.
      */
     public validate(input: any): boolean {
-        if (!input) {
-            return true;
+        if (!new Iterable().validate(input)) {
+            return false;
         }
 
         const itens: string[] = Object.keys(input);

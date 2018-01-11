@@ -32,6 +32,8 @@ describe('NotEmpty', () => {
         assert.isTrue(notEmpty.validate(1.1));
         assert.isTrue(notEmpty.validate(new Array('foo')));
         assert.isTrue(notEmpty.validate(new Object({foo: 'bar'})));
+        assert.isTrue(notEmpty.validate(new Set('foo')));
+        assert.isTrue(notEmpty.validate(new Map<any, any>([[{}, {}]])));
 
         class Foo {}
         assert.isTrue(notEmpty.validate(new Foo()));
@@ -56,6 +58,8 @@ describe('NotEmpty', () => {
         assert.isFalse(notEmpty.validate(new Array()));
         assert.isFalse(notEmpty.validate(new Object()));
         assert.isFalse(notEmpty.validate(Object.create(null)));
+        assert.isFalse(notEmpty.validate(new Set()));
+        assert.isFalse(notEmpty.validate(new Map()));
     });
 
 });

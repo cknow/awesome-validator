@@ -7,7 +7,7 @@ export class ArrayInstance extends AbstractWrapper {
     /**
      * Get Validatable.
      */
-    protected getValidatable(): Validatable {
+    protected getValidatable(input: any): Validatable {
         return new InstanceOf(Array);
     }
 }

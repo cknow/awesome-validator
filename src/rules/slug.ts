@@ -10,7 +10,7 @@ export class Slug extends AbstractWrapper {
     /**
      * Get Validatable.
      */
-    protected getValidatable(): Validatable {
+    protected getValidatable(input: any): Validatable {
         return new AllOf(
             new Not(new Contains('--')),
             new Regex(/^[0-9a-z\-]+$/),

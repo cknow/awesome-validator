@@ -1,5 +1,5 @@
 import { AbstractRule } from './abstract-rule';
-import { ArrayType } from './array-type';
+import { ArrayVal } from './array-val';
 import { In } from './in';
 import { ObjectType } from './object-type';
 import { ObjectTypeStrict } from './object-type-strict';
@@ -19,12 +19,16 @@ export class Empty extends AbstractRule {
             return String(input).trim().length === 0;
         }
 
+        if (new ArrayVal().validate(input)) {
+            return Object.keys(Array.from(input)).length === 0;
+        }
+
         if (new ObjectType().validate(input)) {
             if (Object.getPrototypeOf(input) === null) {
                 return true;
             }
 
-            if (new ObjectTypeStrict().validate(input) || new ArrayType().validate(input)) {
+            if (new ObjectTypeStrict().validate(input)) {
                 return Object.keys(input).length === 0;
             }
         }

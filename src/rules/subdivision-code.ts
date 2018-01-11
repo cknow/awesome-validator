@@ -1,30 +1,19 @@
-import { AbstractRule } from './abstract-rule';
-import { In } from './in';
-
 import * as subdivisions from './subdivisions';
 
-export class SubdivisionCode extends AbstractRule {
+import { AbstractServiceArray } from './abstract-service-array';
+
+export class SubdivisionCode extends AbstractServiceArray {
 
     /**
-     * SubdivisionCode.
+     * Services.
      */
-    public constructor(
-        public readonly countryCode: string,
-        public readonly identical: boolean = true
-    ) {
-        super();
-    }
+    protected get services(): Map<string, string[]> {
+        const list: Map<string, string[]> = new Map<string, string[]>();
 
-    /**
-     * Validate.
-     */
-    public validate(input: any): boolean {
-        const countryCode: string = this.countryCode.toLocaleUpperCase();
-
-        if (!subdivisions[countryCode]) {
-            return false;
+        for (const subdivision of Object.keys(subdivisions)) {
+            list.set(subdivision, subdivisions[subdivision]);
         }
 
-        return new In(subdivisions[countryCode], false, this.identical).validate(input);
+        return list;
     }
 }

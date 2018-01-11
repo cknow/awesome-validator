@@ -1,13 +1,17 @@
 import { AbstractRule } from './abstract-rule';
 import { ArrayVal } from './array-val';
 import { Regex } from './regex';
+import { TypeOf } from './type-of';
 
 export class StartsWith extends AbstractRule {
 
     /**
      * StartsWith.
      */
-    public constructor(public readonly startValue: any, public readonly identical: boolean = false) {
+    public constructor(
+        protected readonly startValue: any,
+        protected readonly identical: boolean = false
+    ) {
         super();
     }
 
@@ -21,11 +25,9 @@ export class StartsWith extends AbstractRule {
             value = Array.from(value).shift();
         }
 
-        /* tslint:disable:strict-type-predicates */
-        if (this.identical && typeof this.startValue !== typeof value) {
+        if (this.identical && !new TypeOf(typeof this.startValue).validate(value)) {
             return false;
         }
-        /* tslint:enable:strict-type-predicates */
 
         return new Regex(RegExp(`^${this.startValue}`, this.identical ? undefined : 'i')).validate(value);
     }

@@ -17,7 +17,9 @@ describe('CountryCode', () => {
 
     it('values is valid', () => {
         assert.isTrue(new CountryCode('alpha-2').validate('BR'));
+        assert.isTrue(new CountryCode('alpha2').validate('BR'));
         assert.isTrue(new CountryCode('alpha-3').validate('BRA'));
+        assert.isTrue(new CountryCode('alpha3').validate('BRA'));
         assert.isTrue(new CountryCode('numeric').validate('076'));
         assert.isTrue(new CountryCode('alpha-2').validate('DE'));
         assert.isTrue(new CountryCode('alpha-3').validate('DEU'));
@@ -25,6 +27,10 @@ describe('CountryCode', () => {
         assert.isTrue(new CountryCode('alpha-2').validate('US'));
         assert.isTrue(new CountryCode('alpha-3').validate('USA'));
         assert.isTrue(new CountryCode('numeric').validate('840'));
+        assert.isTrue(new CountryCode('alpha-2', 'alpha-3').validate('BR'));
+        assert.isTrue(new CountryCode('alpha-2', 'alpha-3').validate('BRA'));
+        assert.isTrue(new CountryCode('alpha-2', 'alpha3').validate('BR'));
+        assert.isTrue(new CountryCode('alpha2', 'alpha-3').validate('BRA'));
 
         assert.isTrue(countryCode.validate('BR'));
         assert.isTrue(countryCode.validate('BRA'));
@@ -41,6 +47,8 @@ describe('CountryCode', () => {
         assert.isFalse(new CountryCode('alpha-2').validate('USA'));
         assert.isFalse(new CountryCode('alpha-3').validate('US'));
         assert.isFalse(new CountryCode('numeric').validate('000'));
+        assert.isFalse(new CountryCode('alpha-2', 'numeric').validate('USA'));
+        assert.isFalse(new CountryCode('alpha2', 'numeric').validate('USA'));
 
         assert.isFalse(countryCode.validate('text'));
         assert.isFalse(countryCode.validate(''));

@@ -7,8 +7,8 @@ export class Base extends AbstractRule {
      * Base.
      */
     public constructor(
-        public readonly base?: number,
-        public readonly chars: string = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ'
+        protected readonly base?: number,
+        protected readonly chars: string = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ'
     ) {
         super();
     }

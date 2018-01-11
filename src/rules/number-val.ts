@@ -9,7 +9,7 @@ export class NumberVal extends AbstractWrapper {
     /**
      * Get Validatable.
      */
-    protected getValidatable(): Validatable {
+    protected getValidatable(input: any): Validatable {
         return new AnyOf(new FloatVal(), new IntVal());
     }
 }

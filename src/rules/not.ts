@@ -6,7 +6,7 @@ export class Not extends AbstractRule {
     /**
      * Not.
      */
-    public constructor(public readonly validatable: Validatable) {
+    public constructor(protected readonly validatable: Validatable) {
         super();
     }
 

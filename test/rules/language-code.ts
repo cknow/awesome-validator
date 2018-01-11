@@ -16,11 +16,17 @@ describe('LanguageCode', () => {
     });
 
     it('values is valid', () => {
+        assert.isTrue(new LanguageCode('alpha3').validate('por'));
+        assert.isTrue(new LanguageCode('alpha2').validate('pt'));
+
         assert.isTrue(languageCode.validate('por'));
         assert.isTrue(languageCode.validate('eng'));
     });
 
     it('values is not valid', () => {
+        assert.isFalse(new LanguageCode('alpha3').validate('pt'));
+        assert.isFalse(new LanguageCode('alpha2').validate('por'));
+
         assert.isFalse(languageCode.validate('1'));
         assert.isFalse(languageCode.validate(' '));
         assert.isFalse(languageCode.validate('   '));

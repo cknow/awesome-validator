@@ -8,8 +8,8 @@ export class Each extends AbstractRule {
      * Each.
      */
     public constructor(
-        public readonly itemValidator?: Validatable | null,
-        public readonly keyValidator?: Validatable | null
+        protected readonly itemValidator?: Validatable | null,
+        protected readonly keyValidator?: Validatable | null
     ) {
         super();
     }

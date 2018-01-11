@@ -33,6 +33,8 @@ describe('Sorted', () => {
     });
 
     it('values is not valid', () => {
+        assert.isFalse(new Sorted().validate(null));
+        assert.isFalse(new Sorted().validate(undefined));
         assert.isFalse(new Sorted().validate('edcba'));
         assert.isFalse(new Sorted().validate([3, 2, 1]));
         assert.isFalse(new Sorted().validate({c: 'c', b: 'b', a: 'a'}));
