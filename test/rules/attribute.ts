@@ -7,8 +7,14 @@ import { StringType } from '../../src/rules/string-type';
 
 describe('Attribute', () => {
 
+    let attribute: Attribute;
+
+    beforeEach(() => {
+        attribute = new Attribute(null);
+    });
+
     it('is rule', () => {
-        assert.instanceOf(new Attribute(null), AbstractRule);
+        assert.instanceOf(attribute, AbstractRule);
     });
 
     it('values is valid', () => {
@@ -18,9 +24,22 @@ describe('Attribute', () => {
     });
 
     it('values is not valid', () => {
+        assert.isFalse(new Attribute('foo').validate('foo'));
         assert.isFalse(new Attribute('foo').validate({}));
         assert.isFalse(new Attribute('foo', new IntType()).validate({foo: 'bar'}));
-        assert.isFalse(new Attribute(null).validate({}));
+
+        assert.isFalse(attribute.validate(null));
+        assert.isFalse(attribute.validate(undefined));
+        assert.isFalse(attribute.validate({}));
+        assert.isFalse(attribute.validate([]));
+        assert.isFalse(attribute.validate('foo'));
+        assert.isFalse(attribute.validate(0));
+        assert.isFalse(attribute.validate(true));
+        assert.isFalse(attribute.validate(false));
+        assert.isFalse(attribute.validate(String('foo')));
+        assert.isFalse(attribute.validate(Number(0)));
+        assert.isFalse(attribute.validate(Boolean(true)));
+        assert.isFalse(attribute.validate(Boolean(false)));
     });
 
 });

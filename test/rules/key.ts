@@ -7,8 +7,14 @@ import { StringType } from '../../src/rules/string-type';
 
 describe('Key', () => {
 
+    let key: Key;
+
+    beforeEach(() => {
+        key = new Key(null);
+    });
+
     it('is rule', () => {
-        assert.instanceOf(new Key(null), AbstractRule);
+        assert.instanceOf(key, AbstractRule);
     });
 
     it('values is valid', () => {
@@ -22,14 +28,24 @@ describe('Key', () => {
     });
 
     it('values is not valid', () => {
+        assert.isFalse(new Key('foo').validate('foo'));
         assert.isFalse(new Key('foo').validate(new Set('foo')));
         assert.isFalse(new Key('foo').validate({bar: 'foo'}));
         assert.isFalse(new Key('foo').validate([]));
         assert.isFalse(new Key('foo', new IntType()).validate(new Map<string, string>([['foo', 'bar']])));
-        assert.isFalse(new Key(null).validate([]));
-        assert.isFalse(new Key(null).validate(null));
-        assert.isFalse(new Key(undefined).validate(undefined));
-        assert.isFalse(new Key(0).validate(0));
+
+        assert.isFalse(key.validate(null));
+        assert.isFalse(key.validate(undefined));
+        assert.isFalse(key.validate({}));
+        assert.isFalse(key.validate([]));
+        assert.isFalse(key.validate('foo'));
+        assert.isFalse(key.validate(0));
+        assert.isFalse(key.validate(true));
+        assert.isFalse(key.validate(false));
+        assert.isFalse(key.validate(String('foo')));
+        assert.isFalse(key.validate(Number(0)));
+        assert.isFalse(key.validate(Boolean(true)));
+        assert.isFalse(key.validate(Boolean(false)));
     });
 
 });
