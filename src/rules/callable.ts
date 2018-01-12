@@ -10,13 +10,15 @@ export class Callable extends AbstractTryCatch {
      * Validate Function.
      */
     protected validateFunction(input: any): boolean {
-        if (new FunctionType().validate(input)) {
+        const functionType: FunctionType = new FunctionType();
+
+        if (functionType.validate(input)) {
             return true;
         }
 
         if (new StringType().validate(input)) {
             /* tslint:disable no-eval */
-            return new FunctionType().validate(eval(input));
+            return functionType.validate(eval(input));
             /* tslint:enable no-eval */
         }
 
@@ -25,7 +27,7 @@ export class Callable extends AbstractTryCatch {
             new ObjectType().validate(input[0]) &&
             new StringType().validate(input[1])
         ) {
-            return new FunctionType().validate(input[0][input[1]]);
+            return functionType.validate(input[0][input[1]]);
         }
 
         return false;

@@ -95,6 +95,7 @@ The library can be loaded either as a standalone script, or through an [AMD](htt
 - [BooleanVal](docs/boolean-val.md)
 - [Bsn](docs/bsn.md)
 - [Callable](docs/callable.md)
+- [Callback](docs/callback.md)
 - [Charset](docs/charset.md)
 - [Cnh](docs/cnh.md)
 - [Cnpj](docs/cnpj.md)
