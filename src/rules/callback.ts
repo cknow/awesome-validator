@@ -23,9 +23,9 @@ export class Callback extends AbstractRule {
     }
 
     /**
-     * Validate.
+     * Call.
      */
-    public validate(input: any): boolean {
+    public call(input: any): any {
         if (!new Callable().validate(this.callback)) {
             return false;
         }
@@ -43,6 +43,13 @@ export class Callback extends AbstractRule {
         const params: any[] = this.parameters;
         params.unshift(input);
 
-        return Boolean(fn.apply(this.callback, params));
+        return fn.apply(this.callback, params);
+    }
+
+    /**
+     * Validate.
+     */
+    public validate(input: any): boolean {
+        return Boolean(this.call(input));
     }
 }
