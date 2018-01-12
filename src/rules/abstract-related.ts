@@ -18,15 +18,11 @@ export abstract class AbstractRelated extends AbstractRule {
      * Validate.
      */
     public validate(input: any): boolean {
-        const hasReference: boolean = this.hasReference(input);
-
-        if (this.mandatory && !hasReference) {
-            return false;
+        if (!this.hasReference(input)) {
+            return !this.mandatory;
         }
 
-        return (!this.mandatory && !hasReference) || (
-            !this.validator || this.validator.validate(this.getReferenceValue(input))
-        );
+        return !this.validator || this.validator.validate(this.getReferenceValue(input));
     }
 
     /**

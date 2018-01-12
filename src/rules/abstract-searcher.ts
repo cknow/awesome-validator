@@ -1,4 +1,5 @@
 import { AbstractRule } from './abstract-rule';
+import { ArrayType } from './array-type';
 import { PropertyKey } from './property-key';
 import { Regex } from './regex';
 import { RegexType } from './regex-type';
@@ -33,7 +34,7 @@ export abstract class AbstractSearcher extends AbstractRule {
             ) !== -1;
         }
 
-        if (Array.isArray(searcher)) {
+        if (new ArrayType().validate(searcher)) {
             if (!this.identical && new Scalar().validate(input)) {
                 return searcher.findIndex(
                     (item: any) => this.validateSearcher(item, input)
