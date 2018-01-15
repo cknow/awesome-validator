@@ -1,5 +1,6 @@
 import { Validatable } from './../validatable';
 import { AbstractRule } from './abstract-rule';
+import { Alnum } from './alnum';
 import { Regex } from './regex';
 import { StringType } from './string-type';
 import { Tld } from './tld';
@@ -17,7 +18,7 @@ export class Domain extends AbstractRule {
     public constructor(tldCheck: boolean = true) {
         super();
 
-        this.tld = tldCheck ? new Tld() : new Regex(/^[a-zA-Z0-9]+$/gi);
+        this.tld = tldCheck ? new Tld() : new Alnum();
     }
 
     /**
@@ -35,7 +36,7 @@ export class Domain extends AbstractRule {
         }
 
         return parts.every((host: string) => {
-            const regex: Regex = new Regex(/^(?!:\/\/)([a-zA-Z0-9]+|[a-zA-Z0-9][a-zA-Z0-9-]*[a-zA-Z0-9])$/gi);
+            const regex: Regex = new Regex(/^(?!:\/\/)([a-z0-9]+|[a-z0-9][a-z0-9-]*[a-z0-9])$/gi);
 
             return regex.validate(host);
         });
