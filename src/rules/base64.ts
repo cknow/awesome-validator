@@ -1,19 +1,12 @@
-import { AbstractRegex } from './abstract-regex';
-import { StringType } from './string-type';
+import { AbstractString } from './abstract-string';
+import { Regex } from './regex';
 
-export class Base64 extends AbstractRegex {
-
-    /**
-     * Validate.
-     */
-    public validate(input: any): boolean {
-        return new StringType().validate(input) && super.validate(input) && String(input).length % 4 === 0;
-    }
+export class Base64 extends AbstractString {
 
     /**
-     * Get pattern.
+     * Validate string.
      */
-    protected getPattern(): string | RegExp {
-        return /^[A-Za-z0-9+/\n\r]+={0,2}$/;
+    public validateString(input: string): boolean {
+        return new Regex(/^[A-Za-z0-9+/\n\r]+={0,2}$/).validate(input) && input.length % 4 === 0;
     }
 }

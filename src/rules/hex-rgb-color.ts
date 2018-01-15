@@ -1,17 +1,13 @@
-import { StringType } from './string-type';
+import { AbstractString } from './abstract-string';
 import { Xdigit } from './xdigit';
 
-export class HexRgbColor extends Xdigit {
+export class HexRgbColor extends AbstractString {
 
     /**
-     * Validate.
+     * Validate string.
      */
-    public validate(input: any): boolean {
-        if (!new StringType().validate(input)) {
-            return false;
-        }
-
-        let inputString: string = String(input);
+    public validateString(input: string): boolean {
+        let inputString: string = input;
 
         if (inputString.indexOf('#') === 0) {
             inputString = inputString.substr(1);
@@ -21,6 +17,6 @@ export class HexRgbColor extends Xdigit {
             return false;
         }
 
-        return super.validate(inputString);
+        return new Xdigit().validate(inputString);
     }
 }

@@ -1,18 +1,21 @@
-import { AbstractRegex } from './abstract-regex';
+import { AbstractString } from './abstract-string';
+import { Regex } from './regex';
 
-export class Email extends AbstractRegex {
+export class Email extends AbstractString {
 
     /**
-     * Validate.
+     * Validate string.
      */
-    public validate(input: any): boolean {
-        const stringInput: String = String(input);
+    public validateString(input: string): boolean {
+        /* tslint:disable max-line-length */
+        const regex: Regex = new Regex(/^[-!#$%&'*+\/0-9=?A-Z^_a-z{|}~](\.?[-!#$%&'*+\/0-9=?A-Z^_a-z`{|}~])*@[a-zA-Z0-9](-?\.?[a-zA-Z0-9])*\.[a-zA-Z](-?[a-zA-Z0-9])+$/);
+        /* tslint:enable max-line-length */
 
-        if (!input || stringInput.length > 254 || !super.validate(stringInput)) {
+        if (input.length > 254 || !regex.validate(input)) {
             return false;
         }
 
-        const parts: string[] = stringInput.split('@');
+        const parts: string[] = input.split('@');
 
         if (parts[0].length > 64) {
             return false;
@@ -25,14 +28,5 @@ export class Email extends AbstractRegex {
         }
 
         return true;
-    }
-
-    /**
-     * Get pattern.
-     */
-    protected getPattern(): string | RegExp {
-        /* tslint:disable max-line-length */
-        return /^[-!#$%&'*+\/0-9=?A-Z^_a-z{|}~](\.?[-!#$%&'*+\/0-9=?A-Z^_a-z`{|}~])*@[a-zA-Z0-9](-?\.?[a-zA-Z0-9])*\.[a-zA-Z](-?[a-zA-Z0-9])+$/;
-        /* tslint:enable max-line-length */
     }
 }
