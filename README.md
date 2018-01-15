@@ -112,6 +112,7 @@ The library can be loaded either as a standalone script, or through an [AMD](htt
 - [DateTime](docs/date-time.md)
 - [Digit](docs/digit.md)
 - [Directory](docs/directory.md)
+- [Domain](docs/domain.md)
 - [Each](docs/each.md)
 - [Email](docs/email.md)
 - [Empty](docs/empty.md)
