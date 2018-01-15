@@ -18,27 +18,27 @@ export abstract class AbstractFilter extends AbstractRule {
             return false;
         }
 
-        let stringInput: string = String(input);
+        let inputString: string = String(input);
 
-        if (stringInput === '') {
+        if (inputString === '') {
             return false;
         }
 
         if (this.additionalChars) {
             for (const char of this.additionalChars) {
-                stringInput = stringInput.split(char).join('');
+                inputString = inputString.split(char).join('');
             }
         }
 
         if (this.filterWhiteSpace()) {
-            stringInput = stringInput.replace(/\s/g, '');
+            inputString = inputString.replace(/\s/g, '');
         }
 
-        if (stringInput === '') {
+        if (inputString === '') {
             return true;
         }
 
-        return this.validateClean(stringInput);
+        return this.validateClean(inputString);
     }
 
     /**
