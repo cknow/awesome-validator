@@ -29,6 +29,9 @@ export class StartsWith extends AbstractRule {
             return false;
         }
 
-        return new Regex(RegExp(`^${this.startValue}`, this.identical ? undefined : 'i')).validate(value);
+        return new Regex(RegExp(
+            `^${String(this.startValue).replace(/([[\]().?/*{}+$^:])/g, '\\$1')}`,
+            this.identical ? undefined : 'i'
+        )).validate(value);
     }
 }
