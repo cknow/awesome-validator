@@ -29,6 +29,9 @@ export class EndsWith extends AbstractRule {
             return false;
         }
 
-        return new Regex(RegExp(`${this.endValue}$`, this.identical ? undefined : 'i')).validate(value);
+        return new Regex(RegExp(
+            `${String(this.endValue).replace(/([[\]().?/*{}+$^:])/g, '\\$1')}$`,
+            this.identical ? undefined : 'i'
+        )).validate(value);
     }
 }
