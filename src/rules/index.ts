@@ -67,6 +67,7 @@ export * from './ip';
 export * from './iterable';
 export * from './json';
 export * from './key-nested';
+export * from './key-value';
 export * from './key';
 export * from './label';
 export * from './language-code';

@@ -146,6 +146,7 @@ The library can be loaded either as a standalone script, or through an [AMD](htt
 - [Iterable](docs/iterable.md)
 - [Json](docs/json.md)
 - [KeyNested](docs/key-nested.md)
+- [KeyValue](docs/key-value.md)
 - [Key](docs/key.md)
 - [Label](docs/label.md)
 - [LanguageCode](docs/language-code.md)
