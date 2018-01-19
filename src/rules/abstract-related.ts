@@ -4,6 +4,11 @@ import { AbstractRule } from './abstract-rule';
 export abstract class AbstractRelated extends AbstractRule {
 
     /**
+     * Value.
+     */
+    private value: any;
+
+    /**
      * AbstractRelated.
      */
     public constructor(
@@ -22,7 +27,16 @@ export abstract class AbstractRelated extends AbstractRule {
             return !this.mandatory;
         }
 
-        return !this.validator || this.validator.validate(this.getReferenceValue(input));
+        this.value = this.getReferenceValue(input);
+
+        return !this.validator || this.validator.validate(this.value);
+    }
+
+    /**
+     * Get reference value stored.
+     */
+    public getReferenceValueStored(): any {
+        return this.value;
     }
 
     /**

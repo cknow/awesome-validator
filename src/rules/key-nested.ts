@@ -35,15 +35,13 @@ export class KeyNested extends AbstractRelated {
      * Get value.
      */
     protected getValue(value: any, key: any): any {
-        if (!new Key(key).validate(value)) {
+        const ruleKey: Key = new Key(key);
+
+        if (!ruleKey.validate(value)) {
             throw new TypeError(`Cannot select the property ${this.reference} from the given data.`);
         }
 
-        if (value instanceof Map) {
-            return value.get(key);
-        }
-
-        return value[key];
+        return ruleKey.getReferenceValueStored();
     }
 
     /**
