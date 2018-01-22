@@ -10,7 +10,7 @@ export class LanguageCode extends AbstractServiceArray {
         /**
          * List extracted from http://www.loc.gov/standards/iso639-2/ISO-639-2_utf-8.txt
          */
-        const  list: string[][] = [
+        const list: string[][] = [
             ['AA', 'AAR'], // AFAR
             ['AB', 'ABK'], // ABKHAZIAN
             ['', 'ACE'],   // ACHINESE

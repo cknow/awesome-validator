@@ -10,7 +10,7 @@ export class CountryCode extends AbstractServiceArray {
         /**
          * List extracted from http://download.geonames.org/export/dump/countryInfo.txt
          */
-        const  list: string[][] = [
+        const list: string[][] = [
             ['AD', 'AND', '020'], // Andorra
             ['AE', 'ARE', '784'], // United Arab Emirates
             ['AF', 'AFG', '004'], // Afghanistan
