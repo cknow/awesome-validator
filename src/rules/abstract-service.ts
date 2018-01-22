@@ -5,7 +5,7 @@ export abstract class AbstractService<Key, Value> extends AbstractRule {
     /**
      * Services key.
      */
-    protected readonly servicesKey: Key[];
+    public readonly servicesKey: Key[];
 
     /**
      * Service.

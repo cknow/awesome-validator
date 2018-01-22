@@ -12,9 +12,9 @@ export abstract class AbstractRelated extends AbstractRule {
      * AbstractRelated.
      */
     public constructor(
-        protected readonly reference: any,
-        protected readonly validator?: Validatable,
-        protected readonly mandatory: boolean = true
+        public readonly reference: any,
+        public readonly validator?: Validatable,
+        public readonly mandatory: boolean = true
     ) {
         super();
     }

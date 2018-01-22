@@ -6,7 +6,7 @@ export class Factor extends AbstractRule {
     /**
      * Factor.
      */
-    public constructor(protected readonly dividend: number) {
+    public constructor(public readonly dividend: number) {
         super();
     }
 

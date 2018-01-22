@@ -9,8 +9,8 @@ export class EndsWith extends AbstractRule {
      * EndsWith.
      */
     public constructor(
-        protected readonly endValue: any,
-        protected readonly identical: boolean = false
+        public readonly endValue: any,
+        public readonly identical: boolean = false
     ) {
         super();
     }

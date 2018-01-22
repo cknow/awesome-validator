@@ -6,7 +6,7 @@ export class ObjectProperty extends AbstractRule {
     /**
      * ObjectProperty.
      */
-    public constructor(protected readonly property: any) {
+    public constructor(public readonly property: any) {
         super();
     }
 

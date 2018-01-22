@@ -10,9 +10,9 @@ export class Age extends AbstractRule {
      * Age.
      */
     public constructor(
-        protected readonly min: moment.DurationInputArg1 = 18,
-        protected readonly max?: moment.DurationInputArg1,
-        protected readonly format?: moment.MomentFormatSpecification
+        public readonly min: moment.DurationInputArg1 = 18,
+        public readonly max?: moment.DurationInputArg1,
+        public readonly format?: moment.MomentFormatSpecification
     ) {
         super();
     }

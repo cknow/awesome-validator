@@ -7,8 +7,8 @@ export class Sorted extends AbstractRule {
      * Sorted.
      */
     public constructor(
-        protected readonly fn?: Function | null,
-        protected readonly ascending: boolean = true
+        public readonly fn?: Function | null,
+        public readonly ascending: boolean = true
     ) {
         super();
 

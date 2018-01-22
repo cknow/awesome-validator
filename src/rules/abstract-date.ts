@@ -33,7 +33,7 @@ export abstract class AbstractDate extends AbstractRule {
     /**
      * AbstractDate.
      */
-    public constructor(protected readonly format?: moment.MomentFormatSpecification) {
+    public constructor(public readonly format?: moment.MomentFormatSpecification) {
         super();
     }
 

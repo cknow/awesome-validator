@@ -6,7 +6,7 @@ export abstract class AbstractFilter extends AbstractRule {
     /**
      * AbstractFilter.
      */
-    public constructor(protected readonly additionalChars: string = '') {
+    public constructor(public readonly additionalChars: string = '') {
         super();
     }
 

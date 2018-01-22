@@ -7,7 +7,7 @@ export class Identical extends AbstractRule {
     /**
      * Identical.
      */
-    public constructor(protected readonly compareTo: any) {
+    public constructor(public readonly compareTo: any) {
         super();
     }
 

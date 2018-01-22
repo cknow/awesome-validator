@@ -6,7 +6,7 @@ export class Multiple extends AbstractRule {
     /**
      * Multiple.
      */
-    public constructor(protected readonly multipleOf: number) {
+    public constructor(public readonly multipleOf: number) {
         super();
     }
 

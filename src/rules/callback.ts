@@ -8,13 +8,13 @@ export class Callback extends AbstractRule {
     /**
      * Parameters.
      */
-    protected parameters: any[];
+    public readonly parameters: any[];
 
     /**
      * Callback.
      */
     public constructor(
-        protected readonly callback: any,
+        public readonly callback: any,
         ...parameters: any[]
     ) {
         super();

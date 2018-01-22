@@ -9,9 +9,9 @@ export class Between extends AbstractRule {
      * Between.
      */
     public constructor(
-        protected readonly min?: any,
-        protected readonly max?: any,
-        protected readonly inclusive: boolean = true
+        public readonly min?: any,
+        public readonly max?: any,
+        public readonly inclusive: boolean = true
     ) {
         super();
     }

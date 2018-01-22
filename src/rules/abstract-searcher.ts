@@ -12,9 +12,9 @@ export abstract class AbstractSearcher extends AbstractRule {
      * AbstractSearcher.
      */
     public constructor(
-        protected readonly searcher?: any,
-        protected readonly contains: boolean = true,
-        protected readonly identical: boolean = false
+        public readonly searcher?: any,
+        public readonly contains: boolean = true,
+        public readonly identical: boolean = false
     ) {
         super();
     }

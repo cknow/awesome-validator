@@ -9,8 +9,8 @@ export class StartsWith extends AbstractRule {
      * StartsWith.
      */
     public constructor(
-        protected readonly startValue: any,
-        protected readonly identical: boolean = false
+        public readonly startValue: any,
+        public readonly identical: boolean = false
     ) {
         super();
     }

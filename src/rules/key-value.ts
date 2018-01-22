@@ -9,9 +9,9 @@ export class KeyValue extends AbstractRule {
      * KeyValue.
      */
     public constructor(
-        protected readonly comparedKey: any,
-        protected readonly ruleName: any,
-        protected readonly baseKey: any
+        public readonly comparedKey: any,
+        public readonly ruleName: any,
+        public readonly baseKey: any
     ) {
         super();
     }
