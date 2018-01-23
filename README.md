@@ -9,7 +9,10 @@
 [![Build status](https://ci.appveyor.com/api/projects/status/64mu0a0cfmtvgicd/branch/master?svg=true)](https://ci.appveyor.com/project/cknow/awesome-validator/branch/master)
 [![Coverage Status](https://coveralls.io/repos/github/cknow/awesome-validator/badge.svg?branch=master)](https://coveralls.io/github/cknow/awesome-validator?branch=master)
 
-[![Dependency Status](https://dependencyci.com/github/cknow/awesome-validator/badge)](https://dependencyci.com/github/cknow/awesome-validator)
+[![Code Climate](https://codeclimate.com/github/cknow/awesome-validator/badges/gpa.svg)](https://codeclimate.com/github/cknow/awesome-validator)
+[![Test Coverage](https://codeclimate.com/github/cknow/awesome-validator/badges/coverage.svg)](https://codeclimate.com/github/cknow/awesome-validator/coverage)
+[![Issue Count](https://codeclimate.com/github/cknow/awesome-validator/badges/issue_count.svg)](https://codeclimate.com/github/cknow/awesome-validator)
+
 [![Dependencies Status](https://david-dm.org/cknow/awesome-validator/status.svg)](https://david-dm.org/cknow/awesome-validator)
 [![devDependencies Status](https://david-dm.org/cknow/awesome-validator/dev-status.svg)](https://david-dm.org/cknow/awesome-validator?type=dev)
 [![peerDependencies Status](https://david-dm.org/cknow/awesome-validator/peer-status.svg)](https://david-dm.org/cknow/awesome-validator?type=peer)
