@@ -1,11 +1,31 @@
-import { AbstractRegex } from './abstract-regex';
+import { AbstractServiceRegex } from './abstract-service-regex';
 
-export class Ip extends AbstractRegex {
+export class Ip extends AbstractServiceRegex {
 
     /**
-     * Get pattern.
+     * Services.
      */
-    protected getPattern(): string | RegExp {
+    protected get services(): Map<string, RegExp> {
+        return new Map([
+            ['ipv4', this.ipv4()],
+            ['ipv6', this.ipv6()]
+        ]);
+    }
+
+    /**
+     * Ipv4.
+     */
+    private ipv4(): RegExp {
+        const v4: string =
+            '(?:25[0-5]|2[0-4]\\d|1\\d\\d|[1-9]\\d|\\d)(?:\\.(?:25[0-5]|2[0-4]\\d|1\\d\\d|[1-9]\\d|\\d)){3}';
+
+        return new RegExp(`(?:^${v4}$)`);
+    }
+
+    /**
+     * Ipv6.
+     */
+    private ipv6(): RegExp {
         const v4: string =
             '(?:25[0-5]|2[0-4]\\d|1\\d\\d|[1-9]\\d|\\d)(?:\\.(?:25[0-5]|2[0-4]\\d|1\\d\\d|[1-9]\\d|\\d)){3}';
 
@@ -21,7 +41,7 @@ export class Ip extends AbstractRegex {
 (?::((?::${v6seg}){0,5}:${v4}|(?::${v6seg}){1,7}|:))
 )(%[0-9a-zA-Z]{1,})?`.replace(/\s*\/\/.*$/gm, '').replace(/\n/g, '').trim();
 
-        return new RegExp(`(?:^${v4}$)|(?:^${v6}$)`);
+        return new RegExp(`(?:^${v6}$)`);
     }
 }
 
