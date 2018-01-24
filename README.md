@@ -212,6 +212,7 @@ The library can be loaded either as a standalone script, or through an [AMD](htt
 - [SymbolType](docs/symbol-type.md)
 - [SymbolVal](docs/symbol-val.md)
 - [SymbolicLink](docs/symbolic-link.md)
+- [Time](docs/time.md)
 - [Tld](docs/tld.md)
 - [TrueVal](docs/true-val.md)
 - [TypeOf](docs/type-of.md)

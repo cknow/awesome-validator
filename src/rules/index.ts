@@ -130,6 +130,7 @@ export * from './symbol-instance';
 export * from './symbol-type';
 export * from './symbol-val';
 export * from './symbolic-link';
+export * from './time';
 export * from './tld';
 export * from './true-val';
 export * from './type-of';
