@@ -35,3 +35,5 @@ export class Each extends AbstractRule {
         return true;
     }
 }
+
+export default Each;

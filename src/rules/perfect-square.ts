@@ -9,3 +9,5 @@ export class PerfectSquare extends IntVal {
         return super.validate(input) && Math.floor(Math.sqrt(input)) === Math.sqrt(input);
     }
 }
+
+export default PerfectSquare;

@@ -53,3 +53,5 @@ export class Callback extends AbstractRule {
         return Boolean(this.call(input));
     }
 }
+
+export default Callback;

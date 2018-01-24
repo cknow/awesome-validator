@@ -9,3 +9,5 @@ export class Lowercase extends AbstractRule {
         return input === String(input).toLocaleLowerCase();
     }
 }
+
+export default Lowercase;

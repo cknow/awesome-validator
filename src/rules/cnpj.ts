@@ -37,3 +37,5 @@ export class Cnpj extends AbstractCalculation {
         return true;
     }
 }
+
+export default Cnpj;

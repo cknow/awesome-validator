@@ -35,3 +35,5 @@ export class EndsWith extends AbstractRule {
         )).validate(value);
     }
 }
+
+export default EndsWith;

@@ -32,3 +32,5 @@ export class KeyValue extends AbstractRule {
         return rule.validate(ruleCompared.getReferenceValueStored());
     }
 }
+
+export default KeyValue;

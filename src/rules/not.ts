@@ -17,3 +17,5 @@ export class Not extends AbstractRule {
         return !this.validatable.validate(input);
     }
 }
+
+export default Not;

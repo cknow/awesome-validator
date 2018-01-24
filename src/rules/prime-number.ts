@@ -23,3 +23,5 @@ export class PrimeNumber extends NumberVal {
         return true;
     }
 }
+
+export default PrimeNumber;

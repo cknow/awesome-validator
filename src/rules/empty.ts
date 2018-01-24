@@ -36,3 +36,5 @@ export class Empty extends AbstractRule {
         return false;
     }
 }
+
+export default Empty;

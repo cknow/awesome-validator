@@ -9,3 +9,5 @@ export class BooleanInstance extends AbstractConstructotName {
         return 'Boolean';
     }
 }
+
+export default BooleanInstance;

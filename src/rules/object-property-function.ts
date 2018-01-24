@@ -10,3 +10,5 @@ export class ObjectPropertyFunction extends ObjectProperty {
         return super.validate(input) && new FunctionType().validate(input[this.property]);
     }
 }
+
+export default ObjectPropertyFunction;

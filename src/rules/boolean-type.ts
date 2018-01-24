@@ -11,3 +11,5 @@ export class BooleanType extends AbstractWrapper {
         return new TypeOf(/boolean/i);
     }
 }
+
+export default BooleanType;

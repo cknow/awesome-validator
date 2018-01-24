@@ -9,3 +9,5 @@ export class StringInstance extends AbstractConstructotName {
         return 'String';
     }
 }
+
+export default StringInstance;

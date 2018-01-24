@@ -22,3 +22,5 @@ export class Identical extends AbstractRule {
         return input === this.compareTo;
     }
 }
+
+export default Identical;

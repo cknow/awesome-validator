@@ -16,3 +16,5 @@ export class InstanceOf extends AbstractRule {
         return input instanceof this.instanceName;
     }
 }
+
+export default InstanceOf;

@@ -12,3 +12,5 @@ export class ArrayVal extends AbstractWrapper {
         return new AnyOf(new InstanceOf(Array), new InstanceOf(Set), new InstanceOf(Map));
     }
 }
+
+export default ArrayVal;

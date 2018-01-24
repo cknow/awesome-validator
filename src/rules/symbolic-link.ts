@@ -19,3 +19,5 @@ export class SymbolicLink extends AbstractTryCatch {
         return String(url).length > 0;
     }
 }
+
+export default SymbolicLink;

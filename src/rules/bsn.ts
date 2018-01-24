@@ -22,3 +22,5 @@ export class Bsn extends AbstractCalculation {
         return sum !== 0 && sum % 11 === 0;
     }
 }
+
+export default Bsn;

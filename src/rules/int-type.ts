@@ -9,3 +9,5 @@ export class IntType extends AbstractRule {
         return Number.isInteger(input);
     }
 }
+
+export default IntType;

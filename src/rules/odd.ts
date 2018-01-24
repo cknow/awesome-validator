@@ -9,3 +9,5 @@ export class Odd extends IntVal {
         return super.validate(input) && input % 2 !== 0;
     }
 }
+
+export default Odd;

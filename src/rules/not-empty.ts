@@ -12,3 +12,5 @@ export class NotEmpty extends AbstractWrapper {
         return new Not(new Empty());
     }
 }
+
+export default NotEmpty;

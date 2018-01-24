@@ -24,3 +24,5 @@ export class Key extends AbstractRelated {
         return input[this.reference];
     }
 }
+
+export default Key;

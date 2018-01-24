@@ -18,3 +18,5 @@ export class Call extends AbstractRelated {
         return new Callback(this.reference).call(input);
     }
 }
+
+export default Call;

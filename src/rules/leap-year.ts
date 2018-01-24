@@ -11,3 +11,5 @@ export class LeapYear extends AbstractDate {
         return date.isLeapYear();
     }
 }
+
+export default LeapYear;

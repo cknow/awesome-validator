@@ -11,3 +11,5 @@ export class Image extends AbstractWrapper {
         return new Mimetype(/^image\//i);
     }
 }
+
+export default Image;

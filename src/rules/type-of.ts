@@ -9,3 +9,5 @@ export class TypeOf extends Regex {
         return super.validate(typeof input);
     }
 }
+
+export default TypeOf;

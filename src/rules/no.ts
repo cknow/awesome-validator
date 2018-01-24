@@ -9,3 +9,5 @@ export class No extends AbstractRegexFilter {
         return /^n(o(t|pe)?|ix|ay)?$/i;
     }
 }
+
+export default No;

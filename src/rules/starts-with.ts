@@ -35,3 +35,5 @@ export class StartsWith extends AbstractRule {
         )).validate(value);
     }
 }
+
+export default StartsWith;

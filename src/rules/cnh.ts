@@ -43,3 +43,5 @@ export class Cnh extends AbstractCalculation {
         return `${vl1}${vl2}` === input.substr(-2);
     }
 }
+
+export default Cnh;

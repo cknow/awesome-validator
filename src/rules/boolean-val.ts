@@ -13,3 +13,5 @@ export class BooleanVal extends AbstractWrapper {
         return new AnyOf(new TrueVal(), new FalseVal());
     }
 }
+
+export default BooleanVal;

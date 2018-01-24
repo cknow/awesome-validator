@@ -9,3 +9,5 @@ export class Extension extends AbstractServiceList {
         return String(input).split('.').pop();
     }
 }
+
+export default Extension;

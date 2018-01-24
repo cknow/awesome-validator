@@ -11,3 +11,5 @@ export class Directory extends AbstractFileSystem {
         return stats.isDirectory();
     }
 }
+
+export default Directory;

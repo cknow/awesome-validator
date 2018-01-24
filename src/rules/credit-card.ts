@@ -28,3 +28,5 @@ export class CreditCard extends AbstractServiceRegex {
         ]);
     }
 }
+
+export default CreditCard;

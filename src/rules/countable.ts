@@ -13,3 +13,5 @@ export class Countable extends AbstractWrapper {
         return new AnyOf(new ArrayVal(), new ObjectPropertyFunction('count'));
     }
 }
+
+export default Countable;

@@ -17,3 +17,5 @@ export class SubdivisionCode extends AbstractServiceArray {
         return list;
     }
 }
+
+export default SubdivisionCode;

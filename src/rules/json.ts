@@ -12,3 +12,5 @@ export class Json extends AbstractTryCatch {
         return !!obj && new ObjectType().validate(obj);
     }
 }
+
+export default Json;

@@ -30,7 +30,7 @@
 Install the library with ```npm install --save awesome-validator```
 
 ```js
-var validator = require('awesome-validator');
+var validator = require('awesome-validator').validator;
 
 validator.notEmpty().stringType().validate('foo'); //=> true
 ```

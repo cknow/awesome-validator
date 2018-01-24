@@ -9,3 +9,5 @@ export class RegexType extends AbstractConstructotName {
         return 'RegExp';
     }
 }
+
+export default RegexType;

@@ -40,3 +40,5 @@ export class Sorted extends AbstractRule {
         return true;
     }
 }
+
+export default Sorted;

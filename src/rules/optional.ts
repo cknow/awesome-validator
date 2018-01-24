@@ -19,3 +19,5 @@ export class Optional extends AbstractRule {
         return !new NotOptional().validate(input) || this.validatable.validate(input);
     }
 }
+
+export default Optional;

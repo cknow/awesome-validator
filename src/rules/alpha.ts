@@ -16,3 +16,5 @@ export class Alpha extends AbstractRegexFilter {
         return /^[a-z]+$/gi;
     }
 }
+
+export default Alpha;

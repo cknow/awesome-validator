@@ -17,3 +17,5 @@ export class ObjectProperty extends AbstractRule {
         return new NotOptional().validate(input) && Object.prototype.hasOwnProperty.call(input, this.property);
     }
 }
+
+export default ObjectProperty;

@@ -9,3 +9,5 @@ export class Even extends IntVal {
         return super.validate(input) && input % 2 === 0;
     }
 }
+
+export default Even;

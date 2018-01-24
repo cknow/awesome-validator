@@ -21,3 +21,5 @@ export class Fibonacci extends NumberVal {
         return sequence[position] === Number(input);
     }
 }
+
+export default Fibonacci;

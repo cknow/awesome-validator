@@ -24,3 +24,5 @@ export class Ip extends AbstractRegex {
         return new RegExp(`(?:^${v4}$)|(?:^${v6}$)`);
     }
 }
+
+export default Ip;

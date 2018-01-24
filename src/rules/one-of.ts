@@ -12,3 +12,5 @@ export class OneOf extends AbstractComposite {
         ).length === 1;
     }
 }
+
+export default OneOf;

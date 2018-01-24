@@ -9,3 +9,5 @@ export class NullType extends AbstractRule {
         return input === null;
     }
 }
+
+export default NullType;

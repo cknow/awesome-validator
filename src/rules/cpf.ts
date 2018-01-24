@@ -36,3 +36,5 @@ export class Cpf extends AbstractCalculation {
         return true;
     }
 }
+
+export default Cpf;

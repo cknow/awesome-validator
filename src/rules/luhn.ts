@@ -33,3 +33,5 @@ export class Luhn extends AbstractCalculation {
         return (sum % 10) === 0;
     }
 }
+
+export default Luhn;

@@ -9,3 +9,5 @@ export class Infinite extends AbstractRule {
         return Math.abs(Number(input)) === Infinity;
     }
 }
+
+export default Infinite;

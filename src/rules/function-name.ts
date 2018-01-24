@@ -9,3 +9,5 @@ export class FunctionName extends AbstractRegex {
         return /^[_$a-zA-Z\xA0-\uFFFF][_$a-zA-Z0-9\xA0-\uFFFF]*$/;
     }
 }
+
+export default FunctionName;

@@ -16,3 +16,5 @@ export class Alnum extends AbstractRegexFilter {
         return /^[a-z\d]+$/gi;
     }
 }
+
+export default Alnum;

@@ -10,3 +10,5 @@ export class NoWhitespace extends NotOptional {
         return !super.validate(input) || (new Scalar().validate(input) && !/\s/.test(input));
     }
 }
+
+export default NoWhitespace;

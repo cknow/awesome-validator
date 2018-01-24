@@ -9,3 +9,5 @@ export class Negative extends NumberVal {
         return super.validate(input) && input < 0;
     }
 }
+
+export default Negative;

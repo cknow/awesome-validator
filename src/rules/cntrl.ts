@@ -9,3 +9,5 @@ export class Cntrl extends AbstractRegexFilter {
         return /^[\u0000-\u001F\u007F]+$/g;
     }
 }
+
+export default Cntrl;

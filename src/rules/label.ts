@@ -9,3 +9,5 @@ export class Label extends AbstractRegex {
         return /^[a-z_\x7f-\xff][a-z0-9_\x7f-\xff]*$/i;
     }
 }
+
+export default Label;

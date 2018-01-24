@@ -26,3 +26,5 @@ export class Between extends AbstractRule {
         ).validate(input);
     }
 }
+
+export default Between;

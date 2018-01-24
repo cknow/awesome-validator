@@ -11,3 +11,5 @@ export class StringType extends AbstractWrapper {
         return new TypeOf(/string/i);
     }
 }
+
+export default StringType;

@@ -24,3 +24,5 @@ export class Equals extends AbstractRule {
         /* tslint:enable triple-equals */
     }
 }
+
+export default Equals;

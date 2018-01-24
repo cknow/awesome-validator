@@ -9,3 +9,5 @@ export class Vowel extends AbstractRegexFilter {
         return /^(\s|[aeiou])*$/i;
     }
 }
+
+export default Vowel;

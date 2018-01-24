@@ -9,3 +9,5 @@ export class Prnt extends AbstractRegexFilter {
         return /^[\u0020-\u007E]+$/g;
     }
 }
+
+export default Prnt;

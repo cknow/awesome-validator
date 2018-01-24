@@ -16,3 +16,5 @@ export class Charset extends AbstractServiceList {
         return chardet.detect(new Buffer(input));
     }
 }
+
+export default Charset;

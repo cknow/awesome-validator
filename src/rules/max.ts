@@ -13,3 +13,5 @@ export class Max extends AbstractInterval {
         return input < interval;
     }
 }
+
+export default Max;

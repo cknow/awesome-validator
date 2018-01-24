@@ -9,3 +9,5 @@ export class Finite extends NumberVal {
         return super.validate(input) && Number.isFinite(Number(input));
     }
 }
+
+export default Finite;

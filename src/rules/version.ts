@@ -9,3 +9,5 @@ export class Version extends AbstractRegex {
         return /^[0-9]+\.[0-9]+\.[0-9]+([+-][^+-][0-9a-z-.]*)?$/i;
     }
 }
+
+export default Version;

@@ -1561,3 +1561,5 @@ export class Tld extends AbstractWrapper {
         return new In(searcher, false);
     }
 }
+
+export default Tld;

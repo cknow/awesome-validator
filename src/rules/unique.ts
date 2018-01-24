@@ -21,3 +21,5 @@ export class Unique extends ArrayVal {
         return JSON.stringify(input) === JSON.stringify(unique);
     }
 }
+
+export default Unique;

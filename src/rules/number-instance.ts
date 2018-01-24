@@ -9,3 +9,5 @@ export class NumberInstance extends AbstractConstructotName {
         return 'Number';
     }
 }
+
+export default NumberInstance;

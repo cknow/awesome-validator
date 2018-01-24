@@ -11,3 +11,5 @@ export class Phone extends AbstractRegex {
         /* tslint:enable max-line-length */
     }
 }
+
+export default Phone;

@@ -9,3 +9,5 @@ export class AlwaysValid extends AbstractRule {
         return true;
     }
 }
+
+export default AlwaysValid;

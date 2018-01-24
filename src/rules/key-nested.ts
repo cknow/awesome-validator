@@ -62,3 +62,5 @@ export class KeyNested extends AbstractRelated {
         return value;
     }
 }
+
+export default KeyNested;

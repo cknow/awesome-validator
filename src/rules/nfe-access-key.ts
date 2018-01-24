@@ -33,3 +33,5 @@ export class NfeAccessKey extends AbstractCalculation {
         return ((z === 0 || z === 1) ? 0 : (11 - z)) === Number(input[43]);
     }
 }
+
+export default NfeAccessKey;

@@ -29,3 +29,5 @@ export class Age extends AbstractRule {
         ).validate(date);
     }
 }
+
+export default Age;

@@ -42,3 +42,5 @@ export class Domain extends AbstractRule {
         });
     }
 }
+
+export default Domain;

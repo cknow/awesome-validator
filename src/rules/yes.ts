@@ -9,3 +9,5 @@ export class Yes extends AbstractRegexFilter {
         return /^y(eah?|ep|es)?$/i;
     }
 }
+
+export default Yes;

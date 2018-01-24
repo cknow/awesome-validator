@@ -9,3 +9,5 @@ export class ArrayType extends AbstractConstructotName {
         return 'Array';
     }
 }
+
+export default ArrayType;

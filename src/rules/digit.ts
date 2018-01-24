@@ -16,3 +16,5 @@ export class Digit extends AbstractRegexFilter {
         return /^[\d]+$/g;
     }
 }
+
+export default Digit;

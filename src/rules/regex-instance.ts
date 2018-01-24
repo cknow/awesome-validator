@@ -11,3 +11,5 @@ export class RegexInstance extends AbstractWrapper {
         return new InstanceOf(RegExp);
     }
 }
+
+export default RegexInstance;

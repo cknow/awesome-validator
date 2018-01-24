@@ -11,3 +11,5 @@ export class ObjectInstance extends AbstractWrapper {
         return new InstanceOf(Object);
     }
 }
+
+export default ObjectInstance;

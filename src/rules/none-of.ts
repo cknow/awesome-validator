@@ -18,3 +18,5 @@ export class NoneOf extends AbstractComposite {
         return true;
     }
 }
+
+export default NoneOf;

@@ -20,3 +20,5 @@ export class Base extends AbstractRule {
         return new Regex(`^[${this.chars.substr(0, this.base)}]+$`).validate(input);
     }
 }
+
+export default Base;

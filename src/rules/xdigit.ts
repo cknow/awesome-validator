@@ -9,3 +9,5 @@ export class Xdigit extends AbstractRegexFilter {
         return /^[a-f\d]+$/gi;
     }
 }
+
+export default Xdigit;

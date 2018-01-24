@@ -13,3 +13,5 @@ export class Writable extends AbstractTryCatch {
         return true;
     }
 }
+
+export default Writable;

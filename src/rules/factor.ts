@@ -29,3 +29,5 @@ export class Factor extends AbstractRule {
         return n !== 0 && intval.validate(Math.abs(this.dividend) / Math.abs(n));
     }
 }
+
+export default Factor;

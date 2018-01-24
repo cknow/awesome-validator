@@ -11,3 +11,5 @@ export class FunctionType extends AbstractWrapper {
         return new TypeOf(/function/i);
     }
 }
+
+export default FunctionType;

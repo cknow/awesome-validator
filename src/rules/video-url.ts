@@ -14,3 +14,5 @@ export class VideoUrl extends AbstractServiceRegex {
         ]);
     }
 }
+
+export default VideoUrl;

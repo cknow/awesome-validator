@@ -28,3 +28,5 @@ export class Pesel extends AbstractCalculation {
         return targetControlNumber === calculateControlNumber;
     }
 }
+
+export default Pesel;

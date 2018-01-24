@@ -11,3 +11,5 @@ export class RegexVal extends AbstractTryCatch {
         return true;
     }
 }
+
+export default RegexVal;

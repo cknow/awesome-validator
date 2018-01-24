@@ -49,3 +49,5 @@ export class KeySet extends AllOf {
         return i === Object.keys(input).length;
     }
 }
+
+export default KeySet;

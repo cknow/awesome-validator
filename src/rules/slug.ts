@@ -18,3 +18,5 @@ export class Slug extends AbstractWrapper {
         );
     }
 }
+
+export default Slug;

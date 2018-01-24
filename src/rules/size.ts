@@ -14,3 +14,5 @@ export class Size extends Between {
         return super.validate(input);
     }
 }
+
+export default Size;

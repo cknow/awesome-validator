@@ -13,3 +13,5 @@ export class NumberVal extends AbstractWrapper {
         return new AnyOf(new FloatVal(), new IntVal());
     }
 }
+
+export default NumberVal;

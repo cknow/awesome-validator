@@ -11,3 +11,5 @@ export class Mimetype extends AbstractServiceList {
         return lookup(input);
     }
 }
+
+export default Mimetype;

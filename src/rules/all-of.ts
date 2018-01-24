@@ -18,3 +18,5 @@ export class AllOf extends AbstractComposite {
         return true;
     }
 }
+
+export default AllOf;

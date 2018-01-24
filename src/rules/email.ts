@@ -30,3 +30,5 @@ export class Email extends AbstractString {
         return true;
     }
 }
+
+export default Email;

@@ -9,3 +9,5 @@ export class FloatType extends AbstractRule {
         return !Number.isInteger(input) && Number.isFinite(input);
     }
 }
+
+export default FloatType;

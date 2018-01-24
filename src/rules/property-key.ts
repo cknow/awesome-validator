@@ -11,3 +11,5 @@ export class PropertyKey extends AbstractWrapper {
         return new TypeOf(/number|string|symbol/i);
     }
 }
+
+export default PropertyKey;

@@ -16,3 +16,5 @@ export class Iterable extends AbstractRule {
         return Symbol.iterator in Object(iterableInput);
     }
 }
+
+export default Iterable;

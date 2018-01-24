@@ -11,3 +11,5 @@ export class IntVal extends AbstractRule {
         /* tslint:enable no-eval */
     }
 }
+
+export default IntVal;

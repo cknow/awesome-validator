@@ -11,3 +11,5 @@ export class ObjectType extends AbstractWrapper {
         return new TypeOf(/object/i);
     }
 }
+
+export default ObjectType;

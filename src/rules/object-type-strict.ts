@@ -9,3 +9,5 @@ export class ObjectTypeStrict extends AbstractConstructotName {
         return 'Object';
     }
 }
+
+export default ObjectTypeStrict;

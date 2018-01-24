@@ -11,3 +11,5 @@ export class SymbolType extends AbstractWrapper {
         return new TypeOf(/symbol/i);
     }
 }
+
+export default SymbolType;

@@ -11,3 +11,5 @@ export class NumberType extends AbstractWrapper {
         return new TypeOf(/number/i);
     }
 }
+
+export default NumberType;

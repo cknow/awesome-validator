@@ -9,3 +9,5 @@ export class Contains extends AbstractSearcher {
         return this.validateSearcher(input, this.searcher);
     }
 }
+
+export default Contains;

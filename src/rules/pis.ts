@@ -23,3 +23,5 @@ export class Pis extends AbstractCalculation {
         return Number(input[10]) === ((summation % 11 < 2) ? 0 : 11 - (summation % 11));
     }
 }
+
+export default Pis;

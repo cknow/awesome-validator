@@ -11,3 +11,5 @@ export class FalseVal extends AbstractWrapper {
         return new In([0, false, 'off', 'no', 'n', ''], false);
     }
 }
+
+export default FalseVal;

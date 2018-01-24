@@ -9,3 +9,5 @@ export class Imei extends Luhn {
         return 15;
     }
 }
+
+export default Imei;

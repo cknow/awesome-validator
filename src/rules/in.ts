@@ -9,3 +9,5 @@ export class In extends AbstractSearcher {
         return this.validateSearcher(this.searcher, input);
     }
 }
+
+export default In;

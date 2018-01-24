@@ -11,3 +11,5 @@ export class Scalar extends AbstractWrapper {
         return new TypeOf(/boolean|number|string/i);
     }
 }
+
+export default Scalar;

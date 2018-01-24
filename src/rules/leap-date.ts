@@ -11,3 +11,5 @@ export class LeapDate extends AbstractDate {
         return date.format('DD-MM') === '29-02';
     }
 }
+
+export default LeapDate;

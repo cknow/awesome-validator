@@ -17,3 +17,5 @@ export class Attribute extends AbstractRelated {
         return Reflect.get(input, this.reference);
     }
 }
+
+export default Attribute;

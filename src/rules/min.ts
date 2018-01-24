@@ -13,3 +13,5 @@ export class Min extends AbstractInterval {
         return input > interval;
     }
 }
+
+export default Min;

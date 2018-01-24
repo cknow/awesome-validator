@@ -11,3 +11,5 @@ export class TrueVal extends AbstractWrapper {
         return new In([1, true, 'on', 'yes', 'y', 's'], false);
     }
 }
+
+export default TrueVal;

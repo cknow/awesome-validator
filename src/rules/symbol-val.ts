@@ -11,3 +11,5 @@ export class SymbolVal extends AbstractWrapper {
         return new TypeOf(/number|string|symbol|undefined/i);
     }
 }
+
+export default SymbolVal;

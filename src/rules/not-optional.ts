@@ -12,3 +12,5 @@ export class NotOptional extends AbstractWrapper {
         return new Not(new In(['', null, undefined], false));
     }
 }
+
+export default NotOptional;

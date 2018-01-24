@@ -9,3 +9,5 @@ export class Space extends AbstractRegexFilter {
         return /^[\f\n\r\t\v ]+$/g;
     }
 }
+
+export default Space;

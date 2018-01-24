@@ -9,3 +9,5 @@ export class SymbolInstance extends AbstractConstructotName {
         return 'Symbol';
     }
 }
+
+export default SymbolInstance;

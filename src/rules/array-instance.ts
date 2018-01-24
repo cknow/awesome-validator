@@ -11,3 +11,5 @@ export class ArrayInstance extends AbstractWrapper {
         return new InstanceOf(Array);
     }
 }
+
+export default ArrayInstance;

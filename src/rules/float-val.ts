@@ -9,3 +9,5 @@ export class FloatVal extends FloatType {
         return !Number.isNaN(input) && super.validate(Number.parseFloat(input));
     }
 }
+
+export default FloatVal;

@@ -11,3 +11,5 @@ export class Url extends AbstractRegex {
         /* tslint:enable max-line-length */
     }
 }
+
+export default Url;

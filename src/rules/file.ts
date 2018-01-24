@@ -11,3 +11,5 @@ export class File extends AbstractFileSystem {
         return stats.isFile();
     }
 }
+
+export default File;

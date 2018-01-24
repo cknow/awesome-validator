@@ -196,3 +196,5 @@ export class CurrencyCode extends AbstractWrapper {
         return new In(searcher, false);
     }
 }
+
+export default CurrencyCode;

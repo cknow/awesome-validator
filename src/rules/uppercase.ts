@@ -9,3 +9,5 @@ export class Uppercase extends AbstractRule {
         return input === String(input).toLocaleUpperCase();
     }
 }
+
+export default Uppercase;

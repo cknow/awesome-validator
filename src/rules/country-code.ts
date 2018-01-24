@@ -272,3 +272,5 @@ export class CountryCode extends AbstractServiceArray {
         ]);
     }
 }
+
+export default CountryCode;

@@ -505,3 +505,5 @@ export class LanguageCode extends AbstractServiceArray {
         ]);
     }
 }
+
+export default LanguageCode;

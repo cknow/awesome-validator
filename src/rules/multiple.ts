@@ -25,3 +25,5 @@ export class Multiple extends AbstractRule {
         return input % this.multipleOf === 0;
     }
 }
+
+export default Multiple;

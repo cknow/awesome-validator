@@ -21,3 +21,5 @@ export class Regex extends AbstractRule {
         return new RegExp(this.regexp).test(String(input));
     }
 }
+
+export default Regex;

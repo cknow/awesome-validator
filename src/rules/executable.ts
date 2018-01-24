@@ -23,3 +23,5 @@ export class Executable extends File {
         /* tslint:enable no-bitwise */
     }
 }
+
+export default Executable;

@@ -20,3 +20,5 @@ export class HexRgbColor extends AbstractString {
         return new Xdigit().validate(inputString);
     }
 }
+
+export default HexRgbColor;

@@ -9,3 +9,5 @@ export class FunctionInstance extends AbstractConstructotName {
         return 'Function';
     }
 }
+
+export default FunctionInstance;

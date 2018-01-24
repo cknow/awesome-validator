@@ -13,3 +13,5 @@ export class Readable extends AbstractTryCatch {
         return true;
     }
 }
+
+export default Readable;

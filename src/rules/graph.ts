@@ -9,3 +9,5 @@ export class Graph extends AbstractRegexFilter {
         return /^[\u0021-\u007E]+$/g;
     }
 }
+
+export default Graph;

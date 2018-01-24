@@ -13,3 +13,5 @@ export class StringVal extends AbstractWrapper {
         return new AnyOf(new Scalar(), new ObjectPropertyFunction('toString'));
     }
 }
+
+export default StringVal;

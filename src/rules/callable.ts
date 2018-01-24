@@ -33,3 +33,5 @@ export class Callable extends AbstractTryCatch {
         return false;
     }
 }
+
+export default Callable;

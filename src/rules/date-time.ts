@@ -11,3 +11,5 @@ export class DateTime extends AbstractDate {
         return true;
     }
 }
+
+export default DateTime;

@@ -11,3 +11,5 @@ export class Exists extends AbstractTryCatch {
         return existsSync(input);
     }
 }
+
+export default Exists;

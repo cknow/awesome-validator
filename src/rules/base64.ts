@@ -10,3 +10,5 @@ export class Base64 extends AbstractString {
         return new Regex(/^[A-Za-z0-9+/\n\r]+={0,2}$/).validate(input) && input.length % 4 === 0;
     }
 }
+
+export default Base64;

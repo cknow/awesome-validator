@@ -29,3 +29,5 @@ export class When extends AbstractRule {
         return false;
     }
 }
+
+export default When;

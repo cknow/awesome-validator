@@ -9,3 +9,5 @@ export class Consonant extends AbstractRegexFilter {
         return /^(\s|[bcdfghjklmnpqrstvwxyz])*$/i;
     }
 }
+
+export default Consonant;

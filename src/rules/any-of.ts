@@ -18,3 +18,5 @@ export class AnyOf extends AbstractComposite {
         return false;
     }
 }
+
+export default AnyOf;
