@@ -58,6 +58,7 @@ export * from './function-name';
 export * from './function-type';
 export * from './graph';
 export * from './half-width';
+export * from './hash';
 export * from './hex-rgb-color';
 export * from './identical';
 export * from './image';
