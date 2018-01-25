@@ -229,6 +229,7 @@ The library can be loaded either as a standalone script, or through an [AMD](htt
 - [Uppercase](docs/uppercase.md)
 - [Url](docs/url.md)
 - [Uuid](docs/uuid.md)
+- [VariableWidth](docs/variable-width.md)
 - [Version](docs/version.md)
 - [VideoUrl](docs/video-url.md)
 - [Vowel](docs/vowel.md)

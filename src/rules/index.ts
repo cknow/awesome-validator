@@ -147,6 +147,7 @@ export * from './unique';
 export * from './uppercase';
 export * from './url';
 export * from './uuid';
+export * from './variable-width';
 export * from './version';
 export * from './video-url';
 export * from './vowel';
