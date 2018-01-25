@@ -139,6 +139,7 @@ The library can be loaded either as a standalone script, or through an [AMD](htt
 - [FunctionName](docs/function-name.md)
 - [FunctionType](docs/function-type.md)
 - [Graph](docs/graph.md)
+- [HalfWidth](docs/half-width.md)
 - [HexRgbColor](docs/hex-rgb-color.md)
 - [Identical](docs/identical.md)
 - [Image](docs/image.md)
