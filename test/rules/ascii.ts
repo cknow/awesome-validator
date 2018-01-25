@@ -33,6 +33,16 @@ describe('Ascii', () => {
         assert.isFalse(ascii.validate('ｘｙｚ０９８'));
         assert.isFalse(ascii.validate('１２３456'));
         assert.isFalse(ascii.validate('ｶﾀｶﾅ'));
+        assert.isFalse(ascii.validate(''));
+        assert.isFalse(ascii.validate(null));
+        assert.isFalse(ascii.validate(undefined));
+        assert.isFalse(ascii.validate([]));
+        assert.isFalse(ascii.validate({}));
+        assert.isFalse(ascii.validate(new Array('foo')));
+        assert.isFalse(ascii.validate(new Object({foo: 'bar'})));
+
+        class Foo {}
+        assert.isFalse(ascii.validate(new Foo()));
     });
 
 });
