@@ -52,6 +52,7 @@ export * from './file';
 export * from './finite';
 export * from './float-type';
 export * from './float-val';
+export * from './full-width';
 export * from './function-instance';
 export * from './function-name';
 export * from './function-type';

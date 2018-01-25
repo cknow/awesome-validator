@@ -134,6 +134,7 @@ The library can be loaded either as a standalone script, or through an [AMD](htt
 - [Finite](docs/finite.md)
 - [FloatType](docs/float-type.md)
 - [FloatVal](docs/float-val.md)
+- [FullWidth](docs/full-width.md)
 - [FunctionInstance](docs/function-instance.md)
 - [FunctionName](docs/function-name.md)
 - [FunctionType](docs/function-type.md)
