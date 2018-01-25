@@ -15,6 +15,12 @@ describe('FullWidth', () => {
         assert.instanceOf(fullWidth, AbstractRule);
     });
 
+    it('values is valid with additional characters', () => {
+        assert.isTrue(new FullWidth('!@#$%^&*(){}').validate('!@#$%^&*(){} test＠example.com'));
+        assert.isTrue(new FullWidth('[]?+=/\\-_|"\',<>.').validate('[]?+=/\\-_|"\',<>. \t \n test＠example.com'));
+        assert.isTrue(new FullWidth(undefined).validate('ひらがな'));
+    });
+
     it('values is valid', () => {
         assert.isTrue(fullWidth.validate('ひらがな・カタカナ、．漢字'));
         assert.isTrue(fullWidth.validate('３ー０ ａ＠ｃｏｍ'));

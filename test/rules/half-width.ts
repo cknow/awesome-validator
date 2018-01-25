@@ -15,6 +15,12 @@ describe('HalfWidth', () => {
         assert.instanceOf(halfWidth, AbstractRule);
     });
 
+    it('values is valid with additional characters', () => {
+        assert.isTrue(new HalfWidth('!@#$%^&*(){}').validate('!@#$%^&*(){} abc'));
+        assert.isTrue(new HalfWidth('[]?+=/\\-_|"\',<>.').validate('[]?+=/\\-_|"\',<>. \t \n abc'));
+        assert.isTrue(new HalfWidth(undefined).validate('ｶﾀｶﾅﾞﾬ￩'));
+    });
+
     it('values is valid', () => {
         assert.isTrue(halfWidth.validate('!"#$%&()<>/+=-_? ~^|.,@`{}[]'));
         assert.isTrue(halfWidth.validate('l-btn_02--active'));

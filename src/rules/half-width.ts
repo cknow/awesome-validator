@@ -1,6 +1,6 @@
-import { AbstractRegex } from './abstract-regex';
+import { AbstractRegexFilter } from './abstract-regex-filter';
 
-export class HalfWidth  extends AbstractRegex {
+export class HalfWidth  extends AbstractRegexFilter {
 
     /**
      * Get pattern.
