@@ -107,6 +107,7 @@ export * from './perfect-square';
 export * from './pesel';
 export * from './phone';
 export * from './pis';
+export * from './port';
 export * from './positive';
 export * from './prime-number';
 export * from './prnt';

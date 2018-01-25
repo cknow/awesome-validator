@@ -189,6 +189,7 @@ The library can be loaded either as a standalone script, or through an [AMD](htt
 - [Pesel](docs/pesel.md)
 - [Phone](docs/phone.md)
 - [Pis](docs/pis.md)
+- [Port](docs/port.md)
 - [Positive](docs/positive.md)
 - [PrimeNumber](docs/prime-number.md)
 - [Prnt](docs/prnt.md)
