@@ -23,6 +23,8 @@ describe('HexRgbColor', () => {
         assert.isTrue(hexRgbColor.validate('#FFFFFF'));
         assert.isTrue(hexRgbColor.validate('123123'));
         assert.isTrue(hexRgbColor.validate('FFFFFF'));
+        assert.isTrue(hexRgbColor.validate(443));
+        assert.isTrue(hexRgbColor.validate(123));
     });
 
     it('values is not valid', () => {
@@ -38,11 +40,15 @@ describe('HexRgbColor', () => {
         assert.isFalse(hexRgbColor.validate('#S'));
         assert.isFalse(hexRgbColor.validate('1234'));
         assert.isFalse(hexRgbColor.validate('foo'));
-        assert.isFalse(hexRgbColor.validate(0x39F));
         assert.isFalse(hexRgbColor.validate(5));
         assert.isFalse(hexRgbColor.validate(1));
-        assert.isFalse(hexRgbColor.validate(443));
         assert.isFalse(hexRgbColor.validate([]));
+        assert.isFalse(hexRgbColor.validate({}));
+        assert.isFalse(hexRgbColor.validate(new Array('foo')));
+        assert.isFalse(hexRgbColor.validate(new Object({foo: 'bar'})));
+
+        class Foo {}
+        assert.isFalse(hexRgbColor.validate(new Foo()));
     });
 
 });

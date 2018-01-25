@@ -1,23 +1,12 @@
-import { AbstractString } from './abstract-string';
-import { Xdigit } from './xdigit';
+import { AbstractRegex } from './abstract-regex';
 
-export class HexRgbColor extends AbstractString {
+export class HexRgbColor extends AbstractRegex {
 
     /**
-     * Validate string.
+     * Get pattern.
      */
-    public validateString(input: string): boolean {
-        let inputString: string = input;
-
-        if (inputString.indexOf('#') === 0) {
-            inputString = inputString.substr(1);
-        }
-
-        if (inputString.length !== 3 && inputString.length !== 6) {
-            return false;
-        }
-
-        return new Xdigit().validate(inputString);
+    protected getPattern(): string | RegExp {
+        return /^#?([0-9A-F]{3}|[0-9A-F]{6})$/i;
     }
 }
 
