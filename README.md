@@ -166,6 +166,7 @@ The library can be loaded either as a standalone script, or through an [AMD](htt
 - [Max](docs/max.md)
 - [Mimetype](docs/mimetype.md)
 - [Min](docs/min.md)
+- [Multibyte](docs/multibyte.md)
 - [Multiple](docs/multiple.md)
 - [Negative](docs/negative.md)
 - [NfeAccessKey](docs/nfe-access-key.md)
