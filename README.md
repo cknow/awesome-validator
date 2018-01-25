@@ -215,6 +215,7 @@ The library can be loaded either as a standalone script, or through an [AMD](htt
 - [StringType](docs/string-type.md)
 - [StringVal](docs/string-val.md)
 - [SubdivisionCode](docs/subdivision-code.md)
+- [SurrogatePair](docs/surrogate-pair.md)
 - [SymbolInstance](docs/symbol-instance.md)
 - [SymbolType](docs/symbol-type.md)
 - [SymbolVal](docs/symbol-val.md)

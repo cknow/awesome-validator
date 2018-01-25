@@ -133,6 +133,7 @@ export * from './string-instance';
 export * from './string-type';
 export * from './string-val';
 export * from './subdivision-code';
+export * from './surrogate-pair';
 export * from './symbol-instance';
 export * from './symbol-type';
 export * from './symbol-val';
