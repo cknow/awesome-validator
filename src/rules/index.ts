@@ -8,6 +8,7 @@ export * from './any-of';
 export * from './array-instance';
 export * from './array-type';
 export * from './array-val';
+export * from './ascii';
 export * from './attribute';
 export * from './base';
 export * from './base64';
