@@ -88,6 +88,7 @@ export * from './mac-address';
 export * from './max';
 export * from './mimetype';
 export * from './min';
+export * from './mobile-phone';
 export * from './mongo-id';
 export * from './multibyte';
 export * from './multiple';

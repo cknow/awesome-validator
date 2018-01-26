@@ -170,6 +170,7 @@ The library can be loaded either as a standalone script, or through an [AMD](htt
 - [Max](docs/max.md)
 - [Mimetype](docs/mimetype.md)
 - [Min](docs/min.md)
+- [MobilePhone](docs/mobile-phone.md)
 - [MongoId](docs/mongo-id.md)
 - [Multibyte](docs/multibyte.md)
 - [Multiple](docs/multiple.md)
