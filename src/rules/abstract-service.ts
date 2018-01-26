@@ -24,6 +24,10 @@ export abstract class AbstractService<Key, Value> extends AbstractRule {
             (value: [Key, Value]) => this.servicesFilter(value)
         );
 
+        if (services.length === 0 && this.serviceDefault) {
+            return this.validateService(this.serviceDefault, input);
+        }
+
         if (services.length === 0) {
             services = Array.from(this.services);
         }
@@ -34,6 +38,13 @@ export abstract class AbstractService<Key, Value> extends AbstractRule {
             }
         }
 
+        return false;
+    }
+
+    /**
+     * Services.
+     */
+    protected get serviceDefault(): Value | false {
         return false;
     }
 

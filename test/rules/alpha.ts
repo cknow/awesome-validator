@@ -15,27 +15,22 @@ describe('Alpha', () => {
         assert.instanceOf(alpha, AbstractRule);
     });
 
-    it('values is valid with additional characters', () => {
-        assert.isTrue(new Alpha('!@#$%^&*(){}').validate('!@#$%^&*(){} abc'));
-        assert.isTrue(new Alpha('[]?+=/\\-_|"\',<>.').validate('[]?+=/\\-_|"\',<>. \t \n abc'));
-        assert.isTrue(new Alpha(undefined).validate('abc'));
-    });
-
     it('values is valid', () => {
-        assert.isTrue(alpha.validate(' '));
+        assert.isTrue(new Alpha('pt-BR').validate('ÀÂÇÉÊÍÕÓ'));
+        assert.isTrue(new Alpha('fr-FR').validate('ÂÆÇÉÈÊË'));
+
         assert.isTrue(alpha.validate('alganet'));
         assert.isTrue(alpha.validate('a'));
-        assert.isTrue(alpha.validate('\t'));
-        assert.isTrue(alpha.validate('\n'));
         assert.isTrue(alpha.validate('foobar'));
         assert.isTrue(alpha.validate('Foo'));
-        assert.isTrue(alpha.validate('alganet alganet'));
-        assert.isTrue(alpha.validate('\nabc'));
-        assert.isTrue(alpha.validate('\tdef'));
-        assert.isTrue(alpha.validate('\nabc \t'));
+        assert.isTrue(alpha.validate('abc'));
+        assert.isTrue(alpha.validate('def'));
     });
 
     it('values is not valid', () => {
+        assert.isFalse(new Alpha('pt-BR').validate('ÂÆÇÉÈÊË'));
+        assert.isFalse(new Alpha('fr-FR').validate('ÀÂÇÉÊÍÕÓ'));
+
         assert.isFalse(alpha.validate(''));
         assert.isFalse(alpha.validate('16-50'));
         assert.isFalse(alpha.validate('@#$'));

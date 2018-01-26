@@ -5,16 +5,17 @@ Validates if the given input is alphanumeric.
 Valid values:
 
 ```js
+validator.alnum('pt-BR').validate('kre123skção');
+validator.alnum('nb-NO').validate('Ære321');
 validator.alnum().validate('alganet');
-validator.alnum().validate('abc 123');
-validator.alnum().validate('\t');
-validator.alnum().validate('\n');
+validator.alnum().validate('abc123');
 ```
 
 Invalid values:
 
 ```js
-validator.alnum().validate('');
+validator.alnum('pt-BR').validate('Ære321');
+validator.alnum('nb-NO').validate('kre123skção');
 validator.alnum().validate('16-50');
 validator.alnum().validate('@#$');
 validator.alnum().validate('_');

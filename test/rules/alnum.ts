@@ -15,29 +15,23 @@ describe('Alnum', () => {
         assert.instanceOf(alnum, AbstractRule);
     });
 
-    it('values is valid with additional characters', () => {
-        assert.isTrue(new Alnum('!@#$%^&*(){}').validate('!@#$%^&*(){} abc 123'));
-        assert.isTrue(new Alnum('[]?+=/\\-_|"\',<>.').validate('[]?+=/\\-_|"\',<>. \t \n abc 123'));
-        assert.isTrue(new Alnum(undefined).validate('abc 123'));
-    });
-
     it('values is valid', () => {
-        assert.isTrue(alnum.validate(' '));
+        assert.isTrue(new Alnum('pt-BR').validate('kre123skção'));
+        assert.isTrue(new Alnum('nb-NO').validate('Ære321'));
+
         assert.isTrue(alnum.validate('alganet'));
         assert.isTrue(alnum.validate('a'));
         assert.isTrue(alnum.validate('1'));
-        assert.isTrue(alnum.validate('\t'));
-        assert.isTrue(alnum.validate('\n'));
         assert.isTrue(alnum.validate('foobar'));
         assert.isTrue(alnum.validate('Foo'));
-        assert.isTrue(alnum.validate('alganet alganet'));
-        assert.isTrue(alnum.validate('\nabc'));
-        assert.isTrue(alnum.validate('\tdef'));
-        assert.isTrue(alnum.validate('\nabc \t'));
+        assert.isTrue(alnum.validate('abc'));
         assert.isTrue(alnum.validate(0));
     });
 
     it('values is not valid', () => {
+        assert.isFalse(new Alnum('pt-BR').validate('Ære321'));
+        assert.isFalse(new Alnum('nb-NO').validate('kre123skção'));
+
         assert.isFalse(alnum.validate(''));
         assert.isFalse(alnum.validate('16-50'));
         assert.isFalse(alnum.validate('@#$'));
