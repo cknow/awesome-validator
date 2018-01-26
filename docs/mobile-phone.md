@@ -28,6 +28,8 @@ The current supported services are:
 - ar-JO
 - ar-SA
 - ar-SY
+- be-BY
+- bg-BG
 - cs-CZ
 - da-DK
 - de-DE
@@ -60,6 +62,7 @@ The current supported services are:
 - id-ID
 - it-IT
 - ja-JP
+- kk-KZ
 - kl-GL
 - ko-KR
 - lt-LT
@@ -74,6 +77,7 @@ The current supported services are:
 - ru-RU
 - sk-SK
 - sr-RS
+- th-TH
 - tr-TR
 - uk-UA
 - vi-VN
