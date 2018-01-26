@@ -24,7 +24,7 @@ validator.creditCard().validate('1234 1234 1234 1234');
 validator.creditCard('Visa').validate(3530111333300000); // JCB
 ```
 
-The current supported brands are:
+The current supported services are:
 
 - American Express
 - Diners Club

@@ -20,7 +20,7 @@ validator.postalCode('US').validate('PR1 9LY');
 validator.postalCode('PL').validate('02179-000');
 ```
 
-The current supported brands are:
+The current supported services are:
 
 - AD
 - AM

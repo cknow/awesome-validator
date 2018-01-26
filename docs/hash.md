@@ -52,7 +52,7 @@ validator.hash('crc32').validate('KYT0bf1c35032a71a14c2f719e5a14c1');
 validator.hash('crc32b').validate('q94375dj93458w34');
 ```
 
-The current supported brands are:
+The current supported services are:
 
 - md5
 - md4
