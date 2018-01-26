@@ -108,6 +108,7 @@ The library can be loaded either as a standalone script, or through an [AMD](htt
 - [Cntrl](docs/cntrl.md)
 - [Consonant](docs/consonant.md)
 - [Contains](docs/contains.md)
+- [Coordinate](docs/coordinate.md)
 - [Countable](docs/countable.md)
 - [CountryCode](docs/country-code.md)
 - [Cpf](docs/cpf.md)
