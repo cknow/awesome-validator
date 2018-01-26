@@ -117,6 +117,7 @@ export * from './phone';
 export * from './pis';
 export * from './port';
 export * from './positive';
+export * from './postal-code';
 export * from './prime-number';
 export * from './prnt';
 export * from './property-key';

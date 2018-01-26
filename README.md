@@ -199,6 +199,7 @@ The library can be loaded either as a standalone script, or through an [AMD](htt
 - [Pis](docs/pis.md)
 - [Port](docs/port.md)
 - [Positive](docs/positive.md)
+- [PostalCode](docs/postal-code.md)
 - [PrimeNumber](docs/prime-number.md)
 - [Prnt](docs/prnt.md)
 - [PropertyKey](docs/property-key.md)
