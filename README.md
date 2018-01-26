@@ -162,6 +162,7 @@ The library can be loaded either as a standalone script, or through an [AMD](htt
 - [Latitude](docs/latitude.md)
 - [LeapDate](docs/leap-date.md)
 - [LeapYear](docs/leap-year.md)
+- [Longitude](docs/longitude.md)
 - [Lowercase](docs/lowercase.md)
 - [Luhn](docs/luhn.md)
 - [MacAddress](docs/mac-address.md)

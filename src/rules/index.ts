@@ -80,6 +80,7 @@ export * from './language-code';
 export * from './latitude';
 export * from './leap-date';
 export * from './leap-year';
+export * from './longitude';
 export * from './lowercase';
 export * from './luhn';
 export * from './mac-address';
