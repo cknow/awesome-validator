@@ -1,6 +1,6 @@
 # Isrc
 
-Validates if the input is isrc.
+Validates if the input is [ISRC](https://pt.wikipedia.org/wiki/ISRC).
 
 Valid values:
 

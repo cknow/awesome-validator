@@ -1,6 +1,6 @@
 # Isin
 
-Validates if the input is ISIN.
+Validates if the input is [ISIN](https://pt.wikipedia.org/wiki/International_Securities_Identification_Number).
 
 Valid values:
 
