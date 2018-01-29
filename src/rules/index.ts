@@ -145,6 +145,7 @@ export * from './symbol-type';
 export * from './symbol-val';
 export * from './symbolic-link';
 export * from './time';
+export * from './timezone';
 export * from './tld';
 export * from './true-val';
 export * from './type-of';
