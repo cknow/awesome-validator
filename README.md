@@ -158,6 +158,7 @@ The library can be loaded either as a standalone script, or through an [AMD](htt
 - [Isin](docs/isin.md)
 - [Iso8601](docs/iso8601.md)
 - [Isrc](docs/isrc.md)
+- [Issn](docs/issn.md)
 - [Iterable](docs/iterable.md)
 - [Json](docs/json.md)
 - [KeyNested](docs/key-nested.md)

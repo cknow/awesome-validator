@@ -76,6 +76,7 @@ export * from './isbn13';
 export * from './isin';
 export * from './iso8601';
 export * from './isrc';
+export * from './issn';
 export * from './iterable';
 export * from './json';
 export * from './key-nested';
