@@ -1,18 +1,16 @@
-import { AbstractRule } from './abstract-rule';
-import { Regex } from './regex';
+import { AbstractString } from './abstract-string';
 
-export class Isin extends AbstractRule {
+export class Isin extends AbstractString {
 
     /**
-     * Validate.
+     * Validate string.
      */
-    public validate(input: any): boolean {
-        if (!new Regex(/^[A-Z]{2}[0-9A-Z]{9}[0-9]$/).validate(input)) {
+    protected validateString(input: string): boolean {
+        if (!/^[A-Z]{2}[0-9A-Z]{9}[0-9]$/.test(input)) {
             return false;
         }
 
-        const inputString: string = String(input);
-        const checksumStr: string = inputString.replace(/[A-Z]/g, (c: string): string => parseInt(c, 36).toString());
+        const checksumStr: string = input.replace(/[A-Z]/g, (c: string): string => parseInt(c, 36).toString());
 
         let sum: number = 0;
         let digit: string;
@@ -33,7 +31,7 @@ export class Isin extends AbstractRule {
             shouldDouble = !shouldDouble;
         }
 
-        return parseInt(inputString.substr(inputString.length - 1), 10) === (10000 - sum) % 10;
+        return parseInt(input.substr(input.length - 1), 10) === (10000 - sum) % 10;
     }
 }
 
