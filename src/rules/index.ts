@@ -70,6 +70,7 @@ export * from './instance-of';
 export * from './int-type';
 export * from './int-val';
 export * from './ip';
+export * from './iso8601';
 export * from './isrc';
 export * from './iterable';
 export * from './json';
