@@ -152,6 +152,7 @@ The library can be loaded either as a standalone script, or through an [AMD](htt
 - [IntType](docs/int-type.md)
 - [IntVal](docs/int-val.md)
 - [Ip](docs/ip.md)
+- [Isrc](docs/isrc.md)
 - [Iterable](docs/iterable.md)
 - [Json](docs/json.md)
 - [KeyNested](docs/key-nested.md)
