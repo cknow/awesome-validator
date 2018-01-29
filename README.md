@@ -152,6 +152,7 @@ The library can be loaded either as a standalone script, or through an [AMD](htt
 - [IntType](docs/int-type.md)
 - [IntVal](docs/int-val.md)
 - [Ip](docs/ip.md)
+- [Isin](docs/isin.md)
 - [Iso8601](docs/iso8601.md)
 - [Isrc](docs/isrc.md)
 - [Iterable](docs/iterable.md)
