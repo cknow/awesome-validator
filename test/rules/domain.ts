@@ -26,6 +26,10 @@ describe('Domain', () => {
         assert.isTrue(new Domain(false).validate('foo.bar.baz'));
         assert.isTrue(new Domain(false).validate('foo-bar.ba-z.qux'));
         assert.isTrue(new Domain(false).validate('hello.world'));
+
+        assert.isTrue(new Domain(true, true).validate('do_main.com'));
+        assert.isTrue(new Domain(true, false, true).validate('dom.com.'));
+        assert.isTrue(new Domain(true, true, true).validate('a.doma_in.co.'));
     });
 
     it('values is not valid', () => {

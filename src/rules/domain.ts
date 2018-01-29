@@ -15,7 +15,11 @@ export class Domain extends AbstractRule {
     /**
      * Domain.
      */
-    public constructor(tldCheck: boolean = true) {
+    public constructor(
+        tldCheck: boolean = true,
+        public readonly allowUnderscores: boolean = false,
+        public readonly allowTrailingDot: boolean = false
+    ) {
         super();
 
         this.tld = tldCheck ? new Tld() : new Alnum();
@@ -29,7 +33,13 @@ export class Domain extends AbstractRule {
             return false;
         }
 
-        const parts: string[] = String(input).split('.');
+        let inputString: string = String(input);
+
+        if (this.allowTrailingDot && inputString.substr(-1) === '.') {
+            inputString = inputString.slice(0, -1);
+        }
+
+        const parts: string[] = inputString.split('.');
 
         if (parts.length <= 1 || !this.tld.validate(parts.pop())) {
             return false;
@@ -38,7 +48,7 @@ export class Domain extends AbstractRule {
         return parts.every((host: string) => {
             const regex: Regex = new Regex(/^(?!:\/\/)([a-z0-9]+|[a-z0-9][a-z0-9-]*[a-z0-9])$/gi);
 
-            return regex.validate(host);
+            return regex.validate(this.allowUnderscores ? host.replace(/_/g, '') : host);
         });
     }
 }
