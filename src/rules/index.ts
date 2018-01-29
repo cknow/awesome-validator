@@ -81,6 +81,7 @@ export * from './language-code';
 export * from './latitude';
 export * from './leap-date';
 export * from './leap-year';
+export * from './locale';
 export * from './longitude';
 export * from './lowercase';
 export * from './luhn';
