@@ -1,4 +1,5 @@
 import { AbstractRule } from './abstract-rule';
+import { Regex } from './regex';
 
 export class Issn extends AbstractRule {
 
@@ -19,7 +20,7 @@ export class Issn extends AbstractRule {
         const inputString: string = String(input);
         const regex: string = `^\\d{4}-${(this.requireHyphen ? '' : '?')}\\d{3}[\\dX]$`;
 
-        if (!new RegExp(regex, this.caseSensitive ? undefined : 'i').test(inputString)) {
+        if (!new Regex(RegExp(regex, this.caseSensitive ? undefined : 'i')).validate(inputString)) {
             return false;
         }
 
