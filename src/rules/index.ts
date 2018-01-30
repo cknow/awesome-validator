@@ -34,6 +34,7 @@ export * from './credit-card';
 export * from './currency-code';
 export * from './data-uri';
 export * from './date-time';
+export * from './decimal';
 export * from './digit';
 export * from './directory';
 export * from './domain';

@@ -116,6 +116,7 @@ The library can be loaded either as a standalone script, or through an [AMD](htt
 - [CurrencyCode](docs/currency-code.md)
 - [DataUri](docs/data-uri.md)
 - [DateTime](docs/date-time.md)
+- [Decimal](docs/decimal.md)
 - [Digit](docs/digit.md)
 - [Directory](docs/directory.md)
 - [Domain](docs/domain.md)
