@@ -14,7 +14,6 @@ export class Alpha extends AbstractServiceRegex {
      */
     protected get services(): Map<string, RegExp> {
         return new Map([
-            ['ar', /^[ءآأؤإئابةتثجحخدذرزسشصضطظعغفقكلمنهوىيًٌٍَُِّْٰ]+$/],
             ['ar-AE', /^[ءآأؤإئابةتثجحخدذرزسشصضطظعغفقكلمنهوىيًٌٍَُِّْٰ]+$/],
             ['ar-BH', /^[ءآأؤإئابةتثجحخدذرزسشصضطظعغفقكلمنهوىيًٌٍَُِّْٰ]+$/],
             ['ar-DZ', /^[ءآأؤإئابةتثجحخدذرزسشصضطظعغفقكلمنهوىيًٌٍَُِّْٰ]+$/],
@@ -37,6 +36,14 @@ export class Alpha extends AbstractServiceRegex {
             ['da-DK', /^[A-ZÆØÅ]+$/i],
             ['de-DE', /^[A-ZÄÖÜß]+$/i],
             ['el-GR', /^[Α-ω]+$/i],
+            ['en-AU', /^[A-Z]+$/i],
+            ['en-GB', /^[A-Z]+$/i],
+            ['en-HK', /^[A-Z]+$/i],
+            ['en-IN', /^[A-Z]+$/i],
+            ['en-NZ', /^[A-Z]+$/i],
+            ['en-US', /^[A-Z]+$/i],
+            ['en-ZA', /^[A-Z]+$/i],
+            ['en-ZM', /^[A-Z]+$/i],
             ['es-ES', /^[A-ZÁÉÍÑÓÚÜ]+$/i],
             ['fr-FR', /^[A-ZÀÂÆÇÉÈÊËÏÎÔŒÙÛÜŸ]+$/i],
             ['hu-HU', /^[A-ZÁÉÍÓÖŐÚÜŰ]+$/i],
