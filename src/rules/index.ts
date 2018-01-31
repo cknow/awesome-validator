@@ -32,6 +32,7 @@ export * from './country-code';
 export * from './cpf';
 export * from './credit-card';
 export * from './currency-code';
+export * from './currency';
 export * from './data-uri';
 export * from './date-time';
 export * from './decimal';

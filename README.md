@@ -114,6 +114,7 @@ The library can be loaded either as a standalone script, or through an [AMD](htt
 - [Cpf](docs/cpf.md)
 - [CreditCard](docs/credit-card.md)
 - [CurrencyCode](docs/currency-code.md)
+- [Currency](docs/currency.md)
 - [DataUri](docs/data-uri.md)
 - [DateTime](docs/date-time.md)
 - [Decimal](docs/decimal.md)
