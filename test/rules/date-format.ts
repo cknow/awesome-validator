@@ -27,8 +27,8 @@ describe('DateFormat', () => {
     });
 
     it('values is valid with format', () => {
-        assert.isTrue(new dateFormat('DD-MM-YYYY').validate('29-02-2008'));
-        assert.isTrue(new dateFormat('DD/MM/YYYY HH:mm:ss').validate('20/10/2008 10:30:29'));
+        assert.isTrue(new DateFormat('DD-MM-YYYY').validate('29-02-2008'));
+        assert.isTrue(new DateFormat('DD/MM/YYYY HH:mm:ss').validate('20/10/2008 10:30:29'));
     });
 
     it('values is not valid', () => {
