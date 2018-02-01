@@ -1,15 +1,13 @@
-import { isLeapYear } from 'date-fns';
-
 import { AbstractDate } from './abstract-date';
 
-export class LeapYear extends AbstractDate {
+export class DateFormat extends AbstractDate {
 
     /**
      * Validate Date.
      */
     protected validateDate(date: Date): boolean {
-        return isLeapYear(date);
+        return true;
     }
 }
 
-export default LeapYear;
+export default DateFormat;

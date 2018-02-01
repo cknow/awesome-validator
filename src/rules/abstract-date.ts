@@ -1,39 +1,30 @@
-import * as moment from 'moment';
+import { format as formatDate, isValid, parse as parseDate, toDate } from 'date-fns';
 
 import { AbstractRule } from './abstract-rule';
-import { BooleanType } from './boolean-type';
-import { NumberVal } from './number-val';
-import { StringType } from './string-type';
 
 export abstract class AbstractDate extends AbstractRule {
 
     /**
      * Parse.
      */
-    public static parse(input: any, format?: moment.MomentFormatSpecification): moment.Moment {
-        if (new NumberVal().validate(input)) {
-            if (moment([input]).isValid()) {
-                return moment([input]);
-            }
-
-            return moment.unix(Number(input));
+    public static parse(input: any, format?: string): Date | null {
+        if (typeof input !== 'string' || !format) {
+            return isValid(input) ? toDate(input) : null;
         }
 
-        if (new StringType().validate(input)) {
-            return moment(input, format, !!format);
+        const parsed: Date = parseDate(String(input), format, new Date());
+
+        if (!isValid(parsed) || formatDate(parsed, format) !== input) {
+            return null;
         }
 
-        if (new BooleanType().validate(input)) {
-            return moment();
-        }
-
-        return moment(input);
+        return parsed;
     }
 
     /**
      * AbstractDate.
      */
-    public constructor(public readonly format?: moment.MomentFormatSpecification) {
+    public constructor(public readonly format?: string) {
         super();
     }
 
@@ -41,13 +32,13 @@ export abstract class AbstractDate extends AbstractRule {
      * Validate.
      */
     public validate(input: any): boolean {
-        const date: moment.Moment = AbstractDate.parse(input, this.format);
+        const date: Date | null = AbstractDate.parse(input, this.format);
 
-        return date.isValid() && this.validateDate(date);
+        return !!date && this.validateDate(date);
     }
 
     /**
      * Validate Date.
      */
-    protected abstract validateDate(date: moment.Moment): boolean;
+    protected abstract validateDate(date: Date): boolean;
 }

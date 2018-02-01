@@ -1,6 +1,6 @@
 import { AbstractRule } from './abstract-rule';
 import { ArrayType } from './array-type';
-import { DateTime } from './date-time';
+import { DateFormat } from './date-format';
 import { NotOptional } from './not-optional';
 import { NumberVal } from './number-val';
 import { ObjectTypeStrict } from './object-type-strict';
@@ -43,8 +43,9 @@ export abstract class AbstractInterval extends AbstractRule {
             return input.size;
         }
 
-        if (new DateTime().validate(input)) {
-            return DateTime.parse(input).unix();
+        const date: Date | null = DateFormat.parse(input);
+        if (date) {
+            return date.getTime();
         }
 
         return String(input).length;

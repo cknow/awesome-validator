@@ -1,5 +1,3 @@
-import * as moment from 'moment';
-
 import { assert } from 'chai';
 
 import { AbstractRule } from '../../src/rules/abstract-rule';
@@ -20,7 +18,6 @@ describe('LeapDate', () => {
     it('values is valid', () => {
         assert.isTrue(leapDate.validate(new Date(2008, 1, 29)));
         assert.isTrue(leapDate.validate('2008-02-29'));
-        assert.isTrue(leapDate.validate(moment([2008, 1, 29])));
     });
 
     it('values is valid with format', () => {
@@ -39,7 +36,6 @@ describe('LeapDate', () => {
         assert.isFalse(leapDate.validate(false));
         assert.isFalse(leapDate.validate([]));
         assert.isFalse(leapDate.validate({}));
-        assert.isFalse(leapDate.validate(moment([2009])));
     });
 
     it('values is not valid with format', () => {

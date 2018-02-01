@@ -60,14 +60,14 @@
     "@types/deep-equal": "^1.0.1",
     "@types/mime-types": "^2.1.0",
     "chardet": "^0.4.2",
+    "date-fns": "^2.0.0-alpha.7",
     "deep-equal": "^1.0.1",
-    "mime-types": "^2.1.17",
-    "moment": "^2.20.1"
+    "mime-types": "^2.1.17"
   },
   "devDependencies": {
     "@cknow/tslint-config": "^3.3.0",
-    "@types/chai": "^4.1.1",
-    "@types/mocha": "^2.2.46",
+    "@types/chai": "^4.1.2",
+    "@types/mocha": "^2.2.48",
     "@types/mock-fs": "^3.6.30",
     "awesome-typescript-loader": "^3.4.1",
     "chai": "^4.1.2",
@@ -83,7 +83,7 @@
     "temp-write": "^3.4.0",
     "ts-node": "^4.1.0",
     "tslint": "^5.9.1",
-    "typescript": "^2.6.2",
+    "typescript": "^2.7.1",
     "validate-commit-msg": "^2.14.0",
     "webpack": "^3.10.0"
   },
