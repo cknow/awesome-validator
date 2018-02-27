@@ -2,6 +2,7 @@ const path = require('path');
 const webpack = require('webpack');
 
 module.exports = {
+    mode: 'production',
     entry: {
         'awesome-validator.min': [path.resolve(__dirname, 'src/validator.ts')]
     },
@@ -13,17 +14,13 @@ module.exports = {
     resolve: {
         extensions: ['.ts', '.tsx', '.js']
     },
-    devtool: 'source-map',
-    plugins: [
-        new webpack.optimize.UglifyJsPlugin({
-            minimize: true,
-            include: /\.min\.js$/,
-        })
-    ],
+    devtool: false,
     module: {
-        loaders: [{
+        rules: [{
             test: /\.tsx?$/,
-            loader: 'awesome-typescript-loader',
+            use: [{
+                loader: 'awesome-typescript-loader'
+            }],
             exclude: /node_modules/
         }]
     },
