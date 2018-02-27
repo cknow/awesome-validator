@@ -3,7 +3,6 @@
     "outDir": "lib",
     "target": "es5",
     "importHelpers": true,
-    "noEmitHelpers": false,
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "allowSyntheticDefaultImports": true,
